@@ -260,6 +260,20 @@ const run = async () => {
     }))
     .filter((row) => row.state && row.population > 0 && VALID_STATES.has(row.state))
 
+  const incomeRows = await parseSourceRows(config.downloads.income)
+
+  const normalizedIncomeRows = incomeRows
+    .map((row) => ({
+      state: normalizeState(row.NAME ?? row.state ?? ''),
+      year: config.year,
+      per_capita_income: Math.round(parseNumeric(row.B19301_001E ?? row.per_capita_income ?? 0)),
+    }))
+    .filter((row) => row.state && row.per_capita_income > 0 && VALID_STATES.has(row.state))
+
+  if (!normalizedIncomeRows.length) {
+    throw new Error('Income normalization produced zero rows. Check data/raw/downloads/bea-income-source.json.')
+  }
+
   if (!normalizedTaxRows.length) {
     throw new Error('Tax normalization produced zero rows. Update aliases in data/config/source-download.config.json.')
   }
@@ -282,10 +296,17 @@ const run = async () => {
     'population',
   ])
 
+  const incomeOutput = await writeCsv(config.normalizedOutputs.income, normalizedIncomeRows, [
+    'state',
+    'year',
+    'per_capita_income',
+  ])
+
   console.log(`Normalized tax rows: ${normalizedTaxRows.length} -> ${path.relative(projectRoot, taxOutput)}`)
   console.log(
     `Normalized population rows: ${normalizedPopulationRows.length} -> ${path.relative(projectRoot, populationOutput)}`,
   )
+  console.log(`Normalized income rows: ${normalizedIncomeRows.length} -> ${path.relative(projectRoot, incomeOutput)}`)
 }
 
 run().catch((error) => {
