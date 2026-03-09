@@ -11,6 +11,7 @@ type StateRecord = {
   population: number
   totalRevenue: number
   perCapitaTotal: number
+  perCapitaIncome: number
   breakdown: Record<string, number>
 }
 
@@ -62,7 +63,7 @@ const TAX_COLORS: Record<string, string> = {
 function App() {
   const [data, setData] = useState<DataPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [metric, setMetric] = useState<'total' | 'perCapita'>('total')
+  const [metric, setMetric] = useState<'total' | 'perCapita' | 'perCapitaBurden'>('total')
   const [hoveredState, setHoveredState] = useState<string | null>(null)
 
   useEffect(() => {
@@ -98,22 +99,21 @@ function App() {
     }
 
     return [...data.states].sort((a, b) => {
-      if (metric === 'total') {
-        return b.totalRevenue - a.totalRevenue
-      }
-
-      return b.perCapitaTotal - a.perCapitaTotal
+      if (metric === 'total') return b.totalRevenue - a.totalRevenue
+      if (metric === 'perCapita') return b.perCapitaTotal - a.perCapitaTotal
+      const burdenA = a.perCapitaIncome > 0 ? (a.perCapitaTotal * 1000) / a.perCapitaIncome : 0
+      const burdenB = b.perCapitaIncome > 0 ? (b.perCapitaTotal * 1000) / b.perCapitaIncome : 0
+      return burdenB - burdenA
     })
   }, [data, metric])
 
   const maxMetricValue = useMemo(() => {
-    if (sortedStates.length === 0) {
-      return 0
-    }
-
-    return metric === 'total'
-      ? Math.max(...sortedStates.map((entry) => entry.totalRevenue))
-      : Math.max(...sortedStates.map((entry) => entry.perCapitaTotal))
+    if (sortedStates.length === 0) return 0
+    if (metric === 'total') return Math.max(...sortedStates.map((e) => e.totalRevenue))
+    if (metric === 'perCapita') return Math.max(...sortedStates.map((e) => e.perCapitaTotal))
+    return Math.max(
+      ...sortedStates.map((e) => (e.perCapitaIncome > 0 ? (e.perCapitaTotal * 1000) / e.perCapitaIncome : 0))
+    )
   }, [metric, sortedStates])
 
   const topState = sortedStates[0]
@@ -143,8 +143,8 @@ function App() {
           </a>
         </p>
         <p>
-          One-year nominal-dollar comparison across all 50 states, including total tax revenue
-          and per-capita views.
+          One-year nominal-dollar comparison across all 50 states, including total tax revenue,
+          per-capita views, and tax burden as a percentage of per-capita personal income.
         </p>
       </section>
 
@@ -162,7 +162,7 @@ function App() {
               <p>Top {data.metadata.topN} states</p>
             </article>
             <article className="summary-card">
-              <h2>Top state ({metric === 'total' ? 'Total' : 'Per capita'})</h2>
+              <h2>Top state ({metric === 'total' ? 'Total' : metric === 'perCapita' ? 'Per capita' : '% of income'})</h2>
               <p>{topState?.state ?? '—'}</p>
             </article>
             <article className="summary-card">
@@ -189,14 +189,33 @@ function App() {
                 >
                   Per capita
                 </button>
+                <button
+                  className={metric === 'perCapitaBurden' ? 'active' : ''}
+                  onClick={() => setMetric('perCapitaBurden')}
+                  type="button"
+                >
+                  % of income
+                </button>
               </div>
             </div>
 
             <div className="bar-list">
               {sortedStates.map((entry) => {
-                const rawValue = metric === 'total' ? entry.totalRevenue : entry.perCapitaTotal
-                // perCapitaTotal is stored in thousands (Census Bureau units); multiply to get actual dollars
-                const displayValue = metric === 'perCapita' ? rawValue * 1000 : rawValue
+                const rawValue =
+                  metric === 'total'
+                    ? entry.totalRevenue
+                    : metric === 'perCapita'
+                      ? entry.perCapitaTotal
+                      : entry.perCapitaIncome > 0
+                        ? (entry.perCapitaTotal * 1000) / entry.perCapitaIncome
+                        : 0
+
+                const displayValue =
+                  metric === 'perCapita'
+                    ? rawValue * 1000
+                    : metric === 'perCapitaBurden'
+                      ? rawValue * 100
+                      : rawValue
 
                 return (
                   <article
@@ -210,13 +229,22 @@ function App() {
                       <p>
                         {metric === 'total'
                           ? compactCurrency(displayValue)
-                          : `${currencyFormatter.format(displayValue)} / resident`}
+                          : metric === 'perCapita'
+                            ? `${currencyFormatter.format(displayValue)} / resident`
+                            : `${displayValue.toFixed(1)}% of income`}
                       </p>
                     </header>
                     <div className="bar-track">
                       {data.taxTypes.map((taxType) => {
                         const breakdownRaw = entry.breakdown[taxType.key] ?? 0
-                        const segmentRaw = metric === 'total' ? breakdownRaw : breakdownRaw / entry.population
+                        const segmentRaw =
+                          metric === 'total'
+                            ? breakdownRaw
+                            : metric === 'perCapita'
+                              ? breakdownRaw / entry.population
+                              : entry.perCapitaIncome > 0
+                                ? ((breakdownRaw / entry.population) * 1000) / entry.perCapitaIncome
+                                : 0
                         const segmentWidth = maxMetricValue === 0 ? 0 : (segmentRaw / maxMetricValue) * 100
                         return (
                           <div
@@ -234,7 +262,11 @@ function App() {
                           const tooltipValue =
                             metric === 'total'
                               ? compactCurrency(breakdownRaw)
-                              : `${currencyFormatter.format((breakdownRaw / entry.population) * 1000)} / resident`
+                              : metric === 'perCapita'
+                                ? `${currencyFormatter.format((breakdownRaw / entry.population) * 1000)} / resident`
+                                : entry.perCapitaIncome > 0
+                                  ? `${(((breakdownRaw / entry.population) * 1000) / entry.perCapitaIncome * 100).toFixed(2)}% of income`
+                                  : '—'
                           return (
                             <div key={taxType.key} className="tooltip-row">
                               <span className="tooltip-swatch" style={{ background: TAX_COLORS[taxType.key] ?? '#9ca3af' }} />
@@ -314,6 +346,15 @@ function App() {
                   rel="noreferrer"
                 >
                   U.S. Census Bureau — State Population Estimates (2023)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://api.census.gov/data/2023/acs/acs1?get=NAME,B19301_001E&for=state:*"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  U.S. Census Bureau — ACS 1-Year 2023, Per Capita Income by State (B19301_001E)
                 </a>
               </li>
             </ul>
