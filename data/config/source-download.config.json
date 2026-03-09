@@ -10,8 +10,8 @@
       "description": "CSV source with state population values"
     },
     "income": {
-      "url": "https://apps.bea.gov/api/data/?UserID=DEMO_KEY&method=GetData&datasetname=Regional&TableName=SAINC1&LineCode=3&GeoFips=STATE&Year=2023&ResultFormat=JSON",
-      "description": "BEA SAINC1 — Per capita personal income by state (2023)"
+      "url": "https://api.census.gov/data/2023/acs/acs1?get=NAME,B19301_001E&for=state:*",
+      "description": "Census ACS 1-year 2023 — Per capita income by state (B19301_001E)"
     }
   },
   "downloads": {
