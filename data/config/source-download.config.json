@@ -17,7 +17,7 @@
   "downloads": {
     "tax": "data/raw/downloads/census-tax-source.csv",
     "population": "data/raw/downloads/census-population-source.csv",
-    "income": "data/raw/downloads/bea-income-source.json"
+    "income": "data/raw/downloads/census-acs-income-source.json"
   },
   "normalization": {
     "tax": {
