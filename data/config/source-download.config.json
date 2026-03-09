@@ -8,11 +8,16 @@
     "population": {
       "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2023/state/totals/NST-EST2023-ALLDATA.csv",
       "description": "CSV source with state population values"
+    },
+    "income": {
+      "url": "https://apps.bea.gov/api/data/?UserID=DEMO_KEY&method=GetData&datasetname=Regional&TableName=SAINC1&LineCode=3&GeoFips=STATE&Year=2023&ResultFormat=JSON",
+      "description": "BEA SAINC1 — Per capita personal income by state (2023)"
     }
   },
   "downloads": {
     "tax": "data/raw/downloads/census-tax-source.csv",
-    "population": "data/raw/downloads/census-population-source.csv"
+    "population": "data/raw/downloads/census-population-source.csv",
+    "income": "data/raw/downloads/bea-income-source.json"
   },
   "normalization": {
     "tax": {
@@ -30,6 +35,7 @@
   },
   "normalizedOutputs": {
     "tax": "data/raw/state-local-tax-by-type.csv",
-    "population": "data/raw/state-population.csv"
+    "population": "data/raw/state-population.csv",
+    "income": "data/raw/state-per-capita-income.csv"
   }
 }
