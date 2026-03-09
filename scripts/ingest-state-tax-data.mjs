@@ -131,11 +131,15 @@ const run = async () => {
   const taxCsvPath = path.resolve(projectRoot, config.input.taxByTypeCsv)
   const populationCsvPath = path.resolve(projectRoot, config.input.populationCsv)
 
+  const incomeCsvPath = path.resolve(projectRoot, config.input.incomeCsv)
+
   const taxRows = await readCsv(taxCsvPath)
   const populationRows = await readCsv(populationCsvPath)
+  const incomeRows = await readCsv(incomeCsvPath)
 
   const taxColumns = config.columns.tax
   const populationColumns = config.columns.population
+  const incomeColumns = config.columns.income
 
   const populationByState = new Map()
 
@@ -158,6 +162,28 @@ const run = async () => {
 
   if (!populationByState.size) {
     throw new Error(`No population rows found for year ${config.year}.`)
+  }
+
+  const perCapitaIncomeByState = new Map()
+  for (const row of incomeRows) {
+    const rowYear = Number(row[incomeColumns.year])
+    if (Number.isFinite(rowYear) && rowYear !== config.year) {
+      continue
+    }
+
+    const state = normalizeState(row[incomeColumns.state])
+    if (!state || !VALID_STATES.has(state)) {
+      continue
+    }
+
+    const income = parseNumeric(row[incomeColumns.perCapitaIncome])
+    if (income > 0) {
+      perCapitaIncomeByState.set(state, income)
+    }
+  }
+
+  if (!perCapitaIncomeByState.size) {
+    throw new Error(`No per-capita income rows found for year ${config.year}.`)
   }
 
   const topStates = [...populationByState.entries()]
@@ -215,11 +241,13 @@ const run = async () => {
     .map((state) => {
       const population = state.population || 0
       const perCapitaTotal = population > 0 ? state.totalRevenue / population : 0
+      const perCapitaIncome = perCapitaIncomeByState.get(state.state) ?? 0
 
       return {
         ...state,
         totalRevenue: Math.round(state.totalRevenue),
         perCapitaTotal: Number(perCapitaTotal.toFixed(2)),
+        perCapitaIncome,
       }
     })
     .sort((a, b) => b.totalRevenue - a.totalRevenue)

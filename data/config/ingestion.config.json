@@ -3,7 +3,8 @@
   "topNStates": 50,
   "input": {
     "taxByTypeCsv": "data/raw/state-local-tax-by-type.csv",
-    "populationCsv": "data/raw/state-population.csv"
+    "populationCsv": "data/raw/state-population.csv",
+    "incomeCsv": "data/raw/state-per-capita-income.csv"
   },
   "columns": {
     "tax": {
@@ -17,6 +18,11 @@
       "state": "state",
       "year": "year",
       "population": "population"
+    },
+    "income": {
+      "state": "state",
+      "year": "year",
+      "perCapitaIncome": "per_capita_income"
     }
   },
   "taxTypeMap": {
