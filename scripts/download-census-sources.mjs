@@ -49,8 +49,12 @@ const run = async () => {
   const taxOutput = await downloadTo(taxUrl, config.downloads.tax)
   const populationOutput = await downloadTo(populationUrl, config.downloads.population)
 
+  const incomeUrl = ensureUrl(config.sources?.income?.url, 'income source')
+  const incomeOutput = await downloadTo(incomeUrl, config.downloads.income)
+
   console.log(`Downloaded tax source: ${path.relative(projectRoot, taxOutput)}`)
   console.log(`Downloaded population source: ${path.relative(projectRoot, populationOutput)}`)
+  console.log(`Downloaded income source: ${path.relative(projectRoot, incomeOutput)}`)
 }
 
 run().catch((error) => {
