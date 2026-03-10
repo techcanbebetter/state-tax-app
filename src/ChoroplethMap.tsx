@@ -21,11 +21,9 @@ type TooltipState = {
 type ChoroplethMapProps = {
   states: StateRecord[]
   metric: Metric
-  selectedStates: Set<string>
-  onToggleState: (name: string) => void
 }
 
-export default function ChoroplethMap({ states, metric, selectedStates, onToggleState }: ChoroplethMapProps) {
+export default function ChoroplethMap({ states, metric }: ChoroplethMapProps) {
   const [tooltip, setTooltip] = useState<TooltipState>(null)
 
   const stateByName = useMemo(() => new Map(states.map((s) => [s.state, s])), [states])
@@ -47,22 +45,18 @@ export default function ChoroplethMap({ states, metric, selectedStates, onToggle
               if (!name) return null
               const entry = stateByName.get(name)
               const value = entry ? getMetricValue(entry, metric) : 0
-              const isSelected = selectedStates.has(name)
 
               return (
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
                   fill={entry ? (colorScale(value) ?? COLOR_RANGE[0]) : '#e5e7eb'}
-                  stroke={isSelected ? '#f59e0b' : '#fff'}
-                  strokeWidth={isSelected ? 2.5 : 0.5}
+                  stroke="#fff"
+                  strokeWidth={0.5}
                   style={{
-                    default: { outline: 'none', cursor: 'pointer' },
+                    default: { outline: 'none' },
                     hover: { outline: 'none', filter: 'brightness(0.85)' },
                     pressed: { outline: 'none' },
-                  }}
-                  onClick={() => {
-                    if (entry) onToggleState(name)
                   }}
                   onMouseEnter={(e: React.MouseEvent) => {
                     if (!entry) return

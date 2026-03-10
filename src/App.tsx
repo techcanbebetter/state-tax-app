@@ -3,7 +3,6 @@ import './App.css'
 import type { DataPayload, Metric } from './types'
 import { compactCurrency, currencyFormatter, formatMetricValue, getMetricValue, numberFormatter, TAX_COLORS } from './format'
 import ChoroplethMap from './ChoroplethMap'
-import ComparisonPanel from './ComparisonPanel'
 
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -15,19 +14,6 @@ function App() {
   const [error, setError] = useState<string | null>(null)
   const [metric, setMetric] = useState<Metric>('total')
   const [hoveredState, setHoveredState] = useState<string | null>(null)
-  const [selectedStates, setSelectedStates] = useState<Set<string>>(new Set())
-
-  const toggleState = (name: string) => {
-    setSelectedStates((prev) => {
-      const next = new Set(prev)
-      if (next.has(name)) {
-        next.delete(name)
-      } else if (next.size < 5) {
-        next.add(name)
-      }
-      return next
-    })
-  }
 
   useEffect(() => {
     const loadData = async () => {
@@ -160,23 +146,10 @@ function App() {
                   return (
                     <article
                       key={entry.state}
-                      className={`bar-row${selectedStates.has(entry.state) ? ' bar-row--selected' : ''}`}
+                      className="bar-row"
                       onMouseEnter={() => setHoveredState(entry.state)}
                       onMouseLeave={() => setHoveredState(null)}
                     >
-                      <label
-                        className="bar-checkbox-label"
-                        title={selectedStates.size >= 5 && !selectedStates.has(entry.state) ? 'Max 5 states' : ''}
-                      >
-                        <input
-                          type="checkbox"
-                          className="bar-checkbox"
-                          checked={selectedStates.has(entry.state)}
-                          disabled={selectedStates.size >= 5 && !selectedStates.has(entry.state)}
-                          onChange={() => toggleState(entry.state)}
-                          aria-label={`Compare ${entry.state}`}
-                        />
-                      </label>
                       <header>
                         <h3>{entry.state}</h3>
                         <p>{formatMetricValue(getMetricValue(entry, metric), metric)}</p>
@@ -243,17 +216,9 @@ function App() {
               <ChoroplethMap
                 states={data.states}
                 metric={metric}
-                selectedStates={selectedStates}
-                onToggleState={toggleState}
               />
             </section>
           </div>
-          <ComparisonPanel
-            states={data.states}
-            taxTypes={data.taxTypes}
-            selectedStates={selectedStates}
-            onToggleState={toggleState}
-          />
 
           <section className="panel">
             <h2>Breakout by tax type</h2>
