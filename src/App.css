@@ -334,8 +334,8 @@ td:first-child {
   min-width: 0;
 }
 
-.map-panel-section {
-  flex: 0 0 42% !important;
+.chart-map-row > .map-panel-section {
+  flex: 0 0 42%;
 }
 
 .map-panel {
@@ -363,17 +363,13 @@ td:first-child {
     flex-direction: column;
   }
 
-  .map-panel-section {
-    flex: 1 1 auto !important;
+  .chart-map-row > .map-panel-section {
+    flex: 1 1 auto;
     width: 100%;
   }
 }
 
 /* ── Bar chart checkboxes ─────────────────────────────────── */
-.bar-row {
-  position: relative;
-}
-
 .bar-checkbox-label {
   position: absolute;
   left: 0.4rem;
@@ -386,6 +382,10 @@ td:first-child {
 
 .bar-row:hover .bar-checkbox-label,
 .bar-row--selected .bar-checkbox-label {
+  opacity: 1;
+}
+
+.bar-row:focus-within .bar-checkbox-label {
   opacity: 1;
 }
 

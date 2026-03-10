@@ -127,126 +127,126 @@ function App() {
           </section>
 
           <div className="chart-map-row">
-          <section className="panel">
-            <div className="panel-header">
-              <h2>Compare totals across states</h2>
-              <div className="metric-toggle" role="group" aria-label="Metric toggle">
-                <button
-                  className={metric === 'total' ? 'active' : ''}
-                  onClick={() => setMetric('total')}
-                  type="button"
-                >
-                  Total
-                </button>
-                <button
-                  className={metric === 'perCapita' ? 'active' : ''}
-                  onClick={() => setMetric('perCapita')}
-                  type="button"
-                >
-                  Per capita
-                </button>
-                <button
-                  className={metric === 'perCapitaBurden' ? 'active' : ''}
-                  onClick={() => setMetric('perCapitaBurden')}
-                  type="button"
-                >
-                  % of income
-                </button>
-              </div>
-            </div>
-
-            <div className="bar-list">
-              {sortedStates.map((entry) => {
-                return (
-                  <article
-                    key={entry.state}
-                    className={`bar-row${selectedStates.has(entry.state) ? ' bar-row--selected' : ''}`}
-                    onMouseEnter={() => setHoveredState(entry.state)}
-                    onMouseLeave={() => setHoveredState(null)}
+            <section className="panel">
+              <div className="panel-header">
+                <h2>Compare totals across states</h2>
+                <div className="metric-toggle" role="group" aria-label="Metric toggle">
+                  <button
+                    className={metric === 'total' ? 'active' : ''}
+                    onClick={() => setMetric('total')}
+                    type="button"
                   >
-                    <label
-                      className="bar-checkbox-label"
-                      title={selectedStates.size >= 5 && !selectedStates.has(entry.state) ? 'Max 5 states' : ''}
+                    Total
+                  </button>
+                  <button
+                    className={metric === 'perCapita' ? 'active' : ''}
+                    onClick={() => setMetric('perCapita')}
+                    type="button"
+                  >
+                    Per capita
+                  </button>
+                  <button
+                    className={metric === 'perCapitaBurden' ? 'active' : ''}
+                    onClick={() => setMetric('perCapitaBurden')}
+                    type="button"
+                  >
+                    % of income
+                  </button>
+                </div>
+              </div>
+
+              <div className="bar-list">
+                {sortedStates.map((entry) => {
+                  return (
+                    <article
+                      key={entry.state}
+                      className={`bar-row${selectedStates.has(entry.state) ? ' bar-row--selected' : ''}`}
+                      onMouseEnter={() => setHoveredState(entry.state)}
+                      onMouseLeave={() => setHoveredState(null)}
                     >
-                      <input
-                        type="checkbox"
-                        className="bar-checkbox"
-                        checked={selectedStates.has(entry.state)}
-                        disabled={selectedStates.size >= 5 && !selectedStates.has(entry.state)}
-                        onChange={() => toggleState(entry.state)}
-                        aria-label={`Compare ${entry.state}`}
-                      />
-                    </label>
-                    <header>
-                      <h3>{entry.state}</h3>
-                      <p>{formatMetricValue(getMetricValue(entry, metric), metric)}</p>
-                    </header>
-                    <div className="bar-track">
-                      {data.taxTypes.map((taxType) => {
-                        const breakdownRaw = entry.breakdown[taxType.key] ?? 0
-                        const segmentRaw =
-                          metric === 'total'
-                            ? breakdownRaw
-                            : metric === 'perCapita'
-                              ? breakdownRaw / entry.population
-                              : entry.perCapitaIncome > 0
-                                ? ((breakdownRaw / entry.population) * 1000) / entry.perCapitaIncome
-                                : 0
-                        const segmentWidth = maxMetricValue === 0 ? 0 : (segmentRaw / maxMetricValue) * 100
-                        return (
-                          <div
-                            key={taxType.key}
-                            className="bar-segment"
-                            style={{ width: `${segmentWidth}%`, background: TAX_COLORS[taxType.key] ?? '#9ca3af' }}
-                          />
-                        )
-                      })}
-                    </div>
-                    {hoveredState === entry.state && (
-                      <div className="bar-tooltip">
+                      <label
+                        className="bar-checkbox-label"
+                        title={selectedStates.size >= 5 && !selectedStates.has(entry.state) ? 'Max 5 states' : ''}
+                      >
+                        <input
+                          type="checkbox"
+                          className="bar-checkbox"
+                          checked={selectedStates.has(entry.state)}
+                          disabled={selectedStates.size >= 5 && !selectedStates.has(entry.state)}
+                          onChange={() => toggleState(entry.state)}
+                          aria-label={`Compare ${entry.state}`}
+                        />
+                      </label>
+                      <header>
+                        <h3>{entry.state}</h3>
+                        <p>{formatMetricValue(getMetricValue(entry, metric), metric)}</p>
+                      </header>
+                      <div className="bar-track">
                         {data.taxTypes.map((taxType) => {
                           const breakdownRaw = entry.breakdown[taxType.key] ?? 0
-                          const tooltipValue =
+                          const segmentRaw =
                             metric === 'total'
-                              ? compactCurrency(breakdownRaw)
+                              ? breakdownRaw
                               : metric === 'perCapita'
-                                ? `${currencyFormatter.format((breakdownRaw / entry.population) * 1000)} / resident`
+                                ? breakdownRaw / entry.population
                                 : entry.perCapitaIncome > 0
-                                  ? `${(((breakdownRaw / entry.population) * 1000) / entry.perCapitaIncome * 100).toFixed(2)}% of income`
-                                  : '—'
+                                  ? ((breakdownRaw / entry.population) * 1000) / entry.perCapitaIncome
+                                  : 0
+                          const segmentWidth = maxMetricValue === 0 ? 0 : (segmentRaw / maxMetricValue) * 100
                           return (
-                            <div key={taxType.key} className="tooltip-row">
-                              <span className="tooltip-swatch" style={{ background: TAX_COLORS[taxType.key] ?? '#9ca3af' }} />
-                              <span className="tooltip-label">{taxType.label}</span>
-                              <span className="tooltip-value">{tooltipValue}</span>
-                            </div>
+                            <div
+                              key={taxType.key}
+                              className="bar-segment"
+                              style={{ width: `${segmentWidth}%`, background: TAX_COLORS[taxType.key] ?? '#9ca3af' }}
+                            />
                           )
                         })}
                       </div>
-                    )}
-                  </article>
-                )
-              })}
-            </div>
+                      {hoveredState === entry.state && (
+                        <div className="bar-tooltip">
+                          {data.taxTypes.map((taxType) => {
+                            const breakdownRaw = entry.breakdown[taxType.key] ?? 0
+                            const tooltipValue =
+                              metric === 'total'
+                                ? compactCurrency(breakdownRaw)
+                                : metric === 'perCapita'
+                                  ? `${currencyFormatter.format((breakdownRaw / entry.population) * 1000)} / resident`
+                                  : entry.perCapitaIncome > 0
+                                    ? `${(((breakdownRaw / entry.population) * 1000) / entry.perCapitaIncome * 100).toFixed(2)}% of income`
+                                    : '—'
+                            return (
+                              <div key={taxType.key} className="tooltip-row">
+                                <span className="tooltip-swatch" style={{ background: TAX_COLORS[taxType.key] ?? '#9ca3af' }} />
+                                <span className="tooltip-label">{taxType.label}</span>
+                                <span className="tooltip-value">{tooltipValue}</span>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      )}
+                    </article>
+                  )
+                })}
+              </div>
 
-            <div className="tax-legend">
-              {data.taxTypes.map((taxType) => (
-                <span key={taxType.key} className="legend-item">
-                  <span className="legend-swatch" style={{ background: TAX_COLORS[taxType.key] ?? '#9ca3af' }} />
-                  {taxType.label}
-                </span>
-              ))}
-            </div>
-          </section>
-          <section className="panel map-panel-section">
-            <h2>Tax by geography</h2>
-            <ChoroplethMap
-              states={data.states}
-              metric={metric}
-              selectedStates={selectedStates}
-              onToggleState={toggleState}
-            />
-          </section>
+              <div className="tax-legend">
+                {data.taxTypes.map((taxType) => (
+                  <span key={taxType.key} className="legend-item">
+                    <span className="legend-swatch" style={{ background: TAX_COLORS[taxType.key] ?? '#9ca3af' }} />
+                    {taxType.label}
+                  </span>
+                ))}
+              </div>
+            </section>
+            <section className="panel map-panel-section">
+              <h2>Tax by geography</h2>
+              <ChoroplethMap
+                states={data.states}
+                metric={metric}
+                selectedStates={selectedStates}
+                onToggleState={toggleState}
+              />
+            </section>
           </div>
           <ComparisonPanel
             states={data.states}
