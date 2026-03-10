@@ -1,69 +1,17 @@
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
-
-type TaxType = {
-  key: string
-  label: string
-}
-
-type StateRecord = {
-  state: string
-  population: number
-  totalRevenue: number
-  perCapitaTotal: number
-  perCapitaIncome: number
-  breakdown: Record<string, number>
-}
-
-type DataPayload = {
-  metadata: {
-    year: number
-    currency: string
-    scope: string
-    topN: number
-    generatedAt?: string
-    notes?: string[]
-  }
-  taxTypes: TaxType[]
-  states: StateRecord[]
-}
-
-const currencyFormatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  maximumFractionDigits: 0,
-})
-
-const numberFormatter = new Intl.NumberFormat('en-US')
+import type { DataPayload, Metric } from './types'
+import { compactCurrency, currencyFormatter, numberFormatter, TAX_COLORS } from './format'
 
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
   timeStyle: 'short',
 })
 
-// Revenue values are stored in thousands of dollars (Census Bureau native unit).
-// Multiply by 1 000 before display, then abbreviate.
-const compactCurrency = (thousands: number): string => {
-  const dollars = thousands * 1000
-  if (dollars >= 1e9) return `$${(dollars / 1e9).toFixed(1)}B`
-  if (dollars >= 1e6) return `$${(dollars / 1e6).toFixed(1)}M`
-  return currencyFormatter.format(dollars)
-}
-
-const TAX_COLORS: Record<string, string> = {
-  property: '#2563eb',
-  sales_general: '#059669',
-  sales_selective: '#34d399',
-  income_individual: '#d97706',
-  income_corporate: '#fbbf24',
-  licenses: '#7c3aed',
-  other: '#9ca3af',
-}
-
 function App() {
   const [data, setData] = useState<DataPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [metric, setMetric] = useState<'total' | 'perCapita' | 'perCapitaBurden'>('total')
+  const [metric, setMetric] = useState<Metric>('total')
   const [hoveredState, setHoveredState] = useState<string | null>(null)
 
   useEffect(() => {
