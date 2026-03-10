@@ -262,7 +262,6 @@ td:first-child {
 
 /* ── Comparison Panel ─────────────────────────────────────── */
 .comparison-panel {
-  overflow-x: auto;
 }
 
 .comparison-table-wrap {

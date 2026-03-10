@@ -1,5 +1,5 @@
 import type { StateRecord, TaxType } from './types'
-import { compactCurrency, currencyFormatter, getMetricValue } from './format'
+import { compactCurrency, formatMetricValue, getMetricValue } from './format'
 
 type ComparisonPanelProps = {
   states: StateRecord[]
@@ -46,7 +46,7 @@ export default function ComparisonPanel({ states, taxTypes, selectedStates, onTo
             <tr>
               <td className="comparison-row-label">Per Capita</td>
               {selected.map((s) => (
-                <td key={s.state}>{currencyFormatter.format(getMetricValue(s, 'perCapita') * 1000)} / resident</td>
+                <td key={s.state}>{formatMetricValue(getMetricValue(s, 'perCapita'), 'perCapita')}</td>
               ))}
             </tr>
             <tr>
@@ -54,7 +54,7 @@ export default function ComparisonPanel({ states, taxTypes, selectedStates, onTo
               {selected.map((s) => (
                 <td key={s.state}>
                   {s.perCapitaIncome > 0
-                    ? `${(getMetricValue(s, 'perCapitaBurden') * 100).toFixed(1)}% of income`
+                    ? formatMetricValue(getMetricValue(s, 'perCapitaBurden'), 'perCapitaBurden')
                     : '—'}
                 </td>
               ))}

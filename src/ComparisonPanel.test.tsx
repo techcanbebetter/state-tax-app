@@ -79,6 +79,20 @@ describe('ComparisonPanel', () => {
     expect(screen.getByText('Individual Income')).toBeInTheDocument()
   })
 
+  it('renders $0.0M for a zero-value breakdown entry', () => {
+    render(
+      <ComparisonPanel
+        states={states}
+        taxTypes={taxTypes}
+        selectedStates={new Set(['Texas'])}
+        onToggleState={vi.fn()}
+      />
+    )
+    // Texas has income_individual: 0 — should render $0 not NaN
+    const cells = screen.getAllByText('$0')
+    expect(cells.length).toBeGreaterThan(0)
+  })
+
   it('calls onToggleState with state name when X button is clicked', async () => {
     const onToggle = vi.fn()
     render(
