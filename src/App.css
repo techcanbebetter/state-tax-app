@@ -321,3 +321,49 @@ td:first-child {
   border-color: #fca5a5;
   color: #dc2626;
 }
+
+/* ── Choropleth Map ───────────────────────────────────────── */
+.chart-map-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.chart-map-row > .panel {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.map-panel-section {
+  flex: 0 0 42% !important;
+}
+
+.map-panel {
+  width: 100%;
+}
+
+.map-tooltip {
+  position: absolute;
+  background: rgba(17, 24, 39, 0.9);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .chart-map-row {
+    flex-direction: column;
+  }
+
+  .map-panel-section {
+    flex: 1 1 auto !important;
+    width: 100%;
+  }
+}
