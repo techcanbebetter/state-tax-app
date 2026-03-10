@@ -16,6 +16,7 @@ vi.mock('react-simple-maps', () => ({
       geographies: [
         { rsmKey: 'CA', properties: { name: 'California' } },
         { rsmKey: 'TX', properties: { name: 'Texas' } },
+        { rsmKey: 'XX', properties: { name: 'Unknown State' } },
       ],
     }),
   Geography: ({
@@ -74,5 +75,21 @@ describe('ChoroplethMap', () => {
     )
     await userEvent.click(screen.getByTestId('geo-California'))
     expect(onToggle).toHaveBeenCalledWith('California')
+  })
+
+  it('does not call onToggleState when clicking a geography with no matching state', async () => {
+    const onToggle = vi.fn()
+    render(
+      <ChoroplethMap states={states} metric="total" selectedStates={new Set()} onToggleState={onToggle} />
+    )
+    await userEvent.click(screen.getByTestId('geo-Unknown State'))
+    expect(onToggle).not.toHaveBeenCalled()
+  })
+
+  it('renders without error when a different metric is used', () => {
+    const { container } = render(
+      <ChoroplethMap states={states} metric="perCapita" selectedStates={new Set()} onToggleState={vi.fn()} />
+    )
+    expect(container.querySelector('svg')).toBeTruthy()
   })
 })

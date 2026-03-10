@@ -354,7 +354,8 @@ td:first-child {
   flex-direction: column;
   gap: 0.1rem;
   z-index: 10;
-  white-space: nowrap;
+  max-width: 200px;
+  white-space: normal;
 }
 
 @media (max-width: 900px) {

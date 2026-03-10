@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps'
 import { scaleQuantile } from 'd3-scale'
 import type { StateRecord, Metric } from './types'
@@ -28,11 +28,12 @@ type ChoroplethMapProps = {
 export default function ChoroplethMap({ states, metric, selectedStates, onToggleState }: ChoroplethMapProps) {
   const [tooltip, setTooltip] = useState<TooltipState>(null)
 
-  const stateByName = new Map(states.map((s) => [s.state, s]))
+  const stateByName = useMemo(() => new Map(states.map((s) => [s.state, s])), [states])
 
-  const colorScale = scaleQuantile<string>()
-    .domain(states.map((s) => getMetricValue(s, metric)))
-    .range(COLOR_RANGE)
+  const colorScale = useMemo(
+    () => scaleQuantile<string>().domain(states.map((s) => getMetricValue(s, metric))).range(COLOR_RANGE),
+    [states, metric]
+  )
 
   return (
     <div className="map-panel" style={{ position: 'relative' }}>
@@ -40,7 +41,10 @@ export default function ChoroplethMap({ states, metric, selectedStates, onToggle
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
             geographies.map((geo) => {
-              const name = (geo.properties as { name: string }).name
+              const name = typeof (geo.properties as Record<string, unknown>).name === 'string'
+                ? (geo.properties as Record<string, unknown>).name as string
+                : null
+              if (!name) return null
               const entry = stateByName.get(name)
               const value = entry ? getMetricValue(entry, metric) : 0
               const isSelected = selectedStates.has(name)
@@ -49,7 +53,7 @@ export default function ChoroplethMap({ states, metric, selectedStates, onToggle
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill={entry ? colorScale(value) : '#e5e7eb'}
+                  fill={entry ? (colorScale(value) ?? COLOR_RANGE[0]) : '#e5e7eb'}
                   stroke={isSelected ? '#f59e0b' : '#fff'}
                   strokeWidth={isSelected ? 2.5 : 0.5}
                   style={{
