@@ -310,9 +310,9 @@ function App() {
                     <tr key={entry.state}>
                       <td>{entry.state}</td>
                       {data.taxTypes.map((taxType) => (
-                        <td key={taxType.key}>{currencyFormatter.format(entry.breakdown[taxType.key] ?? 0)}</td>
+                        <td key={taxType.key}>{compactCurrency(entry.breakdown[taxType.key] ?? 0)}</td>
                       ))}
-                      <td>{currencyFormatter.format(entry.totalRevenue)}</td>
+                      <td>{compactCurrency(entry.totalRevenue)}</td>
                     </tr>
                   ))}
                 </tbody>
