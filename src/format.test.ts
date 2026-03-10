@@ -41,12 +41,12 @@ describe('getMetricValue', () => {
 
 describe('formatMetricValue', () => {
   it('formats total metric as compact currency', () => {
-    expect(formatMetricValue(1000000, 'total')).toContain('B')
+    expect(formatMetricValue(1000000, 'total')).toBe('$1.0B')
   })
   it('formats perCapita metric with / resident suffix', () => {
-    expect(formatMetricValue(12, 'perCapita')).toContain('/ resident')
+    expect(formatMetricValue(12, 'perCapita')).toBe('$12,000 / resident')
   })
   it('formats perCapitaBurden as percentage', () => {
-    expect(formatMetricValue(0.2667, 'perCapitaBurden')).toContain('% of income')
+    expect(formatMetricValue(0.2667, 'perCapitaBurden')).toBe('26.7% of income')
   })
 })

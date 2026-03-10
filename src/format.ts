@@ -33,6 +33,11 @@ export function getMetricValue(entry: StateRecord, metric: Metric): number {
   return entry.perCapitaIncome > 0 ? (entry.perCapitaTotal * 1000) / entry.perCapitaIncome : 0
 }
 
+/**
+ * Format a metric value for display.
+ * For `perCapita`, `value` is in thousands of dollars (multiply by 1000 before display).
+ * For `perCapitaBurden`, `value` is a ratio (0–1); multiply by 100 for percentage display.
+ */
 export function formatMetricValue(value: number, metric: Metric): string {
   if (metric === 'total') return compactCurrency(value)
   if (metric === 'perCapita') return `${currencyFormatter.format(value * 1000)} / resident`

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 import type { DataPayload, Metric } from './types'
-import { compactCurrency, currencyFormatter, numberFormatter, TAX_COLORS } from './format'
+import { compactCurrency, currencyFormatter, formatMetricValue, getMetricValue, numberFormatter, TAX_COLORS } from './format'
 
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -47,21 +47,13 @@ function App() {
     }
 
     return [...data.states].sort((a, b) => {
-      if (metric === 'total') return b.totalRevenue - a.totalRevenue
-      if (metric === 'perCapita') return b.perCapitaTotal - a.perCapitaTotal
-      const burdenA = a.perCapitaIncome > 0 ? (a.perCapitaTotal * 1000) / a.perCapitaIncome : 0
-      const burdenB = b.perCapitaIncome > 0 ? (b.perCapitaTotal * 1000) / b.perCapitaIncome : 0
-      return burdenB - burdenA
+      return getMetricValue(b, metric) - getMetricValue(a, metric)
     })
   }, [data, metric])
 
   const maxMetricValue = useMemo(() => {
     if (sortedStates.length === 0) return 0
-    if (metric === 'total') return Math.max(...sortedStates.map((e) => e.totalRevenue))
-    if (metric === 'perCapita') return Math.max(...sortedStates.map((e) => e.perCapitaTotal))
-    return Math.max(
-      ...sortedStates.map((e) => (e.perCapitaIncome > 0 ? (e.perCapitaTotal * 1000) / e.perCapitaIncome : 0))
-    )
+    return Math.max(...sortedStates.map((e) => getMetricValue(e, metric)))
   }, [metric, sortedStates])
 
   const topState = sortedStates[0]
@@ -149,22 +141,6 @@ function App() {
 
             <div className="bar-list">
               {sortedStates.map((entry) => {
-                const rawValue =
-                  metric === 'total'
-                    ? entry.totalRevenue
-                    : metric === 'perCapita'
-                      ? entry.perCapitaTotal
-                      : entry.perCapitaIncome > 0
-                        ? (entry.perCapitaTotal * 1000) / entry.perCapitaIncome
-                        : 0
-
-                const displayValue =
-                  metric === 'perCapita'
-                    ? rawValue * 1000
-                    : metric === 'perCapitaBurden'
-                      ? rawValue * 100
-                      : rawValue
-
                 return (
                   <article
                     key={entry.state}
@@ -174,13 +150,7 @@ function App() {
                   >
                     <header>
                       <h3>{entry.state}</h3>
-                      <p>
-                        {metric === 'total'
-                          ? compactCurrency(displayValue)
-                          : metric === 'perCapita'
-                            ? `${currencyFormatter.format(displayValue)} / resident`
-                            : `${displayValue.toFixed(1)}% of income`}
-                      </p>
+                      <p>{formatMetricValue(getMetricValue(entry, metric), metric)}</p>
                     </header>
                     <div className="bar-track">
                       {data.taxTypes.map((taxType) => {
