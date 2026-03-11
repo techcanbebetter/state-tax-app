@@ -184,7 +184,7 @@ function App() {
                               : metric === 'perCapita'
                                 ? breakdownRaw / entry.population
                                 : entry.perCapitaIncome > 0
-                                  ? ((breakdownRaw / entry.population) * 1000) / entry.perCapitaIncome
+                                  ? (breakdownRaw / entry.population) / entry.perCapitaIncome
                                   : 0
                           const segmentWidth = maxMetricValue === 0 ? 0 : (segmentRaw / maxMetricValue) * 100
                           return (
@@ -204,9 +204,9 @@ function App() {
                               metric === 'total'
                                 ? compactCurrency(breakdownRaw)
                                 : metric === 'perCapita'
-                                  ? `${currencyFormatter.format((breakdownRaw / entry.population) * 1000)} / resident`
+                                  ? `${currencyFormatter.format(breakdownRaw / entry.population)} / resident`
                                   : entry.perCapitaIncome > 0
-                                    ? `${(((breakdownRaw / entry.population) * 1000) / entry.perCapitaIncome * 100).toFixed(2)}% of income`
+                                    ? `${((breakdownRaw / entry.population) / entry.perCapitaIncome * 100).toFixed(2)}% of income`
                                     : '—'
                             return (
                               <div key={taxType.key} className="tooltip-row">
