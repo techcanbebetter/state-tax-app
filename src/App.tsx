@@ -3,6 +3,7 @@ import './App.css'
 import type { DataPayload, Metric } from './types'
 import { compactCurrency, currencyFormatter, formatMetricValue, getMetricValue, numberFormatter, TAX_COLORS } from './format'
 import ChoroplethMap from './ChoroplethMap'
+import PersonalCalculator from './PersonalCalculator'
 
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -219,6 +220,8 @@ function App() {
               />
             </section>
           </div>
+
+          <PersonalCalculator states={data.states} />
 
           <section className="panel">
             <h2>Breakout by tax type</h2>
