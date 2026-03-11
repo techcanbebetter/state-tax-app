@@ -128,9 +128,10 @@ const loadConfig = async () => {
 
 const run = async () => {
   const config = await loadConfig()
+  const years = config.years ?? [2023]
+
   const taxCsvPath = path.resolve(projectRoot, config.input.taxByTypeCsv)
   const populationCsvPath = path.resolve(projectRoot, config.input.populationCsv)
-
   const incomeCsvPath = path.resolve(projectRoot, config.input.incomeCsv)
 
   const taxRows = await readCsv(taxCsvPath)
@@ -141,126 +142,151 @@ const run = async () => {
   const populationColumns = config.columns.population
   const incomeColumns = config.columns.income
 
-  const populationByState = new Map()
-
+  // Build population map keyed by `${state}||${year}`
+  const populationByStateYear = new Map()
   for (const row of populationRows) {
     const rowYear = Number(row[populationColumns.year])
-    if (Number.isFinite(rowYear) && rowYear !== config.year) {
-      continue
-    }
-
     const state = normalizeState(row[populationColumns.state])
-    if (!state || !VALID_STATES.has(state)) {
+    if (!state || !VALID_STATES.has(state) || !Number.isFinite(rowYear)) {
       continue
     }
 
     const population = parseNumeric(row[populationColumns.population])
     if (population > 0) {
-      populationByState.set(state, population)
+      populationByStateYear.set(`${state}||${rowYear}`, population)
     }
   }
 
-  if (!populationByState.size) {
-    throw new Error(`No population rows found for year ${config.year}.`)
+  if (!populationByStateYear.size) {
+    throw new Error('No population rows found across any year.')
   }
 
-  const perCapitaIncomeByState = new Map()
+  // Build income map keyed by `${state}||${year}`
+  const incomeByStateYear = new Map()
   for (const row of incomeRows) {
     const rowYear = Number(row[incomeColumns.year])
-    if (Number.isFinite(rowYear) && rowYear !== config.year) {
-      continue
-    }
-
     const state = normalizeState(row[incomeColumns.state])
-    if (!state || !VALID_STATES.has(state)) {
+    if (!state || !VALID_STATES.has(state) || !Number.isFinite(rowYear)) {
       continue
     }
 
     const income = parseNumeric(row[incomeColumns.perCapitaIncome])
     if (income > 0) {
-      perCapitaIncomeByState.set(state, income)
+      incomeByStateYear.set(`${state}||${rowYear}`, income)
     }
   }
 
-  if (!perCapitaIncomeByState.size) {
-    throw new Error(`No per-capita income rows found for year ${config.year}.`)
+  if (!incomeByStateYear.size) {
+    throw new Error('No per-capita income rows found across any year.')
   }
 
-  const topStates = [...populationByState.entries()]
+  // Determine top N states by population in the latest available year
+  const latestPopYear = Math.max(...[...populationByStateYear.keys()].map((k) => Number(k.split('||')[1])))
+  const latestYearPopulation = new Map()
+  for (const [key, pop] of populationByStateYear) {
+    const [state, yearStr] = key.split('||')
+    if (Number(yearStr) === latestPopYear) {
+      latestYearPopulation.set(state, pop)
+    }
+  }
+
+  if (!latestYearPopulation.size) {
+    throw new Error(`No population rows found for latest year ${latestPopYear}.`)
+  }
+
+  const topStates = [...latestYearPopulation.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, config.topNStates)
     .map(([state]) => state)
 
   const topStateSet = new Set(topStates)
 
-  const stateAggregation = new Map()
+  // Determine canonical tax type order from all rows (stable across years)
   const taxTypeOrder = []
   const taxTypeSeen = new Set()
-
   for (const row of taxRows) {
-    const rowYear = Number(row[taxColumns.year])
-    if (Number.isFinite(rowYear) && rowYear !== config.year) {
-      continue
-    }
-
-    const state = normalizeState(row[taxColumns.state])
-    if (!topStateSet.has(state)) {
-      continue
-    }
-
     const rawTaxType = String(row[taxColumns.taxType] ?? '').trim()
-    if (!rawTaxType) {
-      continue
-    }
+    if (!rawTaxType) continue
 
     const taxTypeKey = config.taxTypeMap?.[rawTaxType] ?? toTaxTypeKey(rawTaxType)
     if (!taxTypeSeen.has(taxTypeKey)) {
       taxTypeSeen.add(taxTypeKey)
       taxTypeOrder.push(taxTypeKey)
     }
-
-    const stateTax = parseNumeric(row[taxColumns.stateTaxRevenue])
-    const localTax = parseNumeric(row[taxColumns.localTaxRevenue])
-    const totalTax = stateTax + localTax
-
-    const existing =
-      stateAggregation.get(state) ?? {
-        state,
-        population: populationByState.get(state) ?? 0,
-        totalRevenue: 0,
-        breakdown: {},
-      }
-
-    existing.breakdown[taxTypeKey] = (existing.breakdown[taxTypeKey] ?? 0) + totalTax
-    existing.totalRevenue += totalTax
-
-    stateAggregation.set(state, existing)
   }
 
-  const states = [...stateAggregation.values()]
-    .map((state) => {
-      const population = state.population || 0
-      const perCapitaTotal = population > 0 ? state.totalRevenue / population : 0
-      const perCapitaIncome = perCapitaIncomeByState.get(state.state) ?? 0
+  // Build states array per year
+  const yearsOutput = []
+  for (const year of years) {
+    const stateAggregation = new Map()
 
-      return {
-        ...state,
-        totalRevenue: Math.round(state.totalRevenue),
-        perCapitaTotal: Number(perCapitaTotal.toFixed(2)),
-        perCapitaIncome,
+    for (const row of taxRows) {
+      const rowYear = Number(row[taxColumns.year])
+      if (Number.isFinite(rowYear) && rowYear !== year) {
+        continue
       }
-    })
-    .sort((a, b) => b.totalRevenue - a.totalRevenue)
+
+      const state = normalizeState(row[taxColumns.state])
+      if (!topStateSet.has(state)) {
+        continue
+      }
+
+      const rawTaxType = String(row[taxColumns.taxType] ?? '').trim()
+      if (!rawTaxType) {
+        continue
+      }
+
+      const taxTypeKey = config.taxTypeMap?.[rawTaxType] ?? toTaxTypeKey(rawTaxType)
+
+      const stateTax = parseNumeric(row[taxColumns.stateTaxRevenue])
+      const localTax = parseNumeric(row[taxColumns.localTaxRevenue])
+      const totalTax = stateTax + localTax
+
+      const existing =
+        stateAggregation.get(state) ?? {
+          state,
+          population: populationByStateYear.get(`${state}||${year}`) ?? latestYearPopulation.get(state) ?? 0,
+          totalRevenue: 0,
+          breakdown: {},
+        }
+
+      existing.breakdown[taxTypeKey] = (existing.breakdown[taxTypeKey] ?? 0) + totalTax
+      existing.totalRevenue += totalTax
+
+      stateAggregation.set(state, existing)
+    }
+
+    const states = [...stateAggregation.values()]
+      .map((state) => {
+        const population = state.population || 0
+        const perCapitaTotal = population > 0 ? state.totalRevenue / population : 0
+        const perCapitaIncome = incomeByStateYear.get(`${state.state}||${year}`) ?? 0
+
+        return {
+          ...state,
+          totalRevenue: Math.round(state.totalRevenue),
+          perCapitaTotal: Number(perCapitaTotal.toFixed(2)),
+          perCapitaIncome,
+        }
+      })
+      .sort((a, b) => b.totalRevenue - a.totalRevenue)
+
+    yearsOutput.push({ year, states })
+  }
+
+  const outputYears = yearsOutput.map((y) => y.year)
+  const yearRange = [Math.min(...outputYears), Math.max(...outputYears)]
 
   const payload = {
     metadata: {
-      year: config.year,
+      year: Math.max(...outputYears),
+      yearRange,
       currency: 'USD',
       scope: 'state+local',
       topN: config.topNStates,
       notes: [
         'Nominal dollars.',
-        'Top states selected by population for the same year.',
+        'Top states selected by population for the latest year.',
       ],
       generatedAt: new Date().toISOString(),
     },
@@ -268,13 +294,14 @@ const run = async () => {
       key,
       label: config.taxTypeLabels?.[key] ?? key,
     })),
-    states,
+    years: yearsOutput,
   }
 
   const outputPath = path.resolve(projectRoot, config.output.json)
   await writeFile(outputPath, JSON.stringify(payload, null, 2))
 
-  console.log(`Wrote ${states.length} states to ${path.relative(projectRoot, outputPath)}`)
+  const totalStates = yearsOutput.reduce((sum, y) => sum + y.states.length, 0)
+  console.log(`Wrote ${yearsOutput.length} years (${totalStates} state-year records) to ${path.relative(projectRoot, outputPath)}`)
 }
 
 run().catch((error) => {

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
-import type { DataPayload, Metric } from './types'
+import type { MultiYearPayload, Metric } from './types'
 import { compactCurrency, currencyFormatter, formatMetricValue, getMetricValue, numberFormatter, TAX_COLORS } from './format'
 import ChoroplethMap from './ChoroplethMap'
 import PersonalCalculator from './PersonalCalculator'
@@ -11,15 +11,16 @@ const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
 })
 
 function App() {
-  const [data, setData] = useState<DataPayload | null>(null)
+  const [data, setData] = useState<MultiYearPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [metric, setMetric] = useState<Metric>('total')
   const [hoveredState, setHoveredState] = useState<string | null>(null)
+  const [selectedYear, setSelectedYear] = useState<number | null>(null)
 
   useEffect(() => {
     const loadData = async () => {
       const base = import.meta.env.BASE_URL
-      const candidates = [`${base}data/state-tax-summary-2023.json`, `${base}data/state-tax-summary-sample.json`]
+      const candidates = [`${base}data/state-tax-summary-2019-2023.json`, `${base}data/state-tax-summary-sample.json`]
 
       for (const url of candidates) {
         try {
@@ -28,8 +29,9 @@ function App() {
             continue
           }
 
-          const payload = (await response.json()) as DataPayload
+          const payload = (await response.json()) as MultiYearPayload
           setData(payload)
+          setSelectedYear(payload.years[payload.years.length - 1].year)
           setError(null)
           return
         } catch {
@@ -43,15 +45,20 @@ function App() {
     void loadData()
   }, [])
 
-  const sortedStates = useMemo(() => {
-    if (!data) {
-      return []
-    }
+  const activeStates = useMemo(() => {
+    if (!data || selectedYear == null) return []
+    return data.years.find((y) => y.year === selectedYear)?.states ?? []
+  }, [data, selectedYear])
 
-    return [...data.states].sort((a, b) => {
+  const states2023 = useMemo(() => {
+    return data?.years.find((y) => y.year === 2023)?.states ?? []
+  }, [data])
+
+  const sortedStates = useMemo(() => {
+    return [...activeStates].sort((a, b) => {
       return getMetricValue(b, metric) - getMetricValue(a, metric)
     })
-  }, [data, metric])
+  }, [activeStates, metric])
 
   const maxMetricValue = useMemo(() => {
     if (sortedStates.length === 0) return 0
@@ -97,7 +104,7 @@ function App() {
           <section className="summary-grid">
             <article className="summary-card">
               <h2>Year</h2>
-              <p>{data.metadata.year}</p>
+              <p>{selectedYear ?? data.metadata.year}</p>
             </article>
             <article className="summary-card">
               <h2>Coverage</h2>
@@ -112,6 +119,19 @@ function App() {
               <p>{lastRefreshedLabel}</p>
             </article>
           </section>
+
+          <div className="metric-toggle" role="group" aria-label="Year toggle">
+            {data.years.map((yr) => (
+              <button
+                key={yr.year}
+                className={selectedYear === yr.year ? 'active' : ''}
+                onClick={() => setSelectedYear(yr.year)}
+                type="button"
+              >
+                {yr.year}
+              </button>
+            ))}
+          </div>
 
           <div className="chart-map-row">
             <section className="panel">
@@ -215,13 +235,13 @@ function App() {
             <section className="panel map-panel-section">
               <h2>Tax by geography</h2>
               <ChoroplethMap
-                states={data.states}
+                states={activeStates}
                 metric={metric}
               />
             </section>
           </div>
 
-          <PersonalCalculator states={data.states} />
+          <PersonalCalculator states={states2023} />
 
           <section className="panel">
             <h2>Breakout by tax type</h2>

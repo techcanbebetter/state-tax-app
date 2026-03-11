@@ -1,12 +1,13 @@
 {
   "metadata": {
-    "year": 2024,
+    "year": 2023,
+    "yearRange": [2022, 2023],
     "currency": "USD",
     "scope": "state+local",
     "topN": 6,
     "notes": [
       "Sample dataset for UI development only.",
-      "Replace by running npm run data:ingest with Census source files."
+      "Replace by running npm run data:refresh with Census source files."
     ]
   },
   "taxTypes": [
@@ -18,96 +19,208 @@
     { "key": "licenses", "label": "Licenses" },
     { "key": "other", "label": "Other" }
   ],
-  "states": [
+  "years": [
     {
-      "state": "California",
-      "population": 38965193,
-      "totalRevenue": 362500000000,
-      "perCapitaTotal": 9303,
-      "breakdown": {
-        "income_individual": 117000000000,
-        "income_corporate": 28600000000,
-        "sales_general": 57100000000,
-        "sales_selective": 24100000000,
-        "property": 96000000000,
-        "licenses": 9700000000,
-        "other": 30000000000
-      }
+      "year": 2022,
+      "states": [
+        {
+          "state": "California",
+          "population": 38965193,
+          "totalRevenue": 340000000000,
+          "perCapitaTotal": 8727,
+          "perCapitaIncome": 77358,
+          "breakdown": {
+            "income_individual": 108000000000,
+            "income_corporate": 26000000000,
+            "sales_general": 54000000000,
+            "sales_selective": 22000000000,
+            "property": 92000000000,
+            "licenses": 9000000000,
+            "other": 29000000000
+          }
+        },
+        {
+          "state": "Texas",
+          "population": 30503301,
+          "totalRevenue": 255000000000,
+          "perCapitaTotal": 8360,
+          "perCapitaIncome": 60000,
+          "breakdown": {
+            "income_individual": 0,
+            "income_corporate": 7400000000,
+            "sales_general": 70000000000,
+            "sales_selective": 24000000000,
+            "property": 117000000000,
+            "licenses": 7400000000,
+            "other": 29200000000
+          }
+        },
+        {
+          "state": "Florida",
+          "population": 22610726,
+          "totalRevenue": 168000000000,
+          "perCapitaTotal": 7430,
+          "perCapitaIncome": 55000,
+          "breakdown": {
+            "income_individual": 0,
+            "income_corporate": 5100000000,
+            "sales_general": 50000000000,
+            "sales_selective": 20000000000,
+            "property": 68000000000,
+            "licenses": 4900000000,
+            "other": 20000000000
+          }
+        },
+        {
+          "state": "New York",
+          "population": 19571216,
+          "totalRevenue": 220000000000,
+          "perCapitaTotal": 11241,
+          "perCapitaIncome": 72000,
+          "breakdown": {
+            "income_individual": 79000000000,
+            "income_corporate": 12000000000,
+            "sales_general": 38000000000,
+            "sales_selective": 17000000000,
+            "property": 52000000000,
+            "licenses": 4000000000,
+            "other": 18000000000
+          }
+        },
+        {
+          "state": "Pennsylvania",
+          "population": 12961683,
+          "totalRevenue": 112000000000,
+          "perCapitaTotal": 8641,
+          "perCapitaIncome": 58000,
+          "breakdown": {
+            "income_individual": 20000000000,
+            "income_corporate": 4100000000,
+            "sales_general": 23000000000,
+            "sales_selective": 10000000000,
+            "property": 42000000000,
+            "licenses": 3100000000,
+            "other": 9800000000
+          }
+        },
+        {
+          "state": "Illinois",
+          "population": 12549689,
+          "totalRevenue": 110000000000,
+          "perCapitaTotal": 8766,
+          "perCapitaIncome": 60000,
+          "breakdown": {
+            "income_individual": 27000000000,
+            "income_corporate": 7200000000,
+            "sales_general": 23000000000,
+            "sales_selective": 10000000000,
+            "property": 33000000000,
+            "licenses": 2200000000,
+            "other": 7600000000
+          }
+        }
+      ]
     },
     {
-      "state": "Texas",
-      "population": 30503301,
-      "totalRevenue": 270400000000,
-      "perCapitaTotal": 8865,
-      "breakdown": {
-        "income_individual": 0,
-        "income_corporate": 7900000000,
-        "sales_general": 74400000000,
-        "sales_selective": 25500000000,
-        "property": 124500000000,
-        "licenses": 7900000000,
-        "other": 30100000000
-      }
-    },
-    {
-      "state": "Florida",
-      "population": 22610726,
-      "totalRevenue": 178700000000,
-      "perCapitaTotal": 7904,
-      "breakdown": {
-        "income_individual": 0,
-        "income_corporate": 5500000000,
-        "sales_general": 53600000000,
-        "sales_selective": 21700000000,
-        "property": 72300000000,
-        "licenses": 5200000000,
-        "other": 20400000000
-      }
-    },
-    {
-      "state": "New York",
-      "population": 19571216,
-      "totalRevenue": 234900000000,
-      "perCapitaTotal": 12002,
-      "breakdown": {
-        "income_individual": 85000000000,
-        "income_corporate": 12900000000,
-        "sales_general": 41100000000,
-        "sales_selective": 18100000000,
-        "property": 54800000000,
-        "licenses": 4300000000,
-        "other": 18700000000
-      }
-    },
-    {
-      "state": "Pennsylvania",
-      "population": 12961683,
-      "totalRevenue": 119600000000,
-      "perCapitaTotal": 9229,
-      "breakdown": {
-        "income_individual": 21500000000,
-        "income_corporate": 4400000000,
-        "sales_general": 24700000000,
-        "sales_selective": 11100000000,
-        "property": 44200000000,
-        "licenses": 3300000000,
-        "other": 10400000000
-      }
-    },
-    {
-      "state": "Illinois",
-      "population": 12549689,
-      "totalRevenue": 117900000000,
-      "perCapitaTotal": 9395,
-      "breakdown": {
-        "income_individual": 28900000000,
-        "income_corporate": 7700000000,
-        "sales_general": 24600000000,
-        "sales_selective": 11100000000,
-        "property": 34700000000,
-        "licenses": 2300000000,
-        "other": 8600000000
-      }
+      "year": 2023,
+      "states": [
+        {
+          "state": "California",
+          "population": 38965193,
+          "totalRevenue": 362500000000,
+          "perCapitaTotal": 9303,
+          "perCapitaIncome": 43000,
+          "breakdown": {
+            "income_individual": 117000000000,
+            "income_corporate": 28600000000,
+            "sales_general": 57100000000,
+            "sales_selective": 24100000000,
+            "property": 96000000000,
+            "licenses": 9700000000,
+            "other": 30000000000
+          }
+        },
+        {
+          "state": "Texas",
+          "population": 30503301,
+          "totalRevenue": 270400000000,
+          "perCapitaTotal": 8865,
+          "perCapitaIncome": 34000,
+          "breakdown": {
+            "income_individual": 0,
+            "income_corporate": 7900000000,
+            "sales_general": 74400000000,
+            "sales_selective": 25500000000,
+            "property": 124500000000,
+            "licenses": 7900000000,
+            "other": 30100000000
+          }
+        },
+        {
+          "state": "Florida",
+          "population": 22610726,
+          "totalRevenue": 178700000000,
+          "perCapitaTotal": 7904,
+          "perCapitaIncome": 35000,
+          "breakdown": {
+            "income_individual": 0,
+            "income_corporate": 5500000000,
+            "sales_general": 53600000000,
+            "sales_selective": 21700000000,
+            "property": 72300000000,
+            "licenses": 5200000000,
+            "other": 20400000000
+          }
+        },
+        {
+          "state": "New York",
+          "population": 19571216,
+          "totalRevenue": 234900000000,
+          "perCapitaTotal": 12002,
+          "perCapitaIncome": 48000,
+          "breakdown": {
+            "income_individual": 85000000000,
+            "income_corporate": 12900000000,
+            "sales_general": 41100000000,
+            "sales_selective": 18100000000,
+            "property": 54800000000,
+            "licenses": 4300000000,
+            "other": 18700000000
+          }
+        },
+        {
+          "state": "Pennsylvania",
+          "population": 12961683,
+          "totalRevenue": 119600000000,
+          "perCapitaTotal": 9229,
+          "perCapitaIncome": 38000,
+          "breakdown": {
+            "income_individual": 21500000000,
+            "income_corporate": 4400000000,
+            "sales_general": 24700000000,
+            "sales_selective": 11100000000,
+            "property": 44200000000,
+            "licenses": 3300000000,
+            "other": 10400000000
+          }
+        },
+        {
+          "state": "Illinois",
+          "population": 12549689,
+          "totalRevenue": 117900000000,
+          "perCapitaTotal": 9395,
+          "perCapitaIncome": 42000,
+          "breakdown": {
+            "income_individual": 28900000000,
+            "income_corporate": 7700000000,
+            "sales_general": 24600000000,
+            "sales_selective": 11100000000,
+            "property": 34700000000,
+            "licenses": 2300000000,
+            "other": 8600000000
+          }
+        }
+      ]
     }
   ]
 }

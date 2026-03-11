@@ -12,9 +12,15 @@ export type StateRecord = {
   breakdown: Record<string, number>
 }
 
-export type DataPayload = {
+export type YearRecord = {
+  year: number
+  states: StateRecord[]
+}
+
+export type MultiYearPayload = {
   metadata: {
     year: number
+    yearRange: [number, number]
     currency: string
     scope: string
     topN: number
@@ -22,7 +28,10 @@ export type DataPayload = {
     notes?: string[]
   }
   taxTypes: TaxType[]
-  states: StateRecord[]
+  years: YearRecord[]
 }
+
+// Backward-compat alias
+export type DataPayload = MultiYearPayload
 
 export type Metric = 'total' | 'perCapita' | 'perCapitaBurden'

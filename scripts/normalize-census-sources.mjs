@@ -230,8 +230,17 @@ const writeCsv = async (relativePath, rows, columns) => {
 
 const run = async () => {
   const config = await loadConfig()
+  const years = config.years ?? [config.year]
 
-  const taxRows = await parseSourceRows(config.downloads.tax)
+  // Tax: read one file per year and combine all rows
+  const allTaxApiRows = []
+  for (const year of years) {
+    const taxFilePath = config.downloads.taxByYear.replace('{year}', year)
+    const yearRows = await parseSourceRows(taxFilePath)
+    allTaxApiRows.push(...yearRows)
+  }
+  const taxRows = allTaxApiRows
+
   const populationRows = await parseSourceRows(config.downloads.population)
 
   const taxRowsLookLikeCensusApi =
@@ -252,26 +261,42 @@ const run = async () => {
         }))
         .filter((row) => row.state && row.tax_type && VALID_STATES.has(row.state))
 
-  const normalizedPopulationRows = populationRows
-    .map((row) => ({
-      state: normalizeState(pickColumn(row, config.normalization.population.state)),
-      year: Number(pickColumn(row, config.normalization.population.year) ?? config.year),
-      population: Math.round(parseNumeric(pickColumn(row, config.normalization.population.population))),
-    }))
-    .filter((row) => row.state && row.population > 0 && VALID_STATES.has(row.state))
+  // Population: pivot wide-format CSV — one row per (state, year) using POPESTIMATE{year} columns
+  const normalizedPopulationRows = []
+  for (const row of populationRows) {
+    const state = normalizeState(pickColumn(row, config.normalization.population.state))
+    if (!state || !VALID_STATES.has(state)) {
+      continue
+    }
 
-  const incomeRows = await parseSourceRows(config.downloads.income)
+    for (const year of years) {
+      const pop = parseNumeric(row[`POPESTIMATE${year}`])
+      if (pop > 0) {
+        normalizedPopulationRows.push({ state, year, population: Math.round(pop) })
+      }
+    }
+  }
 
-  const normalizedIncomeRows = incomeRows
-    .map((row) => ({
-      state: normalizeState(row.NAME ?? row.state ?? ''),
-      year: config.year,
-      per_capita_income: Math.round(parseNumeric(row.B19301_001E ?? row.per_capita_income ?? 0)),
-    }))
-    .filter((row) => row.state && row.per_capita_income > 0 && VALID_STATES.has(row.state))
+  // Income: read one file per year; year comes from loop context (not present in ACS response)
+  const normalizedIncomeRows = []
+  for (const year of years) {
+    const incomeFilePath = config.downloads.incomeByYear.replace('{year}', year)
+    const yearIncomeRows = await parseSourceRows(incomeFilePath)
+    for (const row of yearIncomeRows) {
+      const state = normalizeState(row.NAME ?? row.state ?? '')
+      if (!state || !VALID_STATES.has(state)) {
+        continue
+      }
+
+      const per_capita_income = Math.round(parseNumeric(row.B19301_001E ?? row.per_capita_income ?? 0))
+      if (per_capita_income > 0) {
+        normalizedIncomeRows.push({ state, year, per_capita_income })
+      }
+    }
+  }
 
   if (!normalizedIncomeRows.length) {
-    throw new Error('Income normalization produced zero rows. Check data/raw/downloads/bea-income-source.json.')
+    throw new Error('Income normalization produced zero rows. Check data/raw/downloads/census-acs-income-source-*.json.')
   }
 
   if (!normalizedTaxRows.length) {

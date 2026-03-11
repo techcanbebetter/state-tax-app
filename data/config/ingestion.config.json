@@ -1,5 +1,5 @@
 {
-  "year": 2023,
+  "years": [2019, 2020, 2021, 2022, 2023],
   "topNStates": 50,
   "input": {
     "taxByTypeCsv": "data/raw/state-local-tax-by-type.csv",
@@ -44,6 +44,6 @@
     "other": "Other"
   },
   "output": {
-    "json": "public/data/state-tax-summary-2023.json"
+    "json": "public/data/state-tax-summary-2019-2023.json"
   }
 }

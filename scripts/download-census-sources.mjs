@@ -42,19 +42,30 @@ const downloadTo = async (url, outputRelativePath) => {
 
 const run = async () => {
   const config = await loadConfig()
+  const years = config.years ?? [config.year]
 
-  const taxUrl = ensureUrl(config.sources?.tax?.url, 'tax source')
+  // Population: single download (NST-EST2023-ALLDATA.csv already contains all years)
   const populationUrl = ensureUrl(config.sources?.population?.url, 'population source')
-
-  const taxOutput = await downloadTo(taxUrl, config.downloads.tax)
   const populationOutput = await downloadTo(populationUrl, config.downloads.population)
-
-  const incomeUrl = ensureUrl(config.sources?.income?.url, 'income source')
-  const incomeOutput = await downloadTo(incomeUrl, config.downloads.income)
-
-  console.log(`Downloaded tax source: ${path.relative(projectRoot, taxOutput)}`)
   console.log(`Downloaded population source: ${path.relative(projectRoot, populationOutput)}`)
-  console.log(`Downloaded income source: ${path.relative(projectRoot, incomeOutput)}`)
+
+  // Tax: one download per year
+  const taxUrlTemplate = ensureUrl(config.sources?.tax?.urlTemplate, 'tax source urlTemplate')
+  for (const year of years) {
+    const taxUrl = taxUrlTemplate.replace('{year}', year)
+    const taxOutputPath = config.downloads.taxByYear.replace('{year}', year)
+    const taxOutput = await downloadTo(taxUrl, taxOutputPath)
+    console.log(`Downloaded tax source (${year}): ${path.relative(projectRoot, taxOutput)}`)
+  }
+
+  // Income: one download per year
+  const incomeUrlTemplate = ensureUrl(config.sources?.income?.urlTemplate, 'income source urlTemplate')
+  for (const year of years) {
+    const incomeUrl = incomeUrlTemplate.replace('{year}', year)
+    const incomeOutputPath = config.downloads.incomeByYear.replace('{year}', year)
+    const incomeOutput = await downloadTo(incomeUrl, incomeOutputPath)
+    console.log(`Downloaded income source (${year}): ${path.relative(projectRoot, incomeOutput)}`)
+  }
 }
 
 run().catch((error) => {
