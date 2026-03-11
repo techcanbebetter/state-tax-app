@@ -277,11 +277,17 @@ const run = async () => {
     }
   }
 
-  // Income: read one file per year; year comes from loop context (not present in ACS response)
+  // Income: read one file per year; some years may be absent (e.g. 2020 ACS 1-year was cancelled)
   const normalizedIncomeRows = []
   for (const year of years) {
     const incomeFilePath = config.downloads.incomeByYear.replace('{year}', year)
-    const yearIncomeRows = await parseSourceRows(incomeFilePath)
+    let yearIncomeRows
+    try {
+      yearIncomeRows = await parseSourceRows(incomeFilePath)
+    } catch {
+      console.warn(`Skipping income normalization for ${year}: file not found.`)
+      continue
+    }
     for (const row of yearIncomeRows) {
       const state = normalizeState(row.NAME ?? row.state ?? '')
       if (!state || !VALID_STATES.has(state)) {

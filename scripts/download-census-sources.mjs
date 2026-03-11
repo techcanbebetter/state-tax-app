@@ -58,13 +58,17 @@ const run = async () => {
     console.log(`Downloaded tax source (${year}): ${path.relative(projectRoot, taxOutput)}`)
   }
 
-  // Income: one download per year
+  // Income: one download per year — some years may be unavailable (e.g. 2020 ACS 1-year was cancelled)
   const incomeUrlTemplate = ensureUrl(config.sources?.income?.urlTemplate, 'income source urlTemplate')
   for (const year of years) {
     const incomeUrl = incomeUrlTemplate.replace('{year}', year)
     const incomeOutputPath = config.downloads.incomeByYear.replace('{year}', year)
-    const incomeOutput = await downloadTo(incomeUrl, incomeOutputPath)
-    console.log(`Downloaded income source (${year}): ${path.relative(projectRoot, incomeOutput)}`)
+    try {
+      const incomeOutput = await downloadTo(incomeUrl, incomeOutputPath)
+      console.log(`Downloaded income source (${year}): ${path.relative(projectRoot, incomeOutput)}`)
+    } catch (err) {
+      console.warn(`Skipping income data for ${year}: ${err.message}`)
+    }
   }
 }
 

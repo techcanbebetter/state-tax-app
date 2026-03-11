@@ -215,9 +215,17 @@ const run = async () => {
     }
   }
 
-  // Build states array per year
+  // Build states array per year — inner join: skip any year missing population or income data
   const yearsOutput = []
   for (const year of years) {
+    // Check that all 50 top states have population and income for this year
+    const hasPopulation = topStates.every((s) => populationByStateYear.has(`${s}||${year}`))
+    const hasIncome = topStates.some((s) => incomeByStateYear.has(`${s}||${year}`))
+    if (!hasPopulation || !hasIncome) {
+      console.warn(`Skipping year ${year}: missing ${!hasPopulation ? 'population' : 'income'} data.`)
+      continue
+    }
+
     const stateAggregation = new Map()
 
     for (const row of taxRows) {
@@ -238,14 +246,15 @@ const run = async () => {
 
       const taxTypeKey = config.taxTypeMap?.[rawTaxType] ?? toTaxTypeKey(rawTaxType)
 
-      const stateTax = parseNumeric(row[taxColumns.stateTaxRevenue])
-      const localTax = parseNumeric(row[taxColumns.localTaxRevenue])
+      // Census finance data is in thousands of dollars — convert to dollars
+      const stateTax = parseNumeric(row[taxColumns.stateTaxRevenue]) * 1000
+      const localTax = parseNumeric(row[taxColumns.localTaxRevenue]) * 1000
       const totalTax = stateTax + localTax
 
       const existing =
         stateAggregation.get(state) ?? {
           state,
-          population: populationByStateYear.get(`${state}||${year}`) ?? latestYearPopulation.get(state) ?? 0,
+          population: populationByStateYear.get(`${state}||${year}`) ?? 0,
           totalRevenue: 0,
           breakdown: {},
         }
