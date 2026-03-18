@@ -37,6 +37,8 @@ const states: StateRecord[] = [
     perCapitaTotal: 7692,
     perCapitaIncome: 40000,
     breakdown: {},
+    spendingTotal: 250000000,
+    spendingBreakdown: {},
   },
   {
     state: 'Texas',
@@ -45,6 +47,8 @@ const states: StateRecord[] = [
     perCapitaTotal: 6000,
     perCapitaIncome: 35000,
     breakdown: {},
+    spendingTotal: 150000000,
+    spendingBreakdown: {},
   },
 ]
 

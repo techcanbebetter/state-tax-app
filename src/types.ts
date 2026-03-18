@@ -10,6 +10,8 @@ export type StateRecord = {
   perCapitaTotal: number
   perCapitaIncome: number
   breakdown: Record<string, number>
+  spendingTotal: number
+  spendingBreakdown: Record<string, number>
 }
 
 export type YearRecord = {
@@ -28,6 +30,7 @@ export type MultiYearPayload = {
     notes?: string[]
   }
   taxTypes: TaxType[]
+  spendingTypes: TaxType[]
   years: YearRecord[]
 }
 
@@ -35,3 +38,5 @@ export type MultiYearPayload = {
 export type DataPayload = MultiYearPayload
 
 export type Metric = 'total' | 'perCapita' | 'perCapitaBurden'
+
+export type SpendingMetric = 'total' | 'perCapita'

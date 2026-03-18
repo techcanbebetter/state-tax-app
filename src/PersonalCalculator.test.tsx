@@ -5,9 +5,9 @@ import PersonalCalculator from './PersonalCalculator'
 import type { StateRecord } from './types'
 
 const states: StateRecord[] = [
-  { state: 'California', population: 39000000, totalRevenue: 300000, perCapitaTotal: 7, perCapitaIncome: 80000, breakdown: {} },
-  { state: 'Texas', population: 30000000, totalRevenue: 200000, perCapitaTotal: 6, perCapitaIncome: 60000, breakdown: {} },
-  { state: 'Florida', population: 22000000, totalRevenue: 150000, perCapitaTotal: 5, perCapitaIncome: 55000, breakdown: {} },
+  { state: 'California', population: 39000000, totalRevenue: 300000, perCapitaTotal: 7, perCapitaIncome: 80000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {} },
+  { state: 'Texas', population: 30000000, totalRevenue: 200000, perCapitaTotal: 6, perCapitaIncome: 60000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {} },
+  { state: 'Florida', population: 22000000, totalRevenue: 150000, perCapitaTotal: 5, perCapitaIncome: 55000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {} },
 ]
 
 describe('PersonalCalculator', () => {

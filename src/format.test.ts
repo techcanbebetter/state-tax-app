@@ -5,10 +5,20 @@ import type { StateRecord } from './types'
 const mockState: StateRecord = {
   state: 'California',
   population: 39000000,
-  totalRevenue: 350000000000, // $350B
-  perCapitaTotal: 12000,      // $12,000 per capita
-  perCapitaIncome: 45000,     // $45,000 annual income
+  totalRevenue: 350000000000,
+  perCapitaTotal: 12000,
+  perCapitaIncome: 45000,
   breakdown: { property: 100000000000, income_individual: 200000000000 },
+  spendingTotal: 280000000000,
+  spendingBreakdown: {
+    education: 90000000000,
+    public_welfare: 60000000000,
+    health_hospitals: 45000000000,
+    highways: 22000000000,
+    police_corrections: 18000000000,
+    natural_resources: 12000000000,
+    other: 33000000000,
+  },
 }
 
 describe('compactCurrency', () => {
