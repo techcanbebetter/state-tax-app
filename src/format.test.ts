@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { compactCurrency, formatMetricValue, getMetricValue } from './format'
+import { compactCurrency, formatMetricValue, getMetricValue, getSpendingMetricValue, formatSpendingMetricValue } from './format'
 import type { StateRecord } from './types'
 
 const mockState: StateRecord = {
@@ -58,5 +58,39 @@ describe('formatMetricValue', () => {
   })
   it('formats perCapitaBurden as percentage', () => {
     expect(formatMetricValue(0.2667, 'perCapitaBurden')).toBe('26.7% of income')
+  })
+})
+
+describe('compactCurrency — trillion support', () => {
+  it('formats values >= 1 trillion with T suffix', () => {
+    expect(compactCurrency(1_000_000_000_000)).toBe('$1.0T')
+  })
+  it('formats 2.5 trillion', () => {
+    expect(compactCurrency(2_500_000_000_000)).toBe('$2.5T')
+  })
+  it('still formats billions correctly', () => {
+    expect(compactCurrency(500_000_000_000)).toBe('$500.0B')
+  })
+})
+
+describe('getSpendingMetricValue', () => {
+  it('returns spendingTotal for total metric', () => {
+    expect(getSpendingMetricValue(mockState, 'total')).toBe(280000000000)
+  })
+  it('computes per-capita for perCapita metric', () => {
+    // 280000000000 / 39000000 ≈ 7179.49
+    expect(getSpendingMetricValue(mockState, 'perCapita')).toBeCloseTo(7179.49, 1)
+  })
+  it('returns 0 for perCapita when population is 0', () => {
+    expect(getSpendingMetricValue({ ...mockState, population: 0 }, 'perCapita')).toBe(0)
+  })
+})
+
+describe('formatSpendingMetricValue', () => {
+  it('formats total as compact currency', () => {
+    expect(formatSpendingMetricValue(280000000000, 'total')).toBe('$280.0B')
+  })
+  it('formats perCapita with / resident suffix', () => {
+    expect(formatSpendingMetricValue(7179, 'perCapita')).toBe('$7,179 / resident')
   })
 })
