@@ -75,21 +75,24 @@ function App() {
   }, [activeStates, view, revenueMetric, spendingMetric])
 
   return (
-    <main className="page">
-      <section className="hero">
-        <h1>State + Local Tax Comparison</h1>
-        <p className="hero-subtitle">
-          Discussed at{' '}
-          <a href="https://techcanbebetter.com" target="_blank" rel="noreferrer">
-            techcanbebetter.com
-          </a>
-        </p>
-        <p>
-          Compare state + local tax revenue and government spending across all 50 states.
-          Includes per-capita views, tax burden as a share of income, and spending by function.
-        </p>
-      </section>
+    <>
+      <header className="site-header">
+        <div className="site-header-inner">
+          <h1 className="site-title">State &amp; Local Budget Atlas</h1>
+          <p className="site-tagline">
+            Discussed at{' '}
+            <a href="https://techcanbebetter.com" target="_blank" rel="noreferrer">
+              techcanbebetter.com
+            </a>
+          </p>
+          <p className="site-desc">
+            Compare tax revenue and government spending across all 50 states and their localities.
+            Explore per-capita views, tax burden as a share of income, and spending by function.
+          </p>
+        </div>
+      </header>
 
+      <main className="page">
       {error && <section className="error">{error}</section>}
 
       {data && (
@@ -197,7 +200,8 @@ function App() {
           </section>
         </>
       )}
-    </main>
+      </main>
+    </>
   )
 }
 

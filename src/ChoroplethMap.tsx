@@ -33,6 +33,12 @@ export default function ChoroplethMap({ states, getValue, formatValue }: Choropl
     [states, getValue]
   )
 
+  const { domainMin, domainMax } = useMemo(() => {
+    if (!states.length) return { domainMin: 0, domainMax: 0 }
+    const values = states.map((s) => getValue(s))
+    return { domainMin: Math.min(...values), domainMax: Math.max(...values) }
+  }, [states, getValue])
+
   return (
     <div className="map-panel" style={{ position: 'relative' }}>
       <ComposableMap projection="geoAlbersUsa" style={{ width: '100%', height: 'auto' }}>
@@ -82,6 +88,19 @@ export default function ChoroplethMap({ states, getValue, formatValue }: Choropl
           <span>{tooltip.value}</span>
         </div>
       )}
+
+      <div className="map-legend">
+        <div className="map-legend-title">Color scale</div>
+        <div className="map-legend-bar">
+          {COLOR_RANGE.map((color, i) => (
+            <div key={i} className="map-legend-segment" style={{ background: color }} />
+          ))}
+        </div>
+        <div className="map-legend-ticks">
+          <span className="map-legend-tick">{formatValue(domainMin)}</span>
+          <span className="map-legend-tick">{formatValue(domainMax)}</span>
+        </div>
+      </div>
     </div>
   )
 }
