@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
-import type { MultiYearPayload, Metric } from './types'
-import { compactCurrency, currencyFormatter, formatMetricValue, getMetricValue, numberFormatter, TAX_COLORS } from './format'
-import ChoroplethMap from './ChoroplethMap'
-import PersonalCalculator from './PersonalCalculator'
+import type { MultiYearPayload, Metric, SpendingMetric } from './types'
+import { getMetricValue, getSpendingMetricValue } from './format'
+import RevenueView from './RevenueView'
+// SpendingView will be imported in Chunk 5
+// import SpendingView from './SpendingView'
 
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -13,9 +14,10 @@ const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
 function App() {
   const [data, setData] = useState<MultiYearPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [metric, setMetric] = useState<Metric>('total')
-  const [hoveredState, setHoveredState] = useState<string | null>(null)
   const [selectedYear, setSelectedYear] = useState<number | null>(null)
+  const [view, setView] = useState<'revenue' | 'spending'>('revenue')
+  const [revenueMetric, setRevenueMetric] = useState<Metric>('total')
+  const [spendingMetric, _setSpendingMetric] = useState<SpendingMetric>('total')
 
   useEffect(() => {
     const loadData = async () => {
@@ -25,10 +27,7 @@ function App() {
       for (const url of candidates) {
         try {
           const response = await fetch(url)
-          if (!response.ok) {
-            continue
-          }
-
+          if (!response.ok) continue
           const payload = (await response.json()) as MultiYearPayload
           setData(payload)
           setSelectedYear(payload.years[payload.years.length - 1].year)
@@ -54,32 +53,27 @@ function App() {
     return data?.years.find((y) => y.year === 2023)?.states ?? []
   }, [data])
 
-  const sortedStates = useMemo(() => {
-    return [...activeStates].sort((a, b) => {
-      return getMetricValue(b, metric) - getMetricValue(a, metric)
-    })
-  }, [activeStates, metric])
-
-  const maxMetricValue = useMemo(() => {
-    if (sortedStates.length === 0) return 0
-    return Math.max(...sortedStates.map((e) => getMetricValue(e, metric)))
-  }, [metric, sortedStates])
-
-  const topState = sortedStates[0]
-
   const lastRefreshedLabel = useMemo(() => {
     const raw = data?.metadata.generatedAt
-    if (!raw) {
-      return '—'
-    }
-
+    if (!raw) return '—'
     const parsed = new Date(raw)
-    if (Number.isNaN(parsed.getTime())) {
-      return '—'
-    }
-
+    if (Number.isNaN(parsed.getTime())) return '—'
     return dateTimeFormatter.format(parsed)
   }, [data])
+
+  // Top state card — view-aware
+  const { topStateName, topStateLabel } = useMemo(() => {
+    if (!activeStates.length) return { topStateName: '—', topStateLabel: '' }
+    if (view === 'revenue') {
+      const sorted = [...activeStates].sort((a, b) => getMetricValue(b, revenueMetric) - getMetricValue(a, revenueMetric))
+      const label = revenueMetric === 'total' ? 'Total' : revenueMetric === 'perCapita' ? 'Per capita' : '% of income'
+      return { topStateName: sorted[0]?.state ?? '—', topStateLabel: label }
+    } else {
+      const sorted = [...activeStates].sort((a, b) => getSpendingMetricValue(b, spendingMetric) - getSpendingMetricValue(a, spendingMetric))
+      const label = spendingMetric === 'total' ? 'Total spend' : 'Per capita spend'
+      return { topStateName: sorted[0]?.state ?? '—', topStateLabel: label }
+    }
+  }, [activeStates, view, revenueMetric, spendingMetric])
 
   return (
     <main className="page">
@@ -97,10 +91,27 @@ function App() {
         </p>
       </section>
 
-{error && <section className="error">{error}</section>}
+      {error && <section className="error">{error}</section>}
 
       {data && (
         <>
+          <div className="metric-toggle view-toggle" role="group" aria-label="View toggle">
+            <button
+              type="button"
+              className={view === 'revenue' ? 'active' : ''}
+              onClick={() => setView('revenue')}
+            >
+              Tax Revenue
+            </button>
+            <button
+              type="button"
+              className={view === 'spending' ? 'active' : ''}
+              onClick={() => setView('spending')}
+            >
+              Spending
+            </button>
+          </div>
+
           <section className="summary-grid">
             <article className="summary-card">
               <h2>Year</h2>
@@ -111,8 +122,8 @@ function App() {
               <p>Top {data.metadata.topN} states</p>
             </article>
             <article className="summary-card">
-              <h2>Top state ({metric === 'total' ? 'Total' : metric === 'perCapita' ? 'Per capita' : '% of income'})</h2>
-              <p>{topState?.state ?? '—'}</p>
+              <h2>Top state ({topStateLabel})</h2>
+              <p>{topStateName}</p>
             </article>
             <article className="summary-card">
               <h2>Last refreshed</h2>
@@ -133,148 +144,19 @@ function App() {
             ))}
           </div>
 
-          <div className="chart-map-row">
-            <section className="panel">
-              <div className="panel-header">
-                <h2>Compare totals across states</h2>
-                <div className="metric-toggle" role="group" aria-label="Metric toggle">
-                  <button
-                    className={metric === 'total' ? 'active' : ''}
-                    onClick={() => setMetric('total')}
-                    type="button"
-                  >
-                    Total
-                  </button>
-                  <button
-                    className={metric === 'perCapita' ? 'active' : ''}
-                    onClick={() => setMetric('perCapita')}
-                    type="button"
-                  >
-                    Per capita
-                  </button>
-                  <button
-                    className={metric === 'perCapitaBurden' ? 'active' : ''}
-                    onClick={() => setMetric('perCapitaBurden')}
-                    type="button"
-                  >
-                    % of income
-                  </button>
-                </div>
-              </div>
-
-              <div className="bar-list">
-                {sortedStates.map((entry) => {
-                  return (
-                    <article
-                      key={entry.state}
-                      className="bar-row"
-                      onMouseEnter={() => setHoveredState(entry.state)}
-                      onMouseLeave={() => setHoveredState(null)}
-                    >
-                      <header>
-                        <h3>{entry.state}</h3>
-                        <p>{formatMetricValue(getMetricValue(entry, metric), metric)}</p>
-                      </header>
-                      <div className="bar-track">
-                        {data.taxTypes.map((taxType) => {
-                          const breakdownRaw = entry.breakdown[taxType.key] ?? 0
-                          const segmentRaw =
-                            metric === 'total'
-                              ? breakdownRaw
-                              : metric === 'perCapita'
-                                ? breakdownRaw / entry.population
-                                : entry.perCapitaIncome > 0
-                                  ? (breakdownRaw / entry.population) / entry.perCapitaIncome
-                                  : 0
-                          const segmentWidth = maxMetricValue === 0 ? 0 : (segmentRaw / maxMetricValue) * 100
-                          return (
-                            <div
-                              key={taxType.key}
-                              className="bar-segment"
-                              style={{ width: `${segmentWidth}%`, background: TAX_COLORS[taxType.key] ?? '#9ca3af' }}
-                            />
-                          )
-                        })}
-                      </div>
-                      {hoveredState === entry.state && (
-                        <div className="bar-tooltip">
-                          {data.taxTypes.map((taxType) => {
-                            const breakdownRaw = entry.breakdown[taxType.key] ?? 0
-                            const tooltipValue =
-                              metric === 'total'
-                                ? compactCurrency(breakdownRaw)
-                                : metric === 'perCapita'
-                                  ? `${currencyFormatter.format(breakdownRaw / entry.population)} / resident`
-                                  : entry.perCapitaIncome > 0
-                                    ? `${((breakdownRaw / entry.population) / entry.perCapitaIncome * 100).toFixed(2)}% of income`
-                                    : '—'
-                            return (
-                              <div key={taxType.key} className="tooltip-row">
-                                <span className="tooltip-swatch" style={{ background: TAX_COLORS[taxType.key] ?? '#9ca3af' }} />
-                                <span className="tooltip-label">{taxType.label}</span>
-                                <span className="tooltip-value">{tooltipValue}</span>
-                              </div>
-                            )
-                          })}
-                        </div>
-                      )}
-                    </article>
-                  )
-                })}
-              </div>
-
-              <div className="tax-legend">
-                {data.taxTypes.map((taxType) => (
-                  <span key={taxType.key} className="legend-item">
-                    <span className="legend-swatch" style={{ background: TAX_COLORS[taxType.key] ?? '#9ca3af' }} />
-                    {taxType.label}
-                  </span>
-                ))}
-              </div>
-            </section>
-            <section className="panel map-panel-section">
-              <h2>Tax by geography</h2>
-              <ChoroplethMap
-                states={activeStates}
-                getValue={(s) => getMetricValue(s, metric)}
-                formatValue={(v) => formatMetricValue(v, metric)}
-              />
-            </section>
-          </div>
-
-          <PersonalCalculator states={states2023} />
-
-          <section className="panel">
-            <h2>Breakout by tax type</h2>
-            <div className="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>State</th>
-                    {data.taxTypes.map((taxType) => (
-                      <th key={taxType.key}>{taxType.label}</th>
-                    ))}
-                    <th>Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {sortedStates.map((entry) => (
-                    <tr key={entry.state}>
-                      <td>{entry.state}</td>
-                      {data.taxTypes.map((taxType) => (
-                        <td key={taxType.key}>{compactCurrency(entry.breakdown[taxType.key] ?? 0)}</td>
-                      ))}
-                      <td>{compactCurrency(entry.totalRevenue)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          {view === 'revenue' ? (
+            <RevenueView
+              data={data}
+              activeStates={activeStates}
+              states2023={states2023}
+              metric={revenueMetric}
+              setMetric={setRevenueMetric}
+            />
+          ) : (
+            <div className="panel" style={{ padding: '2rem', textAlign: 'center', color: '#6b7280' }}>
+              Spending view coming soon — SpendingView will be wired in Chunk 5.
             </div>
-            <p className="panel-footnote">
-              Population shown in source data and per-capita calculations use nominal dollars. Example: {topState?.state}{' '}
-              population {topState ? numberFormatter.format(topState.population) : '—'}.
-            </p>
-          </section>
+          )}
 
           <section className="panel sources-panel">
             <h2>Data Sources</h2>
