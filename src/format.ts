@@ -1,4 +1,4 @@
-import type { StateRecord, Metric, SpendingMetric } from './types'
+import type { StateRecord, Metric, SpendingMetric, SimpleMetric } from './types'
 
 export const currencyFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -59,6 +59,30 @@ export function getSpendingMetricValue(entry: StateRecord, metric: SpendingMetri
 }
 
 export function formatSpendingMetricValue(value: number, metric: SpendingMetric): string {
+  if (metric === 'total') return compactCurrency(value)
+  return `${currencyFormatter.format(value)} / resident`
+}
+
+export const REVENUE_BUCKET_COLORS: Record<string, string> = {
+  taxes:         '#1a2744',
+  federalGrants: '#d97706',
+  chargesFees:   '#059669',
+  trustUtility:  '#7c3aed',
+  misc:          '#9ca3af',
+}
+
+// Takes a pre-computed dollar value (not a StateRecord field directly).
+// Each view passes its own total: totalRevenueFull, federalGrants, ownSourceTotal, etc.
+export function getSimpleMetricValue(
+  rawValue: number,
+  metric: SimpleMetric,
+  population: number,
+): number {
+  if (metric === 'total') return rawValue
+  return population > 0 ? rawValue / population : 0
+}
+
+export function formatSimpleMetricValue(value: number, metric: SimpleMetric): string {
   if (metric === 'total') return compactCurrency(value)
   return `${currencyFormatter.format(value)} / resident`
 }

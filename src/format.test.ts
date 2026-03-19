@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { compactCurrency, formatMetricValue, getMetricValue, getSpendingMetricValue, formatSpendingMetricValue } from './format'
+import { compactCurrency, formatMetricValue, getMetricValue, getSpendingMetricValue, formatSpendingMetricValue, getSimpleMetricValue, formatSimpleMetricValue, REVENUE_BUCKET_COLORS } from './format'
 import type { StateRecord, SimpleMetric } from './types'
 
 const mockState: StateRecord = {
@@ -106,5 +106,40 @@ describe('SimpleMetric type', () => {
     const m2: SimpleMetric = 'perCapita'
     expect(m1).toBe('total')
     expect(m2).toBe('perCapita')
+  })
+})
+
+describe('getSimpleMetricValue', () => {
+  it('returns rawValue for total metric', () => {
+    expect(getSimpleMetricValue(500_000_000, 'total', 1_000_000)).toBe(500_000_000)
+  })
+
+  it('computes per-capita for perCapita metric', () => {
+    // 500_000_000 / 1_000_000 = 500
+    expect(getSimpleMetricValue(500_000_000, 'perCapita', 1_000_000)).toBe(500)
+  })
+
+  it('returns 0 for perCapita when population is 0', () => {
+    expect(getSimpleMetricValue(500_000_000, 'perCapita', 0)).toBe(0)
+  })
+})
+
+describe('formatSimpleMetricValue', () => {
+  it('formats total as compact currency', () => {
+    expect(formatSimpleMetricValue(500_000_000_000, 'total')).toBe('$500.0B')
+  })
+
+  it('formats perCapita with / resident suffix', () => {
+    expect(formatSimpleMetricValue(8500, 'perCapita')).toBe('$8,500 / resident')
+  })
+})
+
+describe('REVENUE_BUCKET_COLORS', () => {
+  it('has entries for all 5 bucket keys', () => {
+    expect(REVENUE_BUCKET_COLORS).toHaveProperty('taxes')
+    expect(REVENUE_BUCKET_COLORS).toHaveProperty('federalGrants')
+    expect(REVENUE_BUCKET_COLORS).toHaveProperty('chargesFees')
+    expect(REVENUE_BUCKET_COLORS).toHaveProperty('trustUtility')
+    expect(REVENUE_BUCKET_COLORS).toHaveProperty('misc')
   })
 })
