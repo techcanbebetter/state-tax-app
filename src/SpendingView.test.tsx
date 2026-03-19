@@ -154,8 +154,8 @@ describe('SpendingView', () => {
       />
     )
     expect(screen.getByRole('table')).toBeInTheDocument()
-    expect(screen.getByText('Education')).toBeInTheDocument()
-    expect(screen.getByText('Highways')).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: 'Education' })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: 'Highways' })).toBeInTheDocument()
   })
 
   it('shows "no spending data" message when spendingTypes is empty', () => {

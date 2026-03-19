@@ -120,14 +120,9 @@ export default function SpendingView({ data, activeStates, metric, setMetric }: 
 
           <div className="tax-legend">
             {data.spendingTypes.map((spendingType) => (
-              <span
-                key={spendingType.key}
-                className="legend-item"
-                data-label={spendingType.label}
-                title={spendingType.label}
-                aria-label={spendingType.label}
-              >
+              <span key={spendingType.key} className="legend-item">
                 <span className="legend-swatch" style={{ background: SPENDING_COLORS[spendingType.key] ?? '#9ca3af' }} />
+                {spendingType.label}
               </span>
             ))}
           </div>
