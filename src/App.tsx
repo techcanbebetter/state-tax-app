@@ -236,7 +236,8 @@ function App() {
               <h2>Tax by geography</h2>
               <ChoroplethMap
                 states={activeStates}
-                metric={metric}
+                getValue={(s) => getMetricValue(s, metric)}
+                formatValue={(v) => formatMetricValue(v, metric)}
               />
             </section>
           </div>

@@ -1,8 +1,7 @@
 import { useState, useMemo } from 'react'
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps'
 import { scaleQuantile } from 'd3-scale'
-import type { StateRecord, Metric } from './types'
-import { getMetricValue, formatMetricValue } from './format'
+import type { StateRecord } from './types'
 
 const GEO_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'
 
@@ -20,17 +19,18 @@ type TooltipState = {
 
 type ChoroplethMapProps = {
   states: StateRecord[]
-  metric: Metric
+  getValue: (s: StateRecord) => number
+  formatValue: (value: number) => string
 }
 
-export default function ChoroplethMap({ states, metric }: ChoroplethMapProps) {
+export default function ChoroplethMap({ states, getValue, formatValue }: ChoroplethMapProps) {
   const [tooltip, setTooltip] = useState<TooltipState>(null)
 
   const stateByName = useMemo(() => new Map(states.map((s) => [s.state, s])), [states])
 
   const colorScale = useMemo(
-    () => scaleQuantile<string>().domain(states.map((s) => getMetricValue(s, metric))).range(COLOR_RANGE),
-    [states, metric]
+    () => scaleQuantile<string>().domain(states.map((s) => getValue(s))).range(COLOR_RANGE),
+    [states, getValue]
   )
 
   return (
@@ -44,7 +44,7 @@ export default function ChoroplethMap({ states, metric }: ChoroplethMapProps) {
                 : null
               if (!name) return null
               const entry = stateByName.get(name)
-              const value = entry ? getMetricValue(entry, metric) : 0
+              const value = entry ? getValue(entry) : 0
 
               return (
                 <Geography
@@ -63,7 +63,7 @@ export default function ChoroplethMap({ states, metric }: ChoroplethMapProps) {
                     const rect = (e.currentTarget as SVGElement).closest('.map-panel')?.getBoundingClientRect()
                     setTooltip({
                       name,
-                      value: formatMetricValue(value, metric),
+                      value: formatValue(value),
                       x: e.clientX - (rect?.left ?? 0),
                       y: e.clientY - (rect?.top ?? 0),
                     })

@@ -2,8 +2,8 @@ import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import ChoroplethMap from './ChoroplethMap'
 import type { StateRecord } from './types'
+import { getMetricValue, formatMetricValue } from './format'
 
-// Mock react-simple-maps so tests don't make network requests.
 vi.mock('react-simple-maps', () => ({
   ComposableMap: ({ children }: { children: React.ReactNode }) => <svg>{children}</svg>,
   Geographies: ({
@@ -55,22 +55,34 @@ const states: StateRecord[] = [
 describe('ChoroplethMap', () => {
   it('renders an SVG container', () => {
     const { container } = render(
-      <ChoroplethMap states={states} metric="total" />
+      <ChoroplethMap
+        states={states}
+        getValue={(s) => getMetricValue(s, 'total')}
+        formatValue={(v) => formatMetricValue(v, 'total')}
+      />
     )
     expect(container.querySelector('svg')).toBeTruthy()
   })
 
   it('renders a geography element for each state in mock data', () => {
     render(
-      <ChoroplethMap states={states} metric="total" />
+      <ChoroplethMap
+        states={states}
+        getValue={(s) => getMetricValue(s, 'total')}
+        formatValue={(v) => formatMetricValue(v, 'total')}
+      />
     )
     expect(screen.getByTestId('geo-California')).toBeInTheDocument()
     expect(screen.getByTestId('geo-Texas')).toBeInTheDocument()
   })
 
-  it('renders without error when a different metric is used', () => {
+  it('renders without error when a spending getValue is used', () => {
     const { container } = render(
-      <ChoroplethMap states={states} metric="perCapita" />
+      <ChoroplethMap
+        states={states}
+        getValue={(s) => s.spendingTotal}
+        formatValue={(v) => `$${v}`}
+      />
     )
     expect(container.querySelector('svg')).toBeTruthy()
   })
