@@ -58,12 +58,13 @@ const mockStates: StateRecord[] = [
 ]
 
 describe('OwnSourceView', () => {
-  it('renders bars sorted by ownSourceTotal (totalRevenueFull - federalGrants) highest first', () => {
+  it('renders bars sorted by ownSourceTotal (chargesFees + trustUtility + miscRevenue) highest first', () => {
     render(
       <OwnSourceView activeStates={mockStates} metric="total" setMetric={() => undefined} />
     )
     const articles = screen.getAllByRole('article')
-    expect(articles[0]).toHaveTextContent('California') // 560B > 415B
+    // CA: 80B + 150B + 20B = 250B; TX: 60B + 110B + 15B = 185B
+    expect(articles[0]).toHaveTextContent('California')
     expect(articles[1]).toHaveTextContent('Texas')
   })
 
@@ -91,29 +92,29 @@ describe('OwnSourceView', () => {
     expect(container.querySelector('svg')).toBeTruthy()
   })
 
-  it('renders a breakdown table with 4 bucket column headers (no Federal Grants)', () => {
+  it('renders a breakdown table with 3 bucket column headers (no Taxes, no Federal Grants)', () => {
     render(
       <OwnSourceView activeStates={mockStates} metric="total" setMetric={() => undefined} />
     )
     expect(screen.getByRole('table')).toBeInTheDocument()
-    expect(screen.getByRole('columnheader', { name: 'Taxes' })).toBeInTheDocument()
     expect(screen.getByRole('columnheader', { name: 'Charges & Fees' })).toBeInTheDocument()
     expect(screen.getByRole('columnheader', { name: 'Trust & Utility' })).toBeInTheDocument()
     expect(screen.getByRole('columnheader', { name: 'Misc' })).toBeInTheDocument()
+    expect(screen.queryByRole('columnheader', { name: 'Taxes' })).toBeNull()
     expect(screen.queryByRole('columnheader', { name: 'Federal Grants' })).toBeNull()
   })
 
-  it('renders a color legend with 4 entries (no amber Federal Grants)', () => {
+  it('renders a color legend with 3 entries (no Taxes, no Federal Grants)', () => {
     const { container } = render(
       <OwnSourceView activeStates={mockStates} metric="total" setMetric={() => undefined} />
     )
     const legend = container.querySelector('.tax-legend')
     expect(legend).toBeTruthy()
-    expect(legend!.querySelectorAll('.legend-item')).toHaveLength(4)
+    expect(legend!.querySelectorAll('.legend-item')).toHaveLength(3)
   })
 
-  it('shows "no extended revenue data" when ownSourceTotal is 0 for all states', () => {
-    const noDataStates = mockStates.map((s) => ({ ...s, totalRevenueFull: 0, federalGrants: 0 }))
+  it('shows "no extended revenue data" when other revenue is 0 for all states', () => {
+    const noDataStates = mockStates.map((s) => ({ ...s, chargesFees: 0, trustUtility: 0, miscRevenue: 0 }))
     render(
       <OwnSourceView activeStates={noDataStates} metric="total" setMetric={() => undefined} />
     )

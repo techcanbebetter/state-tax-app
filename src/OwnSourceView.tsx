@@ -10,14 +10,13 @@ import {
 } from './format'
 import ChoroplethMap from './ChoroplethMap'
 
+const ownSourceTotal = (s: StateRecord) => s.chargesFees + s.trustUtility + s.miscRevenue
+
 const OWN_SOURCE_BUCKETS: { key: string; label: string; getValue: (s: StateRecord) => number }[] = [
-  { key: 'taxes',        label: 'Taxes',          getValue: (s) => Math.max(0, ownSourceTotal(s) - s.chargesFees - s.trustUtility - s.miscRevenue) },
   { key: 'chargesFees',  label: 'Charges & Fees',  getValue: (s) => s.chargesFees },
   { key: 'trustUtility', label: 'Trust & Utility', getValue: (s) => s.trustUtility },
   { key: 'misc',         label: 'Misc',            getValue: (s) => s.miscRevenue },
 ]
-
-const ownSourceTotal = (s: StateRecord) => Math.max(0, s.totalRevenueFull - s.federalGrants)
 
 type Props = {
   activeStates: StateRecord[]
@@ -28,7 +27,7 @@ type Props = {
 export default function OwnSourceView({ activeStates, metric, setMetric }: Props) {
   const [hoveredState, setHoveredState] = useState<string | null>(null)
 
-  const hasData = activeStates.some((s) => Math.max(0, s.totalRevenueFull - s.federalGrants) > 0)
+  const hasData = activeStates.some((s) => s.chargesFees + s.trustUtility + s.miscRevenue > 0)
 
   const sortedStates = useMemo(
     () =>
@@ -65,8 +64,8 @@ export default function OwnSourceView({ activeStates, metric, setMetric }: Props
       <div className="chart-map-row">
         <section className="panel">
           <div className="panel-header">
-            <h2>Non-federal revenue across states</h2>
-            <div className="metric-toggle" role="group" aria-label="Non-federal revenue metric toggle">
+            <h2>Other revenue across states</h2>
+            <div className="metric-toggle" role="group" aria-label="Other revenue metric toggle">
               <button className={metric === 'total' ? 'active' : ''} onClick={() => setMetric('total')} type="button">
                 Total
               </button>
@@ -143,7 +142,7 @@ export default function OwnSourceView({ activeStates, metric, setMetric }: Props
         </section>
 
         <section className="panel map-panel-section">
-          <h2>Non-federal revenue by geography</h2>
+          <h2>Other revenue by geography</h2>
           <ChoroplethMap
             states={activeStates}
             getValue={(s) => getSimpleMetricValue(ownSourceTotal(s), metric, s.population)}
@@ -153,7 +152,7 @@ export default function OwnSourceView({ activeStates, metric, setMetric }: Props
       </div>
 
       <section className="panel">
-        <h2>Breakout by non-federal revenue source</h2>
+        <h2>Breakout by other revenue source</h2>
         <div className="table-wrap">
           <table>
             <thead>
@@ -182,8 +181,8 @@ export default function OwnSourceView({ activeStates, metric, setMetric }: Props
           </table>
         </div>
         <p className="panel-footnote">
-          Non-federal revenue = total revenue minus federal grants. Includes taxes, charges & fees, insurance trust &
-          utility revenues, and miscellaneous revenue. Example: {topState?.state} population{' '}
+          Other revenue includes charges & fees, insurance trust & utility revenues, and miscellaneous revenue
+          (excludes taxes and federal grants). Example: {topState?.state} population{' '}
           {topState ? numberFormatter.format(topState.population) : '—'}.
         </p>
       </section>

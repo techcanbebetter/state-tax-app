@@ -19,7 +19,7 @@ function App() {
   const [data, setData] = useState<MultiYearPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [selectedYear, setSelectedYear] = useState<number | null>(null)
-  const [view, setView] = useState<View>('revenue')
+  const [view, setView] = useState<View>('totalRevenue')
   const [revenueMetric, setRevenueMetric] = useState<Metric>('total')
   const [spendingMetric, setSpendingMetric] = useState<SpendingMetric>('total')
   const [totalRevenueMetric, setTotalRevenueMetric] = useState<SimpleMetric>('total')
@@ -103,10 +103,10 @@ function App() {
       case 'ownSource': {
         const sorted = [...activeStates].sort(
           (a, b) =>
-            getSimpleMetricValue(Math.max(0, b.totalRevenueFull - b.federalGrants), ownSourceMetric, b.population) -
-            getSimpleMetricValue(Math.max(0, a.totalRevenueFull - a.federalGrants), ownSourceMetric, a.population),
+            getSimpleMetricValue(b.chargesFees + b.trustUtility + b.miscRevenue, ownSourceMetric, b.population) -
+            getSimpleMetricValue(a.chargesFees + a.trustUtility + a.miscRevenue, ownSourceMetric, a.population),
         )
-        const label = ownSourceMetric === 'total' ? 'Total non-federal' : 'Per capita non-federal'
+        const label = ownSourceMetric === 'total' ? 'Total other revenue' : 'Per capita other revenue'
         return { topStateName: sorted[0]?.state ?? '—', topStateLabel: label }
       }
     }
@@ -139,14 +139,14 @@ function App() {
               <button type="button" className={view === 'totalRevenue' ? 'active' : ''} onClick={() => setView('totalRevenue')}>
                 Total Revenue
               </button>
-              <button type="button" className={view === 'federalGrants' ? 'active' : ''} onClick={() => setView('federalGrants')}>
-                Federal Grants
-              </button>
               <button type="button" className={view === 'revenue' ? 'active' : ''} onClick={() => setView('revenue')}>
                 Tax Revenue
               </button>
               <button type="button" className={view === 'ownSource' ? 'active' : ''} onClick={() => setView('ownSource')}>
-                Non-Federal Revenue
+                Other Revenue
+              </button>
+              <button type="button" className={view === 'federalGrants' ? 'active' : ''} onClick={() => setView('federalGrants')}>
+                Federal Grants
               </button>
               <button type="button" className={view === 'spending' ? 'active' : ''} onClick={() => setView('spending')}>
                 Spending
