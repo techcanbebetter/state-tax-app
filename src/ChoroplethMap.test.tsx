@@ -39,6 +39,11 @@ const states: StateRecord[] = [
     breakdown: {},
     spendingTotal: 250000000,
     spendingBreakdown: {},
+    federalGrants: 0,
+    chargesFees: 0,
+    trustUtility: 0,
+    miscRevenue: 0,
+    totalRevenueFull: 0,
   },
   {
     state: 'Texas',
@@ -49,6 +54,11 @@ const states: StateRecord[] = [
     breakdown: {},
     spendingTotal: 150000000,
     spendingBreakdown: {},
+    federalGrants: 0,
+    chargesFees: 0,
+    trustUtility: 0,
+    miscRevenue: 0,
+    totalRevenueFull: 0,
   },
 ]
 
