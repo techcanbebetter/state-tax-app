@@ -12,7 +12,7 @@
       "Nominal dollars.",
       "Top states selected by population for the latest year."
     ],
-    "generatedAt": "2026-03-19T01:49:15.311Z"
+    "generatedAt": "2026-03-19T16:05:51.749Z"
   },
   "taxTypes": [
     {
@@ -101,7 +101,12 @@
             "police_corrections": 43047816000,
             "natural_resources": 14900094000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 1126077413000,
+          "federalGrants": 143262651000,
+          "chargesFees": 95343716000,
+          "miscRevenue": 32402971000,
+          "trustUtility": 356269419000
         },
         {
           "state": "New York",
@@ -126,7 +131,12 @@
             "police_corrections": 16807064000,
             "natural_resources": 3713069000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 604621162000,
+          "federalGrants": 102001168000,
+          "chargesFees": 32400457000,
+          "miscRevenue": 21616463000,
+          "trustUtility": 193401484000
         },
         {
           "state": "Texas",
@@ -149,7 +159,12 @@
             "police_corrections": 16226122000,
             "natural_resources": 5968860000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 453218265000,
+          "federalGrants": 93234834000,
+          "chargesFees": 44204512000,
+          "miscRevenue": 29051657000,
+          "trustUtility": 98782730000
         },
         {
           "state": "Illinois",
@@ -174,7 +189,12 @@
             "police_corrections": 8359317000,
             "natural_resources": 3281469000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 234636414000,
+          "federalGrants": 37096995000,
+          "chargesFees": 13774429000,
+          "miscRevenue": 9577981000,
+          "trustUtility": 55229841000
         },
         {
           "state": "Florida",
@@ -198,7 +218,12 @@
             "police_corrections": 15586256000,
             "natural_resources": 9042677000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 298300750000,
+          "federalGrants": 51835795000,
+          "chargesFees": 34361161000,
+          "miscRevenue": 22868637000,
+          "trustUtility": 69049887000
         },
         {
           "state": "Pennsylvania",
@@ -223,7 +248,12 @@
             "police_corrections": 8743913000,
             "natural_resources": 2065042000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 236015005000,
+          "federalGrants": 50966892000,
+          "chargesFees": 21708641000,
+          "miscRevenue": 11076963000,
+          "trustUtility": 42851885000
         },
         {
           "state": "New Jersey",
@@ -248,7 +278,12 @@
             "police_corrections": 6265832000,
             "natural_resources": 1333075000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 167553664000,
+          "federalGrants": 26249586000,
+          "chargesFees": 11144450000,
+          "miscRevenue": 8566587000,
+          "trustUtility": 29100487000
         },
         {
           "state": "Ohio",
@@ -273,7 +308,12 @@
             "police_corrections": 6139886000,
             "natural_resources": 2154740000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 204792629000,
+          "federalGrants": 39371159000,
+          "chargesFees": 18268077000,
+          "miscRevenue": 11009826000,
+          "trustUtility": 53643611000
         },
         {
           "state": "Massachusetts",
@@ -298,7 +338,12 @@
             "police_corrections": 4096383000,
             "natural_resources": 843144000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 144845777000,
+          "federalGrants": 30013960000,
+          "chargesFees": 8822046000,
+          "miscRevenue": 6472359000,
+          "trustUtility": 31313796000
         },
         {
           "state": "Virginia",
@@ -323,7 +368,12 @@
             "police_corrections": 6028091000,
             "natural_resources": 1489365000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 152976365000,
+          "federalGrants": 25023191000,
+          "chargesFees": 15674848000,
+          "miscRevenue": 6939438000,
+          "trustUtility": 33814673000
         },
         {
           "state": "North Carolina",
@@ -348,7 +398,12 @@
             "police_corrections": 6032240000,
             "natural_resources": 2145745000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 162712945000,
+          "federalGrants": 31394755000,
+          "chargesFees": 21834281000,
+          "miscRevenue": 6519460000,
+          "trustUtility": 33367359000
         },
         {
           "state": "Michigan",
@@ -373,7 +428,12 @@
             "police_corrections": 5360097000,
             "natural_resources": 1445397000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 163418119000,
+          "federalGrants": 32452807000,
+          "chargesFees": 18745717000,
+          "miscRevenue": 7225338000,
+          "trustUtility": 31268519000
         },
         {
           "state": "Georgia",
@@ -398,7 +458,12 @@
             "police_corrections": 5336164000,
             "natural_resources": 1579532000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 166567922000,
+          "federalGrants": 29073974000,
+          "chargesFees": 15664898000,
+          "miscRevenue": 5396518000,
+          "trustUtility": 52388785000
         },
         {
           "state": "Washington",
@@ -421,7 +486,12 @@
             "police_corrections": 4840711000,
             "natural_resources": 2840978000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 167624754000,
+          "federalGrants": 24437419000,
+          "chargesFees": 18322236000,
+          "miscRevenue": 5728577000,
+          "trustUtility": 48232776000
         },
         {
           "state": "Maryland",
@@ -446,7 +516,12 @@
             "police_corrections": 5131255000,
             "natural_resources": 2023927000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 111098193000,
+          "federalGrants": 21700447000,
+          "chargesFees": 7212100000,
+          "miscRevenue": 3980678000,
+          "trustUtility": 23744189000
         },
         {
           "state": "Minnesota",
@@ -471,7 +546,12 @@
             "police_corrections": 3724725000,
             "natural_resources": 2287354000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 135903404000,
+          "federalGrants": 17658038000,
+          "chargesFees": 8773505000,
+          "miscRevenue": 5217612000,
+          "trustUtility": 46628982000
         },
         {
           "state": "Colorado",
@@ -496,7 +576,12 @@
             "police_corrections": 3937885000,
             "natural_resources": 2651680000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 102888259000,
+          "federalGrants": 16483923000,
+          "chargesFees": 10949788000,
+          "miscRevenue": 4852071000,
+          "trustUtility": 24458435000
         },
         {
           "state": "Indiana",
@@ -521,7 +606,12 @@
             "police_corrections": 2954416000,
             "natural_resources": 1004033000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 102076571000,
+          "federalGrants": 23000361000,
+          "chargesFees": 12946377000,
+          "miscRevenue": 4482520000,
+          "trustUtility": 12374461000
         },
         {
           "state": "Connecticut",
@@ -546,7 +636,12 @@
             "police_corrections": 2186624000,
             "natural_resources": 453108000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 79734696000,
+          "federalGrants": 12904909000,
+          "chargesFees": 3533078000,
+          "miscRevenue": 2101288000,
+          "trustUtility": 20721281000
         },
         {
           "state": "Arizona",
@@ -571,7 +666,12 @@
             "police_corrections": 4709447000,
             "natural_resources": 1318367000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 107196859000,
+          "federalGrants": 27448006000,
+          "chargesFees": 7178234000,
+          "miscRevenue": 4559340000,
+          "trustUtility": 23415098000
         },
         {
           "state": "Wisconsin",
@@ -596,7 +696,12 @@
             "police_corrections": 3637940000,
             "natural_resources": 1494045000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 99066609000,
+          "federalGrants": 14981194000,
+          "chargesFees": 8781399000,
+          "miscRevenue": 5119997000,
+          "trustUtility": 23252758000
         },
         {
           "state": "Missouri",
@@ -621,7 +726,12 @@
             "police_corrections": 2998969000,
             "natural_resources": 1107562000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 94039119000,
+          "federalGrants": 16248317000,
+          "chargesFees": 7508800000,
+          "miscRevenue": 5395287000,
+          "trustUtility": 28211659000
         },
         {
           "state": "Tennessee",
@@ -646,7 +756,12 @@
             "police_corrections": 3539695000,
             "natural_resources": 1124420000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 97797813000,
+          "federalGrants": 18683280000,
+          "chargesFees": 9205860000,
+          "miscRevenue": 4421809000,
+          "trustUtility": 26990671000
         },
         {
           "state": "Oregon",
@@ -670,7 +785,12 @@
             "police_corrections": 3253662000,
             "natural_resources": 1507196000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 97530001000,
+          "federalGrants": 15457416000,
+          "chargesFees": 10379066000,
+          "miscRevenue": 4663353000,
+          "trustUtility": 29519685000
         },
         {
           "state": "South Carolina",
@@ -695,7 +815,12 @@
             "police_corrections": 2213841000,
             "natural_resources": 945554000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 76498254000,
+          "federalGrants": 13462851000,
+          "chargesFees": 13495015000,
+          "miscRevenue": 3720522000,
+          "trustUtility": 15682233000
         },
         {
           "state": "Louisiana",
@@ -720,7 +845,12 @@
             "police_corrections": 2492731000,
             "natural_resources": 1823955000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 78096010000,
+          "federalGrants": 21367408000,
+          "chargesFees": 6550624000,
+          "miscRevenue": 3403414000,
+          "trustUtility": 17669452000
         },
         {
           "state": "Kentucky",
@@ -745,7 +875,12 @@
             "police_corrections": 1741080000,
             "natural_resources": 752775000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 68669245000,
+          "federalGrants": 19264629000,
+          "chargesFees": 6851995000,
+          "miscRevenue": 2047555000,
+          "trustUtility": 14346205000
         },
         {
           "state": "Alabama",
@@ -770,7 +905,12 @@
             "police_corrections": 2388178000,
             "natural_resources": 727671000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 71618791000,
+          "federalGrants": 17000455000,
+          "chargesFees": 13063434000,
+          "miscRevenue": 3080697000,
+          "trustUtility": 8569648000
         },
         {
           "state": "Utah",
@@ -795,7 +935,12 @@
             "police_corrections": 1513704000,
             "natural_resources": 1117709000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 51757634000,
+          "federalGrants": 8790272000,
+          "chargesFees": 8919318000,
+          "miscRevenue": 2739699000,
+          "trustUtility": 7327163000
         },
         {
           "state": "Iowa",
@@ -820,7 +965,12 @@
             "police_corrections": 1439942000,
             "natural_resources": 971279000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 65487525000,
+          "federalGrants": 9170612000,
+          "chargesFees": 8352836000,
+          "miscRevenue": 2466009000,
+          "trustUtility": 19462584000
         },
         {
           "state": "Kansas",
@@ -845,7 +995,12 @@
             "police_corrections": 1704832000,
             "natural_resources": 622701000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 48590409000,
+          "federalGrants": 7138655000,
+          "chargesFees": 7407875000,
+          "miscRevenue": 2266015000,
+          "trustUtility": 8382582000
         },
         {
           "state": "Oklahoma",
@@ -870,7 +1025,12 @@
             "police_corrections": 1922442000,
             "natural_resources": 775487000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 58016399000,
+          "federalGrants": 11107446000,
+          "chargesFees": 6237497000,
+          "miscRevenue": 3785387000,
+          "trustUtility": 14368532000
         },
         {
           "state": "Arkansas",
@@ -895,7 +1055,12 @@
             "police_corrections": 1273102000,
             "natural_resources": 559511000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 54909980000,
+          "federalGrants": 11190391000,
+          "chargesFees": 4157616000,
+          "miscRevenue": 1754115000,
+          "trustUtility": 17376392000
         },
         {
           "state": "Nevada",
@@ -918,7 +1083,12 @@
             "police_corrections": 2336990000,
             "natural_resources": 1076907000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 54640609000,
+          "federalGrants": 7748955000,
+          "chargesFees": 4044680000,
+          "miscRevenue": 1992156000,
+          "trustUtility": 17383074000
         },
         {
           "state": "Mississippi",
@@ -943,7 +1113,12 @@
             "police_corrections": 1350893000,
             "natural_resources": 581926000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 48675317000,
+          "federalGrants": 11298021000,
+          "chargesFees": 6308692000,
+          "miscRevenue": 1419184000,
+          "trustUtility": 10938064000
         },
         {
           "state": "Nebraska",
@@ -968,7 +1143,12 @@
             "police_corrections": 1151904000,
             "natural_resources": 617971000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 35844475000,
+          "federalGrants": 6003446000,
+          "chargesFees": 3199184000,
+          "miscRevenue": 1771644000,
+          "trustUtility": 9635646000
         },
         {
           "state": "Hawaii",
@@ -993,7 +1173,12 @@
             "police_corrections": 799939000,
             "natural_resources": 488950000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 30904604000,
+          "federalGrants": 6159252000,
+          "chargesFees": 2233000000,
+          "miscRevenue": 2335626000,
+          "trustUtility": 8111993000
         },
         {
           "state": "Maine",
@@ -1018,7 +1203,12 @@
             "police_corrections": 616287000,
             "natural_resources": 251099000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 23620413000,
+          "federalGrants": 5055746000,
+          "chargesFees": 1545750000,
+          "miscRevenue": 703567000,
+          "trustUtility": 4781674000
         },
         {
           "state": "New Mexico",
@@ -1043,7 +1233,12 @@
             "police_corrections": 1558205000,
             "natural_resources": 669079000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 45803667000,
+          "federalGrants": 12600405000,
+          "chargesFees": 3209063000,
+          "miscRevenue": 3905744000,
+          "trustUtility": 10373281000
         },
         {
           "state": "Idaho",
@@ -1068,7 +1263,12 @@
             "police_corrections": 1029314000,
             "natural_resources": 546681000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 28060174000,
+          "federalGrants": 5423537000,
+          "chargesFees": 2930599000,
+          "miscRevenue": 919782000,
+          "trustUtility": 6571266000
         },
         {
           "state": "West Virginia",
@@ -1093,7 +1293,12 @@
             "police_corrections": 946813000,
             "natural_resources": 402323000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 29115891000,
+          "federalGrants": 7283239000,
+          "chargesFees": 2757242000,
+          "miscRevenue": 1867740000,
+          "trustUtility": 6548442000
         },
         {
           "state": "Rhode Island",
@@ -1118,7 +1323,12 @@
             "police_corrections": 745285000,
             "natural_resources": 153638000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 27276645000,
+          "federalGrants": 6629895000,
+          "chargesFees": 1466154000,
+          "miscRevenue": 987386000,
+          "trustUtility": 9540915000
         },
         {
           "state": "New Hampshire",
@@ -1142,7 +1352,12 @@
             "police_corrections": 705438000,
             "natural_resources": 149157000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 20516171000,
+          "federalGrants": 3821838000,
+          "chargesFees": 1389060000,
+          "miscRevenue": 1061687000,
+          "trustUtility": 3696416000
         },
         {
           "state": "Montana",
@@ -1166,7 +1381,12 @@
             "police_corrections": 659870000,
             "natural_resources": 489762000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 19060285000,
+          "federalGrants": 5531506000,
+          "chargesFees": 1214137000,
+          "miscRevenue": 734442000,
+          "trustUtility": 4111687000
         },
         {
           "state": "Vermont",
@@ -1191,7 +1411,12 @@
             "police_corrections": 432277000,
             "natural_resources": 224763000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 23972281000,
+          "federalGrants": 2785562000,
+          "chargesFees": 830443000,
+          "miscRevenue": 525526000,
+          "trustUtility": 12742556000
         },
         {
           "state": "Delaware",
@@ -1215,7 +1440,12 @@
             "police_corrections": 770659000,
             "natural_resources": 172621000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 22042456000,
+          "federalGrants": 5327825000,
+          "chargesFees": 1486882000,
+          "miscRevenue": 1459289000,
+          "trustUtility": 5217920000
         },
         {
           "state": "South Dakota",
@@ -1239,7 +1469,12 @@
             "police_corrections": 476599000,
             "natural_resources": 335643000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 16520517000,
+          "federalGrants": 2309847000,
+          "chargesFees": 912216000,
+          "miscRevenue": 823436000,
+          "trustUtility": 7139236000
         },
         {
           "state": "North Dakota",
@@ -1264,7 +1499,12 @@
             "police_corrections": 500897000,
             "natural_resources": 736006000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 17183582000,
+          "federalGrants": 3991177000,
+          "chargesFees": 1287291000,
+          "miscRevenue": 1394039000,
+          "trustUtility": 2814167000
         },
         {
           "state": "Alaska",
@@ -1288,7 +1528,12 @@
             "police_corrections": 785522000,
             "natural_resources": 490787000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 21444122000,
+          "federalGrants": 5593262000,
+          "chargesFees": 1571775000,
+          "miscRevenue": 3590597000,
+          "trustUtility": 5434833000
         },
         {
           "state": "Wyoming",
@@ -1311,7 +1556,12 @@
             "police_corrections": 434021000,
             "natural_resources": 370959000,
             "other": 0
-          }
+          },
+          "totalRevenueFull": 13914113000,
+          "federalGrants": 3437807000,
+          "chargesFees": 1996816000,
+          "miscRevenue": 1549947000,
+          "trustUtility": 1890258000
         }
       ]
     },
@@ -1342,7 +1592,12 @@
             "police_corrections": 45255520000,
             "natural_resources": 21817719000,
             "other": 305580391000
-          }
+          },
+          "totalRevenueFull": 886356597000,
+          "federalGrants": 161941684000,
+          "chargesFees": 106175111000,
+          "miscRevenue": 31719400000,
+          "trustUtility": 47767989000
         },
         {
           "state": "New York",
@@ -1368,7 +1623,12 @@
             "police_corrections": 17308292000,
             "natural_resources": 3931818000,
             "other": 179686343000
-          }
+          },
+          "totalRevenueFull": 489126415000,
+          "federalGrants": 119910453000,
+          "chargesFees": 35935046000,
+          "miscRevenue": 23686965000,
+          "trustUtility": 24832878000
         },
         {
           "state": "Texas",
@@ -1392,7 +1652,12 @@
             "police_corrections": 17221017000,
             "natural_resources": 5655391000,
             "other": 104338359000
-          }
+          },
+          "totalRevenueFull": 396312529000,
+          "federalGrants": 88990127000,
+          "chargesFees": 49104840000,
+          "miscRevenue": 27409620000,
+          "trustUtility": 37259244000
         },
         {
           "state": "Florida",
@@ -1417,7 +1682,12 @@
             "police_corrections": 16042164000,
             "natural_resources": 9952271000,
             "other": 76255104000
-          }
+          },
+          "totalRevenueFull": 269732812000,
+          "federalGrants": 63400621000,
+          "chargesFees": 38236890000,
+          "miscRevenue": 22368764000,
+          "trustUtility": 14982812000
         },
         {
           "state": "Illinois",
@@ -1443,7 +1713,12 @@
             "police_corrections": 8703758000,
             "natural_resources": 3631261000,
             "other": 77940806000
-          }
+          },
+          "totalRevenueFull": 215436305000,
+          "federalGrants": 50006208000,
+          "chargesFees": 15907831000,
+          "miscRevenue": 10181409000,
+          "trustUtility": 27528464000
         },
         {
           "state": "New Jersey",
@@ -1469,7 +1744,12 @@
             "police_corrections": 6684551000,
             "natural_resources": 1533134000,
             "other": 48348500000
-          }
+          },
+          "totalRevenueFull": 156595792000,
+          "federalGrants": 30874279000,
+          "chargesFees": 12819484000,
+          "miscRevenue": 8174472000,
+          "trustUtility": 2113248000
         },
         {
           "state": "Pennsylvania",
@@ -1495,7 +1775,12 @@
             "police_corrections": 9267534000,
             "natural_resources": 2273605000,
             "other": 57568424000
-          }
+          },
+          "totalRevenueFull": 200525877000,
+          "federalGrants": 50518397000,
+          "chargesFees": 23147224000,
+          "miscRevenue": 5978752000,
+          "trustUtility": 21384163000
         },
         {
           "state": "Ohio",
@@ -1521,7 +1806,12 @@
             "police_corrections": 6751011000,
             "natural_resources": 2182864000,
             "other": 47268744000
-          }
+          },
+          "totalRevenueFull": 167919070000,
+          "federalGrants": 43595040000,
+          "chargesFees": 20769804000,
+          "miscRevenue": 11482414000,
+          "trustUtility": 29910572000
         },
         {
           "state": "Massachusetts",
@@ -1547,7 +1837,12 @@
             "police_corrections": 4292622000,
             "natural_resources": 924957000,
             "other": 42661528000
-          }
+          },
+          "totalRevenueFull": 127183751000,
+          "federalGrants": 30048543000,
+          "chargesFees": 9727396000,
+          "miscRevenue": 6355841000,
+          "trustUtility": 17177545000
         },
         {
           "state": "Virginia",
@@ -1573,7 +1868,12 @@
             "police_corrections": 6482489000,
             "natural_resources": 1701241000,
             "other": 37211417000
-          }
+          },
+          "totalRevenueFull": 125205335000,
+          "federalGrants": 23431207000,
+          "chargesFees": 17756496000,
+          "miscRevenue": 7909602000,
+          "trustUtility": 6843516000
         },
         {
           "state": "Washington",
@@ -1597,7 +1897,12 @@
             "police_corrections": 4885340000,
             "natural_resources": 2994011000,
             "other": 47617098000
-          }
+          },
+          "totalRevenueFull": 139913841000,
+          "federalGrants": 28178292000,
+          "chargesFees": 20413888000,
+          "miscRevenue": 5073979000,
+          "trustUtility": 16627371000
         },
         {
           "state": "Georgia",
@@ -1623,7 +1928,12 @@
             "police_corrections": 6091391000,
             "natural_resources": 1743114000,
             "other": 35819939000
-          }
+          },
+          "totalRevenueFull": 129166540000,
+          "federalGrants": 26516170000,
+          "chargesFees": 18453742000,
+          "miscRevenue": 5314700000,
+          "trustUtility": 555642000
         },
         {
           "state": "North Carolina",
@@ -1649,7 +1959,12 @@
             "police_corrections": 6490165000,
             "natural_resources": 2379464000,
             "other": 43317754000
-          }
+          },
+          "totalRevenueFull": 148471361000,
+          "federalGrants": 36222371000,
+          "chargesFees": 23692935000,
+          "miscRevenue": 7207376000,
+          "trustUtility": -11814000
         },
         {
           "state": "Michigan",
@@ -1675,7 +1990,12 @@
             "police_corrections": 5539557000,
             "natural_resources": 1606539000,
             "other": 53098849000
-          }
+          },
+          "totalRevenueFull": 146171587000,
+          "federalGrants": 37439964000,
+          "chargesFees": 20068477000,
+          "miscRevenue": 6498013000,
+          "trustUtility": 9447839000
         },
         {
           "state": "Maryland",
@@ -1701,7 +2021,12 @@
             "police_corrections": 5451914000,
             "natural_resources": 2062686000,
             "other": 33013728000
-          }
+          },
+          "totalRevenueFull": 99520212000,
+          "federalGrants": 25199518000,
+          "chargesFees": 8450911000,
+          "miscRevenue": 4694356000,
+          "trustUtility": 2724844000
         },
         {
           "state": "Minnesota",
@@ -1727,7 +2052,12 @@
             "police_corrections": 3778731000,
             "natural_resources": 2464768000,
             "other": 30040940000
-          }
+          },
+          "totalRevenueFull": 99261739000,
+          "federalGrants": 21912683000,
+          "chargesFees": 9583035000,
+          "miscRevenue": 4462908000,
+          "trustUtility": 3804751000
         },
         {
           "state": "Colorado",
@@ -1753,7 +2083,12 @@
             "police_corrections": 4059878000,
             "natural_resources": 2670111000,
             "other": 30797317000
-          }
+          },
+          "totalRevenueFull": 91912724000,
+          "federalGrants": 18080929000,
+          "chargesFees": 13074645000,
+          "miscRevenue": 5555289000,
+          "trustUtility": 19282397000
         },
         {
           "state": "Indiana",
@@ -1779,7 +2114,12 @@
             "police_corrections": 3164414000,
             "natural_resources": 1009661000,
             "other": 26239256000
-          }
+          },
+          "totalRevenueFull": 99343419000,
+          "federalGrants": 25359267000,
+          "chargesFees": 13550474000,
+          "miscRevenue": 4319611000,
+          "trustUtility": 2170875000
         },
         {
           "state": "Arizona",
@@ -1805,7 +2145,12 @@
             "police_corrections": 5378049000,
             "natural_resources": 1380287000,
             "other": 25701228000
-          }
+          },
+          "totalRevenueFull": 101823946000,
+          "federalGrants": 32733921000,
+          "chargesFees": 8204586000,
+          "miscRevenue": 4025341000,
+          "trustUtility": 10495998000
         },
         {
           "state": "Connecticut",
@@ -1831,7 +2176,12 @@
             "police_corrections": 2065998000,
             "natural_resources": 551543000,
             "other": 24209415000
-          }
+          },
+          "totalRevenueFull": 59416614000,
+          "federalGrants": 12192562000,
+          "chargesFees": 3943037000,
+          "miscRevenue": 1720341000,
+          "trustUtility": -654819000
         },
         {
           "state": "Wisconsin",
@@ -1857,7 +2207,12 @@
             "police_corrections": 3940232000,
             "natural_resources": 1412147000,
             "other": 27872808000
-          }
+          },
+          "totalRevenueFull": 83570234000,
+          "federalGrants": 17456814000,
+          "chargesFees": 9474116000,
+          "miscRevenue": 5143933000,
+          "trustUtility": 28251836000
         },
         {
           "state": "Tennessee",
@@ -1883,7 +2238,12 @@
             "police_corrections": 3835389000,
             "natural_resources": 1537357000,
             "other": 24756462000
-          }
+          },
+          "totalRevenueFull": 85533754000,
+          "federalGrants": 20714111000,
+          "chargesFees": 10287638000,
+          "miscRevenue": 2931255000,
+          "trustUtility": 9023945000
         },
         {
           "state": "Missouri",
@@ -1909,7 +2269,12 @@
             "police_corrections": 3084108000,
             "natural_resources": 1299369000,
             "other": 20164989000
-          }
+          },
+          "totalRevenueFull": 77108670000,
+          "federalGrants": 21715343000,
+          "chargesFees": 9753402000,
+          "miscRevenue": 4082146000,
+          "trustUtility": 5952477000
         },
         {
           "state": "Oregon",
@@ -1935,7 +2300,12 @@
             "police_corrections": 3471362000,
             "natural_resources": 1874592000,
             "other": 22261679000
-          }
+          },
+          "totalRevenueFull": 78859731000,
+          "federalGrants": 19974802000,
+          "chargesFees": 11294248000,
+          "miscRevenue": 4891406000,
+          "trustUtility": 10503874000
         },
         {
           "state": "South Carolina",
@@ -1961,7 +2331,12 @@
             "police_corrections": 2501458000,
             "natural_resources": 1203332000,
             "other": 18331320000
-          }
+          },
+          "totalRevenueFull": 75565492000,
+          "federalGrants": 18433846000,
+          "chargesFees": 14562472000,
+          "miscRevenue": 3842005000,
+          "trustUtility": 6603862000
         },
         {
           "state": "Louisiana",
@@ -1987,7 +2362,12 @@
             "police_corrections": 3226650000,
             "natural_resources": 1956819000,
             "other": 20195046000
-          }
+          },
+          "totalRevenueFull": 67373608000,
+          "federalGrants": 21880920000,
+          "chargesFees": 7510934000,
+          "miscRevenue": 3645447000,
+          "trustUtility": -13669000
         },
         {
           "state": "Alabama",
@@ -2013,7 +2393,12 @@
             "police_corrections": 2496572000,
             "natural_resources": 736491000,
             "other": 19111946000
-          }
+          },
+          "totalRevenueFull": 74031019000,
+          "federalGrants": 20231662000,
+          "chargesFees": 13935142000,
+          "miscRevenue": 2696546000,
+          "trustUtility": 426820000
         },
         {
           "state": "Kentucky",
@@ -2039,7 +2424,12 @@
             "police_corrections": 2088106000,
             "natural_resources": 889548000,
             "other": 16138311000
-          }
+          },
+          "totalRevenueFull": 64388839000,
+          "federalGrants": 22085818000,
+          "chargesFees": 8329844000,
+          "miscRevenue": 2268206000,
+          "trustUtility": 1487901000
         },
         {
           "state": "Utah",
@@ -2065,7 +2455,12 @@
             "police_corrections": 1788392000,
             "natural_resources": 1283544000,
             "other": 14963785000
-          }
+          },
+          "totalRevenueFull": 51287296000,
+          "federalGrants": 10158118000,
+          "chargesFees": 9898556000,
+          "miscRevenue": 2517407000,
+          "trustUtility": 9668387000
         },
         {
           "state": "Iowa",
@@ -2091,7 +2486,12 @@
             "police_corrections": 1515915000,
             "natural_resources": 1070252000,
             "other": 13458555000
-          }
+          },
+          "totalRevenueFull": 53106974000,
+          "federalGrants": 11295978000,
+          "chargesFees": 10038202000,
+          "miscRevenue": 2586833000,
+          "trustUtility": 1943420000
         },
         {
           "state": "Oklahoma",
@@ -2117,7 +2517,12 @@
             "police_corrections": 1896318000,
             "natural_resources": 783314000,
             "other": 12858662000
-          }
+          },
+          "totalRevenueFull": 54181232000,
+          "federalGrants": 15305305000,
+          "chargesFees": 6405432000,
+          "miscRevenue": 4025794000,
+          "trustUtility": -70578000
         },
         {
           "state": "Nevada",
@@ -2141,7 +2546,12 @@
             "police_corrections": 2554323000,
             "natural_resources": 1095046000,
             "other": 13227822000
-          }
+          },
+          "totalRevenueFull": 46814462000,
+          "federalGrants": 10714279000,
+          "chargesFees": 3916018000,
+          "miscRevenue": 1824069000,
+          "trustUtility": 1547633000
         },
         {
           "state": "Kansas",
@@ -2167,7 +2577,12 @@
             "police_corrections": 1611878000,
             "natural_resources": 641027000,
             "other": 12191530000
-          }
+          },
+          "totalRevenueFull": 45789232000,
+          "federalGrants": 8794551000,
+          "chargesFees": 7999526000,
+          "miscRevenue": 2380959000,
+          "trustUtility": 2533471000
         },
         {
           "state": "New Mexico",
@@ -2193,7 +2608,12 @@
             "police_corrections": 1693973000,
             "natural_resources": 783345000,
             "other": 11855352000
-          }
+          },
+          "totalRevenueFull": 47516802000,
+          "federalGrants": 13421271000,
+          "chargesFees": 5076434000,
+          "miscRevenue": 6599273000,
+          "trustUtility": 1460891000
         },
         {
           "state": "Arkansas",
@@ -2219,7 +2639,12 @@
             "police_corrections": 1379783000,
             "natural_resources": 670214000,
             "other": 12326554000
-          }
+          },
+          "totalRevenueFull": 42813862000,
+          "federalGrants": 13641371000,
+          "chargesFees": 4349577000,
+          "miscRevenue": 1855095000,
+          "trustUtility": 198595000
         },
         {
           "state": "Mississippi",
@@ -2245,7 +2670,12 @@
             "police_corrections": 1338479000,
             "natural_resources": 624489000,
             "other": 11249574000
-          }
+          },
+          "totalRevenueFull": 41444498000,
+          "federalGrants": 12267324000,
+          "chargesFees": 6753013000,
+          "miscRevenue": 1473602000,
+          "trustUtility": -1357230000
         },
         {
           "state": "Hawaii",
@@ -2271,7 +2701,12 @@
             "police_corrections": 775793000,
             "natural_resources": 506366000,
             "other": 8182293000
-          }
+          },
+          "totalRevenueFull": 25581400000,
+          "federalGrants": 5585436000,
+          "chargesFees": 2686065000,
+          "miscRevenue": 2262666000,
+          "trustUtility": 1360798000
         },
         {
           "state": "Nebraska",
@@ -2297,7 +2732,12 @@
             "police_corrections": 1258446000,
             "natural_resources": 666477000,
             "other": 8758554000
-          }
+          },
+          "totalRevenueFull": 33470200000,
+          "federalGrants": 6704898000,
+          "chargesFees": 4306038000,
+          "miscRevenue": 1440648000,
+          "trustUtility": 5461501000
         },
         {
           "state": "Idaho",
@@ -2323,7 +2763,12 @@
             "police_corrections": 1104393000,
             "natural_resources": 652262000,
             "other": 7015994000
-          }
+          },
+          "totalRevenueFull": 24239409000,
+          "federalGrants": 5600847000,
+          "chargesFees": 3394219000,
+          "miscRevenue": 1105757000,
+          "trustUtility": -5256000
         },
         {
           "state": "Maine",
@@ -2349,7 +2794,12 @@
             "police_corrections": 646390000,
             "natural_resources": 319903000,
             "other": 6218778000
-          }
+          },
+          "totalRevenueFull": 20356070000,
+          "federalGrants": 5666935000,
+          "chargesFees": 1644620000,
+          "miscRevenue": 605596000,
+          "trustUtility": 746505000
         },
         {
           "state": "West Virginia",
@@ -2375,7 +2825,12 @@
             "police_corrections": 877699000,
             "natural_resources": 482792000,
             "other": 7413246000
-          }
+          },
+          "totalRevenueFull": 24673023000,
+          "federalGrants": 8387602000,
+          "chargesFees": 3054374000,
+          "miscRevenue": 1050642000,
+          "trustUtility": -449784000
         },
         {
           "state": "New Hampshire",
@@ -2400,7 +2855,12 @@
             "police_corrections": 769543000,
             "natural_resources": 216719000,
             "other": 5668037000
-          }
+          },
+          "totalRevenueFull": 18095831000,
+          "federalGrants": 4126033000,
+          "chargesFees": 1496433000,
+          "miscRevenue": 1152281000,
+          "trustUtility": 584572000
         },
         {
           "state": "Delaware",
@@ -2425,7 +2885,12 @@
             "police_corrections": 890017000,
             "natural_resources": 221404000,
             "other": 4956994000
-          }
+          },
+          "totalRevenueFull": 17564862000,
+          "federalGrants": 4111004000,
+          "chargesFees": 1699056000,
+          "miscRevenue": 1421937000,
+          "trustUtility": -1150300000
         },
         {
           "state": "Rhode Island",
@@ -2451,7 +2916,12 @@
             "police_corrections": 846145000,
             "natural_resources": 193545000,
             "other": 5322063000
-          }
+          },
+          "totalRevenueFull": 17721591000,
+          "federalGrants": 5580515000,
+          "chargesFees": 1673656000,
+          "miscRevenue": 896472000,
+          "trustUtility": 1206459000
         },
         {
           "state": "North Dakota",
@@ -2477,7 +2947,12 @@
             "police_corrections": 478459000,
             "natural_resources": 717205000,
             "other": 5268033000
-          }
+          },
+          "totalRevenueFull": 16965433000,
+          "federalGrants": 2818948000,
+          "chargesFees": 1472185000,
+          "miscRevenue": 3015382000,
+          "trustUtility": 459978000
         },
         {
           "state": "Montana",
@@ -2502,7 +2977,12 @@
             "police_corrections": 692822000,
             "natural_resources": 489839000,
             "other": 3614589000
-          }
+          },
+          "totalRevenueFull": 15491607000,
+          "federalGrants": 4657041000,
+          "chargesFees": 1346761000,
+          "miscRevenue": 873927000,
+          "trustUtility": 326785000
         },
         {
           "state": "Vermont",
@@ -2528,7 +3008,12 @@
             "police_corrections": 391932000,
             "natural_resources": 222208000,
             "other": 4024192000
-          }
+          },
+          "totalRevenueFull": 13501621000,
+          "federalGrants": 4239087000,
+          "chargesFees": 910433000,
+          "miscRevenue": 471633000,
+          "trustUtility": 218633000
         },
         {
           "state": "Alaska",
@@ -2553,7 +3038,12 @@
             "police_corrections": 892791000,
             "natural_resources": 575668000,
             "other": 6554638000
-          }
+          },
+          "totalRevenueFull": 17260134000,
+          "federalGrants": 6150474000,
+          "chargesFees": 1681914000,
+          "miscRevenue": 2445829000,
+          "trustUtility": -235702000
         },
         {
           "state": "South Dakota",
@@ -2578,7 +3068,12 @@
             "police_corrections": 504574000,
             "natural_resources": 411882000,
             "other": 3130683000
-          }
+          },
+          "totalRevenueFull": 11719215000,
+          "federalGrants": 3790352000,
+          "chargesFees": 970718000,
+          "miscRevenue": 788347000,
+          "trustUtility": 754537000
         },
         {
           "state": "Wyoming",
@@ -2602,7 +3097,12 @@
             "police_corrections": 455176000,
             "natural_resources": 427493000,
             "other": 3884938000
-          }
+          },
+          "totalRevenueFull": 13374130000,
+          "federalGrants": 3940965000,
+          "chargesFees": 2190516000,
+          "miscRevenue": 1193772000,
+          "trustUtility": 2663657000
         }
       ]
     },
@@ -2633,7 +3133,12 @@
             "police_corrections": 47342922000,
             "natural_resources": 20505253000,
             "other": 330299164000
-          }
+          },
+          "totalRevenueFull": 874063154000,
+          "federalGrants": 156329077000,
+          "chargesFees": 113919177000,
+          "miscRevenue": 46318277000,
+          "trustUtility": 184276954000
         },
         {
           "state": "New York",
@@ -2659,7 +3164,12 @@
             "police_corrections": 18122318000,
             "natural_resources": 4317897000,
             "other": 189352978000
-          }
+          },
+          "totalRevenueFull": 490035053000,
+          "federalGrants": 113360418000,
+          "chargesFees": 38947466000,
+          "miscRevenue": 23202631000,
+          "trustUtility": 57266001000
         },
         {
           "state": "Texas",
@@ -2683,7 +3193,12 @@
             "police_corrections": 17811964000,
             "natural_resources": 6768020000,
             "other": 113677444000
-          }
+          },
+          "totalRevenueFull": 416551166000,
+          "federalGrants": 84250024000,
+          "chargesFees": 53423540000,
+          "miscRevenue": 32675185000,
+          "trustUtility": 39464380000
         },
         {
           "state": "Florida",
@@ -2708,7 +3223,12 @@
             "police_corrections": 17569421000,
             "natural_resources": 12030050000,
             "other": 95921098000
-          }
+          },
+          "totalRevenueFull": 290784902000,
+          "federalGrants": 61848631000,
+          "chargesFees": 44213612000,
+          "miscRevenue": 26411541000,
+          "trustUtility": 32249287000
         },
         {
           "state": "Illinois",
@@ -2734,7 +3254,12 @@
             "police_corrections": 9161669000,
             "natural_resources": 4237337000,
             "other": 79355460000
-          }
+          },
+          "totalRevenueFull": 218114758000,
+          "federalGrants": 42857635000,
+          "chargesFees": 17405606000,
+          "miscRevenue": 12351070000,
+          "trustUtility": 12329411000
         },
         {
           "state": "Pennsylvania",
@@ -2760,7 +3285,12 @@
             "police_corrections": 9724333000,
             "natural_resources": 2604150000,
             "other": 61257190000
-          }
+          },
+          "totalRevenueFull": 213171539000,
+          "federalGrants": 55015765000,
+          "chargesFees": 23300583000,
+          "miscRevenue": 9854886000,
+          "trustUtility": 9748437000
         },
         {
           "state": "New Jersey",
@@ -2786,7 +3316,12 @@
             "police_corrections": 7084420000,
             "natural_resources": 1423342000,
             "other": 48979703000
-          }
+          },
+          "totalRevenueFull": 160643617000,
+          "federalGrants": 32252692000,
+          "chargesFees": 14189831000,
+          "miscRevenue": 9357235000,
+          "trustUtility": 18330532000
         },
         {
           "state": "Ohio",
@@ -2812,7 +3347,12 @@
             "police_corrections": 6842184000,
             "natural_resources": 2333345000,
             "other": 49542023000
-          }
+          },
+          "totalRevenueFull": 170735990000,
+          "federalGrants": 40860465000,
+          "chargesFees": 22676934000,
+          "miscRevenue": 12756720000,
+          "trustUtility": 9224825000
         },
         {
           "state": "Massachusetts",
@@ -2838,7 +3378,12 @@
             "police_corrections": 4599414000,
             "natural_resources": 1062817000,
             "other": 45230974000
-          }
+          },
+          "totalRevenueFull": 127998231000,
+          "federalGrants": 28754679000,
+          "chargesFees": 10318668000,
+          "miscRevenue": 8165611000,
+          "trustUtility": 10641783000
         },
         {
           "state": "Virginia",
@@ -2864,7 +3409,12 @@
             "police_corrections": 7282092000,
             "natural_resources": 1934340000,
             "other": 41335421000
-          }
+          },
+          "totalRevenueFull": 133576102000,
+          "federalGrants": 24967215000,
+          "chargesFees": 19581200000,
+          "miscRevenue": 9456253000,
+          "trustUtility": 14936044000
         },
         {
           "state": "Washington",
@@ -2889,7 +3439,12 @@
             "police_corrections": 5418444000,
             "natural_resources": 3675264000,
             "other": 51014525000
-          }
+          },
+          "totalRevenueFull": 147583745000,
+          "federalGrants": 28049139000,
+          "chargesFees": 21769400000,
+          "miscRevenue": 7005850000,
+          "trustUtility": 25172647000
         },
         {
           "state": "Georgia",
@@ -2915,7 +3470,12 @@
             "police_corrections": 6644262000,
             "natural_resources": 2056197000,
             "other": 40956516000
-          }
+          },
+          "totalRevenueFull": 138885325000,
+          "federalGrants": 31093601000,
+          "chargesFees": 19558906000,
+          "miscRevenue": 6857731000,
+          "trustUtility": 21308869000
         },
         {
           "state": "North Carolina",
@@ -2941,7 +3501,12 @@
             "police_corrections": 6848965000,
             "natural_resources": 2806266000,
             "other": 43909774000
-          }
+          },
+          "totalRevenueFull": 150066525000,
+          "federalGrants": 32829759000,
+          "chargesFees": 25834075000,
+          "miscRevenue": 8028034000,
+          "trustUtility": 14821881000
         },
         {
           "state": "Michigan",
@@ -2967,7 +3532,12 @@
             "police_corrections": 5872171000,
             "natural_resources": 2117416000,
             "other": 57062937000
-          }
+          },
+          "totalRevenueFull": 153881611000,
+          "federalGrants": 36403186000,
+          "chargesFees": 22459048000,
+          "miscRevenue": 8351259000,
+          "trustUtility": 14246150000
         },
         {
           "state": "Maryland",
@@ -2993,7 +3563,12 @@
             "police_corrections": 6044401000,
             "natural_resources": 2602632000,
             "other": 33584690000
-          }
+          },
+          "totalRevenueFull": 99654454000,
+          "federalGrants": 22959315000,
+          "chargesFees": 8414112000,
+          "miscRevenue": 5442477000,
+          "trustUtility": 7418752000
         },
         {
           "state": "Minnesota",
@@ -3019,7 +3594,12 @@
             "police_corrections": 4142387000,
             "natural_resources": 2588502000,
             "other": 31282993000
-          }
+          },
+          "totalRevenueFull": 100645148000,
+          "federalGrants": 21355954000,
+          "chargesFees": 10121991000,
+          "miscRevenue": 5208958000,
+          "trustUtility": 13610314000
         },
         {
           "state": "Indiana",
@@ -3045,7 +3625,12 @@
             "police_corrections": 3429141000,
             "natural_resources": 1170898000,
             "other": 27820295000
-          }
+          },
+          "totalRevenueFull": 102844762000,
+          "federalGrants": 26005704000,
+          "chargesFees": 13729076000,
+          "miscRevenue": 4366298000,
+          "trustUtility": 6276390000
         },
         {
           "state": "Colorado",
@@ -3071,7 +3656,12 @@
             "police_corrections": 4238591000,
             "natural_resources": 3116412000,
             "other": 31994048000
-          }
+          },
+          "totalRevenueFull": 90731381000,
+          "federalGrants": 17201332000,
+          "chargesFees": 14244809000,
+          "miscRevenue": 6378775000,
+          "trustUtility": -932444000
         },
         {
           "state": "Arizona",
@@ -3097,7 +3687,12 @@
             "police_corrections": 5607940000,
             "natural_resources": 1780360000,
             "other": 27819994000
-          }
+          },
+          "totalRevenueFull": 103005511000,
+          "federalGrants": 31725443000,
+          "chargesFees": 8713641000,
+          "miscRevenue": 5295254000,
+          "trustUtility": 15381490000
         },
         {
           "state": "Wisconsin",
@@ -3123,7 +3718,12 @@
             "police_corrections": 4134398000,
             "natural_resources": 1679526000,
             "other": 28498029000
-          }
+          },
+          "totalRevenueFull": 86778145000,
+          "federalGrants": 17206316000,
+          "chargesFees": 10492221000,
+          "miscRevenue": 5928786000,
+          "trustUtility": -14517603000
         },
         {
           "state": "Tennessee",
@@ -3149,7 +3749,12 @@
             "police_corrections": 4263085000,
             "natural_resources": 1544989000,
             "other": 26856701000
-          }
+          },
+          "totalRevenueFull": 90585501000,
+          "federalGrants": 21493219000,
+          "chargesFees": 10985380000,
+          "miscRevenue": 3843999000,
+          "trustUtility": 15899553000
         },
         {
           "state": "Connecticut",
@@ -3175,7 +3780,12 @@
             "police_corrections": 2149347000,
             "natural_resources": 550099000,
             "other": 24316097000
-          }
+          },
+          "totalRevenueFull": 58538656000,
+          "federalGrants": 12616730000,
+          "chargesFees": 4082777000,
+          "miscRevenue": 2004580000,
+          "trustUtility": 7551801000
         },
         {
           "state": "Missouri",
@@ -3201,7 +3811,12 @@
             "police_corrections": 3473395000,
             "natural_resources": 1294433000,
             "other": 20738714000
-          }
+          },
+          "totalRevenueFull": 83200498000,
+          "federalGrants": 22607307000,
+          "chargesFees": 11080887000,
+          "miscRevenue": 5497038000,
+          "trustUtility": 11070804000
         },
         {
           "state": "Oregon",
@@ -3227,7 +3842,12 @@
             "police_corrections": 3732139000,
             "natural_resources": 2057891000,
             "other": 25620361000
-          }
+          },
+          "totalRevenueFull": 84663914000,
+          "federalGrants": 19321610000,
+          "chargesFees": 12451343000,
+          "miscRevenue": 6336369000,
+          "trustUtility": 12304814000
         },
         {
           "state": "Louisiana",
@@ -3253,7 +3873,12 @@
             "police_corrections": 3353645000,
             "natural_resources": 2056623000,
             "other": 21107021000
-          }
+          },
+          "totalRevenueFull": 73518031000,
+          "federalGrants": 23749309000,
+          "chargesFees": 7884080000,
+          "miscRevenue": 5209048000,
+          "trustUtility": 7627667000
         },
         {
           "state": "South Carolina",
@@ -3279,7 +3904,12 @@
             "police_corrections": 2715921000,
             "natural_resources": 1404733000,
             "other": 21648248000
-          }
+          },
+          "totalRevenueFull": 78475773000,
+          "federalGrants": 18255941000,
+          "chargesFees": 15859719000,
+          "miscRevenue": 4691904000,
+          "trustUtility": 10642349000
         },
         {
           "state": "Alabama",
@@ -3305,7 +3935,12 @@
             "police_corrections": 2697687000,
             "natural_resources": 928809000,
             "other": 20649127000
-          }
+          },
+          "totalRevenueFull": 77721159000,
+          "federalGrants": 19369440000,
+          "chargesFees": 15029298000,
+          "miscRevenue": 3797573000,
+          "trustUtility": 11464695000
         },
         {
           "state": "Kentucky",
@@ -3331,7 +3966,12 @@
             "police_corrections": 2275424000,
             "natural_resources": 1019902000,
             "other": 17108146000
-          }
+          },
+          "totalRevenueFull": 67085934000,
+          "federalGrants": 21277007000,
+          "chargesFees": 9564524000,
+          "miscRevenue": 3264088000,
+          "trustUtility": 9775862000
         },
         {
           "state": "Oklahoma",
@@ -3357,7 +3997,12 @@
             "police_corrections": 1999847000,
             "natural_resources": 895342000,
             "other": 13287637000
-          }
+          },
+          "totalRevenueFull": 58241213000,
+          "federalGrants": 16968221000,
+          "chargesFees": 6969299000,
+          "miscRevenue": 4853506000,
+          "trustUtility": 7427371000
         },
         {
           "state": "Utah",
@@ -3383,7 +4028,12 @@
             "police_corrections": 1853783000,
             "natural_resources": 1415754000,
             "other": 15875001000
-          }
+          },
+          "totalRevenueFull": 53062548000,
+          "federalGrants": 10045114000,
+          "chargesFees": 10112176000,
+          "miscRevenue": 3718725000,
+          "trustUtility": 937722000
         },
         {
           "state": "Iowa",
@@ -3409,7 +4059,12 @@
             "police_corrections": 1603263000,
             "natural_resources": 1107860000,
             "other": 13789610000
-          }
+          },
+          "totalRevenueFull": 54843198000,
+          "federalGrants": 11267057000,
+          "chargesFees": 10475232000,
+          "miscRevenue": 3394032000,
+          "trustUtility": 6056241000
         },
         {
           "state": "Nevada",
@@ -3433,7 +4088,12 @@
             "police_corrections": 2698314000,
             "natural_resources": 1228761000,
             "other": 17473873000
-          }
+          },
+          "totalRevenueFull": 46312312000,
+          "federalGrants": 9047335000,
+          "chargesFees": 4086218000,
+          "miscRevenue": 2253312000,
+          "trustUtility": 9923846000
         },
         {
           "state": "Kansas",
@@ -3459,7 +4119,12 @@
             "police_corrections": 1849967000,
             "natural_resources": 690015000,
             "other": 13103215000
-          }
+          },
+          "totalRevenueFull": 46875160000,
+          "federalGrants": 7919317000,
+          "chargesFees": 8171230000,
+          "miscRevenue": 2593836000,
+          "trustUtility": 4744516000
         },
         {
           "state": "New Mexico",
@@ -3485,7 +4150,12 @@
             "police_corrections": 1928909000,
             "natural_resources": 887301000,
             "other": 13666704000
-          }
+          },
+          "totalRevenueFull": 54236107000,
+          "federalGrants": 13916518000,
+          "chargesFees": 5171397000,
+          "miscRevenue": 9200292000,
+          "trustUtility": 4835463000
         },
         {
           "state": "Arkansas",
@@ -3511,7 +4181,12 @@
             "police_corrections": 1526817000,
             "natural_resources": 753189000,
             "other": 12815422000
-          }
+          },
+          "totalRevenueFull": 43512230000,
+          "federalGrants": 13437459000,
+          "chargesFees": 4528849000,
+          "miscRevenue": 2257012000,
+          "trustUtility": 4630083000
         },
         {
           "state": "Mississippi",
@@ -3537,7 +4212,12 @@
             "police_corrections": 1489657000,
             "natural_resources": 692838000,
             "other": 12216074000
-          }
+          },
+          "totalRevenueFull": 42830469000,
+          "federalGrants": 12068084000,
+          "chargesFees": 7147954000,
+          "miscRevenue": 1627345000,
+          "trustUtility": 4095522000
         },
         {
           "state": "Hawaii",
@@ -3563,7 +4243,12 @@
             "police_corrections": 800675000,
             "natural_resources": 532279000,
             "other": 8097115000
-          }
+          },
+          "totalRevenueFull": 25695281000,
+          "federalGrants": 5173747000,
+          "chargesFees": 2841488000,
+          "miscRevenue": 2238991000,
+          "trustUtility": 2090284000
         },
         {
           "state": "Nebraska",
@@ -3589,7 +4274,12 @@
             "police_corrections": 1347278000,
             "natural_resources": 778000000,
             "other": 9360262000
-          }
+          },
+          "totalRevenueFull": 33271710000,
+          "federalGrants": 6461922000,
+          "chargesFees": 4082688000,
+          "miscRevenue": 1719344000,
+          "trustUtility": 6298154000
         },
         {
           "state": "West Virginia",
@@ -3615,7 +4305,12 @@
             "police_corrections": 1080009000,
             "natural_resources": 579270000,
             "other": 7121466000
-          }
+          },
+          "totalRevenueFull": 26096222000,
+          "federalGrants": 8335332000,
+          "chargesFees": 3114426000,
+          "miscRevenue": 1703675000,
+          "trustUtility": 2482225000
         },
         {
           "state": "Maine",
@@ -3641,7 +4336,12 @@
             "police_corrections": 677109000,
             "natural_resources": 405908000,
             "other": 6284182000
-          }
+          },
+          "totalRevenueFull": 20848725000,
+          "federalGrants": 5526720000,
+          "chargesFees": 1697426000,
+          "miscRevenue": 916318000,
+          "trustUtility": 1989458000
         },
         {
           "state": "Idaho",
@@ -3667,7 +4367,12 @@
             "police_corrections": 1221686000,
             "natural_resources": 840959000,
             "other": 8649470000
-          }
+          },
+          "totalRevenueFull": 24081969000,
+          "federalGrants": 4799274000,
+          "chargesFees": 3775195000,
+          "miscRevenue": 1287288000,
+          "trustUtility": 2946931000
         },
         {
           "state": "New Hampshire",
@@ -3692,7 +4397,12 @@
             "police_corrections": 801084000,
             "natural_resources": 256548000,
             "other": 6255460000
-          }
+          },
+          "totalRevenueFull": 17797401000,
+          "federalGrants": 3729186000,
+          "chargesFees": 1628712000,
+          "miscRevenue": 1219566000,
+          "trustUtility": 2151902000
         },
         {
           "state": "Delaware",
@@ -3717,7 +4427,12 @@
             "police_corrections": 949859000,
             "natural_resources": 240364000,
             "other": 5447779000
-          }
+          },
+          "totalRevenueFull": 18316402000,
+          "federalGrants": 4124272000,
+          "chargesFees": 1765912000,
+          "miscRevenue": 1794289000,
+          "trustUtility": 1612619000
         },
         {
           "state": "North Dakota",
@@ -3743,7 +4458,12 @@
             "police_corrections": 504472000,
             "natural_resources": 751162000,
             "other": 5488267000
-          }
+          },
+          "totalRevenueFull": 16236749000,
+          "federalGrants": 3260839000,
+          "chargesFees": 1594023000,
+          "miscRevenue": 815863000,
+          "trustUtility": 1157117000
         },
         {
           "state": "Rhode Island",
@@ -3769,7 +4489,12 @@
             "police_corrections": 952743000,
             "natural_resources": 206471000,
             "other": 5761286000
-          }
+          },
+          "totalRevenueFull": 18209355000,
+          "federalGrants": 5469910000,
+          "chargesFees": 1648845000,
+          "miscRevenue": 1321085000,
+          "trustUtility": 2713518000
         },
         {
           "state": "Montana",
@@ -3794,7 +4519,12 @@
             "police_corrections": 761389000,
             "natural_resources": 580633000,
             "other": 3789177000
-          }
+          },
+          "totalRevenueFull": 16063237000,
+          "federalGrants": 5078470000,
+          "chargesFees": 1383335000,
+          "miscRevenue": 900694000,
+          "trustUtility": 2050943000
         },
         {
           "state": "Alaska",
@@ -3819,7 +4549,12 @@
             "police_corrections": 955685000,
             "natural_resources": 578848000,
             "other": 6046506000
-          }
+          },
+          "totalRevenueFull": 18000815000,
+          "federalGrants": 5686811000,
+          "chargesFees": 1888530000,
+          "miscRevenue": 2924580000,
+          "trustUtility": 1946001000
         },
         {
           "state": "Vermont",
@@ -3845,7 +4580,12 @@
             "police_corrections": 421110000,
             "natural_resources": 266190000,
             "other": 4202296000
-          }
+          },
+          "totalRevenueFull": 13169628000,
+          "federalGrants": 3383204000,
+          "chargesFees": 975713000,
+          "miscRevenue": 632663000,
+          "trustUtility": 1192351000
         },
         {
           "state": "South Dakota",
@@ -3870,7 +4610,12 @@
             "police_corrections": 551783000,
             "natural_resources": 458459000,
             "other": 3545892000
-          }
+          },
+          "totalRevenueFull": 11366917000,
+          "federalGrants": 2880715000,
+          "chargesFees": 1039083000,
+          "miscRevenue": 898920000,
+          "trustUtility": 1507160000
         },
         {
           "state": "Wyoming",
@@ -3894,7 +4639,12 @@
             "police_corrections": 478883000,
             "natural_resources": 424966000,
             "other": 3624852000
-          }
+          },
+          "totalRevenueFull": 14437977000,
+          "federalGrants": 4129583000,
+          "chargesFees": 2314093000,
+          "miscRevenue": 1046986000,
+          "trustUtility": 208081000
         }
       ]
     }

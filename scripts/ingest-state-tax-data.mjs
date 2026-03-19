@@ -151,6 +151,19 @@ const run = async () => {
     }
   }
 
+  // Revenue extended: read gracefully — missing file is non-fatal
+  const revenueExtendedCsvPath = path.resolve(projectRoot, config.input.revenueExtendedCsv)
+  let revenueExtendedRows = []
+  try {
+    revenueExtendedRows = await readCsv(revenueExtendedCsvPath)
+  } catch (err) {
+    if (err.message?.includes('Missing required source file') || err.code === 'ENOENT') {
+      console.warn('Revenue-extended CSV not found — extended revenue fields will be 0 for all states.')
+    } else {
+      throw err
+    }
+  }
+
   // Build spending lookup: `${state}||${year}||${lf_code}` → amount in dollars
   const spendingByStateYearCode = new Map()
   for (const row of spendingRows) {
@@ -161,6 +174,18 @@ const run = async () => {
     // normalize script outputs Census thousands — convert to full dollars
     const amount = parseNumeric(row.amount) * 1000
     spendingByStateYearCode.set(`${state}||${year}||${lfCode}`, amount)
+  }
+
+  // Build revenue-extended lookup: `${state}||${year}||${lf_code}` → amount in full dollars
+  const revExtByStateYearCode = new Map()
+  for (const row of revenueExtendedRows) {
+    const state = normalizeState(row.state)
+    const year = Number(row.year)
+    const lfCode = String(row.lf_code ?? '').trim()
+    if (!state || !VALID_STATES.has(state) || !Number.isFinite(year) || !lfCode) continue
+    // normalize script outputs Census thousands — convert to full dollars
+    const amount = parseNumeric(row.amount) * 1000
+    revExtByStateYearCode.set(`${state}||${year}||${lfCode}`, amount)
   }
 
   const taxColumns = config.columns.tax
@@ -309,6 +334,18 @@ const run = async () => {
         // 'other' is only meaningful when LF0090 is present; if using fallback, other = 0
         spendingBreakdown.other = spendingTotal_fromLF0090 > 0 ? Math.max(0, spendingTotal - categoriesSum) : 0
 
+        const lfMap = config.revenueExtendedLfMap ?? {}
+        // Read each LF code into intermediate buckets (some are internal-only, e.g. _trustRevenue)
+        const revBuckets = {}
+        for (const [lfCode, internalKey] of Object.entries(lfMap)) {
+          revBuckets[internalKey] = revExtByStateYearCode.get(`${state.state}||${year}||${lfCode}`) ?? 0
+        }
+        const totalRevenueFull = Math.round(revBuckets['totalRevenueFull'] ?? 0)
+        const federalGrants = Math.round(revBuckets['federalGrants'] ?? 0)
+        const chargesFees = Math.round(revBuckets['chargesFees'] ?? 0)
+        const miscRevenue = Math.round(revBuckets['miscRevenue'] ?? 0)
+        const trustUtility = Math.round((revBuckets['_trustRevenue'] ?? 0) + (revBuckets['_utilityRevenue'] ?? 0))
+
         return {
           ...state,
           totalRevenue: Math.round(state.totalRevenue),
@@ -318,6 +355,11 @@ const run = async () => {
           spendingBreakdown: Object.fromEntries(
             Object.entries(spendingBreakdown).map(([k, v]) => [k, Math.round(v)])
           ),
+          totalRevenueFull,
+          federalGrants,
+          chargesFees,
+          miscRevenue,
+          trustUtility,
         }
       })
       .sort((a, b) => b.totalRevenue - a.totalRevenue)
