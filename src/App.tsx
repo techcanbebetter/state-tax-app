@@ -85,8 +85,8 @@ function App() {
           </a>
         </p>
         <p>
-          One-year nominal-dollar comparison across all 50 states, including total tax revenue,
-          per-capita views, and tax burden as a percentage of per-capita personal income.
+          Compare state + local tax revenue and government spending across all 50 states.
+          Includes per-capita views, tax burden as a share of income, and spending by function.
         </p>
       </section>
 
