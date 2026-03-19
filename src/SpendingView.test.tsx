@@ -42,6 +42,11 @@ const mockStates: StateRecord[] = [
       natural_resources: 10000000000,
       other: 35000000000,
     },
+    federalGrants: 0,
+    chargesFees: 0,
+    trustUtility: 0,
+    miscRevenue: 0,
+    totalRevenueFull: 0,
   },
   {
     state: 'Texas',
@@ -60,6 +65,11 @@ const mockStates: StateRecord[] = [
       natural_resources: 8000000000,
       other: 19000000000,
     },
+    federalGrants: 0,
+    chargesFees: 0,
+    trustUtility: 0,
+    miscRevenue: 0,
+    totalRevenueFull: 0,
   },
 ]
 

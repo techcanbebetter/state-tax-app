@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { compactCurrency, formatMetricValue, getMetricValue, getSpendingMetricValue, formatSpendingMetricValue } from './format'
-import type { StateRecord } from './types'
+import type { StateRecord, SimpleMetric } from './types'
 
 const mockState: StateRecord = {
   state: 'California',
@@ -19,6 +19,11 @@ const mockState: StateRecord = {
     natural_resources: 12000000000,
     other: 33000000000,
   },
+  federalGrants: 0,
+  chargesFees: 0,
+  trustUtility: 0,
+  miscRevenue: 0,
+  totalRevenueFull: 0,
 }
 
 describe('compactCurrency', () => {
@@ -92,5 +97,14 @@ describe('formatSpendingMetricValue', () => {
   })
   it('formats perCapita with / resident suffix', () => {
     expect(formatSpendingMetricValue(7179, 'perCapita')).toBe('$7,179 / resident')
+  })
+})
+
+describe('SimpleMetric type', () => {
+  it('accepts total and perCapita', () => {
+    const m1: SimpleMetric = 'total'
+    const m2: SimpleMetric = 'perCapita'
+    expect(m1).toBe('total')
+    expect(m2).toBe('perCapita')
   })
 })

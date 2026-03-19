@@ -12,6 +12,12 @@ export type StateRecord = {
   breakdown: Record<string, number>
   spendingTotal: number
   spendingBreakdown: Record<string, number>
+  // Extended revenue fields (populated after running npm run data:refresh with updated pipeline)
+  federalGrants: number
+  chargesFees: number
+  trustUtility: number
+  miscRevenue: number
+  totalRevenueFull: number
 }
 
 export type YearRecord = {
@@ -39,4 +45,6 @@ export type DataPayload = MultiYearPayload
 
 export type Metric = 'total' | 'perCapita' | 'perCapitaBurden'
 
-export type SpendingMetric = 'total' | 'perCapita'
+export type SimpleMetric = 'total' | 'perCapita'
+
+export type SpendingMetric = SimpleMetric
