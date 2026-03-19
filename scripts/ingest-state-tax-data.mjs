@@ -138,6 +138,27 @@ const run = async () => {
   const populationRows = await readCsv(populationCsvPath)
   const incomeRows = await readCsv(incomeCsvPath)
 
+  // Spending: read gracefully — missing file is non-fatal (older dataset without spending data)
+  const spendingCsvPath = path.resolve(projectRoot, config.input.spendingByFunctionCsv)
+  let spendingRows = []
+  try {
+    spendingRows = await readCsv(spendingCsvPath)
+  } catch {
+    console.warn('Spending CSV not found — spendingTotal and spendingBreakdown will be 0 for all states.')
+  }
+
+  // Build spending lookup: `${state}||${year}||${lf_code}` → amount in dollars
+  const spendingByStateYearCode = new Map()
+  for (const row of spendingRows) {
+    const state = normalizeState(row.state)
+    const year = Number(row.year)
+    const lfCode = String(row.lf_code ?? '').trim()
+    if (!state || !VALID_STATES.has(state) || !Number.isFinite(year) || !lfCode) continue
+    // normalize script outputs Census thousands — convert to full dollars
+    const amount = parseNumeric(row.amount) * 1000
+    spendingByStateYearCode.set(`${state}||${year}||${lfCode}`, amount)
+  }
+
   const taxColumns = config.columns.tax
   const populationColumns = config.columns.population
   const incomeColumns = config.columns.income
@@ -271,11 +292,28 @@ const run = async () => {
         const perCapitaTotal = population > 0 ? state.totalRevenue / population : 0
         const perCapitaIncome = incomeByStateYear.get(`${state.state}||${year}`) ?? 0
 
+        const spendingCategoryMap = config.spendingCategoryMap ?? {}
+        const spendingTotal_fromLF0090 = spendingByStateYearCode.get(`${state.state}||${year}||LF0090`) ?? 0
+        const spendingBreakdown = {}
+        for (const [lfCode, category] of Object.entries(spendingCategoryMap)) {
+          const amount = spendingByStateYearCode.get(`${state.state}||${year}||${lfCode}`) ?? 0
+          spendingBreakdown[category] = (spendingBreakdown[category] ?? 0) + amount
+        }
+        const categoriesSum = Object.values(spendingBreakdown).reduce((s, v) => s + v, 0)
+        // Fallback: if LF0090 missing (pre-2022 data), derive total from breakdown categories
+        const spendingTotal = spendingTotal_fromLF0090 > 0 ? spendingTotal_fromLF0090 : categoriesSum
+        // 'other' is only meaningful when LF0090 is present; if using fallback, other = 0
+        spendingBreakdown.other = spendingTotal_fromLF0090 > 0 ? Math.max(0, spendingTotal - categoriesSum) : 0
+
         return {
           ...state,
           totalRevenue: Math.round(state.totalRevenue),
           perCapitaTotal: Number(perCapitaTotal.toFixed(2)),
           perCapitaIncome,
+          spendingTotal: Math.round(spendingTotal),
+          spendingBreakdown: Object.fromEntries(
+            Object.entries(spendingBreakdown).map(([k, v]) => [k, Math.round(v)])
+          ),
         }
       })
       .sort((a, b) => b.totalRevenue - a.totalRevenue)
@@ -303,6 +341,9 @@ const run = async () => {
       key,
       label: config.taxTypeLabels?.[key] ?? key,
     })),
+    spendingTypes: config.spendingCategoryLabels
+      ? Object.entries(config.spendingCategoryLabels).map(([key, label]) => ({ key, label }))
+      : [],
     years: yearsOutput,
   }
 

@@ -12,7 +12,7 @@
       "Nominal dollars.",
       "Top states selected by population for the latest year."
     ],
-    "generatedAt": "2026-03-11T18:44:54.685Z"
+    "generatedAt": "2026-03-19T01:49:15.311Z"
   },
   "taxTypes": [
     {
@@ -44,6 +44,36 @@
       "label": "Other"
     }
   ],
+  "spendingTypes": [
+    {
+      "key": "education",
+      "label": "Education"
+    },
+    {
+      "key": "public_welfare",
+      "label": "Public Welfare"
+    },
+    {
+      "key": "health_hospitals",
+      "label": "Health & Hospitals"
+    },
+    {
+      "key": "highways",
+      "label": "Highways"
+    },
+    {
+      "key": "police_corrections",
+      "label": "Police & Corrections"
+    },
+    {
+      "key": "natural_resources",
+      "label": "Natural Resources"
+    },
+    {
+      "key": "other",
+      "label": "Other"
+    }
+  ],
   "years": [
     {
       "year": 2021,
@@ -61,7 +91,17 @@
             "licenses": 5281226000
           },
           "perCapitaTotal": 8797.83,
-          "perCapitaIncome": 42396
+          "perCapitaIncome": 42396,
+          "spendingTotal": 465385894000,
+          "spendingBreakdown": {
+            "education": 159872919000,
+            "public_welfare": 151571583000,
+            "health_hospitals": 72149571000,
+            "highways": 23843911000,
+            "police_corrections": 43047816000,
+            "natural_resources": 14900094000,
+            "other": 0
+          }
         },
         {
           "state": "New York",
@@ -76,7 +116,17 @@
             "licenses": 1566526000
           },
           "perCapitaTotal": 9914.76,
-          "perCapitaIncome": 43078
+          "perCapitaIncome": 43078,
+          "spendingTotal": 237697905000,
+          "spendingBreakdown": {
+            "education": 92002150000,
+            "public_welfare": 84379706000,
+            "health_hospitals": 28702416000,
+            "highways": 12093500000,
+            "police_corrections": 16807064000,
+            "natural_resources": 3713069000,
+            "other": 0
+          }
         },
         {
           "state": "Texas",
@@ -89,7 +139,17 @@
             "licenses": 2544191000
           },
           "perCapitaTotal": 4625.5,
-          "perCapitaIncome": 34717
+          "perCapitaIncome": 34717,
+          "spendingTotal": 231975314000,
+          "spendingBreakdown": {
+            "education": 101131193000,
+            "public_welfare": 51057294000,
+            "health_hospitals": 38182798000,
+            "highways": 19409047000,
+            "police_corrections": 16226122000,
+            "natural_resources": 5968860000,
+            "other": 0
+          }
         },
         {
           "state": "Illinois",
@@ -104,7 +164,17 @@
             "licenses": 2480683000
           },
           "perCapitaTotal": 7134.87,
-          "perCapitaIncome": 39794
+          "perCapitaIncome": 39794,
+          "spendingTotal": 102431921000,
+          "spendingBreakdown": {
+            "education": 42254651000,
+            "public_welfare": 31599028000,
+            "health_hospitals": 7951245000,
+            "highways": 8986211000,
+            "police_corrections": 8359317000,
+            "natural_resources": 3281469000,
+            "other": 0
+          }
         },
         {
           "state": "Florida",
@@ -118,7 +188,17 @@
             "licenses": 1523039000
           },
           "perCapitaTotal": 3974.66,
-          "perCapitaIncome": 36196
+          "perCapitaIncome": 36196,
+          "spendingTotal": 141142248000,
+          "spendingBreakdown": {
+            "education": 50630154000,
+            "public_welfare": 33265264000,
+            "health_hospitals": 20568750000,
+            "highways": 12049147000,
+            "police_corrections": 15586256000,
+            "natural_resources": 9042677000,
+            "other": 0
+          }
         },
         {
           "state": "Pennsylvania",
@@ -133,7 +213,17 @@
             "licenses": 1307236000
           },
           "perCapitaTotal": 5802.46,
-          "perCapitaIncome": 38315
+          "perCapitaIncome": 38315,
+          "spendingTotal": 121961905000,
+          "spendingBreakdown": {
+            "education": 47081206000,
+            "public_welfare": 41087484000,
+            "health_hospitals": 12308534000,
+            "highways": 10675726000,
+            "police_corrections": 8743913000,
+            "natural_resources": 2065042000,
+            "other": 0
+          }
         },
         {
           "state": "New Jersey",
@@ -148,7 +238,17 @@
             "licenses": 681061000
           },
           "perCapitaTotal": 7995.72,
-          "perCapitaIncome": 47338
+          "perCapitaIncome": 47338,
+          "spendingTotal": 81313295000,
+          "spendingBreakdown": {
+            "education": 41791598000,
+            "public_welfare": 22291930000,
+            "health_hospitals": 5277225000,
+            "highways": 4353635000,
+            "police_corrections": 6265832000,
+            "natural_resources": 1333075000,
+            "other": 0
+          }
         },
         {
           "state": "Ohio",
@@ -163,7 +263,17 @@
             "licenses": 614296000
           },
           "perCapitaTotal": 5120.08,
-          "perCapitaIncome": 35119
+          "perCapitaIncome": 35119,
+          "spendingTotal": 98125622000,
+          "spendingBreakdown": {
+            "education": 37732776000,
+            "public_welfare": 35027447000,
+            "health_hospitals": 11074854000,
+            "highways": 5995919000,
+            "police_corrections": 6139886000,
+            "natural_resources": 2154740000,
+            "other": 0
+          }
         },
         {
           "state": "Massachusetts",
@@ -178,7 +288,17 @@
             "property": 19569523000
           },
           "perCapitaTotal": 7739.28,
-          "perCapitaIncome": 49746
+          "perCapitaIncome": 49746,
+          "spendingTotal": 65728750000,
+          "spendingBreakdown": {
+            "education": 26118595000,
+            "public_welfare": 27157443000,
+            "health_hospitals": 4105652000,
+            "highways": 3407533000,
+            "police_corrections": 4096383000,
+            "natural_resources": 843144000,
+            "other": 0
+          }
         },
         {
           "state": "Virginia",
@@ -193,7 +313,17 @@
             "licenses": 703989000
           },
           "perCapitaTotal": 5872.33,
-          "perCapitaIncome": 43756
+          "perCapitaIncome": 43756,
+          "spendingTotal": 72222074000,
+          "spendingBreakdown": {
+            "education": 29529896000,
+            "public_welfare": 19698381000,
+            "health_hospitals": 8660020000,
+            "highways": 6816321000,
+            "police_corrections": 6028091000,
+            "natural_resources": 1489365000,
+            "other": 0
+          }
         },
         {
           "state": "North Carolina",
@@ -208,7 +338,17 @@
             "licenses": 1105716000
           },
           "perCapitaTotal": 4675.23,
-          "perCapitaIncome": 35254
+          "perCapitaIncome": 35254,
+          "spendingTotal": 81748231000,
+          "spendingBreakdown": {
+            "education": 30108563000,
+            "public_welfare": 19482932000,
+            "health_hospitals": 18714146000,
+            "highways": 5264605000,
+            "police_corrections": 6032240000,
+            "natural_resources": 2145745000,
+            "other": 0
+          }
         },
         {
           "state": "Michigan",
@@ -223,7 +363,17 @@
             "licenses": 1455962000
           },
           "perCapitaTotal": 4826.34,
-          "perCapitaIncome": 35353
+          "perCapitaIncome": 35353,
+          "spendingTotal": 77133023000,
+          "spendingBreakdown": {
+            "education": 32193771000,
+            "public_welfare": 21135696000,
+            "health_hospitals": 11143482000,
+            "highways": 5854580000,
+            "police_corrections": 5360097000,
+            "natural_resources": 1445397000,
+            "other": 0
+          }
         },
         {
           "state": "Georgia",
@@ -238,7 +388,17 @@
             "licenses": 406893000
           },
           "perCapitaTotal": 4476.86,
-          "perCapitaIncome": 35086
+          "perCapitaIncome": 35086,
+          "spendingTotal": 67707281000,
+          "spendingBreakdown": {
+            "education": 32239247000,
+            "public_welfare": 14586321000,
+            "health_hospitals": 8806747000,
+            "highways": 5159270000,
+            "police_corrections": 5336164000,
+            "natural_resources": 1579532000,
+            "other": 0
+          }
         },
         {
           "state": "Washington",
@@ -251,7 +411,17 @@
             "licenses": 1150230000
           },
           "perCapitaTotal": 6082.56,
-          "perCapitaIncome": 46177
+          "perCapitaIncome": 46177,
+          "spendingTotal": 72145575000,
+          "spendingBreakdown": {
+            "education": 30591774000,
+            "public_welfare": 15752233000,
+            "health_hospitals": 13184977000,
+            "highways": 4934902000,
+            "police_corrections": 4840711000,
+            "natural_resources": 2840978000,
+            "other": 0
+          }
         },
         {
           "state": "Maryland",
@@ -266,7 +436,17 @@
             "licenses": 520735000
           },
           "perCapitaTotal": 6811.4,
-          "perCapitaIncome": 46500
+          "perCapitaIncome": 46500,
+          "spendingTotal": 54053222000,
+          "spendingBreakdown": {
+            "education": 23448249000,
+            "public_welfare": 16907390000,
+            "health_hospitals": 3526561000,
+            "highways": 3015840000,
+            "police_corrections": 5131255000,
+            "natural_resources": 2023927000,
+            "other": 0
+          }
         },
         {
           "state": "Minnesota",
@@ -281,7 +461,17 @@
             "licenses": 958306000
           },
           "perCapitaTotal": 7179.43,
-          "perCapitaIncome": 41753
+          "perCapitaIncome": 41753,
+          "spendingTotal": 55787622000,
+          "spendingBreakdown": {
+            "education": 21026804000,
+            "public_welfare": 18920945000,
+            "health_hospitals": 4162848000,
+            "highways": 5664946000,
+            "police_corrections": 3724725000,
+            "natural_resources": 2287354000,
+            "other": 0
+          }
         },
         {
           "state": "Colorado",
@@ -296,7 +486,17 @@
             "licenses": 530832000
           },
           "perCapitaTotal": 6283.53,
-          "perCapitaIncome": 44617
+          "perCapitaIncome": 44617,
+          "spendingTotal": 48014244000,
+          "spendingBreakdown": {
+            "education": 20656035000,
+            "public_welfare": 11929576000,
+            "health_hospitals": 5276794000,
+            "highways": 3562274000,
+            "police_corrections": 3937885000,
+            "natural_resources": 2651680000,
+            "other": 0
+          }
         },
         {
           "state": "Indiana",
@@ -311,7 +511,17 @@
             "licenses": 407081000
           },
           "perCapitaTotal": 5289.89,
-          "perCapitaIncome": 33054
+          "perCapitaIncome": 33054,
+          "spendingTotal": 53839707000,
+          "spendingBreakdown": {
+            "education": 20241762000,
+            "public_welfare": 18222297000,
+            "health_hospitals": 7589322000,
+            "highways": 3827877000,
+            "police_corrections": 2954416000,
+            "natural_resources": 1004033000,
+            "other": 0
+          }
         },
         {
           "state": "Connecticut",
@@ -326,7 +536,17 @@
             "sales_general": 5252683000
           },
           "perCapitaTotal": 9187.74,
-          "perCapitaIncome": 48146
+          "perCapitaIncome": 48146,
+          "spendingTotal": 26273384000,
+          "spendingBreakdown": {
+            "education": 14639383000,
+            "public_welfare": 3846725000,
+            "health_hospitals": 2979086000,
+            "highways": 2168458000,
+            "police_corrections": 2186624000,
+            "natural_resources": 453108000,
+            "other": 0
+          }
         },
         {
           "state": "Arizona",
@@ -341,7 +561,17 @@
             "licenses": 296104000
           },
           "perCapitaTotal": 4494.55,
-          "perCapitaIncome": 36295
+          "perCapitaIncome": 36295,
+          "spendingTotal": 52651122000,
+          "spendingBreakdown": {
+            "education": 20437135000,
+            "public_welfare": 20937983000,
+            "health_hospitals": 2492261000,
+            "highways": 2755929000,
+            "police_corrections": 4709447000,
+            "natural_resources": 1318367000,
+            "other": 0
+          }
         },
         {
           "state": "Wisconsin",
@@ -356,7 +586,17 @@
             "licenses": 767683000
           },
           "perCapitaTotal": 5536.52,
-          "perCapitaIncome": 37221
+          "perCapitaIncome": 37221,
+          "spendingTotal": 49628360000,
+          "spendingBreakdown": {
+            "education": 20049011000,
+            "public_welfare": 15674907000,
+            "health_hospitals": 4751997000,
+            "highways": 4020460000,
+            "police_corrections": 3637940000,
+            "natural_resources": 1494045000,
+            "other": 0
+          }
         },
         {
           "state": "Missouri",
@@ -371,7 +611,17 @@
             "licenses": 354198000
           },
           "perCapitaTotal": 4480.91,
-          "perCapitaIncome": 34593
+          "perCapitaIncome": 34593,
+          "spendingTotal": 41763705000,
+          "spendingBreakdown": {
+            "education": 16528316000,
+            "public_welfare": 11033099000,
+            "health_hospitals": 7218758000,
+            "highways": 2877001000,
+            "police_corrections": 2998969000,
+            "natural_resources": 1107562000,
+            "other": 0
+          }
         },
         {
           "state": "Tennessee",
@@ -386,7 +636,17 @@
             "licenses": 533083000
           },
           "perCapitaTotal": 3880.61,
-          "perCapitaIncome": 33904
+          "perCapitaIncome": 33904,
+          "spendingTotal": 44220275000,
+          "spendingBreakdown": {
+            "education": 16404960000,
+            "public_welfare": 13713400000,
+            "health_hospitals": 6704210000,
+            "highways": 2733590000,
+            "police_corrections": 3539695000,
+            "natural_resources": 1124420000,
+            "other": 0
+          }
         },
         {
           "state": "Oregon",
@@ -400,7 +660,17 @@
             "licenses": 818135000
           },
           "perCapitaTotal": 5701.02,
-          "perCapitaIncome": 38975
+          "perCapitaIncome": 38975,
+          "spendingTotal": 44225575000,
+          "spendingBreakdown": {
+            "education": 16896111000,
+            "public_welfare": 14355867000,
+            "health_hospitals": 5530010000,
+            "highways": 2682729000,
+            "police_corrections": 3253662000,
+            "natural_resources": 1507196000,
+            "other": 0
+          }
         },
         {
           "state": "South Carolina",
@@ -415,7 +685,17 @@
             "licenses": 327813000
           },
           "perCapitaTotal": 4156.02,
-          "perCapitaIncome": 33339
+          "perCapitaIncome": 33339,
+          "spendingTotal": 41639061000,
+          "spendingBreakdown": {
+            "education": 16900075000,
+            "public_welfare": 8944638000,
+            "health_hospitals": 10426794000,
+            "highways": 2208159000,
+            "police_corrections": 2213841000,
+            "natural_resources": 945554000,
+            "other": 0
+          }
         },
         {
           "state": "Louisiana",
@@ -430,7 +710,17 @@
             "licenses": 88084000
           },
           "perCapitaTotal": 4616.05,
-          "perCapitaIncome": 30117
+          "perCapitaIncome": 30117,
+          "spendingTotal": 38838906000,
+          "spendingBreakdown": {
+            "education": 13936817000,
+            "public_welfare": 14627471000,
+            "health_hospitals": 3625889000,
+            "highways": 2332043000,
+            "police_corrections": 2492731000,
+            "natural_resources": 1823955000,
+            "other": 0
+          }
         },
         {
           "state": "Kentucky",
@@ -445,7 +735,17 @@
             "property": 4358999000
           },
           "perCapitaTotal": 4541.87,
-          "perCapitaIncome": 30728
+          "perCapitaIncome": 30728,
+          "spendingTotal": 37378492000,
+          "spendingBreakdown": {
+            "education": 12826853000,
+            "public_welfare": 15940011000,
+            "health_hospitals": 3859325000,
+            "highways": 2258448000,
+            "police_corrections": 1741080000,
+            "natural_resources": 752775000,
+            "other": 0
+          }
         },
         {
           "state": "Alabama",
@@ -460,7 +760,17 @@
             "licenses": 281966000
           },
           "perCapitaTotal": 4011.86,
-          "perCapitaIncome": 30608
+          "perCapitaIncome": 30608,
+          "spendingTotal": 39386899000,
+          "spendingBreakdown": {
+            "education": 16520147000,
+            "public_welfare": 8021378000,
+            "health_hospitals": 9173881000,
+            "highways": 2555644000,
+            "police_corrections": 2388178000,
+            "natural_resources": 727671000,
+            "other": 0
+          }
         },
         {
           "state": "Utah",
@@ -475,7 +785,17 @@
             "licenses": 243553000
           },
           "perCapitaTotal": 5562.04,
-          "perCapitaIncome": 35220
+          "perCapitaIncome": 35220,
+          "spendingTotal": 27821027000,
+          "spendingBreakdown": {
+            "education": 12644560000,
+            "public_welfare": 5472554000,
+            "health_hospitals": 4533186000,
+            "highways": 2539314000,
+            "police_corrections": 1513704000,
+            "natural_resources": 1117709000,
+            "other": 0
+          }
         },
         {
           "state": "Iowa",
@@ -490,7 +810,17 @@
             "licenses": 775466000
           },
           "perCapitaTotal": 5754.5,
-          "perCapitaIncome": 35715
+          "perCapitaIncome": 35715,
+          "spendingTotal": 30400940000,
+          "spendingBreakdown": {
+            "education": 11846105000,
+            "public_welfare": 7689910000,
+            "health_hospitals": 5305851000,
+            "highways": 3147853000,
+            "police_corrections": 1439942000,
+            "natural_resources": 971279000,
+            "other": 0
+          }
         },
         {
           "state": "Kansas",
@@ -505,7 +835,17 @@
             "licenses": 270357000
           },
           "perCapitaTotal": 5800.22,
-          "perCapitaIncome": 35028
+          "perCapitaIncome": 35028,
+          "spendingTotal": 26169865000,
+          "spendingBreakdown": {
+            "education": 11121333000,
+            "public_welfare": 5415037000,
+            "health_hospitals": 5209336000,
+            "highways": 2096626000,
+            "police_corrections": 1704832000,
+            "natural_resources": 622701000,
+            "other": 0
+          }
         },
         {
           "state": "Oklahoma",
@@ -520,7 +860,17 @@
             "licenses": 818922000
           },
           "perCapitaTotal": 4146.2,
-          "perCapitaIncome": 29969
+          "perCapitaIncome": 29969,
+          "spendingTotal": 28097549000,
+          "spendingBreakdown": {
+            "education": 11714581000,
+            "public_welfare": 7474819000,
+            "health_hospitals": 3136362000,
+            "highways": 3073858000,
+            "police_corrections": 1922442000,
+            "natural_resources": 775487000,
+            "other": 0
+          }
         },
         {
           "state": "Arkansas",
@@ -535,7 +885,17 @@
             "licenses": 178731000
           },
           "perCapitaTotal": 4717.62,
-          "perCapitaIncome": 29252
+          "perCapitaIncome": 29252,
+          "spendingTotal": 23220099000,
+          "spendingBreakdown": {
+            "education": 9274145000,
+            "public_welfare": 7924832000,
+            "health_hospitals": 1997876000,
+            "highways": 2190633000,
+            "police_corrections": 1273102000,
+            "natural_resources": 559511000,
+            "other": 0
+          }
         },
         {
           "state": "Nevada",
@@ -548,7 +908,17 @@
             "licenses": 209587000
           },
           "perCapitaTotal": 4508.98,
-          "perCapitaIncome": 34933
+          "perCapitaIncome": 34933,
+          "spendingTotal": 20406258000,
+          "spendingBreakdown": {
+            "education": 7815339000,
+            "public_welfare": 4856396000,
+            "health_hospitals": 2141543000,
+            "highways": 2179083000,
+            "police_corrections": 2336990000,
+            "natural_resources": 1076907000,
+            "other": 0
+          }
         },
         {
           "state": "Mississippi",
@@ -563,7 +933,17 @@
             "licenses": 169938000
           },
           "perCapitaTotal": 4262.57,
-          "perCapitaIncome": 26941
+          "perCapitaIncome": 26941,
+          "spendingTotal": 24128903000,
+          "spendingBreakdown": {
+            "education": 8830335000,
+            "public_welfare": 6627471000,
+            "health_hospitals": 4866271000,
+            "highways": 1872007000,
+            "police_corrections": 1350893000,
+            "natural_resources": 581926000,
+            "other": 0
+          }
         },
         {
           "state": "Nebraska",
@@ -578,7 +958,17 @@
             "licenses": 214934000
           },
           "perCapitaTotal": 6007.82,
-          "perCapitaIncome": 36227
+          "perCapitaIncome": 36227,
+          "spendingTotal": 16829300000,
+          "spendingBreakdown": {
+            "education": 8170888000,
+            "public_welfare": 3784047000,
+            "health_hospitals": 1221090000,
+            "highways": 1883400000,
+            "police_corrections": 1151904000,
+            "natural_resources": 617971000,
+            "other": 0
+          }
         },
         {
           "state": "Hawaii",
@@ -593,7 +983,17 @@
             "licenses": 434593000
           },
           "perCapitaTotal": 7596.16,
-          "perCapitaIncome": 38614
+          "perCapitaIncome": 38614,
+          "spendingTotal": 10785305000,
+          "spendingBreakdown": {
+            "education": 3616893000,
+            "public_welfare": 3633165000,
+            "health_hospitals": 1291519000,
+            "highways": 954839000,
+            "police_corrections": 799939000,
+            "natural_resources": 488950000,
+            "other": 0
+          }
         },
         {
           "state": "Maine",
@@ -608,7 +1008,17 @@
             "licenses": 126502000
           },
           "perCapitaTotal": 6496.83,
-          "perCapitaIncome": 38483
+          "perCapitaIncome": 38483,
+          "spendingTotal": 10989389000,
+          "spendingBreakdown": {
+            "education": 4269662000,
+            "public_welfare": 4237922000,
+            "health_hospitals": 493651000,
+            "highways": 1120768000,
+            "police_corrections": 616287000,
+            "natural_resources": 251099000,
+            "other": 0
+          }
         },
         {
           "state": "New Mexico",
@@ -623,7 +1033,17 @@
             "licenses": 232681000
           },
           "perCapitaTotal": 4217.35,
-          "perCapitaIncome": 31043
+          "perCapitaIncome": 31043,
+          "spendingTotal": 21621335000,
+          "spendingBreakdown": {
+            "education": 7310823000,
+            "public_welfare": 8367446000,
+            "health_hospitals": 2451606000,
+            "highways": 1264176000,
+            "police_corrections": 1558205000,
+            "natural_resources": 669079000,
+            "other": 0
+          }
         },
         {
           "state": "Idaho",
@@ -638,7 +1058,17 @@
             "licenses": 238102000
           },
           "perCapitaTotal": 4423.13,
-          "perCapitaIncome": 33841
+          "perCapitaIncome": 33841,
+          "spendingTotal": 12317948000,
+          "spendingBreakdown": {
+            "education": 4327138000,
+            "public_welfare": 3771946000,
+            "health_hospitals": 1341983000,
+            "highways": 1300886000,
+            "police_corrections": 1029314000,
+            "natural_resources": 546681000,
+            "other": 0
+          }
         },
         {
           "state": "West Virginia",
@@ -653,7 +1083,17 @@
             "licenses": 4568000
           },
           "perCapitaTotal": 4280.96,
-          "perCapitaIncome": 30195
+          "perCapitaIncome": 30195,
+          "spendingTotal": 15175160000,
+          "spendingBreakdown": {
+            "education": 5676964000,
+            "public_welfare": 5451215000,
+            "health_hospitals": 946401000,
+            "highways": 1751444000,
+            "police_corrections": 946813000,
+            "natural_resources": 402323000,
+            "other": 0
+          }
         },
         {
           "state": "Rhode Island",
@@ -668,7 +1108,17 @@
             "licenses": 28168000
           },
           "perCapitaTotal": 6292.13,
-          "perCapitaIncome": 40382
+          "perCapitaIncome": 40382,
+          "spendingTotal": 9814973000,
+          "spendingBreakdown": {
+            "education": 3890419000,
+            "public_welfare": 3462651000,
+            "health_hospitals": 883037000,
+            "highways": 679943000,
+            "police_corrections": 745285000,
+            "natural_resources": 153638000,
+            "other": 0
+          }
         },
         {
           "state": "New Hampshire",
@@ -682,7 +1132,17 @@
             "licenses": 94400000
           },
           "perCapitaTotal": 4919.37,
-          "perCapitaIncome": 45365
+          "perCapitaIncome": 45365,
+          "spendingTotal": 9579664000,
+          "spendingBreakdown": {
+            "education": 4568038000,
+            "public_welfare": 3068239000,
+            "health_hospitals": 293253000,
+            "highways": 795539000,
+            "police_corrections": 705438000,
+            "natural_resources": 149157000,
+            "other": 0
+          }
         },
         {
           "state": "Montana",
@@ -696,7 +1156,17 @@
             "licenses": 198725000
           },
           "perCapitaTotal": 4693.93,
-          "perCapitaIncome": 36020
+          "perCapitaIncome": 36020,
+          "spendingTotal": 8900684000,
+          "spendingBreakdown": {
+            "education": 3361393000,
+            "public_welfare": 2768512000,
+            "health_hospitals": 611168000,
+            "highways": 1009979000,
+            "police_corrections": 659870000,
+            "natural_resources": 489762000,
+            "other": 0
+          }
         },
         {
           "state": "Vermont",
@@ -711,7 +1181,17 @@
             "licenses": 75558000
           },
           "perCapitaTotal": 7237.06,
-          "perCapitaIncome": 40016
+          "perCapitaIncome": 40016,
+          "spendingTotal": 6969600000,
+          "spendingBreakdown": {
+            "education": 3028300000,
+            "public_welfare": 2067037000,
+            "health_hospitals": 480560000,
+            "highways": 736663000,
+            "police_corrections": 432277000,
+            "natural_resources": 224763000,
+            "other": 0
+          }
         },
         {
           "state": "Delaware",
@@ -725,7 +1205,17 @@
             "licenses": 62180000
           },
           "perCapitaTotal": 4248.53,
-          "perCapitaIncome": 38797
+          "perCapitaIncome": 38797,
+          "spendingTotal": 10137703000,
+          "spendingBreakdown": {
+            "education": 4575434000,
+            "public_welfare": 3150257000,
+            "health_hospitals": 664818000,
+            "highways": 803914000,
+            "police_corrections": 770659000,
+            "natural_resources": 172621000,
+            "other": 0
+          }
         },
         {
           "state": "South Dakota",
@@ -739,7 +1229,17 @@
             "licenses": 134551000
           },
           "perCapitaTotal": 4386.82,
-          "perCapitaIncome": 35135
+          "perCapitaIncome": 35135,
+          "spendingTotal": 6792881000,
+          "spendingBreakdown": {
+            "education": 2694017000,
+            "public_welfare": 1747495000,
+            "health_hospitals": 326499000,
+            "highways": 1212628000,
+            "police_corrections": 476599000,
+            "natural_resources": 335643000,
+            "other": 0
+          }
         },
         {
           "state": "North Dakota",
@@ -754,7 +1254,17 @@
             "licenses": 117995000
           },
           "perCapitaTotal": 4684.91,
-          "perCapitaIncome": 36497
+          "perCapitaIncome": 36497,
+          "spendingTotal": 8274834000,
+          "spendingBreakdown": {
+            "education": 3424102000,
+            "public_welfare": 1768689000,
+            "health_hospitals": 454718000,
+            "highways": 1390422000,
+            "police_corrections": 500897000,
+            "natural_resources": 736006000,
+            "other": 0
+          }
         },
         {
           "state": "Alaska",
@@ -768,7 +1278,17 @@
             "licenses": 52850000
           },
           "perCapitaTotal": 3474.25,
-          "perCapitaIncome": 39509
+          "perCapitaIncome": 39509,
+          "spendingTotal": 9590594000,
+          "spendingBreakdown": {
+            "education": 3252197000,
+            "public_welfare": 2653885000,
+            "health_hospitals": 1104782000,
+            "highways": 1303421000,
+            "police_corrections": 785522000,
+            "natural_resources": 490787000,
+            "other": 0
+          }
         },
         {
           "state": "Wyoming",
@@ -781,7 +1301,17 @@
             "licenses": 130466000
           },
           "perCapitaTotal": 4215.55,
-          "perCapitaIncome": 37156
+          "perCapitaIncome": 37156,
+          "spendingTotal": 7747515000,
+          "spendingBreakdown": {
+            "education": 3234889000,
+            "public_welfare": 914069000,
+            "health_hospitals": 2051093000,
+            "highways": 742484000,
+            "police_corrections": 434021000,
+            "natural_resources": 370959000,
+            "other": 0
+          }
         }
       ]
     },
@@ -802,7 +1332,17 @@
             "other": 7504202000
           },
           "perCapitaTotal": 10346.52,
-          "perCapitaIncome": 46661
+          "perCapitaIncome": 46661,
+          "spendingTotal": 823393204000,
+          "spendingBreakdown": {
+            "education": 183646973000,
+            "public_welfare": 163948094000,
+            "health_hospitals": 78509457000,
+            "highways": 24635050000,
+            "police_corrections": 45255520000,
+            "natural_resources": 21817719000,
+            "other": 305580391000
+          }
         },
         {
           "state": "New York",
@@ -818,7 +1358,17 @@
             "other": 8500135000
           },
           "perCapitaTotal": 12756.62,
-          "perCapitaIncome": 47421
+          "perCapitaIncome": 47421,
+          "spendingTotal": 433914501000,
+          "spendingBreakdown": {
+            "education": 99692452000,
+            "public_welfare": 91957230000,
+            "health_hospitals": 30587199000,
+            "highways": 10751167000,
+            "police_corrections": 17308292000,
+            "natural_resources": 3931818000,
+            "other": 179686343000
+          }
         },
         {
           "state": "Texas",
@@ -832,7 +1382,17 @@
             "other": 11038591000
           },
           "perCapitaTotal": 5454.84,
-          "perCapitaIncome": 38123
+          "perCapitaIncome": 38123,
+          "spendingTotal": 357972318000,
+          "spendingBreakdown": {
+            "education": 112047833000,
+            "public_welfare": 61187475000,
+            "health_hospitals": 38260983000,
+            "highways": 19261260000,
+            "police_corrections": 17221017000,
+            "natural_resources": 5655391000,
+            "other": 104338359000
+          }
         },
         {
           "state": "Florida",
@@ -847,7 +1407,17 @@
             "other": 6464969000
           },
           "perCapitaTotal": 4885.94,
-          "perCapitaIncome": 40278
+          "perCapitaIncome": 40278,
+          "spendingTotal": 233001467000,
+          "spendingBreakdown": {
+            "education": 55460132000,
+            "public_welfare": 39113395000,
+            "health_hospitals": 23427831000,
+            "highways": 12750570000,
+            "police_corrections": 16042164000,
+            "natural_resources": 9952271000,
+            "other": 76255104000
+          }
         },
         {
           "state": "Illinois",
@@ -863,7 +1433,17 @@
             "other": 1100170000
           },
           "perCapitaTotal": 8192.84,
-          "perCapitaIncome": 43317
+          "perCapitaIncome": 43317,
+          "spendingTotal": 202115350000,
+          "spendingBreakdown": {
+            "education": 58947000000,
+            "public_welfare": 34666210000,
+            "health_hospitals": 9579209000,
+            "highways": 8647106000,
+            "police_corrections": 8703758000,
+            "natural_resources": 3631261000,
+            "other": 77940806000
+          }
         },
         {
           "state": "New Jersey",
@@ -879,7 +1459,17 @@
             "other": 1678275000
           },
           "perCapitaTotal": 9375.02,
-          "perCapitaIncome": 51272
+          "perCapitaIncome": 51272,
+          "spendingTotal": 147831366000,
+          "spendingBreakdown": {
+            "education": 54418310000,
+            "public_welfare": 25950724000,
+            "health_hospitals": 5805133000,
+            "highways": 5091014000,
+            "police_corrections": 6684551000,
+            "natural_resources": 1533134000,
+            "other": 48348500000
+          }
         },
         {
           "state": "Pennsylvania",
@@ -895,7 +1485,17 @@
             "other": 4030189000
           },
           "perCapitaTotal": 6658.16,
-          "perCapitaIncome": 41489
+          "perCapitaIncome": 41489,
+          "spendingTotal": 189283271000,
+          "spendingBreakdown": {
+            "education": 50358401000,
+            "public_welfare": 45915753000,
+            "health_hospitals": 13300000000,
+            "highways": 10599554000,
+            "police_corrections": 9267534000,
+            "natural_resources": 2273605000,
+            "other": 57568424000
+          }
         },
         {
           "state": "Ohio",
@@ -911,7 +1511,17 @@
             "other": 414735000
           },
           "perCapitaTotal": 5753.6,
-          "perCapitaIncome": 37932
+          "perCapitaIncome": 37932,
+          "spendingTotal": 152768001000,
+          "spendingBreakdown": {
+            "education": 40780047000,
+            "public_welfare": 38633237000,
+            "health_hospitals": 11414022000,
+            "highways": 5738076000,
+            "police_corrections": 6751011000,
+            "natural_resources": 2182864000,
+            "other": 47268744000
+          }
         },
         {
           "state": "Massachusetts",
@@ -927,7 +1537,17 @@
             "other": 1470038000
           },
           "perCapitaTotal": 9380.77,
-          "perCapitaIncome": 54025
+          "perCapitaIncome": 54025,
+          "spendingTotal": 118117055000,
+          "spendingBreakdown": {
+            "education": 30359384000,
+            "public_welfare": 31994091000,
+            "health_hospitals": 4389019000,
+            "highways": 3495454000,
+            "police_corrections": 4292622000,
+            "natural_resources": 924957000,
+            "other": 42661528000
+          }
         },
         {
           "state": "Virginia",
@@ -943,7 +1563,17 @@
             "other": 1258032000
           },
           "perCapitaTotal": 6840.63,
-          "perCapitaIncome": 47199
+          "perCapitaIncome": 47199,
+          "spendingTotal": 117901067000,
+          "spendingBreakdown": {
+            "education": 31853896000,
+            "public_welfare": 23397848000,
+            "health_hospitals": 9930829000,
+            "highways": 7323347000,
+            "police_corrections": 6482489000,
+            "natural_resources": 1701241000,
+            "other": 37211417000
+          }
         },
         {
           "state": "Washington",
@@ -957,7 +1587,17 @@
             "other": 4031033000
           },
           "perCapitaTotal": 7420.55,
-          "perCapitaIncome": 50764
+          "perCapitaIncome": 50764,
+          "spendingTotal": 125109613000,
+          "spendingBreakdown": {
+            "education": 32076119000,
+            "public_welfare": 16950687000,
+            "health_hospitals": 15609714000,
+            "highways": 4976644000,
+            "police_corrections": 4885340000,
+            "natural_resources": 2994011000,
+            "other": 47617098000
+          }
         },
         {
           "state": "Georgia",
@@ -973,7 +1613,17 @@
             "other": 272500000
           },
           "perCapitaTotal": 5237.64,
-          "perCapitaIncome": 38378
+          "perCapitaIncome": 38378,
+          "spendingTotal": 113204184000,
+          "spendingBreakdown": {
+            "education": 36429679000,
+            "public_welfare": 16691085000,
+            "health_hospitals": 11019466000,
+            "highways": 5409510000,
+            "police_corrections": 6091391000,
+            "natural_resources": 1743114000,
+            "other": 35819939000
+          }
         },
         {
           "state": "North Carolina",
@@ -989,7 +1639,17 @@
             "other": 501575000
           },
           "perCapitaTotal": 5314.29,
-          "perCapitaIncome": 38701
+          "perCapitaIncome": 38701,
+          "spendingTotal": 136337666000,
+          "spendingBreakdown": {
+            "education": 33752443000,
+            "public_welfare": 23689750000,
+            "health_hospitals": 20191886000,
+            "highways": 6516204000,
+            "police_corrections": 6490165000,
+            "natural_resources": 2379464000,
+            "other": 43317754000
+          }
         },
         {
           "state": "Michigan",
@@ -1005,7 +1665,17 @@
             "other": 610953000
           },
           "perCapitaTotal": 5287.72,
-          "perCapitaIncome": 38151
+          "perCapitaIncome": 38151,
+          "spendingTotal": 137923205000,
+          "spendingBreakdown": {
+            "education": 37431242000,
+            "public_welfare": 22502492000,
+            "health_hospitals": 11578487000,
+            "highways": 6166039000,
+            "police_corrections": 5539557000,
+            "natural_resources": 1606539000,
+            "other": 53098849000
+          }
         },
         {
           "state": "Maryland",
@@ -1021,7 +1691,17 @@
             "other": 2160544000
           },
           "perCapitaTotal": 8076.46,
-          "perCapitaIncome": 49236
+          "perCapitaIncome": 49236,
+          "spendingTotal": 94959441000,
+          "spendingBreakdown": {
+            "education": 27502757000,
+            "public_welfare": 19809312000,
+            "health_hospitals": 3751691000,
+            "highways": 3367353000,
+            "police_corrections": 5451914000,
+            "natural_resources": 2062686000,
+            "other": 33013728000
+          }
         },
         {
           "state": "Minnesota",
@@ -1037,7 +1717,17 @@
             "other": 735787000
           },
           "perCapitaTotal": 7900.66,
-          "perCapitaIncome": 45021
+          "perCapitaIncome": 45021,
+          "spendingTotal": 90165064000,
+          "spendingBreakdown": {
+            "education": 21893400000,
+            "public_welfare": 21764184000,
+            "health_hospitals": 4684750000,
+            "highways": 5538291000,
+            "police_corrections": 3778731000,
+            "natural_resources": 2464768000,
+            "other": 30040940000
+          }
         },
         {
           "state": "Colorado",
@@ -1053,7 +1743,17 @@
             "other": 492797000
           },
           "perCapitaTotal": 7249.58,
-          "perCapitaIncome": 49071
+          "perCapitaIncome": 49071,
+          "spendingTotal": 82540938000,
+          "spendingBreakdown": {
+            "education": 22126534000,
+            "public_welfare": 13853749000,
+            "health_hospitals": 5713198000,
+            "highways": 3320151000,
+            "police_corrections": 4059878000,
+            "natural_resources": 2670111000,
+            "other": 30797317000
+          }
         },
         {
           "state": "Indiana",
@@ -1069,7 +1769,17 @@
             "other": 166857000
           },
           "perCapitaTotal": 5765.86,
-          "perCapitaIncome": 35984
+          "perCapitaIncome": 35984,
+          "spendingTotal": 84001409000,
+          "spendingBreakdown": {
+            "education": 22803507000,
+            "public_welfare": 19521233000,
+            "health_hospitals": 7249515000,
+            "highways": 4013823000,
+            "police_corrections": 3164414000,
+            "natural_resources": 1009661000,
+            "other": 26239256000
+          }
         },
         {
           "state": "Arizona",
@@ -1085,7 +1795,17 @@
             "other": 301484000
           },
           "perCapitaTotal": 5205.87,
-          "perCapitaIncome": 39819
+          "perCapitaIncome": 39819,
+          "spendingTotal": 85711073000,
+          "spendingBreakdown": {
+            "education": 22678566000,
+            "public_welfare": 25267850000,
+            "health_hospitals": 2413683000,
+            "highways": 2891410000,
+            "police_corrections": 5378049000,
+            "natural_resources": 1380287000,
+            "other": 25701228000
+          }
         },
         {
           "state": "Connecticut",
@@ -1101,7 +1821,17 @@
             "other": 620733000
           },
           "perCapitaTotal": 9730.3,
-          "perCapitaIncome": 51581
+          "perCapitaIncome": 51581,
+          "spendingTotal": 53791054000,
+          "spendingBreakdown": {
+            "education": 17514657000,
+            "public_welfare": 4010793000,
+            "health_hospitals": 3268398000,
+            "highways": 2170250000,
+            "police_corrections": 2065998000,
+            "natural_resources": 551543000,
+            "other": 24209415000
+          }
         },
         {
           "state": "Wisconsin",
@@ -1117,7 +1847,17 @@
             "other": 183583000
           },
           "perCapitaTotal": 5954.93,
-          "perCapitaIncome": 40188
+          "perCapitaIncome": 40188,
+          "spendingTotal": 81457070000,
+          "spendingBreakdown": {
+            "education": 21491319000,
+            "public_welfare": 16698875000,
+            "health_hospitals": 5569086000,
+            "highways": 4472603000,
+            "police_corrections": 3940232000,
+            "natural_resources": 1412147000,
+            "other": 27872808000
+          }
         },
         {
           "state": "Tennessee",
@@ -1133,7 +1873,17 @@
             "other": 552614000
           },
           "perCapitaTotal": 4704.94,
-          "perCapitaIncome": 36704
+          "perCapitaIncome": 36704,
+          "spendingTotal": 73186667000,
+          "spendingBreakdown": {
+            "education": 18116855000,
+            "public_welfare": 14609413000,
+            "health_hospitals": 7314609000,
+            "highways": 3016582000,
+            "police_corrections": 3835389000,
+            "natural_resources": 1537357000,
+            "other": 24756462000
+          }
         },
         {
           "state": "Missouri",
@@ -1149,7 +1899,17 @@
             "other": 384650000
           },
           "perCapitaTotal": 4981.34,
-          "perCapitaIncome": 36640
+          "perCapitaIncome": 36640,
+          "spendingTotal": 66942619000,
+          "spendingBreakdown": {
+            "education": 18408167000,
+            "public_welfare": 12157505000,
+            "health_hospitals": 8766137000,
+            "highways": 3062344000,
+            "police_corrections": 3084108000,
+            "natural_resources": 1299369000,
+            "other": 20164989000
+          }
         },
         {
           "state": "Oregon",
@@ -1165,7 +1925,17 @@
             "other": 954363000
           },
           "perCapitaTotal": 7005.81,
-          "perCapitaIncome": 42474
+          "perCapitaIncome": 42474,
+          "spendingTotal": 72984095000,
+          "spendingBreakdown": {
+            "education": 18169821000,
+            "public_welfare": 17148433000,
+            "health_hospitals": 7012213000,
+            "highways": 3045995000,
+            "police_corrections": 3471362000,
+            "natural_resources": 1874592000,
+            "other": 22261679000
+          }
         },
         {
           "state": "South Carolina",
@@ -1181,7 +1951,17 @@
             "other": 312055000
           },
           "perCapitaTotal": 5010.84,
-          "perCapitaIncome": 36675
+          "perCapitaIncome": 36675,
+          "spendingTotal": 63565552000,
+          "spendingBreakdown": {
+            "education": 18752503000,
+            "public_welfare": 9909984000,
+            "health_hospitals": 10565661000,
+            "highways": 2301294000,
+            "police_corrections": 2501458000,
+            "natural_resources": 1203332000,
+            "other": 18331320000
+          }
         },
         {
           "state": "Louisiana",
@@ -1197,7 +1977,17 @@
             "other": 538882000
           },
           "perCapitaTotal": 5524.57,
-          "perCapitaIncome": 32171
+          "perCapitaIncome": 32171,
+          "spendingTotal": 64662335000,
+          "spendingBreakdown": {
+            "education": 15502917000,
+            "public_welfare": 15885203000,
+            "health_hospitals": 5381568000,
+            "highways": 2514132000,
+            "police_corrections": 3226650000,
+            "natural_resources": 1956819000,
+            "other": 20195046000
+          }
         },
         {
           "state": "Alabama",
@@ -1213,7 +2003,17 @@
             "other": 231954000
           },
           "perCapitaTotal": 4749.91,
-          "perCapitaIncome": 33777
+          "perCapitaIncome": 33777,
+          "spendingTotal": 62305663000,
+          "spendingBreakdown": {
+            "education": 17984312000,
+            "public_welfare": 8723959000,
+            "health_hospitals": 10619352000,
+            "highways": 2633031000,
+            "police_corrections": 2496572000,
+            "natural_resources": 736491000,
+            "other": 19111946000
+          }
         },
         {
           "state": "Kentucky",
@@ -1229,7 +2029,17 @@
             "other": 260514000
           },
           "perCapitaTotal": 5234.46,
-          "perCapitaIncome": 33980
+          "perCapitaIncome": 33980,
+          "spendingTotal": 59677355000,
+          "spendingBreakdown": {
+            "education": 16371583000,
+            "public_welfare": 16760499000,
+            "health_hospitals": 4620478000,
+            "highways": 2808830000,
+            "police_corrections": 2088106000,
+            "natural_resources": 889548000,
+            "other": 16138311000
+          }
         },
         {
           "state": "Utah",
@@ -1245,7 +2055,17 @@
             "other": 120448000
           },
           "perCapitaTotal": 6237.16,
-          "perCapitaIncome": 38514
+          "perCapitaIncome": 38514,
+          "spendingTotal": 46130072000,
+          "spendingBreakdown": {
+            "education": 13851896000,
+            "public_welfare": 6657517000,
+            "health_hospitals": 5006070000,
+            "highways": 2578868000,
+            "police_corrections": 1788392000,
+            "natural_resources": 1283544000,
+            "other": 14963785000
+          }
         },
         {
           "state": "Iowa",
@@ -1261,7 +2081,17 @@
             "other": 137892000
           },
           "perCapitaTotal": 6377.2,
-          "perCapitaIncome": 38917
+          "perCapitaIncome": 38917,
+          "spendingTotal": 46305062000,
+          "spendingBreakdown": {
+            "education": 12483508000,
+            "public_welfare": 8410770000,
+            "health_hospitals": 6247213000,
+            "highways": 3118849000,
+            "police_corrections": 1515915000,
+            "natural_resources": 1070252000,
+            "other": 13458555000
+          }
         },
         {
           "state": "Oklahoma",
@@ -1277,7 +2107,17 @@
             "other": 1729127000
           },
           "perCapitaTotal": 5033.14,
-          "perCapitaIncome": 32930
+          "perCapitaIncome": 32930,
+          "spendingTotal": 43910015000,
+          "spendingBreakdown": {
+            "education": 12470376000,
+            "public_welfare": 9283922000,
+            "health_hospitals": 3190656000,
+            "highways": 3426767000,
+            "police_corrections": 1896318000,
+            "natural_resources": 783314000,
+            "other": 12858662000
+          }
         },
         {
           "state": "Nevada",
@@ -1291,7 +2131,17 @@
             "other": 1167408000
           },
           "perCapitaTotal": 6165.38,
-          "perCapitaIncome": 38183
+          "perCapitaIncome": 38183,
+          "spendingTotal": 35483181000,
+          "spendingBreakdown": {
+            "education": 8726038000,
+            "public_welfare": 5493813000,
+            "health_hospitals": 2126652000,
+            "highways": 2259487000,
+            "police_corrections": 2554323000,
+            "natural_resources": 1095046000,
+            "other": 13227822000
+          }
         },
         {
           "state": "Kansas",
@@ -1307,7 +2157,17 @@
             "other": 83096000
           },
           "perCapitaTotal": 6357.74,
-          "perCapitaIncome": 37919
+          "perCapitaIncome": 37919,
+          "spendingTotal": 40324953000,
+          "spendingBreakdown": {
+            "education": 12029852000,
+            "public_welfare": 5997960000,
+            "health_hospitals": 5695025000,
+            "highways": 2157681000,
+            "police_corrections": 1611878000,
+            "natural_resources": 641027000,
+            "other": 12191530000
+          }
         },
         {
           "state": "New Mexico",
@@ -1323,7 +2183,17 @@
             "other": 4724812000
           },
           "perCapitaTotal": 7759.57,
-          "perCapitaIncome": 33916
+          "perCapitaIncome": 33916,
+          "spendingTotal": 38213566000,
+          "spendingBreakdown": {
+            "education": 8256723000,
+            "public_welfare": 9626045000,
+            "health_hospitals": 4692974000,
+            "highways": 1305154000,
+            "police_corrections": 1693973000,
+            "natural_resources": 783345000,
+            "other": 11855352000
+          }
         },
         {
           "state": "Arkansas",
@@ -1339,7 +2209,17 @@
             "other": 245075000
           },
           "perCapitaTotal": 5270.63,
-          "perCapitaIncome": 31380
+          "perCapitaIncome": 31380,
+          "spendingTotal": 38051385000,
+          "spendingBreakdown": {
+            "education": 9993631000,
+            "public_welfare": 9504553000,
+            "health_hospitals": 2024124000,
+            "highways": 2152526000,
+            "police_corrections": 1379783000,
+            "natural_resources": 670214000,
+            "other": 12326554000
+          }
         },
         {
           "state": "Mississippi",
@@ -1355,7 +2235,17 @@
             "other": 75460000
           },
           "perCapitaTotal": 4778.69,
-          "perCapitaIncome": 29045
+          "perCapitaIncome": 29045,
+          "spendingTotal": 36564595000,
+          "spendingBreakdown": {
+            "education": 9297428000,
+            "public_welfare": 6844977000,
+            "health_hospitals": 5333990000,
+            "highways": 1875658000,
+            "police_corrections": 1338479000,
+            "natural_resources": 624489000,
+            "other": 11249574000
+          }
         },
         {
           "state": "Hawaii",
@@ -1371,7 +2261,17 @@
             "other": 245823000
           },
           "perCapitaTotal": 9525.14,
-          "perCapitaIncome": 42710
+          "perCapitaIncome": 42710,
+          "spendingTotal": 20973391000,
+          "spendingBreakdown": {
+            "education": 5227188000,
+            "public_welfare": 4102638000,
+            "health_hospitals": 1277432000,
+            "highways": 901681000,
+            "police_corrections": 775793000,
+            "natural_resources": 506366000,
+            "other": 8182293000
+          }
         },
         {
           "state": "Nebraska",
@@ -1387,7 +2287,17 @@
             "other": 292895000
           },
           "perCapitaTotal": 6730.6,
-          "perCapitaIncome": 38997
+          "perCapitaIncome": 38997,
+          "spendingTotal": 26833093000,
+          "spendingBreakdown": {
+            "education": 8511999000,
+            "public_welfare": 4387378000,
+            "health_hospitals": 1317451000,
+            "highways": 1932788000,
+            "police_corrections": 1258446000,
+            "natural_resources": 666477000,
+            "other": 8758554000
+          }
         },
         {
           "state": "Idaho",
@@ -1403,7 +2313,17 @@
             "other": 12825000
           },
           "perCapitaTotal": 5135.65,
-          "perCapitaIncome": 35980
+          "perCapitaIncome": 35980,
+          "spendingTotal": 20534085000,
+          "spendingBreakdown": {
+            "education": 4716877000,
+            "public_welfare": 4092859000,
+            "health_hospitals": 1686876000,
+            "highways": 1264824000,
+            "police_corrections": 1104393000,
+            "natural_resources": 652262000,
+            "other": 7015994000
+          }
         },
         {
           "state": "Maine",
@@ -1419,7 +2339,17 @@
             "other": 96878000
           },
           "perCapitaTotal": 7167.02,
-          "perCapitaIncome": 41188
+          "perCapitaIncome": 41188,
+          "spendingTotal": 18629733000,
+          "spendingBreakdown": {
+            "education": 4688890000,
+            "public_welfare": 5011917000,
+            "health_hospitals": 529865000,
+            "highways": 1213990000,
+            "police_corrections": 646390000,
+            "natural_resources": 319903000,
+            "other": 6218778000
+          }
         },
         {
           "state": "West Virginia",
@@ -1435,7 +2365,17 @@
             "other": 833805000
           },
           "perCapitaTotal": 5355.74,
-          "perCapitaIncome": 31922
+          "perCapitaIncome": 31922,
+          "spendingTotal": 24469790000,
+          "spendingBreakdown": {
+            "education": 6622609000,
+            "public_welfare": 6259634000,
+            "health_hospitals": 1059066000,
+            "highways": 1754744000,
+            "police_corrections": 877699000,
+            "natural_resources": 482792000,
+            "other": 7413246000
+          }
         },
         {
           "state": "New Hampshire",
@@ -1450,7 +2390,17 @@
             "other": 239763000
           },
           "perCapitaTotal": 5908.05,
-          "perCapitaIncome": 49281
+          "perCapitaIncome": 49281,
+          "spendingTotal": 15963101000,
+          "spendingBreakdown": {
+            "education": 4739746000,
+            "public_welfare": 3430945000,
+            "health_hospitals": 348846000,
+            "highways": 789265000,
+            "police_corrections": 769543000,
+            "natural_resources": 216719000,
+            "other": 5668037000
+          }
         },
         {
           "state": "Delaware",
@@ -1465,7 +2415,17 @@
             "other": 553854000
           },
           "perCapitaTotal": 7642.99,
-          "perCapitaIncome": 42571
+          "perCapitaIncome": 42571,
+          "spendingTotal": 15802026000,
+          "spendingBreakdown": {
+            "education": 4690503000,
+            "public_welfare": 3492779000,
+            "health_hospitals": 750589000,
+            "highways": 799740000,
+            "police_corrections": 890017000,
+            "natural_resources": 221404000,
+            "other": 4956994000
+          }
         },
         {
           "state": "Rhode Island",
@@ -1481,7 +2441,17 @@
             "other": 65039000
           },
           "perCapitaTotal": 7029.1,
-          "perCapitaIncome": 44538
+          "perCapitaIncome": 44538,
+          "spendingTotal": 16413033000,
+          "spendingBreakdown": {
+            "education": 4463792000,
+            "public_welfare": 4019316000,
+            "health_hospitals": 855589000,
+            "highways": 712583000,
+            "police_corrections": 846145000,
+            "natural_resources": 193545000,
+            "other": 5322063000
+          }
         },
         {
           "state": "North Dakota",
@@ -1497,7 +2467,17 @@
             "other": 2861976000
           },
           "perCapitaTotal": 8965.6,
-          "perCapitaIncome": 41800
+          "perCapitaIncome": 41800,
+          "spendingTotal": 13877922000,
+          "spendingBreakdown": {
+            "education": 3731237000,
+            "public_welfare": 2019825000,
+            "health_hospitals": 428902000,
+            "highways": 1234261000,
+            "police_corrections": 478459000,
+            "natural_resources": 717205000,
+            "other": 5268033000
+          }
         },
         {
           "state": "Montana",
@@ -1512,7 +2492,17 @@
             "other": 236617000
           },
           "perCapitaTotal": 5799.51,
-          "perCapitaIncome": 38329
+          "perCapitaIncome": 38329,
+          "spendingTotal": 12922713000,
+          "spendingBreakdown": {
+            "education": 3512857000,
+            "public_welfare": 2959904000,
+            "health_hospitals": 678860000,
+            "highways": 973842000,
+            "police_corrections": 692822000,
+            "natural_resources": 489839000,
+            "other": 3614589000
+          }
         },
         {
           "state": "Vermont",
@@ -1528,7 +2518,17 @@
             "other": 138581000
           },
           "perCapitaTotal": 8251.63,
-          "perCapitaIncome": 42251
+          "perCapitaIncome": 42251,
+          "spendingTotal": 12008678000,
+          "spendingBreakdown": {
+            "education": 3784816000,
+            "public_welfare": 2357902000,
+            "health_hospitals": 533220000,
+            "highways": 694408000,
+            "police_corrections": 391932000,
+            "natural_resources": 222208000,
+            "other": 4024192000
+          }
         },
         {
           "state": "Alaska",
@@ -1543,7 +2543,17 @@
             "other": 2033625000
           },
           "perCapitaTotal": 6927.75,
-          "perCapitaIncome": 43054
+          "perCapitaIncome": 43054,
+          "spendingTotal": 17476134000,
+          "spendingBreakdown": {
+            "education": 3684392000,
+            "public_welfare": 3096408000,
+            "health_hospitals": 1134423000,
+            "highways": 1537814000,
+            "police_corrections": 892791000,
+            "natural_resources": 575668000,
+            "other": 6554638000
+          }
         },
         {
           "state": "South Dakota",
@@ -1558,7 +2568,17 @@
             "other": 22768000
           },
           "perCapitaTotal": 5052.46,
-          "perCapitaIncome": 37618
+          "perCapitaIncome": 37618,
+          "spendingTotal": 10193791000,
+          "spendingBreakdown": {
+            "education": 2888817000,
+            "public_welfare": 1712220000,
+            "health_hospitals": 316749000,
+            "highways": 1228866000,
+            "police_corrections": 504574000,
+            "natural_resources": 411882000,
+            "other": 3130683000
+          }
         },
         {
           "state": "Wyoming",
@@ -1572,7 +2592,17 @@
             "other": 792308000
           },
           "perCapitaTotal": 6248.84,
-          "perCapitaIncome": 38114
+          "perCapitaIncome": 38114,
+          "spendingTotal": 11557280000,
+          "spendingBreakdown": {
+            "education": 2923859000,
+            "public_welfare": 1031405000,
+            "health_hospitals": 2086790000,
+            "highways": 747619000,
+            "police_corrections": 455176000,
+            "natural_resources": 427493000,
+            "other": 3884938000
+          }
         }
       ]
     },
@@ -1593,7 +2623,17 @@
             "other": 6055143000
           },
           "perCapitaTotal": 8989.45,
-          "perCapitaIncome": 48013
+          "perCapitaIncome": 48013,
+          "spendingTotal": 880120213000,
+          "spendingBreakdown": {
+            "education": 192168106000,
+            "public_welfare": 177701230000,
+            "health_hospitals": 84464774000,
+            "highways": 27638764000,
+            "police_corrections": 47342922000,
+            "natural_resources": 20505253000,
+            "other": 330299164000
+          }
         },
         {
           "state": "New York",
@@ -1609,7 +2649,17 @@
             "other": 9702799000
           },
           "perCapitaTotal": 12601.5,
-          "perCapitaIncome": 48847
+          "perCapitaIncome": 48847,
+          "spendingTotal": 453942522000,
+          "spendingBreakdown": {
+            "education": 99698046000,
+            "public_welfare": 100289293000,
+            "health_hospitals": 30524467000,
+            "highways": 11637523000,
+            "police_corrections": 18122318000,
+            "natural_resources": 4317897000,
+            "other": 189352978000
+          }
         },
         {
           "state": "Texas",
@@ -1623,7 +2673,17 @@
             "other": 9552099000
           },
           "perCapitaTotal": 5721.17,
-          "perCapitaIncome": 39775
+          "perCapitaIncome": 39775,
+          "spendingTotal": 383261291000,
+          "spendingBreakdown": {
+            "education": 120676602000,
+            "public_welfare": 64715722000,
+            "health_hospitals": 38231514000,
+            "highways": 21380025000,
+            "police_corrections": 17811964000,
+            "natural_resources": 6768020000,
+            "other": 113677444000
+          }
         },
         {
           "state": "Florida",
@@ -1638,7 +2698,17 @@
             "other": 4740494000
           },
           "perCapitaTotal": 5148.16,
-          "perCapitaIncome": 41902
+          "perCapitaIncome": 41902,
+          "spendingTotal": 268357794000,
+          "spendingBreakdown": {
+            "education": 61794836000,
+            "public_welfare": 42017603000,
+            "health_hospitals": 25325552000,
+            "highways": 13699234000,
+            "police_corrections": 17569421000,
+            "natural_resources": 12030050000,
+            "other": 95921098000
+          }
         },
         {
           "state": "Illinois",
@@ -1654,7 +2724,17 @@
             "other": 961109000
           },
           "perCapitaTotal": 8393.67,
-          "perCapitaIncome": 45043
+          "perCapitaIncome": 45043,
+          "spendingTotal": 212995612000,
+          "spendingBreakdown": {
+            "education": 60868450000,
+            "public_welfare": 40075670000,
+            "health_hospitals": 9616367000,
+            "highways": 9680659000,
+            "police_corrections": 9161669000,
+            "natural_resources": 4237337000,
+            "other": 79355460000
+          }
         },
         {
           "state": "Pennsylvania",
@@ -1670,7 +2750,17 @@
             "other": 3964727000
           },
           "perCapitaTotal": 6889.59,
-          "perCapitaIncome": 42605
+          "perCapitaIncome": 42605,
+          "spendingTotal": 203537918000,
+          "spendingBreakdown": {
+            "education": 51751865000,
+            "public_welfare": 52032229000,
+            "health_hospitals": 14233052000,
+            "highways": 11935099000,
+            "police_corrections": 9724333000,
+            "natural_resources": 2604150000,
+            "other": 61257190000
+          }
         },
         {
           "state": "New Jersey",
@@ -1686,7 +2776,17 @@
             "other": 1474092000
           },
           "perCapitaTotal": 9223.99,
-          "perCapitaIncome": 52583
+          "perCapitaIncome": 52583,
+          "spendingTotal": 151458886000,
+          "spendingBreakdown": {
+            "education": 55099041000,
+            "public_welfare": 27702223000,
+            "health_hospitals": 5929199000,
+            "highways": 5240958000,
+            "police_corrections": 7084420000,
+            "natural_resources": 1423342000,
+            "other": 48979703000
+          }
         },
         {
           "state": "Ohio",
@@ -1702,7 +2802,17 @@
             "other": 277172000
           },
           "perCapitaTotal": 5871.13,
-          "perCapitaIncome": 39395
+          "perCapitaIncome": 39395,
+          "spendingTotal": 159435129000,
+          "spendingBreakdown": {
+            "education": 43033985000,
+            "public_welfare": 39867869000,
+            "health_hospitals": 11678347000,
+            "highways": 6137376000,
+            "police_corrections": 6842184000,
+            "natural_resources": 2333345000,
+            "other": 49542023000
+          }
         },
         {
           "state": "Massachusetts",
@@ -1718,7 +2828,17 @@
             "other": 1398170000
           },
           "perCapitaTotal": 9131.84,
-          "perCapitaIncome": 55897
+          "perCapitaIncome": 55897,
+          "spendingTotal": 126554041000,
+          "spendingBreakdown": {
+            "education": 32484071000,
+            "public_welfare": 34350080000,
+            "health_hospitals": 4963161000,
+            "highways": 3863524000,
+            "police_corrections": 4599414000,
+            "natural_resources": 1062817000,
+            "other": 45230974000
+          }
         },
         {
           "state": "Virginia",
@@ -1734,7 +2854,17 @@
             "other": 834544000
           },
           "perCapitaTotal": 7037.37,
-          "perCapitaIncome": 48689
+          "perCapitaIncome": 48689,
+          "spendingTotal": 131001731000,
+          "spendingBreakdown": {
+            "education": 34732166000,
+            "public_welfare": 26937581000,
+            "health_hospitals": 10834939000,
+            "highways": 7945192000,
+            "police_corrections": 7282092000,
+            "natural_resources": 1934340000,
+            "other": 41335421000
+          }
         },
         {
           "state": "Washington",
@@ -1749,7 +2879,17 @@
             "other": 3400842000
           },
           "perCapitaTotal": 7757.27,
-          "perCapitaIncome": 52011
+          "perCapitaIncome": 52011,
+          "spendingTotal": 135712494000,
+          "spendingBreakdown": {
+            "education": 34308354000,
+            "public_welfare": 19236096000,
+            "health_hospitals": 16189928000,
+            "highways": 5869883000,
+            "police_corrections": 5418444000,
+            "natural_resources": 3675264000,
+            "other": 51014525000
+          }
         },
         {
           "state": "Georgia",
@@ -1765,7 +2905,17 @@
             "other": 288828000
           },
           "perCapitaTotal": 5390.6,
-          "perCapitaIncome": 39685
+          "perCapitaIncome": 39685,
+          "spendingTotal": 127259656000,
+          "spendingBreakdown": {
+            "education": 39334953000,
+            "public_welfare": 20364023000,
+            "health_hospitals": 11215057000,
+            "highways": 6688648000,
+            "police_corrections": 6644262000,
+            "natural_resources": 2056197000,
+            "other": 40956516000
+          }
         },
         {
           "state": "North Carolina",
@@ -1781,7 +2931,17 @@
             "other": 443264000
           },
           "perCapitaTotal": 5358.43,
-          "perCapitaIncome": 40414
+          "perCapitaIncome": 40414,
+          "spendingTotal": 142193901000,
+          "spendingBreakdown": {
+            "education": 34997500000,
+            "public_welfare": 23972066000,
+            "health_hospitals": 22164931000,
+            "highways": 7494399000,
+            "police_corrections": 6848965000,
+            "natural_resources": 2806266000,
+            "other": 43909774000
+          }
         },
         {
           "state": "Michigan",
@@ -1797,7 +2957,17 @@
             "other": 465610000
           },
           "perCapitaTotal": 5429.52,
-          "perCapitaIncome": 38952
+          "perCapitaIncome": 38952,
+          "spendingTotal": 150342756000,
+          "spendingBreakdown": {
+            "education": 41199812000,
+            "public_welfare": 23320964000,
+            "health_hospitals": 13923005000,
+            "highways": 6846451000,
+            "police_corrections": 5872171000,
+            "natural_resources": 2117416000,
+            "other": 57062937000
+          }
         },
         {
           "state": "Maryland",
@@ -1813,7 +2983,17 @@
             "other": 1597400000
           },
           "perCapitaTotal": 8171.19,
-          "perCapitaIncome": 50728
+          "perCapitaIncome": 50728,
+          "spendingTotal": 98546244000,
+          "spendingBreakdown": {
+            "education": 29299854000,
+            "public_welfare": 20215728000,
+            "health_hospitals": 3530741000,
+            "highways": 3268198000,
+            "police_corrections": 6044401000,
+            "natural_resources": 2602632000,
+            "other": 33584690000
+          }
         },
         {
           "state": "Minnesota",
@@ -1829,7 +3009,17 @@
             "other": 648069000
           },
           "perCapitaTotal": 7859.29,
-          "perCapitaIncome": 46530
+          "perCapitaIncome": 46530,
+          "spendingTotal": 95255076000,
+          "spendingBreakdown": {
+            "education": 22524199000,
+            "public_welfare": 23798617000,
+            "health_hospitals": 4858250000,
+            "highways": 6060128000,
+            "police_corrections": 4142387000,
+            "natural_resources": 2588502000,
+            "other": 31282993000
+          }
         },
         {
           "state": "Indiana",
@@ -1845,7 +3035,17 @@
             "other": 157808000
           },
           "perCapitaTotal": 5963.69,
-          "perCapitaIncome": 37299
+          "perCapitaIncome": 37299,
+          "spendingTotal": 89434154000,
+          "spendingBreakdown": {
+            "education": 24494015000,
+            "public_welfare": 20550233000,
+            "health_hospitals": 7754947000,
+            "highways": 4214625000,
+            "police_corrections": 3429141000,
+            "natural_resources": 1170898000,
+            "other": 27820295000
+          }
         },
         {
           "state": "Colorado",
@@ -1861,7 +3061,17 @@
             "other": 512832000
           },
           "perCapitaTotal": 6777.96,
-          "perCapitaIncome": 51768
+          "perCapitaIncome": 51768,
+          "spendingTotal": 88078504000,
+          "spendingBreakdown": {
+            "education": 24587075000,
+            "public_welfare": 13921516000,
+            "health_hospitals": 6330203000,
+            "highways": 3890659000,
+            "police_corrections": 4238591000,
+            "natural_resources": 3116412000,
+            "other": 31994048000
+          }
         },
         {
           "state": "Arizona",
@@ -1877,7 +3087,17 @@
             "other": 329552000
           },
           "perCapitaTotal": 5001.54,
-          "perCapitaIncome": 41290
+          "perCapitaIncome": 41290,
+          "spendingTotal": 93862654000,
+          "spendingBreakdown": {
+            "education": 24591511000,
+            "public_welfare": 28469945000,
+            "health_hospitals": 2306536000,
+            "highways": 3286368000,
+            "police_corrections": 5607940000,
+            "natural_resources": 1780360000,
+            "other": 27819994000
+          }
         },
         {
           "state": "Wisconsin",
@@ -1893,7 +3113,17 @@
             "other": 160799000
           },
           "perCapitaTotal": 6036.55,
-          "perCapitaIncome": 41785
+          "perCapitaIncome": 41785,
+          "spendingTotal": 85427317000,
+          "spendingBreakdown": {
+            "education": 23096926000,
+            "public_welfare": 18182929000,
+            "health_hospitals": 5392666000,
+            "highways": 4442843000,
+            "police_corrections": 4134398000,
+            "natural_resources": 1679526000,
+            "other": 28498029000
+          }
         },
         {
           "state": "Tennessee",
@@ -1909,7 +3139,17 @@
             "other": 427207000
           },
           "perCapitaTotal": 4897.26,
-          "perCapitaIncome": 38538
+          "perCapitaIncome": 38538,
+          "spendingTotal": 79126873000,
+          "spendingBreakdown": {
+            "education": 19826436000,
+            "public_welfare": 15524605000,
+            "health_hospitals": 7607467000,
+            "highways": 3503590000,
+            "police_corrections": 4263085000,
+            "natural_resources": 1544989000,
+            "other": 26856701000
+          }
         },
         {
           "state": "Connecticut",
@@ -1925,7 +3165,17 @@
             "other": 523084000
           },
           "perCapitaTotal": 9422.17,
-          "perCapitaIncome": 53119
+          "perCapitaIncome": 53119,
+          "spendingTotal": 55215890000,
+          "spendingBreakdown": {
+            "education": 17406707000,
+            "public_welfare": 4517817000,
+            "health_hospitals": 3600266000,
+            "highways": 2675557000,
+            "police_corrections": 2149347000,
+            "natural_resources": 550099000,
+            "other": 24316097000
+          }
         },
         {
           "state": "Missouri",
@@ -1941,7 +3191,17 @@
             "other": 345321000
           },
           "perCapitaTotal": 5284.15,
-          "perCapitaIncome": 38699
+          "perCapitaIncome": 38699,
+          "spendingTotal": 74989977000,
+          "spendingBreakdown": {
+            "education": 19854044000,
+            "public_welfare": 15388699000,
+            "health_hospitals": 10427381000,
+            "highways": 3813311000,
+            "police_corrections": 3473395000,
+            "natural_resources": 1294433000,
+            "other": 20738714000
+          }
         },
         {
           "state": "Oregon",
@@ -1957,7 +3217,17 @@
             "other": 922526000
           },
           "perCapitaTotal": 7634.72,
-          "perCapitaIncome": 44623
+          "perCapitaIncome": 44623,
+          "spendingTotal": 80338807000,
+          "spendingBreakdown": {
+            "education": 19566908000,
+            "public_welfare": 18778201000,
+            "health_hospitals": 7220725000,
+            "highways": 3362582000,
+            "police_corrections": 3732139000,
+            "natural_resources": 2057891000,
+            "other": 25620361000
+          }
         },
         {
           "state": "Louisiana",
@@ -1973,7 +3243,17 @@
             "other": 881195000
           },
           "perCapitaTotal": 5885.4,
-          "perCapitaIncome": 34102
+          "perCapitaIncome": 34102,
+          "spendingTotal": 67947428000,
+          "spendingBreakdown": {
+            "education": 16455282000,
+            "public_welfare": 17680133000,
+            "health_hospitals": 4486780000,
+            "highways": 2807944000,
+            "police_corrections": 3353645000,
+            "natural_resources": 2056623000,
+            "other": 21107021000
+          }
         },
         {
           "state": "South Carolina",
@@ -1989,7 +3269,17 @@
             "other": 281632000
           },
           "perCapitaTotal": 4951.1,
-          "perCapitaIncome": 38097
+          "perCapitaIncome": 38097,
+          "spendingTotal": 69831739000,
+          "spendingBreakdown": {
+            "education": 19677562000,
+            "public_welfare": 10806869000,
+            "health_hospitals": 10900632000,
+            "highways": 2677774000,
+            "police_corrections": 2715921000,
+            "natural_resources": 1404733000,
+            "other": 21648248000
+          }
         },
         {
           "state": "Alabama",
@@ -2005,7 +3295,17 @@
             "other": 192960000
           },
           "perCapitaTotal": 4938.81,
-          "perCapitaIncome": 35046
+          "perCapitaIncome": 35046,
+          "spendingTotal": 68239381000,
+          "spendingBreakdown": {
+            "education": 19907161000,
+            "public_welfare": 9868888000,
+            "health_hospitals": 11455593000,
+            "highways": 2732116000,
+            "police_corrections": 2697687000,
+            "natural_resources": 928809000,
+            "other": 20649127000
+          }
         },
         {
           "state": "Kentucky",
@@ -2021,7 +3321,17 @@
             "other": 288678000
           },
           "perCapitaTotal": 5454.62,
-          "perCapitaIncome": 34676
+          "perCapitaIncome": 34676,
+          "spendingTotal": 65372074000,
+          "spendingBreakdown": {
+            "education": 17877189000,
+            "public_welfare": 18707299000,
+            "health_hospitals": 5218910000,
+            "highways": 3165204000,
+            "police_corrections": 2275424000,
+            "natural_resources": 1019902000,
+            "other": 17108146000
+          }
         },
         {
           "state": "Oklahoma",
@@ -2037,7 +3347,17 @@
             "other": 2025895000
           },
           "perCapitaTotal": 5300.58,
-          "perCapitaIncome": 34206
+          "perCapitaIncome": 34206,
+          "spendingTotal": 47518540000,
+          "spendingBreakdown": {
+            "education": 13102616000,
+            "public_welfare": 11195604000,
+            "health_hospitals": 3416592000,
+            "highways": 3620902000,
+            "police_corrections": 1999847000,
+            "natural_resources": 895342000,
+            "other": 13287637000
+          }
         },
         {
           "state": "Utah",
@@ -2053,7 +3373,17 @@
             "other": 167772000
           },
           "perCapitaTotal": 6237.81,
-          "perCapitaIncome": 40096
+          "perCapitaIncome": 40096,
+          "spendingTotal": 49106483000,
+          "spendingBreakdown": {
+            "education": 15203381000,
+            "public_welfare": 7057116000,
+            "health_hospitals": 5063017000,
+            "highways": 2638431000,
+            "police_corrections": 1853783000,
+            "natural_resources": 1415754000,
+            "other": 15875001000
+          }
         },
         {
           "state": "Iowa",
@@ -2069,7 +3399,17 @@
             "other": 120852000
           },
           "perCapitaTotal": 6478.16,
-          "perCapitaIncome": 39518
+          "perCapitaIncome": 39518,
+          "spendingTotal": 48280266000,
+          "spendingBreakdown": {
+            "education": 13105241000,
+            "public_welfare": 8910071000,
+            "health_hospitals": 6274894000,
+            "highways": 3489327000,
+            "police_corrections": 1603263000,
+            "natural_resources": 1107860000,
+            "other": 13789610000
+          }
         },
         {
           "state": "Nevada",
@@ -2083,7 +3423,17 @@
             "other": 1046841000
           },
           "perCapitaTotal": 6367.01,
-          "perCapitaIncome": 40463
+          "perCapitaIncome": 40463,
+          "spendingTotal": 41329363000,
+          "spendingBreakdown": {
+            "education": 8756492000,
+            "public_welfare": 6526893000,
+            "health_hospitals": 2130297000,
+            "highways": 2514733000,
+            "police_corrections": 2698314000,
+            "natural_resources": 1228761000,
+            "other": 17473873000
+          }
         },
         {
           "state": "Kansas",
@@ -2099,7 +3449,17 @@
             "other": 80433000
           },
           "perCapitaTotal": 6617.24,
-          "perCapitaIncome": 38361
+          "perCapitaIncome": 38361,
+          "spendingTotal": 43160804000,
+          "spendingBreakdown": {
+            "education": 12596272000,
+            "public_welfare": 6816819000,
+            "health_hospitals": 5390166000,
+            "highways": 2714350000,
+            "police_corrections": 1849967000,
+            "natural_resources": 690015000,
+            "other": 13103215000
+          }
         },
         {
           "state": "New Mexico",
@@ -2115,7 +3475,17 @@
             "other": 5426513000
           },
           "perCapitaTotal": 8966.6,
-          "perCapitaIncome": 35510
+          "perCapitaIncome": 35510,
+          "spendingTotal": 42568980000,
+          "spendingBreakdown": {
+            "education": 9348428000,
+            "public_welfare": 10444128000,
+            "health_hospitals": 4785993000,
+            "highways": 1507517000,
+            "police_corrections": 1928909000,
+            "natural_resources": 887301000,
+            "other": 13666704000
+          }
         },
         {
           "state": "Arkansas",
@@ -2131,7 +3501,17 @@
             "other": 249404000
           },
           "perCapitaTotal": 5286.65,
-          "perCapitaIncome": 33012
+          "perCapitaIncome": 33012,
+          "spendingTotal": 40000697000,
+          "spendingBreakdown": {
+            "education": 10558127000,
+            "public_welfare": 9706870000,
+            "health_hospitals": 2227096000,
+            "highways": 2413176000,
+            "police_corrections": 1526817000,
+            "natural_resources": 753189000,
+            "other": 12815422000
+          }
         },
         {
           "state": "Mississippi",
@@ -2147,7 +3527,17 @@
             "other": 76031000
           },
           "perCapitaTotal": 4872.43,
-          "perCapitaIncome": 30807
+          "perCapitaIncome": 30807,
+          "spendingTotal": 40246987000,
+          "spendingBreakdown": {
+            "education": 10496696000,
+            "public_welfare": 7483333000,
+            "health_hospitals": 5626892000,
+            "highways": 2241497000,
+            "police_corrections": 1489657000,
+            "natural_resources": 692838000,
+            "other": 12216074000
+          }
         },
         {
           "state": "Hawaii",
@@ -2163,7 +3553,17 @@
             "other": 150215000
           },
           "perCapitaTotal": 9797.04,
-          "perCapitaIncome": 43794
+          "perCapitaIncome": 43794,
+          "spendingTotal": 21489181000,
+          "spendingBreakdown": {
+            "education": 5732456000,
+            "public_welfare": 4163015000,
+            "health_hospitals": 1226972000,
+            "highways": 936669000,
+            "police_corrections": 800675000,
+            "natural_resources": 532279000,
+            "other": 8097115000
+          }
         },
         {
           "state": "Nebraska",
@@ -2179,7 +3579,17 @@
             "other": 280727000
           },
           "perCapitaTotal": 6632.12,
-          "perCapitaIncome": 41436
+          "perCapitaIncome": 41436,
+          "spendingTotal": 29237186000,
+          "spendingBreakdown": {
+            "education": 8863249000,
+            "public_welfare": 5145065000,
+            "health_hospitals": 1536159000,
+            "highways": 2207173000,
+            "police_corrections": 1347278000,
+            "natural_resources": 778000000,
+            "other": 9360262000
+          }
         },
         {
           "state": "West Virginia",
@@ -2195,7 +3605,17 @@
             "other": 909306000
           },
           "perCapitaTotal": 5717.23,
-          "perCapitaIncome": 32766
+          "perCapitaIncome": 32766,
+          "spendingTotal": 25407898000,
+          "spendingBreakdown": {
+            "education": 6958824000,
+            "public_welfare": 6628930000,
+            "health_hospitals": 1153703000,
+            "highways": 1885696000,
+            "police_corrections": 1080009000,
+            "natural_resources": 579270000,
+            "other": 7121466000
+          }
         },
         {
           "state": "Maine",
@@ -2211,7 +3631,17 @@
             "other": 94908000
           },
           "perCapitaTotal": 7217.78,
-          "perCapitaIncome": 42936
+          "perCapitaIncome": 42936,
+          "spendingTotal": 19922888000,
+          "spendingBreakdown": {
+            "education": 5018360000,
+            "public_welfare": 5624209000,
+            "health_hospitals": 596195000,
+            "highways": 1316925000,
+            "police_corrections": 677109000,
+            "natural_resources": 405908000,
+            "other": 6284182000
+          }
         },
         {
           "state": "Idaho",
@@ -2227,7 +3657,17 @@
             "other": 12120000
           },
           "perCapitaTotal": 4994.21,
-          "perCapitaIncome": 37426
+          "perCapitaIncome": 37426,
+          "spendingTotal": 23456816000,
+          "spendingBreakdown": {
+            "education": 5221967000,
+            "public_welfare": 3761621000,
+            "health_hospitals": 1702005000,
+            "highways": 2059108000,
+            "police_corrections": 1221686000,
+            "natural_resources": 840959000,
+            "other": 8649470000
+          }
         },
         {
           "state": "New Hampshire",
@@ -2242,7 +3682,17 @@
             "other": 208801000
           },
           "perCapitaTotal": 5773.03,
-          "perCapitaIncome": 51587
+          "perCapitaIncome": 51587,
+          "spendingTotal": 16908022000,
+          "spendingBreakdown": {
+            "education": 5104952000,
+            "public_welfare": 3268981000,
+            "health_hospitals": 321920000,
+            "highways": 899077000,
+            "police_corrections": 801084000,
+            "natural_resources": 256548000,
+            "other": 6255460000
+          }
         },
         {
           "state": "Delaware",
@@ -2257,7 +3707,17 @@
             "other": 459312000
           },
           "perCapitaTotal": 7685.13,
-          "perCapitaIncome": 44350
+          "perCapitaIncome": 44350,
+          "spendingTotal": 17369610000,
+          "spendingBreakdown": {
+            "education": 5250514000,
+            "public_welfare": 3844097000,
+            "health_hospitals": 779099000,
+            "highways": 857898000,
+            "police_corrections": 949859000,
+            "natural_resources": 240364000,
+            "other": 5447779000
+          }
         },
         {
           "state": "North Dakota",
@@ -2273,7 +3733,17 @@
             "other": 3170298000
           },
           "perCapitaTotal": 9848.13,
-          "perCapitaIncome": 42814
+          "perCapitaIncome": 42814,
+          "spendingTotal": 14684694000,
+          "spendingBreakdown": {
+            "education": 3779548000,
+            "public_welfare": 2172703000,
+            "health_hospitals": 421649000,
+            "highways": 1566893000,
+            "police_corrections": 504472000,
+            "natural_resources": 751162000,
+            "other": 5488267000
+          }
         },
         {
           "state": "Rhode Island",
@@ -2289,7 +3759,17 @@
             "other": 94069000
           },
           "perCapitaTotal": 6875.29,
-          "perCapitaIncome": 46525
+          "perCapitaIncome": 46525,
+          "spendingTotal": 17402193000,
+          "spendingBreakdown": {
+            "education": 4816097000,
+            "public_welfare": 4146069000,
+            "health_hospitals": 702636000,
+            "highways": 816891000,
+            "police_corrections": 952743000,
+            "natural_resources": 206471000,
+            "other": 5761286000
+          }
         },
         {
           "state": "Montana",
@@ -2304,7 +3784,17 @@
             "other": 291151000
           },
           "perCapitaTotal": 5838.59,
-          "perCapitaIncome": 40197
+          "perCapitaIncome": 40197,
+          "spendingTotal": 13821984000,
+          "spendingBreakdown": {
+            "education": 3666411000,
+            "public_welfare": 3101741000,
+            "health_hospitals": 739381000,
+            "highways": 1183252000,
+            "police_corrections": 761389000,
+            "natural_resources": 580633000,
+            "other": 3789177000
+          }
         },
         {
           "state": "Alaska",
@@ -2319,7 +3809,17 @@
             "other": 2298133000
           },
           "perCapitaTotal": 7530.68,
-          "perCapitaIncome": 45792
+          "perCapitaIncome": 45792,
+          "spendingTotal": 17309261000,
+          "spendingBreakdown": {
+            "education": 3747785000,
+            "public_welfare": 3205777000,
+            "health_hospitals": 1017083000,
+            "highways": 1757577000,
+            "police_corrections": 955685000,
+            "natural_resources": 578848000,
+            "other": 6046506000
+          }
         },
         {
           "state": "Vermont",
@@ -2335,7 +3835,17 @@
             "other": 137936000
           },
           "perCapitaTotal": 8474.61,
-          "perCapitaIncome": 46029
+          "perCapitaIncome": 46029,
+          "spendingTotal": 12722554000,
+          "spendingBreakdown": {
+            "education": 3801305000,
+            "public_welfare": 2630423000,
+            "health_hospitals": 557621000,
+            "highways": 843609000,
+            "police_corrections": 421110000,
+            "natural_resources": 266190000,
+            "other": 4202296000
+          }
         },
         {
           "state": "South Dakota",
@@ -2350,7 +3860,17 @@
             "other": 21138000
           },
           "perCapitaTotal": 5267.48,
-          "perCapitaIncome": 40263
+          "perCapitaIncome": 40263,
+          "spendingTotal": 11169606000,
+          "spendingBreakdown": {
+            "education": 3249372000,
+            "public_welfare": 1689859000,
+            "health_hospitals": 331035000,
+            "highways": 1343206000,
+            "police_corrections": 551783000,
+            "natural_resources": 458459000,
+            "other": 3545892000
+          }
         },
         {
           "state": "Wyoming",
@@ -2364,7 +3884,17 @@
             "other": 1166300000
           },
           "perCapitaTotal": 8029.42,
-          "perCapitaIncome": 39966
+          "perCapitaIncome": 39966,
+          "spendingTotal": 11827272000,
+          "spendingBreakdown": {
+            "education": 3068371000,
+            "public_welfare": 1130232000,
+            "health_hospitals": 2170568000,
+            "highways": 929400000,
+            "police_corrections": 478883000,
+            "natural_resources": 424966000,
+            "other": 3624852000
+          }
         }
       ]
     }
