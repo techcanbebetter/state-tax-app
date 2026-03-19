@@ -30,3 +30,4 @@ dist-ssr
 # Committed outputs: data/config/ and public/data/*.json
 data/raw/downloads/
 data/raw/*.csv
+.superpowers/
