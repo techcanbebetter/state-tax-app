@@ -290,25 +290,29 @@ describe('App year toggle', () => {
 })
 
 describe('App view tab bar', () => {
-  it('renders Tax Revenue and Spending tab buttons', async () => {
+  it('renders all 5 tabs in story order', async () => {
     render(<App />)
     const viewToggle = await screen.findByRole('group', { name: /view toggle/i })
     const buttons = viewToggle.querySelectorAll('button')
-    expect(buttons[0].textContent).toBe('Tax Revenue')
-    expect(buttons[1].textContent).toBe('Spending')
+    expect(buttons).toHaveLength(5)
+    expect(buttons[0].textContent).toBe('Total Revenue')
+    expect(buttons[1].textContent).toBe('Federal Grants')
+    expect(buttons[2].textContent).toBe('Tax Revenue')
+    expect(buttons[3].textContent).toBe('Non-Federal Revenue')
+    expect(buttons[4].textContent).toBe('Spending')
   })
 
   it('defaults to Tax Revenue tab active', async () => {
     render(<App />)
-    const revenueBtn = await screen.findByRole('button', { name: /tax revenue/i })
+    const revenueBtn = await screen.findByRole('button', { name: /^tax revenue$/i })
     expect(revenueBtn.className).toContain('active')
   })
 
   it('switches to Spending view when Spending tab is clicked', async () => {
     render(<App />)
-    await screen.findByRole('button', { name: /tax revenue/i })
-    await userEvent.click(screen.getByRole('button', { name: /spending/i }))
-    expect(screen.getByRole('button', { name: /spending/i }).className).toContain('active')
-    expect(screen.getByRole('button', { name: /tax revenue/i }).className).not.toContain('active')
+    await screen.findByRole('button', { name: /^tax revenue$/i })
+    await userEvent.click(screen.getByRole('button', { name: /^spending$/i }))
+    expect(screen.getByRole('button', { name: /^spending$/i }).className).toContain('active')
+    expect(screen.getByRole('button', { name: /^tax revenue$/i }).className).not.toContain('active')
   })
 })
