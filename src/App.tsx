@@ -17,7 +17,8 @@ function App() {
   const [selectedYear, setSelectedYear] = useState<number | null>(null)
   const [view, setView] = useState<'revenue' | 'spending'>('revenue')
   const [revenueMetric, setRevenueMetric] = useState<Metric>('total')
-  const [spendingMetric, _setSpendingMetric] = useState<SpendingMetric>('total')
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [spendingMetric, setSpendingMetric] = useState<SpendingMetric>('total')
 
   useEffect(() => {
     const loadData = async () => {
