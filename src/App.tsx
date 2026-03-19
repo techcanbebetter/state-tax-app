@@ -3,8 +3,7 @@ import './App.css'
 import type { MultiYearPayload, Metric, SpendingMetric } from './types'
 import { getMetricValue, getSpendingMetricValue } from './format'
 import RevenueView from './RevenueView'
-// SpendingView will be imported in Chunk 5
-// import SpendingView from './SpendingView'
+import SpendingView from './SpendingView'
 
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -17,8 +16,7 @@ function App() {
   const [selectedYear, setSelectedYear] = useState<number | null>(null)
   const [view, setView] = useState<'revenue' | 'spending'>('revenue')
   const [revenueMetric, setRevenueMetric] = useState<Metric>('total')
-  // Renamed _setSpendingMetric intentionally to satisfy noUnusedLocals; Task 8 wires it to SpendingView
-  const [spendingMetric, _setSpendingMetric] = useState<SpendingMetric>('total')
+  const [spendingMetric, setSpendingMetric] = useState<SpendingMetric>('total')
 
   useEffect(() => {
     const loadData = async () => {
@@ -154,9 +152,12 @@ function App() {
               setMetric={setRevenueMetric}
             />
           ) : (
-            <div className="panel" style={{ padding: '2rem', textAlign: 'center', color: '#6b7280' }}>
-              Spending view coming soon — SpendingView will be wired in Chunk 5.
-            </div>
+            <SpendingView
+              data={data}
+              activeStates={activeStates}
+              metric={spendingMetric}
+              setMetric={setSpendingMetric}
+            />
           )}
 
           <section className="panel sources-panel">
