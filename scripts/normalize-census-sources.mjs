@@ -242,6 +242,38 @@ const normalizeSpendingFromCensusApiRows = (rows, config) => {
   return [...bucket.values()]
 }
 
+const REVENUE_EXTENDED_LF_CODES = new Set([
+  'LF0001', // Total Revenue
+  'LF0004', // Federal intergovernmental revenue
+  'LF0040', // Current charges (fees)
+  'LF0058', // Miscellaneous general revenue
+  'LF0068', // Utility revenue
+  'LF0074', // Insurance trust revenue
+])
+
+const normalizeRevenueExtendedFromCensusApiRows = (rows) => {
+  const bucket = new Map()
+
+  for (const row of rows) {
+    const state = normalizeState(row.NAME ?? row.state ?? row.State)
+    const year = Number(row.YEAR ?? row.year)
+    const code = String(row.AGG_DESC ?? '').trim()
+    const govType = String(row.GOVTYPE ?? '').trim()
+
+    if (!state || !VALID_STATES.has(state) || !REVENUE_EXTENDED_LF_CODES.has(code) || !['002', '003'].includes(govType)) {
+      continue
+    }
+
+    const amount = parseNumeric(row.AMOUNT)
+    const mapKey = `${state}||${year}||${code}`
+    const current = bucket.get(mapKey) ?? { state, year, lf_code: code, amount: 0 }
+    current.amount += amount
+    bucket.set(mapKey, current)
+  }
+
+  return [...bucket.values()]
+}
+
 const quoteCsv = (value) => {
   const text = String(value ?? '')
   if (/[",\n]/.test(text)) {
@@ -304,6 +336,14 @@ const run = async () => {
 
   if (taxRowsLookLikeCensusApi && normalizedSpendingRows.length === 0) {
     console.warn('Spending normalization produced zero rows. Check LF code availability in the raw Census files.')
+  }
+
+  const normalizedRevenueExtendedRows = taxRowsLookLikeCensusApi
+    ? normalizeRevenueExtendedFromCensusApiRows(allTaxApiRows)
+    : []
+
+  if (taxRowsLookLikeCensusApi && normalizedRevenueExtendedRows.length === 0) {
+    console.warn('Revenue-extended normalization produced zero rows. Check LF code availability in raw Census files.')
   }
 
   // Population: pivot wide-format CSV — one row per (state, year) using POPESTIMATE{year} columns
@@ -390,6 +430,15 @@ const run = async () => {
   )
   console.log(`Normalized income rows: ${normalizedIncomeRows.length} -> ${path.relative(projectRoot, incomeOutput)}`)
   console.log(`Normalized spending rows: ${normalizedSpendingRows.length} -> ${path.relative(projectRoot, spendingOutput)}`)
+
+  const revenueExtendedOutput = await writeCsv(
+    config.normalizedOutputs.revenueExtended,
+    normalizedRevenueExtendedRows,
+    ['state', 'year', 'lf_code', 'amount'],
+  )
+  console.log(
+    `Normalized revenue-extended rows: ${normalizedRevenueExtendedRows.length} -> ${path.relative(projectRoot, revenueExtendedOutput)}`,
+  )
 }
 
 run().catch((error) => {
