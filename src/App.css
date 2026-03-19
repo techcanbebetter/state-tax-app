@@ -108,6 +108,36 @@
   margin-top: 1.25rem;
 }
 
+.view-toggle button {
+  position: relative;
+}
+
+.view-toggle button[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a2744;
+  color: #fff;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+  white-space: normal;
+  width: 18rem;
+  text-align: left;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.view-toggle button[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
 /* ── Summary cards ───────────────────────────────────────── */
 .summary-grid {
   display: grid;

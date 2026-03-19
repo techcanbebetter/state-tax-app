@@ -136,19 +136,19 @@ function App() {
         {data && (
           <>
             <div className="metric-toggle view-toggle" role="group" aria-label="View toggle">
-              <button type="button" className={view === 'totalRevenue' ? 'active' : ''} onClick={() => setView('totalRevenue')}>
+              <button type="button" className={view === 'totalRevenue' ? 'active' : ''} onClick={() => setView('totalRevenue')} data-tooltip="All revenue collected by state and local governments — taxes, federal grants, charges & fees, insurance trust & utility revenue, and miscellaneous sources.">
                 Total Revenue
               </button>
-              <button type="button" className={view === 'revenue' ? 'active' : ''} onClick={() => setView('revenue')}>
+              <button type="button" className={view === 'revenue' ? 'active' : ''} onClick={() => setView('revenue')} data-tooltip="Revenue from state and local taxes, including income, sales, property, and other taxes levied directly on residents and businesses.">
                 Tax Revenue
               </button>
-              <button type="button" className={view === 'ownSource' ? 'active' : ''} onClick={() => setView('ownSource')}>
+              <button type="button" className={view === 'ownSource' ? 'active' : ''} onClick={() => setView('ownSource')} data-tooltip="Non-tax, non-federal revenue: charges & fees for government services, insurance trust & utility revenues, and miscellaneous sources.">
                 Other Revenue
               </button>
-              <button type="button" className={view === 'federalGrants' ? 'active' : ''} onClick={() => setView('federalGrants')}>
+              <button type="button" className={view === 'federalGrants' ? 'active' : ''} onClick={() => setView('federalGrants')} data-tooltip="Intergovernmental transfers from the federal government to state and local governments, including Medicaid, education, transportation, and other programs.">
                 Federal Grants
               </button>
-              <button type="button" className={view === 'spending' ? 'active' : ''} onClick={() => setView('spending')}>
+              <button type="button" className={view === 'spending' ? 'active' : ''} onClick={() => setView('spending')} data-tooltip="State and local government expenditures broken down by category, such as education, public welfare, health, and highways.">
                 Spending
               </button>
             </div>
