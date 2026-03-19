@@ -37,6 +37,7 @@
   "normalizedOutputs": {
     "tax": "data/raw/state-local-tax-by-type.csv",
     "population": "data/raw/state-population.csv",
-    "income": "data/raw/state-per-capita-income.csv"
+    "income": "data/raw/state-per-capita-income.csv",
+    "spending": "data/raw/state-local-spending-by-function.csv"
   }
 }
