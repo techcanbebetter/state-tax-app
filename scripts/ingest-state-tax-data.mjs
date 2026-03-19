@@ -143,8 +143,12 @@ const run = async () => {
   let spendingRows = []
   try {
     spendingRows = await readCsv(spendingCsvPath)
-  } catch {
-    console.warn('Spending CSV not found — spendingTotal and spendingBreakdown will be 0 for all states.')
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.warn('Spending CSV not found — spendingTotal and spendingBreakdown will be 0 for all states.')
+    } else {
+      throw err
+    }
   }
 
   // Build spending lookup: `${state}||${year}||${lf_code}` → amount in dollars
