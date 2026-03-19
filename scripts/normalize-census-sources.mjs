@@ -206,6 +206,42 @@ const normalizeTaxFromCensusApiRows = (rows, config) => {
   return [...bucket.values()].filter((row) => row.state_tax_revenue > 0 || row.local_tax_revenue > 0)
 }
 
+const SPENDING_LF_CODES = new Set([
+  'LF0090', // Total General Expenditure (spendingTotal)
+  'LF0106', // Education
+  'LF0122', // Public Welfare
+  'LF0128', // Hospitals
+  'LF0131', // Health
+  'LF0140', // Highways
+  'LF0152', // Police Protection
+  'LF0158', // Correction
+  'LF0164', // Natural Resources
+  'LF0167', // Parks and Recreation
+])
+
+const normalizeSpendingFromCensusApiRows = (rows, config) => {
+  const bucket = new Map()
+
+  for (const row of rows) {
+    const state = normalizeState(row.NAME ?? row.state ?? row.State)
+    const year = Number(row.YEAR ?? row.year ?? config.year)
+    const code = String(row.AGG_DESC ?? '').trim()
+    const govType = String(row.GOVTYPE ?? '').trim()
+
+    if (!state || !VALID_STATES.has(state) || !SPENDING_LF_CODES.has(code) || !['002', '003'].includes(govType)) {
+      continue
+    }
+
+    const amount = parseNumeric(row.AMOUNT)
+    const mapKey = `${state}||${year}||${code}`
+    const current = bucket.get(mapKey) ?? { state, year, lf_code: code, amount: 0 }
+    current.amount += amount
+    bucket.set(mapKey, current)
+  }
+
+  return [...bucket.values()]
+}
+
 const quoteCsv = (value) => {
   const text = String(value ?? '')
   if (/[",\n]/.test(text)) {
@@ -260,6 +296,15 @@ const run = async () => {
           local_tax_revenue: parseNumeric(pickColumn(row, config.normalization.tax.localTaxRevenue)),
         }))
         .filter((row) => row.state && row.tax_type && VALID_STATES.has(row.state))
+
+  // Spending: reuse the same allTaxApiRows (already contains expenditure LF codes)
+  const normalizedSpendingRows = taxRowsLookLikeCensusApi
+    ? normalizeSpendingFromCensusApiRows(taxRows, config)
+    : []
+
+  if (taxRowsLookLikeCensusApi && normalizedSpendingRows.length === 0) {
+    console.warn('Spending normalization produced zero rows. Check LF code availability in the raw Census files.')
+  }
 
   // Population: pivot wide-format CSV — one row per (state, year) using POPESTIMATE{year} columns
   const normalizedPopulationRows = []
@@ -333,11 +378,18 @@ const run = async () => {
     'per_capita_income',
   ])
 
+  const spendingOutput = await writeCsv(config.normalizedOutputs.spending, normalizedSpendingRows, [
+    'state',
+    'year',
+    'lf_code',
+    'amount',
+  ])
   console.log(`Normalized tax rows: ${normalizedTaxRows.length} -> ${path.relative(projectRoot, taxOutput)}`)
   console.log(
     `Normalized population rows: ${normalizedPopulationRows.length} -> ${path.relative(projectRoot, populationOutput)}`,
   )
   console.log(`Normalized income rows: ${normalizedIncomeRows.length} -> ${path.relative(projectRoot, incomeOutput)}`)
+  console.log(`Normalized spending rows: ${normalizedSpendingRows.length} -> ${path.relative(projectRoot, spendingOutput)}`)
 }
 
 run().catch((error) => {
