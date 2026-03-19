@@ -87,17 +87,20 @@ export default function TotalRevenueView({ activeStates, metric, setMetric }: Pr
                   <h3>{entry.state}</h3>
                   <p>{formatSimpleMetricValue(getSimpleMetricValue(entry.totalRevenueFull, metric, entry.population), metric)}</p>
                 </header>
-                <div className="bar-track">
+                <div
+                  className="bar-track"
+                  style={{
+                    width: `${maxMetricValue === 0 ? 0 : (getSimpleMetricValue(entry.totalRevenueFull, metric, entry.population) / maxMetricValue) * 100}%`,
+                  }}
+                >
                   {BUCKETS.map(({ key, getValue }) => {
                     const bucketRaw = getValue(entry)
-                    const segmentRaw =
-                      metric === 'total' ? bucketRaw : entry.population > 0 ? bucketRaw / entry.population : 0
-                    const segmentWidth = maxMetricValue === 0 ? 0 : (segmentRaw / maxMetricValue) * 100
+                    const segmentPct = entry.totalRevenueFull === 0 ? 0 : (bucketRaw / entry.totalRevenueFull) * 100
                     return (
                       <div
                         key={key}
                         className="bar-segment"
-                        style={{ width: `${segmentWidth}%`, background: REVENUE_BUCKET_COLORS[key] }}
+                        style={{ width: `${segmentPct}%`, background: REVENUE_BUCKET_COLORS[key] }}
                       />
                     )
                   })}

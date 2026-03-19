@@ -88,17 +88,21 @@ export default function OwnSourceView({ activeStates, metric, setMetric }: Props
                   <h3>{entry.state}</h3>
                   <p>{formatSimpleMetricValue(getSimpleMetricValue(ownSourceTotal(entry), metric, entry.population), metric)}</p>
                 </header>
-                <div className="bar-track">
+                <div
+                  className="bar-track"
+                  style={{
+                    width: `${maxMetricValue === 0 ? 0 : (getSimpleMetricValue(ownSourceTotal(entry), metric, entry.population) / maxMetricValue) * 100}%`,
+                  }}
+                >
                   {OWN_SOURCE_BUCKETS.map(({ key, getValue }) => {
                     const bucketRaw = getValue(entry)
-                    const segmentRaw =
-                      metric === 'total' ? bucketRaw : entry.population > 0 ? bucketRaw / entry.population : 0
-                    const segmentWidth = maxMetricValue === 0 ? 0 : (segmentRaw / maxMetricValue) * 100
+                    const entryOwnSource = ownSourceTotal(entry)
+                    const segmentPct = entryOwnSource === 0 ? 0 : (bucketRaw / entryOwnSource) * 100
                     return (
                       <div
                         key={key}
                         className="bar-segment"
-                        style={{ width: `${segmentWidth}%`, background: REVENUE_BUCKET_COLORS[key] }}
+                        style={{ width: `${segmentPct}%`, background: REVENUE_BUCKET_COLORS[key] }}
                       />
                     )
                   })}
