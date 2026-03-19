@@ -11,7 +11,7 @@ import {
 import ChoroplethMap from './ChoroplethMap'
 
 const BUCKETS: { key: string; label: string; getValue: (s: StateRecord) => number }[] = [
-  { key: 'taxes',         label: 'Taxes',          getValue: (s) => s.totalRevenue },
+  { key: 'taxes',         label: 'Taxes',          getValue: (s) => Math.max(0, s.totalRevenueFull - s.federalGrants - s.chargesFees - s.trustUtility - s.miscRevenue) },
   { key: 'federalGrants', label: 'Federal Grants',  getValue: (s) => s.federalGrants },
   { key: 'chargesFees',   label: 'Charges & Fees',  getValue: (s) => s.chargesFees },
   { key: 'trustUtility',  label: 'Trust & Utility', getValue: (s) => s.trustUtility },
@@ -87,20 +87,15 @@ export default function TotalRevenueView({ activeStates, metric, setMetric }: Pr
                   <h3>{entry.state}</h3>
                   <p>{formatSimpleMetricValue(getSimpleMetricValue(entry.totalRevenueFull, metric, entry.population), metric)}</p>
                 </header>
-                <div
-                  className="bar-track"
-                  style={{
-                    width: `${maxMetricValue === 0 ? 0 : (getSimpleMetricValue(entry.totalRevenueFull, metric, entry.population) / maxMetricValue) * 100}%`,
-                  }}
-                >
+                <div className="bar-track">
                   {BUCKETS.map(({ key, getValue }) => {
                     const bucketRaw = getValue(entry)
-                    const segmentPct = entry.totalRevenueFull === 0 ? 0 : (bucketRaw / entry.totalRevenueFull) * 100
+                    const segmentWidth = maxMetricValue === 0 ? 0 : (getSimpleMetricValue(bucketRaw, metric, entry.population) / maxMetricValue) * 100
                     return (
                       <div
                         key={key}
                         className="bar-segment"
-                        style={{ width: `${segmentPct}%`, background: REVENUE_BUCKET_COLORS[key] }}
+                        style={{ width: `${segmentWidth}%`, background: REVENUE_BUCKET_COLORS[key] }}
                       />
                     )
                   })}

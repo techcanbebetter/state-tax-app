@@ -11,7 +11,7 @@ import {
 import ChoroplethMap from './ChoroplethMap'
 
 const OWN_SOURCE_BUCKETS: { key: string; label: string; getValue: (s: StateRecord) => number }[] = [
-  { key: 'taxes',        label: 'Taxes',          getValue: (s) => s.totalRevenue },
+  { key: 'taxes',        label: 'Taxes',          getValue: (s) => Math.max(0, ownSourceTotal(s) - s.chargesFees - s.trustUtility - s.miscRevenue) },
   { key: 'chargesFees',  label: 'Charges & Fees',  getValue: (s) => s.chargesFees },
   { key: 'trustUtility', label: 'Trust & Utility', getValue: (s) => s.trustUtility },
   { key: 'misc',         label: 'Misc',            getValue: (s) => s.miscRevenue },
@@ -88,21 +88,15 @@ export default function OwnSourceView({ activeStates, metric, setMetric }: Props
                   <h3>{entry.state}</h3>
                   <p>{formatSimpleMetricValue(getSimpleMetricValue(ownSourceTotal(entry), metric, entry.population), metric)}</p>
                 </header>
-                <div
-                  className="bar-track"
-                  style={{
-                    width: `${maxMetricValue === 0 ? 0 : (getSimpleMetricValue(ownSourceTotal(entry), metric, entry.population) / maxMetricValue) * 100}%`,
-                  }}
-                >
+                <div className="bar-track">
                   {OWN_SOURCE_BUCKETS.map(({ key, getValue }) => {
                     const bucketRaw = getValue(entry)
-                    const entryOwnSource = ownSourceTotal(entry)
-                    const segmentPct = entryOwnSource === 0 ? 0 : (bucketRaw / entryOwnSource) * 100
+                    const segmentWidth = maxMetricValue === 0 ? 0 : (getSimpleMetricValue(bucketRaw, metric, entry.population) / maxMetricValue) * 100
                     return (
                       <div
                         key={key}
                         className="bar-segment"
-                        style={{ width: `${segmentPct}%`, background: REVENUE_BUCKET_COLORS[key] }}
+                        style={{ width: `${segmentWidth}%`, background: REVENUE_BUCKET_COLORS[key] }}
                       />
                     )
                   })}
