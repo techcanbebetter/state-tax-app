@@ -13,16 +13,6 @@ type SpendingViewProps = {
 export default function SpendingView({ data, activeStates, metric, setMetric }: SpendingViewProps) {
   const [hoveredState, setHoveredState] = useState<string | null>(null)
 
-  if (!data.spendingTypes || data.spendingTypes.length === 0) {
-    return (
-      <section className="panel">
-        <p style={{ textAlign: 'center', color: '#6b7280', padding: '2rem 0' }}>
-          No spending data available. Run <code>npm run data:refresh</code> to regenerate the dataset.
-        </p>
-      </section>
-    )
-  }
-
   const sortedStates = useMemo(() => {
     return [...activeStates].sort((a, b) => getSpendingMetricValue(b, metric) - getSpendingMetricValue(a, metric))
   }, [activeStates, metric])
@@ -33,6 +23,16 @@ export default function SpendingView({ data, activeStates, metric, setMetric }: 
   }, [metric, sortedStates])
 
   const topState = sortedStates[0]
+
+  if (!data.spendingTypes || data.spendingTypes.length === 0) {
+    return (
+      <section className="panel">
+        <p style={{ textAlign: 'center', color: '#6b7280', padding: '2rem 0' }}>
+          No spending data available. Run <code>npm run data:refresh</code> to regenerate the dataset.
+        </p>
+      </section>
+    )
+  }
 
   return (
     <>
@@ -155,10 +155,12 @@ export default function SpendingView({ data, activeStates, metric, setMetric }: 
               {sortedStates.map((entry) => (
                 <tr key={entry.state}>
                   <td>{entry.state}</td>
-                  {data.spendingTypes.map((spendingType) => (
-                    <td key={spendingType.key}>{compactCurrency(entry.spendingBreakdown[spendingType.key] ?? 0)}</td>
-                  ))}
-                  <td>{compactCurrency(entry.spendingTotal)}</td>
+                  {data.spendingTypes.map((spendingType) => {
+                    const raw = entry.spendingBreakdown[spendingType.key] ?? 0
+                    const cellValue = metric === 'total' ? raw : entry.population > 0 ? raw / entry.population : 0
+                    return <td key={spendingType.key}>{formatSpendingMetricValue(cellValue, metric)}</td>
+                  })}
+                  <td>{formatSpendingMetricValue(getSpendingMetricValue(entry, metric), metric)}</td>
                 </tr>
               ))}
             </tbody>
