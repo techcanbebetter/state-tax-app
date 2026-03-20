@@ -101,18 +101,41 @@ describe('FederalGrantsView', () => {
     expect(container.querySelector('svg')).toBeTruthy()
   })
 
-  it('does not render a breakdown table', () => {
+  it('renders a breakdown table with 5 bucket column headers', () => {
     render(
       <FederalGrantsView activeStates={mockStates} metric="total" setMetric={() => undefined} />
     )
-    expect(screen.queryByRole('table')).toBeNull()
+    expect(screen.getByRole('table')).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: 'Medicaid & Welfare' })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: 'Education' })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: 'Health' })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: 'Transportation' })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: 'Other' })).toBeInTheDocument()
   })
 
-  it('does not render a color legend', () => {
+  it('renders a color legend with 5 entries', () => {
     const { container } = render(
       <FederalGrantsView activeStates={mockStates} metric="total" setMetric={() => undefined} />
     )
-    expect(container.querySelector('.tax-legend')).toBeNull()
+    const legend = container.querySelector('.tax-legend')
+    expect(legend).toBeTruthy()
+    expect(legend!.querySelectorAll('.legend-item')).toHaveLength(5)
+  })
+
+  it('shows breakdown unavailable message when federalGrants > 0 but all grants* fields are 0', () => {
+    const noBreakdownStates = mockStates.map((s) => ({
+      ...s,
+      grantsWelfare: 0,
+      grantsEducation: 0,
+      grantsHealth: 0,
+      grantsTransportation: 0,
+      grantsOther: 0,
+    }))
+    render(
+      <FederalGrantsView activeStates={noBreakdownStates} metric="total" setMetric={() => undefined} />
+    )
+    expect(screen.getByText(/breakdown not available/i)).toBeInTheDocument()
+    expect(screen.queryByRole('table')).toBeNull()
   })
 
   it('shows "no extended revenue data" when all federalGrants values are 0', () => {
