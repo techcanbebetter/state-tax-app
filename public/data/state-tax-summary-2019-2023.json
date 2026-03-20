@@ -12,7 +12,7 @@
       "Nominal dollars.",
       "Top states selected by population for the latest year."
     ],
-    "generatedAt": "2026-03-19T16:05:51.749Z"
+    "generatedAt": "2026-03-20T04:18:58.588Z"
   },
   "taxTypes": [
     {
@@ -106,7 +106,12 @@
           "federalGrants": 143262651000,
           "chargesFees": 95343716000,
           "miscRevenue": 32402971000,
-          "trustUtility": 356269419000
+          "trustUtility": 356269419000,
+          "grantsWelfare": 86425025000,
+          "grantsEducation": 15052072000,
+          "grantsHealth": 1634047000,
+          "grantsTransportation": 5189599000,
+          "grantsOther": 5752933000
         },
         {
           "state": "New York",
@@ -136,7 +141,12 @@
           "federalGrants": 102001168000,
           "chargesFees": 32400457000,
           "miscRevenue": 21616463000,
-          "trustUtility": 193401484000
+          "trustUtility": 193401484000,
+          "grantsWelfare": 59454647000,
+          "grantsEducation": 3607824000,
+          "grantsHealth": 6078501000,
+          "grantsTransportation": 1897050000,
+          "grantsOther": 6279348000
         },
         {
           "state": "Texas",
@@ -164,7 +174,12 @@
           "federalGrants": 93234834000,
           "chargesFees": 44204512000,
           "miscRevenue": 29051657000,
-          "trustUtility": 98782730000
+          "trustUtility": 98782730000,
+          "grantsWelfare": 34576415000,
+          "grantsEducation": 7723226000,
+          "grantsHealth": 33322127000,
+          "grantsTransportation": 5643909000,
+          "grantsOther": 3394428000
         },
         {
           "state": "Illinois",
@@ -194,7 +209,12 @@
           "federalGrants": 37096995000,
           "chargesFees": 13774429000,
           "miscRevenue": 9577981000,
-          "trustUtility": 55229841000
+          "trustUtility": 55229841000,
+          "grantsWelfare": 20132919000,
+          "grantsEducation": 4223747000,
+          "grantsHealth": 1228283000,
+          "grantsTransportation": 2329516000,
+          "grantsOther": 2768185000
         },
         {
           "state": "Florida",
@@ -223,7 +243,12 @@
           "federalGrants": 51835795000,
           "chargesFees": 34361161000,
           "miscRevenue": 22868637000,
-          "trustUtility": 69049887000
+          "trustUtility": 69049887000,
+          "grantsWelfare": 20685593000,
+          "grantsEducation": 6638492000,
+          "grantsHealth": 9763246000,
+          "grantsTransportation": 2035668000,
+          "grantsOther": 4109262000
         },
         {
           "state": "Pennsylvania",
@@ -253,7 +278,12 @@
           "federalGrants": 50966892000,
           "chargesFees": 21708641000,
           "miscRevenue": 11076963000,
-          "trustUtility": 42851885000
+          "trustUtility": 42851885000,
+          "grantsWelfare": 26167281000,
+          "grantsEducation": 3887360000,
+          "grantsHealth": 12657122000,
+          "grantsTransportation": 2056294000,
+          "grantsOther": 1301749000
         },
         {
           "state": "New Jersey",
@@ -283,7 +313,12 @@
           "federalGrants": 26249586000,
           "chargesFees": 11144450000,
           "miscRevenue": 8566587000,
-          "trustUtility": 29100487000
+          "trustUtility": 29100487000,
+          "grantsWelfare": 12788660000,
+          "grantsEducation": 2170516000,
+          "grantsHealth": 3730228000,
+          "grantsTransportation": 994754000,
+          "grantsOther": 3586464000
         },
         {
           "state": "Ohio",
@@ -313,19 +348,24 @@
           "federalGrants": 39371159000,
           "chargesFees": 18268077000,
           "miscRevenue": 11009826000,
-          "trustUtility": 53643611000
+          "trustUtility": 53643611000,
+          "grantsWelfare": 22146514000,
+          "grantsEducation": 3192722000,
+          "grantsHealth": 7104942000,
+          "grantsTransportation": 1433541000,
+          "grantsOther": 1119960000
         },
         {
           "state": "Massachusetts",
           "population": 6991951,
           "totalRevenue": 54112689000,
           "breakdown": {
+            "property": 19569523000,
             "sales_general": 7785108000,
             "sales_selective": 2929293000,
             "income_individual": 19683486000,
             "income_corporate": 3672995000,
-            "licenses": 472284000,
-            "property": 19569523000
+            "licenses": 472284000
           },
           "perCapitaTotal": 7739.28,
           "perCapitaIncome": 49746,
@@ -343,7 +383,12 @@
           "federalGrants": 30013960000,
           "chargesFees": 8822046000,
           "miscRevenue": 6472359000,
-          "trustUtility": 31313796000
+          "trustUtility": 31313796000,
+          "grantsWelfare": 13945828000,
+          "grantsEducation": 1766569000,
+          "grantsHealth": 7195954000,
+          "grantsTransportation": 707918000,
+          "grantsOther": 2086934000
         },
         {
           "state": "Virginia",
@@ -373,7 +418,12 @@
           "federalGrants": 25023191000,
           "chargesFees": 15674848000,
           "miscRevenue": 6939438000,
-          "trustUtility": 33814673000
+          "trustUtility": 33814673000,
+          "grantsWelfare": 11466607000,
+          "grantsEducation": 2396677000,
+          "grantsHealth": 7159568000,
+          "grantsTransportation": 988782000,
+          "grantsOther": 560258000
         },
         {
           "state": "North Carolina",
@@ -403,7 +453,12 @@
           "federalGrants": 31394755000,
           "chargesFees": 21834281000,
           "miscRevenue": 6519460000,
-          "trustUtility": 33367359000
+          "trustUtility": 33367359000,
+          "grantsWelfare": 15173316000,
+          "grantsEducation": 3144784000,
+          "grantsHealth": 4117886000,
+          "grantsTransportation": 1530370000,
+          "grantsOther": 3809265000
         },
         {
           "state": "Michigan",
@@ -433,7 +488,12 @@
           "federalGrants": 32452807000,
           "chargesFees": 18745717000,
           "miscRevenue": 7225338000,
-          "trustUtility": 31268519000
+          "trustUtility": 31268519000,
+          "grantsWelfare": 16850449000,
+          "grantsEducation": 4145589000,
+          "grantsHealth": 4462253000,
+          "grantsTransportation": 1029068000,
+          "grantsOther": 2731247000
         },
         {
           "state": "Georgia",
@@ -463,7 +523,12 @@
           "federalGrants": 29073974000,
           "chargesFees": 15664898000,
           "miscRevenue": 5396518000,
-          "trustUtility": 52388785000
+          "trustUtility": 52388785000,
+          "grantsWelfare": 9220359000,
+          "grantsEducation": 3621855000,
+          "grantsHealth": 10265068000,
+          "grantsTransportation": 1734578000,
+          "grantsOther": 1305683000
         },
         {
           "state": "Washington",
@@ -491,7 +556,12 @@
           "federalGrants": 24437419000,
           "chargesFees": 18322236000,
           "miscRevenue": 5728577000,
-          "trustUtility": 48232776000
+          "trustUtility": 48232776000,
+          "grantsWelfare": 11306966000,
+          "grantsEducation": 3015031000,
+          "grantsHealth": 3138501000,
+          "grantsTransportation": 913204000,
+          "grantsOther": 2307879000
         },
         {
           "state": "Maryland",
@@ -521,7 +591,12 @@
           "federalGrants": 21700447000,
           "chargesFees": 7212100000,
           "miscRevenue": 3980678000,
-          "trustUtility": 23744189000
+          "trustUtility": 23744189000,
+          "grantsWelfare": 10329239000,
+          "grantsEducation": 1892872000,
+          "grantsHealth": 3210189000,
+          "grantsTransportation": 777497000,
+          "grantsOther": 2384727000
         },
         {
           "state": "Minnesota",
@@ -551,7 +626,12 @@
           "federalGrants": 17658038000,
           "chargesFees": 8773505000,
           "miscRevenue": 5217612000,
-          "trustUtility": 46628982000
+          "trustUtility": 46628982000,
+          "grantsWelfare": 9212737000,
+          "grantsEducation": 2035914000,
+          "grantsHealth": 2610454000,
+          "grantsTransportation": 963458000,
+          "grantsOther": 673117000
         },
         {
           "state": "Colorado",
@@ -581,7 +661,12 @@
           "federalGrants": 16483923000,
           "chargesFees": 10949788000,
           "miscRevenue": 4852071000,
-          "trustUtility": 24458435000
+          "trustUtility": 24458435000,
+          "grantsWelfare": 7188090000,
+          "grantsEducation": 1901399000,
+          "grantsHealth": 3542681000,
+          "grantsTransportation": 620455000,
+          "grantsOther": 1030265000
         },
         {
           "state": "Indiana",
@@ -611,7 +696,12 @@
           "federalGrants": 23000361000,
           "chargesFees": 12946377000,
           "miscRevenue": 4482520000,
-          "trustUtility": 12374461000
+          "trustUtility": 12374461000,
+          "grantsWelfare": 14973818000,
+          "grantsEducation": 1951880000,
+          "grantsHealth": 3024920000,
+          "grantsTransportation": 1256551000,
+          "grantsOther": 1017339000
         },
         {
           "state": "Connecticut",
@@ -619,11 +709,11 @@
           "totalRevenue": 33109765000,
           "breakdown": {
             "property": 11871993000,
+            "sales_general": 5252683000,
             "sales_selective": 2895587000,
             "income_individual": 10259183000,
             "income_corporate": 2607064000,
-            "licenses": 223255000,
-            "sales_general": 5252683000
+            "licenses": 223255000
           },
           "perCapitaTotal": 9187.74,
           "perCapitaIncome": 48146,
@@ -641,7 +731,12 @@
           "federalGrants": 12904909000,
           "chargesFees": 3533078000,
           "miscRevenue": 2101288000,
-          "trustUtility": 20721281000
+          "trustUtility": 20721281000,
+          "grantsWelfare": 6038499000,
+          "grantsEducation": 745618000,
+          "grantsHealth": 4013331000,
+          "grantsTransportation": 591249000,
+          "grantsOther": 653119000
         },
         {
           "state": "Arizona",
@@ -671,7 +766,12 @@
           "federalGrants": 27448006000,
           "chargesFees": 7178234000,
           "miscRevenue": 4559340000,
-          "trustUtility": 23415098000
+          "trustUtility": 23415098000,
+          "grantsWelfare": 17855706000,
+          "grantsEducation": 2341262000,
+          "grantsHealth": 3518053000,
+          "grantsTransportation": 771732000,
+          "grantsOther": 706694000
         },
         {
           "state": "Wisconsin",
@@ -701,7 +801,12 @@
           "federalGrants": 14981194000,
           "chargesFees": 8781399000,
           "miscRevenue": 5119997000,
-          "trustUtility": 23252758000
+          "trustUtility": 23252758000,
+          "grantsWelfare": 8146817000,
+          "grantsEducation": 1718027000,
+          "grantsHealth": 469077000,
+          "grantsTransportation": 946248000,
+          "grantsOther": 2682668000
         },
         {
           "state": "Missouri",
@@ -731,7 +836,12 @@
           "federalGrants": 16248317000,
           "chargesFees": 7508800000,
           "miscRevenue": 5395287000,
-          "trustUtility": 28211659000
+          "trustUtility": 28211659000,
+          "grantsWelfare": 8585045000,
+          "grantsEducation": 1646274000,
+          "grantsHealth": 2694305000,
+          "grantsTransportation": 1319054000,
+          "grantsOther": 825026000
         },
         {
           "state": "Tennessee",
@@ -761,7 +871,12 @@
           "federalGrants": 18683280000,
           "chargesFees": 9205860000,
           "miscRevenue": 4421809000,
-          "trustUtility": 26990671000
+          "trustUtility": 26990671000,
+          "grantsWelfare": 9478681000,
+          "grantsEducation": 2165456000,
+          "grantsHealth": 1777666000,
+          "grantsTransportation": 1069161000,
+          "grantsOther": 2741060000
         },
         {
           "state": "Oregon",
@@ -790,7 +905,12 @@
           "federalGrants": 15457416000,
           "chargesFees": 10379066000,
           "miscRevenue": 4663353000,
-          "trustUtility": 29519685000
+          "trustUtility": 29519685000,
+          "grantsWelfare": 10047412000,
+          "grantsEducation": 1711299000,
+          "grantsHealth": 312893000,
+          "grantsTransportation": 474283000,
+          "grantsOther": 1147803000
         },
         {
           "state": "South Carolina",
@@ -820,7 +940,12 @@
           "federalGrants": 13462851000,
           "chargesFees": 13495015000,
           "miscRevenue": 3720522000,
-          "trustUtility": 15682233000
+          "trustUtility": 15682233000,
+          "grantsWelfare": 7513635000,
+          "grantsEducation": 1592504000,
+          "grantsHealth": 1489834000,
+          "grantsTransportation": 710595000,
+          "grantsOther": 1458956000
         },
         {
           "state": "Louisiana",
@@ -850,19 +975,24 @@
           "federalGrants": 21367408000,
           "chargesFees": 6550624000,
           "miscRevenue": 3403414000,
-          "trustUtility": 17669452000
+          "trustUtility": 17669452000,
+          "grantsWelfare": 11670421000,
+          "grantsEducation": 1981001000,
+          "grantsHealth": 499347000,
+          "grantsTransportation": 833529000,
+          "grantsOther": 5307359000
         },
         {
           "state": "Kentucky",
           "population": 4507600,
           "totalRevenue": 20472945000,
           "breakdown": {
+            "property": 4358999000,
             "sales_general": 4558823000,
             "sales_selective": 3289925000,
             "income_individual": 6886506000,
             "income_corporate": 1152481000,
-            "licenses": 226211000,
-            "property": 4358999000
+            "licenses": 226211000
           },
           "perCapitaTotal": 4541.87,
           "perCapitaIncome": 30728,
@@ -880,7 +1010,12 @@
           "federalGrants": 19264629000,
           "chargesFees": 6851995000,
           "miscRevenue": 2047555000,
-          "trustUtility": 14346205000
+          "trustUtility": 14346205000,
+          "grantsWelfare": 12635781000,
+          "grantsEducation": 1851261000,
+          "grantsHealth": 1660865000,
+          "grantsTransportation": 894038000,
+          "grantsOther": 903846000
         },
         {
           "state": "Alabama",
@@ -910,7 +1045,12 @@
           "federalGrants": 17000455000,
           "chargesFees": 13063434000,
           "miscRevenue": 3080697000,
-          "trustUtility": 8569648000
+          "trustUtility": 8569648000,
+          "grantsWelfare": 9300164000,
+          "grantsEducation": 2786910000,
+          "grantsHealth": 1660034000,
+          "grantsTransportation": 1006907000,
+          "grantsOther": 953622000
         },
         {
           "state": "Utah",
@@ -940,7 +1080,12 @@
           "federalGrants": 8790272000,
           "chargesFees": 8919318000,
           "miscRevenue": 2739699000,
-          "trustUtility": 7327163000
+          "trustUtility": 7327163000,
+          "grantsWelfare": 4006233000,
+          "grantsEducation": 1386208000,
+          "grantsHealth": 1039559000,
+          "grantsTransportation": 467394000,
+          "grantsOther": 456523000
         },
         {
           "state": "Iowa",
@@ -970,7 +1115,12 @@
           "federalGrants": 9170612000,
           "chargesFees": 8352836000,
           "miscRevenue": 2466009000,
-          "trustUtility": 19462584000
+          "trustUtility": 19462584000,
+          "grantsWelfare": 5099944000,
+          "grantsEducation": 1221318000,
+          "grantsHealth": 547619000,
+          "grantsTransportation": 587050000,
+          "grantsOther": 893354000
         },
         {
           "state": "Kansas",
@@ -1000,7 +1150,12 @@
           "federalGrants": 7138655000,
           "chargesFees": 7407875000,
           "miscRevenue": 2266015000,
-          "trustUtility": 8382582000
+          "trustUtility": 8382582000,
+          "grantsWelfare": 3138756000,
+          "grantsEducation": 920118000,
+          "grantsHealth": 1640698000,
+          "grantsTransportation": 443598000,
+          "grantsOther": 439909000
         },
         {
           "state": "Oklahoma",
@@ -1030,7 +1185,12 @@
           "federalGrants": 11107446000,
           "chargesFees": 6237497000,
           "miscRevenue": 3785387000,
-          "trustUtility": 14368532000
+          "trustUtility": 14368532000,
+          "grantsWelfare": 6461502000,
+          "grantsEducation": 1747721000,
+          "grantsHealth": 571631000,
+          "grantsTransportation": 712897000,
+          "grantsOther": 721972000
         },
         {
           "state": "Arkansas",
@@ -1060,7 +1220,12 @@
           "federalGrants": 11190391000,
           "chargesFees": 4157616000,
           "miscRevenue": 1754115000,
-          "trustUtility": 17376392000
+          "trustUtility": 17376392000,
+          "grantsWelfare": 6683655000,
+          "grantsEducation": 1037029000,
+          "grantsHealth": 1679861000,
+          "grantsTransportation": 790844000,
+          "grantsOther": 530282000
         },
         {
           "state": "Nevada",
@@ -1088,7 +1253,12 @@
           "federalGrants": 7748955000,
           "chargesFees": 4044680000,
           "miscRevenue": 1992156000,
-          "trustUtility": 17383074000
+          "trustUtility": 17383074000,
+          "grantsWelfare": 3583474000,
+          "grantsEducation": 710388000,
+          "grantsHealth": 998067000,
+          "grantsTransportation": 344668000,
+          "grantsOther": 749504000
         },
         {
           "state": "Mississippi",
@@ -1118,7 +1288,12 @@
           "federalGrants": 11298021000,
           "chargesFees": 6308692000,
           "miscRevenue": 1419184000,
-          "trustUtility": 10938064000
+          "trustUtility": 10938064000,
+          "grantsWelfare": 6393413000,
+          "grantsEducation": 1155415000,
+          "grantsHealth": 1691309000,
+          "grantsTransportation": 683742000,
+          "grantsOther": 643019000
         },
         {
           "state": "Nebraska",
@@ -1148,7 +1323,12 @@
           "federalGrants": 6003446000,
           "chargesFees": 3199184000,
           "miscRevenue": 1771644000,
-          "trustUtility": 9635646000
+          "trustUtility": 9635646000,
+          "grantsWelfare": 3528356000,
+          "grantsEducation": 301333000,
+          "grantsHealth": 744788000,
+          "grantsTransportation": 514059000,
+          "grantsOther": 394131000
         },
         {
           "state": "Hawaii",
@@ -1178,7 +1358,12 @@
           "federalGrants": 6159252000,
           "chargesFees": 2233000000,
           "miscRevenue": 2335626000,
-          "trustUtility": 8111993000
+          "trustUtility": 8111993000,
+          "grantsWelfare": 2086915000,
+          "grantsEducation": 681340000,
+          "grantsHealth": 2081280000,
+          "grantsTransportation": 395446000,
+          "grantsOther": 290572000
         },
         {
           "state": "Maine",
@@ -1208,7 +1393,12 @@
           "federalGrants": 5055746000,
           "chargesFees": 1545750000,
           "miscRevenue": 703567000,
-          "trustUtility": 4781674000
+          "trustUtility": 4781674000,
+          "grantsWelfare": 2904669000,
+          "grantsEducation": 361575000,
+          "grantsHealth": 703320000,
+          "grantsTransportation": 282147000,
+          "grantsOther": 598668000
         },
         {
           "state": "New Mexico",
@@ -1238,7 +1428,12 @@
           "federalGrants": 12600405000,
           "chargesFees": 3209063000,
           "miscRevenue": 3905744000,
-          "trustUtility": 10373281000
+          "trustUtility": 10373281000,
+          "grantsWelfare": 8150833000,
+          "grantsEducation": 987319000,
+          "grantsHealth": 1461601000,
+          "grantsTransportation": 419390000,
+          "grantsOther": 818005000
         },
         {
           "state": "Idaho",
@@ -1268,7 +1463,12 @@
           "federalGrants": 5423537000,
           "chargesFees": 2930599000,
           "miscRevenue": 919782000,
-          "trustUtility": 6571266000
+          "trustUtility": 6571266000,
+          "grantsWelfare": 2657873000,
+          "grantsEducation": 432321000,
+          "grantsHealth": 1268095000,
+          "grantsTransportation": 398768000,
+          "grantsOther": 366720000
         },
         {
           "state": "West Virginia",
@@ -1298,7 +1498,12 @@
           "federalGrants": 7283239000,
           "chargesFees": 2757242000,
           "miscRevenue": 1867740000,
-          "trustUtility": 6548442000
+          "trustUtility": 6548442000,
+          "grantsWelfare": 4033821000,
+          "grantsEducation": 601094000,
+          "grantsHealth": 1317147000,
+          "grantsTransportation": 374678000,
+          "grantsOther": 439104000
         },
         {
           "state": "Rhode Island",
@@ -1328,7 +1533,12 @@
           "federalGrants": 6629895000,
           "chargesFees": 1466154000,
           "miscRevenue": 987386000,
-          "trustUtility": 9540915000
+          "trustUtility": 9540915000,
+          "grantsWelfare": 2038319000,
+          "grantsEducation": 199840000,
+          "grantsHealth": 3295613000,
+          "grantsTransportation": 297501000,
+          "grantsOther": 466470000
         },
         {
           "state": "New Hampshire",
@@ -1357,7 +1567,12 @@
           "federalGrants": 3821838000,
           "chargesFees": 1389060000,
           "miscRevenue": 1061687000,
-          "trustUtility": 3696416000
+          "trustUtility": 3696416000,
+          "grantsWelfare": 1714215000,
+          "grantsEducation": 249961000,
+          "grantsHealth": 28397000,
+          "grantsTransportation": 190350000,
+          "grantsOther": 1449276000
         },
         {
           "state": "Montana",
@@ -1386,7 +1601,12 @@
           "federalGrants": 5531506000,
           "chargesFees": 1214137000,
           "miscRevenue": 734442000,
-          "trustUtility": 4111687000
+          "trustUtility": 4111687000,
+          "grantsWelfare": 2029352000,
+          "grantsEducation": 440099000,
+          "grantsHealth": 1733265000,
+          "grantsTransportation": 557191000,
+          "grantsOther": 362078000
         },
         {
           "state": "Vermont",
@@ -1416,7 +1636,12 @@
           "federalGrants": 2785562000,
           "chargesFees": 830443000,
           "miscRevenue": 525526000,
-          "trustUtility": 12742556000
+          "trustUtility": 12742556000,
+          "grantsWelfare": 1400992000,
+          "grantsEducation": 336645000,
+          "grantsHealth": 379000000,
+          "grantsTransportation": 276557000,
+          "grantsOther": 261210000
         },
         {
           "state": "Delaware",
@@ -1445,7 +1670,12 @@
           "federalGrants": 5327825000,
           "chargesFees": 1486882000,
           "miscRevenue": 1459289000,
-          "trustUtility": 5217920000
+          "trustUtility": 5217920000,
+          "grantsWelfare": 2067143000,
+          "grantsEducation": 390465000,
+          "grantsHealth": 1358249000,
+          "grantsTransportation": 1103290000,
+          "grantsOther": 244443000
         },
         {
           "state": "South Dakota",
@@ -1474,7 +1704,12 @@
           "federalGrants": 2309847000,
           "chargesFees": 912216000,
           "miscRevenue": 823436000,
-          "trustUtility": 7139236000
+          "trustUtility": 7139236000,
+          "grantsWelfare": 785107000,
+          "grantsEducation": 311317000,
+          "grantsHealth": 248722000,
+          "grantsTransportation": 430246000,
+          "grantsOther": 218875000
         },
         {
           "state": "North Dakota",
@@ -1504,7 +1739,12 @@
           "federalGrants": 3991177000,
           "chargesFees": 1287291000,
           "miscRevenue": 1394039000,
-          "trustUtility": 2814167000
+          "trustUtility": 2814167000,
+          "grantsWelfare": 1362764000,
+          "grantsEducation": 410418000,
+          "grantsHealth": 1230742000,
+          "grantsTransportation": 338928000,
+          "grantsOther": 337592000
         },
         {
           "state": "Alaska",
@@ -1533,7 +1773,12 @@
           "federalGrants": 5593262000,
           "chargesFees": 1571775000,
           "miscRevenue": 3590597000,
-          "trustUtility": 5434833000
+          "trustUtility": 5434833000,
+          "grantsWelfare": 1879024000,
+          "grantsEducation": 480024000,
+          "grantsHealth": 1462257000,
+          "grantsTransportation": 833384000,
+          "grantsOther": 580064000
         },
         {
           "state": "Wyoming",
@@ -1561,7 +1806,12 @@
           "federalGrants": 3437807000,
           "chargesFees": 1996816000,
           "miscRevenue": 1549947000,
-          "trustUtility": 1890258000
+          "trustUtility": 1890258000,
+          "grantsWelfare": 481071000,
+          "grantsEducation": 216005000,
+          "grantsHealth": 1006086000,
+          "grantsTransportation": 403873000,
+          "grantsOther": 980137000
         }
       ]
     },
@@ -1597,7 +1847,12 @@
           "federalGrants": 161941684000,
           "chargesFees": 106175111000,
           "miscRevenue": 31719400000,
-          "trustUtility": 47767989000
+          "trustUtility": 47767989000,
+          "grantsWelfare": 95553522000,
+          "grantsEducation": 23239585000,
+          "grantsHealth": 2025226000,
+          "grantsTransportation": 0,
+          "grantsOther": 11485382000
         },
         {
           "state": "New York",
@@ -1628,7 +1883,12 @@
           "federalGrants": 119910453000,
           "chargesFees": 35935046000,
           "miscRevenue": 23686965000,
-          "trustUtility": 24832878000
+          "trustUtility": 24832878000,
+          "grantsWelfare": 67704517000,
+          "grantsEducation": 6123624000,
+          "grantsHealth": 17952501000,
+          "grantsTransportation": 1728963000,
+          "grantsOther": 6720703000
         },
         {
           "state": "Texas",
@@ -1657,7 +1917,12 @@
           "federalGrants": 88990127000,
           "chargesFees": 49104840000,
           "miscRevenue": 27409620000,
-          "trustUtility": 37259244000
+          "trustUtility": 37259244000,
+          "grantsWelfare": 42909788000,
+          "grantsEducation": 9830961000,
+          "grantsHealth": 18131396000,
+          "grantsTransportation": 4530989000,
+          "grantsOther": 3540456000
         },
         {
           "state": "Florida",
@@ -1687,7 +1952,12 @@
           "federalGrants": 63400621000,
           "chargesFees": 38236890000,
           "miscRevenue": 22368764000,
-          "trustUtility": 14982812000
+          "trustUtility": 14982812000,
+          "grantsWelfare": 28085370000,
+          "grantsEducation": 10241352000,
+          "grantsHealth": 9684996000,
+          "grantsTransportation": 2059880000,
+          "grantsOther": 4367145000
         },
         {
           "state": "Illinois",
@@ -1718,7 +1988,12 @@
           "federalGrants": 50006208000,
           "chargesFees": 15907831000,
           "miscRevenue": 10181409000,
-          "trustUtility": 27528464000
+          "trustUtility": 27528464000,
+          "grantsWelfare": 22258482000,
+          "grantsEducation": 5732125000,
+          "grantsHealth": 9729855000,
+          "grantsTransportation": 1799664000,
+          "grantsOther": 3046809000
         },
         {
           "state": "New Jersey",
@@ -1749,7 +2024,12 @@
           "federalGrants": 30874279000,
           "chargesFees": 12819484000,
           "miscRevenue": 8174472000,
-          "trustUtility": 2113248000
+          "trustUtility": 2113248000,
+          "grantsWelfare": 14618388000,
+          "grantsEducation": 2693073000,
+          "grantsHealth": 5209824000,
+          "grantsTransportation": 1034903000,
+          "grantsOther": 4974793000
         },
         {
           "state": "Pennsylvania",
@@ -1780,7 +2060,12 @@
           "federalGrants": 50518397000,
           "chargesFees": 23147224000,
           "miscRevenue": 5978752000,
-          "trustUtility": 21384163000
+          "trustUtility": 21384163000,
+          "grantsWelfare": 29215121000,
+          "grantsEducation": 4632907000,
+          "grantsHealth": 8074546000,
+          "grantsTransportation": 1890104000,
+          "grantsOther": 1419669000
         },
         {
           "state": "Ohio",
@@ -1811,7 +2096,12 @@
           "federalGrants": 43595040000,
           "chargesFees": 20769804000,
           "miscRevenue": 11482414000,
-          "trustUtility": 29910572000
+          "trustUtility": 29910572000,
+          "grantsWelfare": 24178836000,
+          "grantsEducation": 3970745000,
+          "grantsHealth": 9137319000,
+          "grantsTransportation": 1347990000,
+          "grantsOther": 1265797000
         },
         {
           "state": "Massachusetts",
@@ -1842,7 +2132,12 @@
           "federalGrants": 30048543000,
           "chargesFees": 9727396000,
           "miscRevenue": 6355841000,
-          "trustUtility": 17177545000
+          "trustUtility": 17177545000,
+          "grantsWelfare": 15642994000,
+          "grantsEducation": 2766042000,
+          "grantsHealth": 2797011000,
+          "grantsTransportation": 619630000,
+          "grantsOther": 3869527000
         },
         {
           "state": "Virginia",
@@ -1873,7 +2168,12 @@
           "federalGrants": 23431207000,
           "chargesFees": 17756496000,
           "miscRevenue": 7909602000,
-          "trustUtility": 6843516000
+          "trustUtility": 6843516000,
+          "grantsWelfare": 13380834000,
+          "grantsEducation": 2970399000,
+          "grantsHealth": 3056863000,
+          "grantsTransportation": 1287119000,
+          "grantsOther": 571521000
         },
         {
           "state": "Washington",
@@ -1902,7 +2202,12 @@
           "federalGrants": 28178292000,
           "chargesFees": 20413888000,
           "miscRevenue": 5073979000,
-          "trustUtility": 16627371000
+          "trustUtility": 16627371000,
+          "grantsWelfare": 12213011000,
+          "grantsEducation": 4468812000,
+          "grantsHealth": 4467500000,
+          "grantsTransportation": 893937000,
+          "grantsOther": 1868458000
         },
         {
           "state": "Georgia",
@@ -1933,7 +2238,12 @@
           "federalGrants": 26516170000,
           "chargesFees": 18453742000,
           "miscRevenue": 5314700000,
-          "trustUtility": 555642000
+          "trustUtility": 555642000,
+          "grantsWelfare": 11611084000,
+          "grantsEducation": 5222904000,
+          "grantsHealth": 4062419000,
+          "grantsTransportation": 1455801000,
+          "grantsOther": 1402521000
         },
         {
           "state": "North Carolina",
@@ -1964,7 +2274,12 @@
           "federalGrants": 36222371000,
           "chargesFees": 23692935000,
           "miscRevenue": 7207376000,
-          "trustUtility": -11814000
+          "trustUtility": -11814000,
+          "grantsWelfare": 17840827000,
+          "grantsEducation": 4391942000,
+          "grantsHealth": 6146989000,
+          "grantsTransportation": 1301616000,
+          "grantsOther": 2591679000
         },
         {
           "state": "Michigan",
@@ -1995,7 +2310,12 @@
           "federalGrants": 37439964000,
           "chargesFees": 20068477000,
           "miscRevenue": 6498013000,
-          "trustUtility": 9447839000
+          "trustUtility": 9447839000,
+          "grantsWelfare": 18441312000,
+          "grantsEducation": 4241519000,
+          "grantsHealth": 7243589000,
+          "grantsTransportation": 1147930000,
+          "grantsOther": 3009667000
         },
         {
           "state": "Maryland",
@@ -2026,7 +2346,12 @@
           "federalGrants": 25199518000,
           "chargesFees": 8450911000,
           "miscRevenue": 4694356000,
-          "trustUtility": 2724844000
+          "trustUtility": 2724844000,
+          "grantsWelfare": 11570594000,
+          "grantsEducation": 3357743000,
+          "grantsHealth": 3901048000,
+          "grantsTransportation": 792524000,
+          "grantsOther": 3148662000
         },
         {
           "state": "Minnesota",
@@ -2057,7 +2382,12 @@
           "federalGrants": 21912683000,
           "chargesFees": 9583035000,
           "miscRevenue": 4462908000,
-          "trustUtility": 3804751000
+          "trustUtility": 3804751000,
+          "grantsWelfare": 11220106000,
+          "grantsEducation": 3127572000,
+          "grantsHealth": 3830999000,
+          "grantsTransportation": 924622000,
+          "grantsOther": 872124000
         },
         {
           "state": "Colorado",
@@ -2088,7 +2418,12 @@
           "federalGrants": 18080929000,
           "chargesFees": 13074645000,
           "miscRevenue": 5555289000,
-          "trustUtility": 19282397000
+          "trustUtility": 19282397000,
+          "grantsWelfare": 8007664000,
+          "grantsEducation": 2433236000,
+          "grantsHealth": 2657273000,
+          "grantsTransportation": 687829000,
+          "grantsOther": 1900192000
         },
         {
           "state": "Indiana",
@@ -2119,7 +2454,12 @@
           "federalGrants": 25359267000,
           "chargesFees": 13550474000,
           "miscRevenue": 4319611000,
-          "trustUtility": 2170875000
+          "trustUtility": 2170875000,
+          "grantsWelfare": 15752862000,
+          "grantsEducation": 2382948000,
+          "grantsHealth": 4015632000,
+          "grantsTransportation": 1182507000,
+          "grantsOther": 1120082000
         },
         {
           "state": "Arizona",
@@ -2150,7 +2490,12 @@
           "federalGrants": 32733921000,
           "chargesFees": 8204586000,
           "miscRevenue": 4025341000,
-          "trustUtility": 10495998000
+          "trustUtility": 10495998000,
+          "grantsWelfare": 21740946000,
+          "grantsEducation": 3462171000,
+          "grantsHealth": 3566108000,
+          "grantsTransportation": 873787000,
+          "grantsOther": 909388000
         },
         {
           "state": "Connecticut",
@@ -2181,7 +2526,12 @@
           "federalGrants": 12192562000,
           "chargesFees": 3943037000,
           "miscRevenue": 1720341000,
-          "trustUtility": -654819000
+          "trustUtility": -654819000,
+          "grantsWelfare": 6935338000,
+          "grantsEducation": 1018466000,
+          "grantsHealth": 1848617000,
+          "grantsTransportation": 559589000,
+          "grantsOther": 1134455000
         },
         {
           "state": "Wisconsin",
@@ -2212,7 +2562,12 @@
           "federalGrants": 17456814000,
           "chargesFees": 9474116000,
           "miscRevenue": 5143933000,
-          "trustUtility": 28251836000
+          "trustUtility": 28251836000,
+          "grantsWelfare": 9606080000,
+          "grantsEducation": 2219468000,
+          "grantsHealth": 859629000,
+          "grantsTransportation": 980211000,
+          "grantsOther": 2536777000
         },
         {
           "state": "Tennessee",
@@ -2243,7 +2598,12 @@
           "federalGrants": 20714111000,
           "chargesFees": 10287638000,
           "miscRevenue": 2931255000,
-          "trustUtility": 9023945000
+          "trustUtility": 9023945000,
+          "grantsWelfare": 11149130000,
+          "grantsEducation": 2173678000,
+          "grantsHealth": 2520852000,
+          "grantsTransportation": 1194554000,
+          "grantsOther": 2040791000
         },
         {
           "state": "Missouri",
@@ -2274,7 +2634,12 @@
           "federalGrants": 21715343000,
           "chargesFees": 9753402000,
           "miscRevenue": 4082146000,
-          "trustUtility": 5952477000
+          "trustUtility": 5952477000,
+          "grantsWelfare": 10101310000,
+          "grantsEducation": 2600524000,
+          "grantsHealth": 5531915000,
+          "grantsTransportation": 970641000,
+          "grantsOther": 1177362000
         },
         {
           "state": "Oregon",
@@ -2305,7 +2670,12 @@
           "federalGrants": 19974802000,
           "chargesFees": 11294248000,
           "miscRevenue": 4891406000,
-          "trustUtility": 10503874000
+          "trustUtility": 10503874000,
+          "grantsWelfare": 11273267000,
+          "grantsEducation": 1466094000,
+          "grantsHealth": 3529625000,
+          "grantsTransportation": 567164000,
+          "grantsOther": 915422000
         },
         {
           "state": "South Carolina",
@@ -2336,7 +2706,12 @@
           "federalGrants": 18433846000,
           "chargesFees": 14562472000,
           "miscRevenue": 3842005000,
-          "trustUtility": 6603862000
+          "trustUtility": 6603862000,
+          "grantsWelfare": 8756445000,
+          "grantsEducation": 1893470000,
+          "grantsHealth": 4721799000,
+          "grantsTransportation": 840827000,
+          "grantsOther": 1127993000
         },
         {
           "state": "Louisiana",
@@ -2367,7 +2742,12 @@
           "federalGrants": 21880920000,
           "chargesFees": 7510934000,
           "miscRevenue": 3645447000,
-          "trustUtility": -13669000
+          "trustUtility": -13669000,
+          "grantsWelfare": 12795778000,
+          "grantsEducation": 3250480000,
+          "grantsHealth": 541079000,
+          "grantsTransportation": 882577000,
+          "grantsOther": 2947125000
         },
         {
           "state": "Alabama",
@@ -2398,7 +2778,12 @@
           "federalGrants": 20231662000,
           "chargesFees": 13935142000,
           "miscRevenue": 2696546000,
-          "trustUtility": 426820000
+          "trustUtility": 426820000,
+          "grantsWelfare": 10446104000,
+          "grantsEducation": 3300637000,
+          "grantsHealth": 2824249000,
+          "grantsTransportation": 1016425000,
+          "grantsOther": 1143965000
         },
         {
           "state": "Kentucky",
@@ -2429,7 +2814,12 @@
           "federalGrants": 22085818000,
           "chargesFees": 8329844000,
           "miscRevenue": 2268206000,
-          "trustUtility": 1487901000
+          "trustUtility": 1487901000,
+          "grantsWelfare": 13541275000,
+          "grantsEducation": 2952329000,
+          "grantsHealth": 1815673000,
+          "grantsTransportation": 1012556000,
+          "grantsOther": 1167876000
         },
         {
           "state": "Utah",
@@ -2460,7 +2850,12 @@
           "federalGrants": 10158118000,
           "chargesFees": 9898556000,
           "miscRevenue": 2517407000,
-          "trustUtility": 9668387000
+          "trustUtility": 9668387000,
+          "grantsWelfare": 5042374000,
+          "grantsEducation": 1725436000,
+          "grantsHealth": 928916000,
+          "grantsTransportation": 419578000,
+          "grantsOther": 584505000
         },
         {
           "state": "Iowa",
@@ -2491,7 +2886,12 @@
           "federalGrants": 11295978000,
           "chargesFees": 10038202000,
           "miscRevenue": 2586833000,
-          "trustUtility": 1943420000
+          "trustUtility": 1943420000,
+          "grantsWelfare": 5550512000,
+          "grantsEducation": 1517589000,
+          "grantsHealth": 1728219000,
+          "grantsTransportation": 650817000,
+          "grantsOther": 831390000
         },
         {
           "state": "Oklahoma",
@@ -2522,7 +2922,12 @@
           "federalGrants": 15305305000,
           "chargesFees": 6405432000,
           "miscRevenue": 4025794000,
-          "trustUtility": -70578000
+          "trustUtility": -70578000,
+          "grantsWelfare": 9108778000,
+          "grantsEducation": 2470876000,
+          "grantsHealth": 1511435000,
+          "grantsTransportation": 746227000,
+          "grantsOther": 679500000
         },
         {
           "state": "Nevada",
@@ -2551,7 +2956,12 @@
           "federalGrants": 10714279000,
           "chargesFees": 3916018000,
           "miscRevenue": 1824069000,
-          "trustUtility": 1547633000
+          "trustUtility": 1547633000,
+          "grantsWelfare": 4116496000,
+          "grantsEducation": 745784000,
+          "grantsHealth": 3292056000,
+          "grantsTransportation": 286644000,
+          "grantsOther": 869406000
         },
         {
           "state": "Kansas",
@@ -2582,7 +2992,12 @@
           "federalGrants": 8794551000,
           "chargesFees": 7999526000,
           "miscRevenue": 2380959000,
-          "trustUtility": 2533471000
+          "trustUtility": 2533471000,
+          "grantsWelfare": 3760725000,
+          "grantsEducation": 1193293000,
+          "grantsHealth": 2009679000,
+          "grantsTransportation": 533216000,
+          "grantsOther": 653369000
         },
         {
           "state": "New Mexico",
@@ -2613,7 +3028,12 @@
           "federalGrants": 13421271000,
           "chargesFees": 5076434000,
           "miscRevenue": 6599273000,
-          "trustUtility": 1460891000
+          "trustUtility": 1460891000,
+          "grantsWelfare": 9725341000,
+          "grantsEducation": 1381385000,
+          "grantsHealth": 338587000,
+          "grantsTransportation": 531744000,
+          "grantsOther": 596520000
         },
         {
           "state": "Arkansas",
@@ -2644,7 +3064,12 @@
           "federalGrants": 13641371000,
           "chargesFees": 4349577000,
           "miscRevenue": 1855095000,
-          "trustUtility": 198595000
+          "trustUtility": 198595000,
+          "grantsWelfare": 7804303000,
+          "grantsEducation": 1242163000,
+          "grantsHealth": 2008192000,
+          "grantsTransportation": 754536000,
+          "grantsOther": 671967000
         },
         {
           "state": "Mississippi",
@@ -2675,7 +3100,12 @@
           "federalGrants": 12267324000,
           "chargesFees": 6753013000,
           "miscRevenue": 1473602000,
-          "trustUtility": -1357230000
+          "trustUtility": -1357230000,
+          "grantsWelfare": 6393814000,
+          "grantsEducation": 1563046000,
+          "grantsHealth": 1966911000,
+          "grantsTransportation": 535770000,
+          "grantsOther": 934720000
         },
         {
           "state": "Hawaii",
@@ -2706,7 +3136,12 @@
           "federalGrants": 5585436000,
           "chargesFees": 2686065000,
           "miscRevenue": 2262666000,
-          "trustUtility": 1360798000
+          "trustUtility": 1360798000,
+          "grantsWelfare": 2315250000,
+          "grantsEducation": 1006143000,
+          "grantsHealth": 1050777000,
+          "grantsTransportation": 354252000,
+          "grantsOther": 352610000
         },
         {
           "state": "Nebraska",
@@ -2737,7 +3172,12 @@
           "federalGrants": 6704898000,
           "chargesFees": 4306038000,
           "miscRevenue": 1440648000,
-          "trustUtility": 5461501000
+          "trustUtility": 5461501000,
+          "grantsWelfare": 4325242000,
+          "grantsEducation": 322653000,
+          "grantsHealth": 522504000,
+          "grantsTransportation": 518385000,
+          "grantsOther": 363989000
         },
         {
           "state": "Idaho",
@@ -2768,7 +3208,12 @@
           "federalGrants": 5600847000,
           "chargesFees": 3394219000,
           "miscRevenue": 1105757000,
-          "trustUtility": -5256000
+          "trustUtility": -5256000,
+          "grantsWelfare": 3095380000,
+          "grantsEducation": 525759000,
+          "grantsHealth": 787636000,
+          "grantsTransportation": 370272000,
+          "grantsOther": 504578000
         },
         {
           "state": "Maine",
@@ -2799,7 +3244,12 @@
           "federalGrants": 5666935000,
           "chargesFees": 1644620000,
           "miscRevenue": 605596000,
-          "trustUtility": 746505000
+          "trustUtility": 746505000,
+          "grantsWelfare": 3357601000,
+          "grantsEducation": 493124000,
+          "grantsHealth": 802618000,
+          "grantsTransportation": 295450000,
+          "grantsOther": 458275000
         },
         {
           "state": "West Virginia",
@@ -2830,7 +3280,12 @@
           "federalGrants": 8387602000,
           "chargesFees": 3054374000,
           "miscRevenue": 1050642000,
-          "trustUtility": -449784000
+          "trustUtility": -449784000,
+          "grantsWelfare": 5049856000,
+          "grantsEducation": 927341000,
+          "grantsHealth": 968271000,
+          "grantsTransportation": 474477000,
+          "grantsOther": 518593000
         },
         {
           "state": "New Hampshire",
@@ -2860,7 +3315,12 @@
           "federalGrants": 4126033000,
           "chargesFees": 1496433000,
           "miscRevenue": 1152281000,
-          "trustUtility": 584572000
+          "trustUtility": 584572000,
+          "grantsWelfare": 1895381000,
+          "grantsEducation": 321690000,
+          "grantsHealth": 34389000,
+          "grantsTransportation": 215428000,
+          "grantsOther": 1483464000
         },
         {
           "state": "Delaware",
@@ -2890,7 +3350,12 @@
           "federalGrants": 4111004000,
           "chargesFees": 1699056000,
           "miscRevenue": 1421937000,
-          "trustUtility": -1150300000
+          "trustUtility": -1150300000,
+          "grantsWelfare": 2209968000,
+          "grantsEducation": 430954000,
+          "grantsHealth": 534752000,
+          "grantsTransportation": 473593000,
+          "grantsOther": 378134000
         },
         {
           "state": "Rhode Island",
@@ -2921,7 +3386,12 @@
           "federalGrants": 5580515000,
           "chargesFees": 1673656000,
           "miscRevenue": 896472000,
-          "trustUtility": 1206459000
+          "trustUtility": 1206459000,
+          "grantsWelfare": 2367900000,
+          "grantsEducation": 258281000,
+          "grantsHealth": 1806179000,
+          "grantsTransportation": 343396000,
+          "grantsOther": 546478000
         },
         {
           "state": "North Dakota",
@@ -2952,7 +3422,12 @@
           "federalGrants": 2818948000,
           "chargesFees": 1472185000,
           "miscRevenue": 3015382000,
-          "trustUtility": 459978000
+          "trustUtility": 459978000,
+          "grantsWelfare": 1144063000,
+          "grantsEducation": 529558000,
+          "grantsHealth": 222980000,
+          "grantsTransportation": 311686000,
+          "grantsOther": 268208000
         },
         {
           "state": "Montana",
@@ -2982,7 +3457,12 @@
           "federalGrants": 4657041000,
           "chargesFees": 1346761000,
           "miscRevenue": 873927000,
-          "trustUtility": 326785000
+          "trustUtility": 326785000,
+          "grantsWelfare": 2217791000,
+          "grantsEducation": 469919000,
+          "grantsHealth": 796342000,
+          "grantsTransportation": 483953000,
+          "grantsOther": 347251000
         },
         {
           "state": "Vermont",
@@ -3013,7 +3493,12 @@
           "federalGrants": 4239087000,
           "chargesFees": 910433000,
           "miscRevenue": 471633000,
-          "trustUtility": 218633000
+          "trustUtility": 218633000,
+          "grantsWelfare": 1653123000,
+          "grantsEducation": 450962000,
+          "grantsHealth": 1341106000,
+          "grantsTransportation": 277275000,
+          "grantsOther": 415228000
         },
         {
           "state": "Alaska",
@@ -3043,7 +3528,12 @@
           "federalGrants": 6150474000,
           "chargesFees": 1681914000,
           "miscRevenue": 2445829000,
-          "trustUtility": -235702000
+          "trustUtility": -235702000,
+          "grantsWelfare": 2349735000,
+          "grantsEducation": 704808000,
+          "grantsHealth": 1039779000,
+          "grantsTransportation": 934533000,
+          "grantsOther": 695575000
         },
         {
           "state": "South Dakota",
@@ -3073,7 +3563,12 @@
           "federalGrants": 3790352000,
           "chargesFees": 970718000,
           "miscRevenue": 788347000,
-          "trustUtility": 754537000
+          "trustUtility": 754537000,
+          "grantsWelfare": 969110000,
+          "grantsEducation": 373748000,
+          "grantsHealth": 1505939000,
+          "grantsTransportation": 406316000,
+          "grantsOther": 184285000
         },
         {
           "state": "Wyoming",
@@ -3102,7 +3597,12 @@
           "federalGrants": 3940965000,
           "chargesFees": 2190516000,
           "miscRevenue": 1193772000,
-          "trustUtility": 2663657000
+          "trustUtility": 2663657000,
+          "grantsWelfare": 572410000,
+          "grantsEducation": 272121000,
+          "grantsHealth": 742814000,
+          "grantsTransportation": 412564000,
+          "grantsOther": 1537008000
         }
       ]
     },
@@ -3138,7 +3638,12 @@
           "federalGrants": 156329077000,
           "chargesFees": 113919177000,
           "miscRevenue": 46318277000,
-          "trustUtility": 184276954000
+          "trustUtility": 184276954000,
+          "grantsWelfare": 102666694000,
+          "grantsEducation": 15394224000,
+          "grantsHealth": 2110710000,
+          "grantsTransportation": 0,
+          "grantsOther": 13263280000
         },
         {
           "state": "New York",
@@ -3169,7 +3674,12 @@
           "federalGrants": 113360418000,
           "chargesFees": 38947466000,
           "miscRevenue": 23202631000,
-          "trustUtility": 57266001000
+          "trustUtility": 57266001000,
+          "grantsWelfare": 70916181000,
+          "grantsEducation": 6122766000,
+          "grantsHealth": 5598209000,
+          "grantsTransportation": 2143263000,
+          "grantsOther": 10580904000
         },
         {
           "state": "Texas",
@@ -3198,7 +3708,12 @@
           "federalGrants": 84250024000,
           "chargesFees": 53423540000,
           "miscRevenue": 32675185000,
-          "trustUtility": 39464380000
+          "trustUtility": 39464380000,
+          "grantsWelfare": 42316023000,
+          "grantsEducation": 9649499000,
+          "grantsHealth": 16176894000,
+          "grantsTransportation": 4395494000,
+          "grantsOther": 3701459000
         },
         {
           "state": "Florida",
@@ -3228,7 +3743,12 @@
           "federalGrants": 61848631000,
           "chargesFees": 44213612000,
           "miscRevenue": 26411541000,
-          "trustUtility": 32249287000
+          "trustUtility": 32249287000,
+          "grantsWelfare": 31102306000,
+          "grantsEducation": 12191674000,
+          "grantsHealth": 2973847000,
+          "grantsTransportation": 2476959000,
+          "grantsOther": 4576282000
         },
         {
           "state": "Illinois",
@@ -3259,7 +3779,12 @@
           "federalGrants": 42857635000,
           "chargesFees": 17405606000,
           "miscRevenue": 12351070000,
-          "trustUtility": 12329411000
+          "trustUtility": 12329411000,
+          "grantsWelfare": 23310727000,
+          "grantsEducation": 6025161000,
+          "grantsHealth": 1157162000,
+          "grantsTransportation": 2095143000,
+          "grantsOther": 2566225000
         },
         {
           "state": "Pennsylvania",
@@ -3290,7 +3815,12 @@
           "federalGrants": 55015765000,
           "chargesFees": 23300583000,
           "miscRevenue": 9854886000,
-          "trustUtility": 9748437000
+          "trustUtility": 9748437000,
+          "grantsWelfare": 33523461000,
+          "grantsEducation": 4808548000,
+          "grantsHealth": 7114401000,
+          "grantsTransportation": 2239906000,
+          "grantsOther": 1463735000
         },
         {
           "state": "New Jersey",
@@ -3321,7 +3851,12 @@
           "federalGrants": 32252692000,
           "chargesFees": 14189831000,
           "miscRevenue": 9357235000,
-          "trustUtility": 18330532000
+          "trustUtility": 18330532000,
+          "grantsWelfare": 16038598000,
+          "grantsEducation": 2434910000,
+          "grantsHealth": 5222146000,
+          "grantsTransportation": 1083369000,
+          "grantsOther": 5282317000
         },
         {
           "state": "Ohio",
@@ -3352,7 +3887,12 @@
           "federalGrants": 40860465000,
           "chargesFees": 22676934000,
           "miscRevenue": 12756720000,
-          "trustUtility": 9224825000
+          "trustUtility": 9224825000,
+          "grantsWelfare": 25205228000,
+          "grantsEducation": 3302629000,
+          "grantsHealth": 5704572000,
+          "grantsTransportation": 1570355000,
+          "grantsOther": 1305163000
         },
         {
           "state": "Massachusetts",
@@ -3383,7 +3923,12 @@
           "federalGrants": 28754679000,
           "chargesFees": 10318668000,
           "miscRevenue": 8165611000,
-          "trustUtility": 10641783000
+          "trustUtility": 10641783000,
+          "grantsWelfare": 16932216000,
+          "grantsEducation": 2454000000,
+          "grantsHealth": 1709266000,
+          "grantsTransportation": 714247000,
+          "grantsOther": 3041333000
         },
         {
           "state": "Virginia",
@@ -3414,7 +3959,12 @@
           "federalGrants": 24967215000,
           "chargesFees": 19581200000,
           "miscRevenue": 9456253000,
-          "trustUtility": 14936044000
+          "trustUtility": 14936044000,
+          "grantsWelfare": 15419319000,
+          "grantsEducation": 2828625000,
+          "grantsHealth": 2569480000,
+          "grantsTransportation": 1486733000,
+          "grantsOther": 586977000
         },
         {
           "state": "Washington",
@@ -3444,7 +3994,12 @@
           "federalGrants": 28049139000,
           "chargesFees": 21769400000,
           "miscRevenue": 7005850000,
-          "trustUtility": 25172647000
+          "trustUtility": 25172647000,
+          "grantsWelfare": 13175292000,
+          "grantsEducation": 4334075000,
+          "grantsHealth": 4089942000,
+          "grantsTransportation": 997327000,
+          "grantsOther": 1472187000
         },
         {
           "state": "Georgia",
@@ -3475,7 +4030,12 @@
           "federalGrants": 31093601000,
           "chargesFees": 19558906000,
           "miscRevenue": 6857731000,
-          "trustUtility": 21308869000
+          "trustUtility": 21308869000,
+          "grantsWelfare": 13613914000,
+          "grantsEducation": 5216915000,
+          "grantsHealth": 5320093000,
+          "grantsTransportation": 2160538000,
+          "grantsOther": 1966668000
         },
         {
           "state": "North Carolina",
@@ -3506,7 +4066,12 @@
           "federalGrants": 32829759000,
           "chargesFees": 25834075000,
           "miscRevenue": 8028034000,
-          "trustUtility": 14821881000
+          "trustUtility": 14821881000,
+          "grantsWelfare": 17682444000,
+          "grantsEducation": 4156510000,
+          "grantsHealth": 2317477000,
+          "grantsTransportation": 1554212000,
+          "grantsOther": 2929945000
         },
         {
           "state": "Michigan",
@@ -3537,7 +4102,12 @@
           "federalGrants": 36403186000,
           "chargesFees": 22459048000,
           "miscRevenue": 8351259000,
-          "trustUtility": 14246150000
+          "trustUtility": 14246150000,
+          "grantsWelfare": 19102409000,
+          "grantsEducation": 4126590000,
+          "grantsHealth": 5809221000,
+          "grantsTransportation": 1319652000,
+          "grantsOther": 2494075000
         },
         {
           "state": "Maryland",
@@ -3568,7 +4138,12 @@
           "federalGrants": 22959315000,
           "chargesFees": 8414112000,
           "miscRevenue": 5442477000,
-          "trustUtility": 7418752000
+          "trustUtility": 7418752000,
+          "grantsWelfare": 11174552000,
+          "grantsEducation": 3110684000,
+          "grantsHealth": 3554748000,
+          "grantsTransportation": 759577000,
+          "grantsOther": 2268273000
         },
         {
           "state": "Minnesota",
@@ -3599,7 +4174,12 @@
           "federalGrants": 21355954000,
           "chargesFees": 10121991000,
           "miscRevenue": 5208958000,
-          "trustUtility": 13610314000
+          "trustUtility": 13610314000,
+          "grantsWelfare": 12996483000,
+          "grantsEducation": 2483490000,
+          "grantsHealth": 1943902000,
+          "grantsTransportation": 1053512000,
+          "grantsOther": 795512000
         },
         {
           "state": "Indiana",
@@ -3630,7 +4210,12 @@
           "federalGrants": 26005704000,
           "chargesFees": 13729076000,
           "miscRevenue": 4366298000,
-          "trustUtility": 6276390000
+          "trustUtility": 6276390000,
+          "grantsWelfare": 17452080000,
+          "grantsEducation": 2543921000,
+          "grantsHealth": 2283156000,
+          "grantsTransportation": 1219291000,
+          "grantsOther": 1456002000
         },
         {
           "state": "Colorado",
@@ -3661,7 +4246,12 @@
           "federalGrants": 17201332000,
           "chargesFees": 14244809000,
           "miscRevenue": 6378775000,
-          "trustUtility": -932444000
+          "trustUtility": -932444000,
+          "grantsWelfare": 8220313000,
+          "grantsEducation": 2733081000,
+          "grantsHealth": 2434761000,
+          "grantsTransportation": 702672000,
+          "grantsOther": 968784000
         },
         {
           "state": "Arizona",
@@ -3692,7 +4282,12 @@
           "federalGrants": 31725443000,
           "chargesFees": 8713641000,
           "miscRevenue": 5295254000,
-          "trustUtility": 15381490000
+          "trustUtility": 15381490000,
+          "grantsWelfare": 23929245000,
+          "grantsEducation": 3350387000,
+          "grantsHealth": 659735000,
+          "grantsTransportation": 937184000,
+          "grantsOther": 846578000
         },
         {
           "state": "Wisconsin",
@@ -3723,7 +4318,12 @@
           "federalGrants": 17206316000,
           "chargesFees": 10492221000,
           "miscRevenue": 5928786000,
-          "trustUtility": -14517603000
+          "trustUtility": -14517603000,
+          "grantsWelfare": 9990099000,
+          "grantsEducation": 2304500000,
+          "grantsHealth": 636935000,
+          "grantsTransportation": 1253659000,
+          "grantsOther": 1513871000
         },
         {
           "state": "Tennessee",
@@ -3754,7 +4354,12 @@
           "federalGrants": 21493219000,
           "chargesFees": 10985380000,
           "miscRevenue": 3843999000,
-          "trustUtility": 15899553000
+          "trustUtility": 15899553000,
+          "grantsWelfare": 12063189000,
+          "grantsEducation": 1974846000,
+          "grantsHealth": 2682590000,
+          "grantsTransportation": 1190286000,
+          "grantsOther": 2191549000
         },
         {
           "state": "Connecticut",
@@ -3785,7 +4390,12 @@
           "federalGrants": 12616730000,
           "chargesFees": 4082777000,
           "miscRevenue": 2004580000,
-          "trustUtility": 7551801000
+          "trustUtility": 7551801000,
+          "grantsWelfare": 7376319000,
+          "grantsEducation": 1113196000,
+          "grantsHealth": 1578680000,
+          "grantsTransportation": 712937000,
+          "grantsOther": 998642000
         },
         {
           "state": "Missouri",
@@ -3816,7 +4426,12 @@
           "federalGrants": 22607307000,
           "chargesFees": 11080887000,
           "miscRevenue": 5497038000,
-          "trustUtility": 11070804000
+          "trustUtility": 11070804000,
+          "grantsWelfare": 12491734000,
+          "grantsEducation": 2879829000,
+          "grantsHealth": 2955435000,
+          "grantsTransportation": 1205927000,
+          "grantsOther": 1085463000
         },
         {
           "state": "Oregon",
@@ -3847,7 +4462,12 @@
           "federalGrants": 19321610000,
           "chargesFees": 12451343000,
           "miscRevenue": 6336369000,
-          "trustUtility": 12304814000
+          "trustUtility": 12304814000,
+          "grantsWelfare": 12820856000,
+          "grantsEducation": 2290904000,
+          "grantsHealth": 546607000,
+          "grantsTransportation": 687817000,
+          "grantsOther": 1121319000
         },
         {
           "state": "Louisiana",
@@ -3878,7 +4498,12 @@
           "federalGrants": 23749309000,
           "chargesFees": 7884080000,
           "miscRevenue": 5209048000,
-          "trustUtility": 7627667000
+          "trustUtility": 7627667000,
+          "grantsWelfare": 14307064000,
+          "grantsEducation": 3391823000,
+          "grantsHealth": 434223000,
+          "grantsTransportation": 919794000,
+          "grantsOther": 3183011000
         },
         {
           "state": "South Carolina",
@@ -3909,7 +4534,12 @@
           "federalGrants": 18255941000,
           "chargesFees": 15859719000,
           "miscRevenue": 4691904000,
-          "trustUtility": 10642349000
+          "trustUtility": 10642349000,
+          "grantsWelfare": 9744244000,
+          "grantsEducation": 1817410000,
+          "grantsHealth": 3933881000,
+          "grantsTransportation": 832047000,
+          "grantsOther": 1157515000
         },
         {
           "state": "Alabama",
@@ -3940,7 +4570,12 @@
           "federalGrants": 19369440000,
           "chargesFees": 15029298000,
           "miscRevenue": 3797573000,
-          "trustUtility": 11464695000
+          "trustUtility": 11464695000,
+          "grantsWelfare": 10983411000,
+          "grantsEducation": 3635222000,
+          "grantsHealth": 1016182000,
+          "grantsTransportation": 982668000,
+          "grantsOther": 1047104000
         },
         {
           "state": "Kentucky",
@@ -3971,7 +4606,12 @@
           "federalGrants": 21277007000,
           "chargesFees": 9564524000,
           "miscRevenue": 3264088000,
-          "trustUtility": 9775862000
+          "trustUtility": 9775862000,
+          "grantsWelfare": 14775368000,
+          "grantsEducation": 2527510000,
+          "grantsHealth": 525347000,
+          "grantsTransportation": 961141000,
+          "grantsOther": 1413124000
         },
         {
           "state": "Oklahoma",
@@ -4002,7 +4642,12 @@
           "federalGrants": 16968221000,
           "chargesFees": 6969299000,
           "miscRevenue": 4853506000,
-          "trustUtility": 7427371000
+          "trustUtility": 7427371000,
+          "grantsWelfare": 10884733000,
+          "grantsEducation": 2072879000,
+          "grantsHealth": 1512066000,
+          "grantsTransportation": 892981000,
+          "grantsOther": 749213000
         },
         {
           "state": "Utah",
@@ -4033,7 +4678,12 @@
           "federalGrants": 10045114000,
           "chargesFees": 10112176000,
           "miscRevenue": 3718725000,
-          "trustUtility": 937722000
+          "trustUtility": 937722000,
+          "grantsWelfare": 5298280000,
+          "grantsEducation": 1498966000,
+          "grantsHealth": 714096000,
+          "grantsTransportation": 529048000,
+          "grantsOther": 556405000
         },
         {
           "state": "Iowa",
@@ -4064,7 +4714,12 @@
           "federalGrants": 11267057000,
           "chargesFees": 10475232000,
           "miscRevenue": 3394032000,
-          "trustUtility": 6056241000
+          "trustUtility": 6056241000,
+          "grantsWelfare": 5853370000,
+          "grantsEducation": 1240533000,
+          "grantsHealth": 1622076000,
+          "grantsTransportation": 743488000,
+          "grantsOther": 844565000
         },
         {
           "state": "Nevada",
@@ -4093,7 +4748,12 @@
           "federalGrants": 9047335000,
           "chargesFees": 4086218000,
           "miscRevenue": 2253312000,
-          "trustUtility": 9923846000
+          "trustUtility": 9923846000,
+          "grantsWelfare": 4493860000,
+          "grantsEducation": 898307000,
+          "grantsHealth": 1069607000,
+          "grantsTransportation": 330286000,
+          "grantsOther": 1064552000
         },
         {
           "state": "Kansas",
@@ -4124,7 +4784,12 @@
           "federalGrants": 7919317000,
           "chargesFees": 8171230000,
           "miscRevenue": 2593836000,
-          "trustUtility": 4744516000
+          "trustUtility": 4744516000,
+          "grantsWelfare": 4040507000,
+          "grantsEducation": 1100949000,
+          "grantsHealth": 1195103000,
+          "grantsTransportation": 577031000,
+          "grantsOther": 565878000
         },
         {
           "state": "New Mexico",
@@ -4155,7 +4820,12 @@
           "federalGrants": 13916518000,
           "chargesFees": 5171397000,
           "miscRevenue": 9200292000,
-          "trustUtility": 4835463000
+          "trustUtility": 4835463000,
+          "grantsWelfare": 9918014000,
+          "grantsEducation": 1672962000,
+          "grantsHealth": 277873000,
+          "grantsTransportation": 461168000,
+          "grantsOther": 754462000
         },
         {
           "state": "Arkansas",
@@ -4186,7 +4856,12 @@
           "federalGrants": 13437459000,
           "chargesFees": 4528849000,
           "miscRevenue": 2257012000,
-          "trustUtility": 4630083000
+          "trustUtility": 4630083000,
+          "grantsWelfare": 8094469000,
+          "grantsEducation": 1152919000,
+          "grantsHealth": 1277716000,
+          "grantsTransportation": 951138000,
+          "grantsOther": 617931000
         },
         {
           "state": "Mississippi",
@@ -4217,7 +4892,12 @@
           "federalGrants": 12068084000,
           "chargesFees": 7147954000,
           "miscRevenue": 1627345000,
-          "trustUtility": 4095522000
+          "trustUtility": 4095522000,
+          "grantsWelfare": 7256192000,
+          "grantsEducation": 1463929000,
+          "grantsHealth": 915234000,
+          "grantsTransportation": 792863000,
+          "grantsOther": 838374000
         },
         {
           "state": "Hawaii",
@@ -4248,7 +4928,12 @@
           "federalGrants": 5173747000,
           "chargesFees": 2841488000,
           "miscRevenue": 2238991000,
-          "trustUtility": 2090284000
+          "trustUtility": 2090284000,
+          "grantsWelfare": 2566423000,
+          "grantsEducation": 894844000,
+          "grantsHealth": 420699000,
+          "grantsTransportation": 351042000,
+          "grantsOther": 393394000
         },
         {
           "state": "Nebraska",
@@ -4279,7 +4964,12 @@
           "federalGrants": 6461922000,
           "chargesFees": 4082688000,
           "miscRevenue": 1719344000,
-          "trustUtility": 6298154000
+          "trustUtility": 6298154000,
+          "grantsWelfare": 4616271000,
+          "grantsEducation": 371936000,
+          "grantsHealth": 80707000,
+          "grantsTransportation": 515405000,
+          "grantsOther": 336819000
         },
         {
           "state": "West Virginia",
@@ -4310,7 +5000,12 @@
           "federalGrants": 8335332000,
           "chargesFees": 3114426000,
           "miscRevenue": 1703675000,
-          "trustUtility": 2482225000
+          "trustUtility": 2482225000,
+          "grantsWelfare": 5414418000,
+          "grantsEducation": 980253000,
+          "grantsHealth": 253645000,
+          "grantsTransportation": 639231000,
+          "grantsOther": 630733000
         },
         {
           "state": "Maine",
@@ -4341,7 +5036,12 @@
           "federalGrants": 5526720000,
           "chargesFees": 1697426000,
           "miscRevenue": 916318000,
-          "trustUtility": 1989458000
+          "trustUtility": 1989458000,
+          "grantsWelfare": 3598180000,
+          "grantsEducation": 503433000,
+          "grantsHealth": 229828000,
+          "grantsTransportation": 331285000,
+          "grantsOther": 661693000
         },
         {
           "state": "Idaho",
@@ -4372,7 +5072,12 @@
           "federalGrants": 4799274000,
           "chargesFees": 3775195000,
           "miscRevenue": 1287288000,
-          "trustUtility": 2946931000
+          "trustUtility": 2946931000,
+          "grantsWelfare": 2593418000,
+          "grantsEducation": 470893000,
+          "grantsHealth": 498898000,
+          "grantsTransportation": 508643000,
+          "grantsOther": 360729000
         },
         {
           "state": "New Hampshire",
@@ -4402,7 +5107,12 @@
           "federalGrants": 3729186000,
           "chargesFees": 1628712000,
           "miscRevenue": 1219566000,
-          "trustUtility": 2151902000
+          "trustUtility": 2151902000,
+          "grantsWelfare": 1932963000,
+          "grantsEducation": 310287000,
+          "grantsHealth": 39029000,
+          "grantsTransportation": 235142000,
+          "grantsOther": 1037261000
         },
         {
           "state": "Delaware",
@@ -4432,7 +5142,12 @@
           "federalGrants": 4124272000,
           "chargesFees": 1765912000,
           "miscRevenue": 1794289000,
-          "trustUtility": 1612619000
+          "trustUtility": 1612619000,
+          "grantsWelfare": 2552341000,
+          "grantsEducation": 371837000,
+          "grantsHealth": 388447000,
+          "grantsTransportation": 330690000,
+          "grantsOther": 391309000
         },
         {
           "state": "North Dakota",
@@ -4463,7 +5178,12 @@
           "federalGrants": 3260839000,
           "chargesFees": 1594023000,
           "miscRevenue": 815863000,
-          "trustUtility": 1157117000
+          "trustUtility": 1157117000,
+          "grantsWelfare": 1322998000,
+          "grantsEducation": 555990000,
+          "grantsHealth": 247612000,
+          "grantsTransportation": 382545000,
+          "grantsOther": 320794000
         },
         {
           "state": "Rhode Island",
@@ -4494,7 +5214,12 @@
           "federalGrants": 5469910000,
           "chargesFees": 1648845000,
           "miscRevenue": 1321085000,
-          "trustUtility": 2713518000
+          "trustUtility": 2713518000,
+          "grantsWelfare": 2418656000,
+          "grantsEducation": 269133000,
+          "grantsHealth": 1624634000,
+          "grantsTransportation": 416101000,
+          "grantsOther": 447446000
         },
         {
           "state": "Montana",
@@ -4524,7 +5249,12 @@
           "federalGrants": 5078470000,
           "chargesFees": 1383335000,
           "miscRevenue": 900694000,
-          "trustUtility": 2050943000
+          "trustUtility": 2050943000,
+          "grantsWelfare": 2227227000,
+          "grantsEducation": 467776000,
+          "grantsHealth": 964475000,
+          "grantsTransportation": 601113000,
+          "grantsOther": 446825000
         },
         {
           "state": "Alaska",
@@ -4554,7 +5284,12 @@
           "federalGrants": 5686811000,
           "chargesFees": 1888530000,
           "miscRevenue": 2924580000,
-          "trustUtility": 1946001000
+          "trustUtility": 1946001000,
+          "grantsWelfare": 2383954000,
+          "grantsEducation": 594961000,
+          "grantsHealth": 649938000,
+          "grantsTransportation": 958159000,
+          "grantsOther": 744734000
         },
         {
           "state": "Vermont",
@@ -4585,7 +5320,12 @@
           "federalGrants": 3383204000,
           "chargesFees": 975713000,
           "miscRevenue": 632663000,
-          "trustUtility": 1192351000
+          "trustUtility": 1192351000,
+          "grantsWelfare": 1796286000,
+          "grantsEducation": 454361000,
+          "grantsHealth": 268849000,
+          "grantsTransportation": 370118000,
+          "grantsOther": 400430000
         },
         {
           "state": "South Dakota",
@@ -4615,7 +5355,12 @@
           "federalGrants": 2880715000,
           "chargesFees": 1039083000,
           "miscRevenue": 898920000,
-          "trustUtility": 1507160000
+          "trustUtility": 1507160000,
+          "grantsWelfare": 952992000,
+          "grantsEducation": 334919000,
+          "grantsHealth": 511585000,
+          "grantsTransportation": 499039000,
+          "grantsOther": 215703000
         },
         {
           "state": "Wyoming",
@@ -4644,7 +5389,12 @@
           "federalGrants": 4129583000,
           "chargesFees": 2314093000,
           "miscRevenue": 1046986000,
-          "trustUtility": 208081000
+          "trustUtility": 208081000,
+          "grantsWelfare": 603229000,
+          "grantsEducation": 254020000,
+          "grantsHealth": 382896000,
+          "grantsTransportation": 478194000,
+          "grantsOther": 2058556000
         }
       ]
     }
