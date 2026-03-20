@@ -18,6 +18,12 @@ export type StateRecord = {
   trustUtility: number
   miscRevenue: number
   totalRevenueFull: number
+  // Federal grants breakdown (from Census Individual Unit Files)
+  grantsWelfare: number        // B79 — Medicaid, TANF, SNAP, public welfare
+  grantsEducation: number      // B21 — Title I, IDEA, vocational education
+  grantsHealth: number         // B42 + B43 — CHIP, hospital grants, public health
+  grantsTransportation: number // B46 + B01 — highway formula funds, airports
+  grantsOther: number          // B22+B30+B50+B54+B59+B80+B89 — housing, nat resources, etc.
 }
 
 export type YearRecord = {

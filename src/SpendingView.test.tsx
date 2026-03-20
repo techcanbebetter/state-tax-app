@@ -47,6 +47,11 @@ const mockStates: StateRecord[] = [
     trustUtility: 0,
     miscRevenue: 0,
     totalRevenueFull: 0,
+    grantsWelfare: 0,
+    grantsEducation: 0,
+    grantsHealth: 0,
+    grantsTransportation: 0,
+    grantsOther: 0,
   },
   {
     state: 'Texas',
@@ -70,6 +75,11 @@ const mockStates: StateRecord[] = [
     trustUtility: 0,
     miscRevenue: 0,
     totalRevenueFull: 0,
+    grantsWelfare: 0,
+    grantsEducation: 0,
+    grantsHealth: 0,
+    grantsTransportation: 0,
+    grantsOther: 0,
   },
 ]
 

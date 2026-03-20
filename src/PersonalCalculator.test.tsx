@@ -5,9 +5,9 @@ import PersonalCalculator from './PersonalCalculator'
 import type { StateRecord } from './types'
 
 const states: StateRecord[] = [
-  { state: 'California', population: 39000000, totalRevenue: 300000, perCapitaTotal: 7, perCapitaIncome: 80000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {}, federalGrants: 0, chargesFees: 0, trustUtility: 0, miscRevenue: 0, totalRevenueFull: 0 },
-  { state: 'Texas', population: 30000000, totalRevenue: 200000, perCapitaTotal: 6, perCapitaIncome: 60000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {}, federalGrants: 0, chargesFees: 0, trustUtility: 0, miscRevenue: 0, totalRevenueFull: 0 },
-  { state: 'Florida', population: 22000000, totalRevenue: 150000, perCapitaTotal: 5, perCapitaIncome: 55000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {}, federalGrants: 0, chargesFees: 0, trustUtility: 0, miscRevenue: 0, totalRevenueFull: 0 },
+  { state: 'California', population: 39000000, totalRevenue: 300000, perCapitaTotal: 7, perCapitaIncome: 80000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {}, federalGrants: 0, chargesFees: 0, trustUtility: 0, miscRevenue: 0, totalRevenueFull: 0, grantsWelfare: 0, grantsEducation: 0, grantsHealth: 0, grantsTransportation: 0, grantsOther: 0 },
+  { state: 'Texas', population: 30000000, totalRevenue: 200000, perCapitaTotal: 6, perCapitaIncome: 60000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {}, federalGrants: 0, chargesFees: 0, trustUtility: 0, miscRevenue: 0, totalRevenueFull: 0, grantsWelfare: 0, grantsEducation: 0, grantsHealth: 0, grantsTransportation: 0, grantsOther: 0 },
+  { state: 'Florida', population: 22000000, totalRevenue: 150000, perCapitaTotal: 5, perCapitaIncome: 55000, breakdown: {}, spendingTotal: 0, spendingBreakdown: {}, federalGrants: 0, chargesFees: 0, trustUtility: 0, miscRevenue: 0, totalRevenueFull: 0, grantsWelfare: 0, grantsEducation: 0, grantsHealth: 0, grantsTransportation: 0, grantsOther: 0 },
 ]
 
 describe('PersonalCalculator', () => {
