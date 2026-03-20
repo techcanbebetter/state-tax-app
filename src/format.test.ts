@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { compactCurrency, formatMetricValue, getMetricValue, getSpendingMetricValue, formatSpendingMetricValue, getSimpleMetricValue, formatSimpleMetricValue, REVENUE_BUCKET_COLORS } from './format'
+import { compactCurrency, formatMetricValue, getMetricValue, getSpendingMetricValue, formatSpendingMetricValue, getSimpleMetricValue, formatSimpleMetricValue, REVENUE_BUCKET_COLORS, FEDERAL_GRANT_COLORS } from './format'
 import type { StateRecord, SimpleMetric } from './types'
 
 const mockState: StateRecord = {
@@ -146,5 +146,15 @@ describe('REVENUE_BUCKET_COLORS', () => {
     expect(REVENUE_BUCKET_COLORS).toHaveProperty('chargesFees')
     expect(REVENUE_BUCKET_COLORS).toHaveProperty('trustUtility')
     expect(REVENUE_BUCKET_COLORS).toHaveProperty('misc')
+  })
+})
+
+describe('FEDERAL_GRANT_COLORS', () => {
+  it('has entries for all 5 grant buckets', () => {
+    expect(FEDERAL_GRANT_COLORS['grantsWelfare']).toBeDefined()
+    expect(FEDERAL_GRANT_COLORS['grantsEducation']).toBeDefined()
+    expect(FEDERAL_GRANT_COLORS['grantsHealth']).toBeDefined()
+    expect(FEDERAL_GRANT_COLORS['grantsTransportation']).toBeDefined()
+    expect(FEDERAL_GRANT_COLORS['grantsOther']).toBeDefined()
   })
 })

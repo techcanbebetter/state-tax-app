@@ -71,6 +71,14 @@ export const REVENUE_BUCKET_COLORS: Record<string, string> = {
   misc:          '#9ca3af',
 }
 
+export const FEDERAL_GRANT_COLORS: Record<string, string> = {
+  grantsWelfare:        '#1e40af',
+  grantsEducation:      '#059669',
+  grantsHealth:         '#dc2626',
+  grantsTransportation: '#9333ea',
+  grantsOther:          '#9ca3af',
+}
+
 // Takes a pre-computed dollar value (not a StateRecord field directly).
 // Each view passes its own total: totalRevenueFull, federalGrants, ownSourceTotal, etc.
 export function getSimpleMetricValue(
