@@ -1,6 +1,7 @@
 import { mkdir, writeFile, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import AdmZip from 'adm-zip'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const projectRoot = path.resolve(__dirname, '..')
@@ -68,6 +69,49 @@ const run = async () => {
       console.log(`Downloaded income source (${year}): ${path.relative(projectRoot, incomeOutput)}`)
     } catch (err) {
       console.warn(`Skipping income data for ${year}: ${err.message}`)
+    }
+  }
+
+  // Individual Unit Files: one ZIP per year — download, unzip, extract the .txt file
+  const unitFileUrls = config.sources?.individualUnitFiles?.urls ?? {}
+  const unitFileOutputTemplate = config.downloads?.individualUnitFileByYear ?? ''
+
+  if (Object.keys(unitFileUrls).length > 0 && unitFileOutputTemplate) {
+    for (const year of years) {
+      const unitOutputPath = path.resolve(projectRoot, unitFileOutputTemplate.replace('{year}', year))
+
+      // Skip if already downloaded (these ZIPs are ~4 MB each)
+      try {
+        await readFile(unitOutputPath)
+        console.log(`Individual Unit File (${year}): already downloaded, skipping.`)
+        continue
+      } catch {
+        // File does not exist — proceed with download
+      }
+
+      const url = unitFileUrls[String(year)]
+      if (!url) {
+        console.warn(`No Individual Unit File URL configured for year ${year}, skipping.`)
+        continue
+      }
+
+      console.log(`Downloading Individual Unit File (${year})...`)
+      const response = await fetch(url)
+      if (!response.ok) {
+        throw new Error(`Download failed (${response.status}) for ${url}`)
+      }
+
+      const buffer = await response.arrayBuffer()
+      const zip = new AdmZip(Buffer.from(buffer))
+      const txtEntry = zip.getEntries().find((e) => e.entryName.endsWith('.txt'))
+      if (!txtEntry) {
+        throw new Error(`No .txt file found in ZIP for year ${year}: ${url}`)
+      }
+
+      const content = txtEntry.getData().toString('utf8')
+      await mkdir(path.dirname(unitOutputPath), { recursive: true })
+      await writeFile(unitOutputPath, content, 'utf8')
+      console.log(`Downloaded Individual Unit File (${year}): ${path.relative(projectRoot, unitOutputPath)}`)
     }
   }
 }
