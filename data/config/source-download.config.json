@@ -13,12 +13,23 @@
     "income": {
       "urlTemplate": "https://api.census.gov/data/{year}/acs/acs1?get=NAME,B19301_001E&for=state:*",
       "description": "Census ACS 1-year — Per capita income by state (B19301_001E) — one request per year"
+    },
+    "individualUnitFiles": {
+      "description": "Census Individual Unit Files — state/local finance detail rows per year. Note: 2023 uses '_Files' (plural); 2019–2022 use '_File' (singular). Cannot be templated.",
+      "urls": {
+        "2019": "https://www2.census.gov/programs-surveys/gov-finances/tables/2019/2019_Individual_Unit_File.zip",
+        "2020": "https://www2.census.gov/programs-surveys/gov-finances/tables/2020/2020_Individual_Unit_File.zip",
+        "2021": "https://www2.census.gov/programs-surveys/gov-finances/tables/2021/2021_Individual_Unit_File.zip",
+        "2022": "https://www2.census.gov/programs-surveys/gov-finances/tables/2022/2022_Individual_Unit_File.zip",
+        "2023": "https://www2.census.gov/programs-surveys/gov-finances/tables/2023/2023_Individual_Unit_Files.zip"
+      }
     }
   },
   "downloads": {
     "taxByYear": "data/raw/downloads/census-tax-source-{year}.json",
     "population": "data/raw/downloads/census-population-source.csv",
-    "incomeByYear": "data/raw/downloads/census-acs-income-source-{year}.json"
+    "incomeByYear": "data/raw/downloads/census-acs-income-source-{year}.json",
+    "individualUnitFileByYear": "data/raw/downloads/census-individual-unit-{year}.txt"
   },
   "normalization": {
     "tax": {
@@ -39,6 +50,7 @@
     "population": "data/raw/state-population.csv",
     "income": "data/raw/state-per-capita-income.csv",
     "spending": "data/raw/state-local-spending-by-function.csv",
-    "revenueExtended": "data/raw/state-local-revenue-extended.csv"
+    "revenueExtended": "data/raw/state-local-revenue-extended.csv",
+    "federalGrantsBreakdown": "data/raw/federal-grants-breakdown.csv"
   }
 }
