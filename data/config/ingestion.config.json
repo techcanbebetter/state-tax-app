@@ -6,7 +6,8 @@
     "populationCsv": "data/raw/state-population.csv",
     "incomeCsv": "data/raw/state-per-capita-income.csv",
     "spendingByFunctionCsv": "data/raw/state-local-spending-by-function.csv",
-    "revenueExtendedCsv": "data/raw/state-local-revenue-extended.csv"
+    "revenueExtendedCsv": "data/raw/state-local-revenue-extended.csv",
+    "federalGrantsBreakdownCsv": "data/raw/federal-grants-breakdown.csv"
   },
   "columns": {
     "tax": {
@@ -63,6 +64,21 @@
     "LF0058": "miscRevenue",
     "LF0068": "_utilityRevenue",
     "LF0074": "_trustRevenue"
+  },
+  "grantsBucketMap": {
+    "B79": "grantsWelfare",
+    "B21": "grantsEducation",
+    "B42": "grantsHealth",
+    "B43": "grantsHealth",
+    "B46": "grantsTransportation",
+    "B01": "grantsTransportation",
+    "B22": "grantsOther",
+    "B30": "grantsOther",
+    "B50": "grantsOther",
+    "B54": "grantsOther",
+    "B59": "grantsOther",
+    "B80": "grantsOther",
+    "B89": "grantsOther"
   },
   "spendingCategoryLabels": {
     "education": "Education",

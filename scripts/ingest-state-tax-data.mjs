@@ -164,6 +164,19 @@ const run = async () => {
     }
   }
 
+  // Federal grants breakdown: read gracefully — missing file is non-fatal
+  const federalGrantsBreakdownCsvPath = path.resolve(projectRoot, config.input.federalGrantsBreakdownCsv)
+  let grantsBreakdownRows = []
+  try {
+    grantsBreakdownRows = await readCsv(federalGrantsBreakdownCsvPath)
+  } catch (err) {
+    if (err.message?.includes('Missing required source file') || err.code === 'ENOENT') {
+      console.warn('Federal grants breakdown CSV not found — grants* fields will be 0 for all states.')
+    } else {
+      throw err
+    }
+  }
+
   // Build spending lookup: `${state}||${year}||${lf_code}` → amount in dollars
   const spendingByStateYearCode = new Map()
   for (const row of spendingRows) {
@@ -186,6 +199,19 @@ const run = async () => {
     // normalize script outputs Census thousands — convert to full dollars
     const amount = parseNumeric(row.amount) * 1000
     revExtByStateYearCode.set(`${state}||${year}||${lfCode}`, amount)
+  }
+
+  // Build grants breakdown lookup: `${state}||${year}||${b_code}` → amount in full dollars
+  const grantsByStateYearCode = new Map()
+  const grantsBucketMap = config.grantsBucketMap ?? {}
+  for (const row of grantsBreakdownRows) {
+    const state = normalizeState(row.state)
+    const year = Number(row.year)
+    const bCode = String(row.b_code ?? '').trim()
+    if (!state || !VALID_STATES.has(state) || !Number.isFinite(year) || !bCode) continue
+    // normalize script outputs Census thousands — convert to full dollars
+    const amount = parseNumeric(row.amount_thousands) * 1000
+    grantsByStateYearCode.set(`${state}||${year}||${bCode}`, amount)
   }
 
   const taxColumns = config.columns.tax
@@ -346,6 +372,18 @@ const run = async () => {
         const miscRevenue = Math.round(revBuckets['miscRevenue'] ?? 0)
         const trustUtility = Math.round((revBuckets['_trustRevenue'] ?? 0) + (revBuckets['_utilityRevenue'] ?? 0))
 
+        // Federal grants breakdown: accumulate B-codes into the 5 buckets via grantsBucketMap
+        const grantsAccum = {}
+        for (const [bCode, fieldName] of Object.entries(grantsBucketMap)) {
+          const amount = grantsByStateYearCode.get(`${state.state}||${year}||${bCode}`) ?? 0
+          grantsAccum[fieldName] = (grantsAccum[fieldName] ?? 0) + amount
+        }
+        const grantsWelfare = Math.round(grantsAccum['grantsWelfare'] ?? 0)
+        const grantsEducation = Math.round(grantsAccum['grantsEducation'] ?? 0)
+        const grantsHealth = Math.round(grantsAccum['grantsHealth'] ?? 0)
+        const grantsTransportation = Math.round(grantsAccum['grantsTransportation'] ?? 0)
+        const grantsOther = Math.round(grantsAccum['grantsOther'] ?? 0)
+
         return {
           ...state,
           totalRevenue: Math.round(state.totalRevenue),
@@ -360,6 +398,11 @@ const run = async () => {
           chargesFees,
           miscRevenue,
           trustUtility,
+          grantsWelfare,
+          grantsEducation,
+          grantsHealth,
+          grantsTransportation,
+          grantsOther,
         }
       })
       .sort((a, b) => b.totalRevenue - a.totalRevenue)
