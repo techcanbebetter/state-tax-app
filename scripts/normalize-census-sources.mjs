@@ -60,6 +60,23 @@ const VALID_STATES = new Set([
   'Wyoming',
 ])
 
+// FIPS code → state name mapping (50 states; DC excluded as it's not in VALID_STATES)
+const FIPS_TO_STATE = {
+  '01': 'Alabama',       '02': 'Alaska',        '04': 'Arizona',       '05': 'Arkansas',
+  '06': 'California',    '08': 'Colorado',       '09': 'Connecticut',   '10': 'Delaware',
+  '12': 'Florida',       '13': 'Georgia',        '15': 'Hawaii',        '16': 'Idaho',
+  '17': 'Illinois',      '18': 'Indiana',        '19': 'Iowa',          '20': 'Kansas',
+  '21': 'Kentucky',      '22': 'Louisiana',      '23': 'Maine',         '24': 'Maryland',
+  '25': 'Massachusetts', '26': 'Michigan',       '27': 'Minnesota',     '28': 'Mississippi',
+  '29': 'Missouri',      '30': 'Montana',        '31': 'Nebraska',      '32': 'Nevada',
+  '33': 'New Hampshire', '34': 'New Jersey',     '35': 'New Mexico',    '36': 'New York',
+  '37': 'North Carolina','38': 'North Dakota',   '39': 'Ohio',          '40': 'Oklahoma',
+  '41': 'Oregon',        '42': 'Pennsylvania',   '44': 'Rhode Island',  '45': 'South Carolina',
+  '46': 'South Dakota',  '47': 'Tennessee',      '48': 'Texas',         '49': 'Utah',
+  '50': 'Vermont',       '51': 'Virginia',       '53': 'Washington',    '54': 'West Virginia',
+  '55': 'Wisconsin',     '56': 'Wyoming',
+}
+
 const CENSUS_TAX_CODE_TO_TYPE = new Map([
   ['LF0022', 'Individual income tax'],
   ['LF0023', 'Corporate income tax'],
@@ -274,6 +291,67 @@ const normalizeRevenueExtendedFromCensusApiRows = (rows) => {
   return [...bucket.values()]
 }
 
+const GRANT_B_CODES = new Set([
+  'B79', 'B21', 'B42', 'B43', 'B46', 'B01',
+  'B22', 'B30', 'B50', 'B54', 'B59', 'B80', 'B89',
+])
+
+const normalizeFederalGrantsBreakdown = async (config) => {
+  const years = config.years ?? [config.year]
+  const outputTemplate = config.downloads?.individualUnitFileByYear ?? ''
+
+  if (!outputTemplate) {
+    console.warn('No individualUnitFileByYear path configured — skipping federal grants breakdown.')
+    return []
+  }
+
+  // key: `${stateName}||${year}||${bCode}` → accumulated amount in thousands
+  const bucket = new Map()
+
+  for (const year of years) {
+    const txtPath = path.resolve(projectRoot, outputTemplate.replace('{year}', year))
+    let content
+    try {
+      content = await readFile(txtPath, 'utf8')
+    } catch {
+      console.warn(
+        `Individual Unit File for ${year} not found at ${path.relative(projectRoot, txtPath)} — skipping year.`,
+      )
+      continue
+    }
+
+    for (const rawLine of content.split('\n')) {
+      // Trim CRLF: Census flat files use Windows line endings; strip \r before slicing positions
+      const line = rawLine.trimEnd()
+      if (line.length < 27) continue
+
+      const fips = line.substring(0, 2)
+      const unitId = line.substring(2, 12)
+      const bCode = line.substring(12, 15).trim()
+      const amountStr = line.substring(15, 27).trim()
+
+      // State-government rows only: unit ID starts with '0000'
+      if (!unitId.startsWith('0000')) continue
+      // Only capture the 13 B-codes we care about
+      if (!GRANT_B_CODES.has(bCode)) continue
+
+      const stateName = FIPS_TO_STATE[fips]
+      if (!stateName || !VALID_STATES.has(stateName)) continue
+
+      const amount = Number(amountStr)
+      if (!Number.isFinite(amount) || amount < 0) continue
+
+      const key = `${stateName}||${year}||${bCode}`
+      bucket.set(key, (bucket.get(key) ?? 0) + amount)
+    }
+  }
+
+  return [...bucket.entries()].map(([key, amount_thousands]) => {
+    const [state, yearStr, b_code] = key.split('||')
+    return { state, year: Number(yearStr), b_code, amount_thousands }
+  })
+}
+
 const quoteCsv = (value) => {
   const text = String(value ?? '')
   if (/[",\n]/.test(text)) {
@@ -438,6 +516,22 @@ const run = async () => {
   )
   console.log(
     `Normalized revenue-extended rows: ${normalizedRevenueExtendedRows.length} -> ${path.relative(projectRoot, revenueExtendedOutput)}`,
+  )
+
+  const grantsBreakdownRows = await normalizeFederalGrantsBreakdown(config)
+  if (grantsBreakdownRows.length === 0) {
+    console.warn(
+      'Federal grants breakdown produced zero rows — Individual Unit Files may not be downloaded yet.',
+    )
+  }
+
+  const grantsBreakdownOutput = await writeCsv(
+    config.normalizedOutputs.federalGrantsBreakdown,
+    grantsBreakdownRows,
+    ['state', 'year', 'b_code', 'amount_thousands'],
+  )
+  console.log(
+    `Normalized federal grants breakdown rows: ${grantsBreakdownRows.length} -> ${path.relative(projectRoot, grantsBreakdownOutput)}`,
   )
 }
 
