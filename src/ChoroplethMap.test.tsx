@@ -52,6 +52,11 @@ const states: StateRecord[] = [
     educationPerPupil: 0,
     naepGrade4Reading: 0,
     naepGrade8Math: 0,
+    reasonOverallRank: 0,
+    reasonPavementRank: 0,
+    reasonBridgeRank: 0,
+    reasonCongestionRank: 0,
+    reasonFatalityRank: 0,
   },
   {
     state: 'Texas',
@@ -75,6 +80,11 @@ const states: StateRecord[] = [
     educationPerPupil: 0,
     naepGrade4Reading: 0,
     naepGrade8Math: 0,
+    reasonOverallRank: 0,
+    reasonPavementRank: 0,
+    reasonBridgeRank: 0,
+    reasonCongestionRank: 0,
+    reasonFatalityRank: 0,
   },
 ]
 

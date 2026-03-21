@@ -26,6 +26,11 @@ const makeState = (overrides: Partial<StateRecord> = {}): StateRecord => ({
   educationPerPupil: 20737,
   naepGrade4Reading: 214,
   naepGrade8Math: 270,
+  reasonOverallRank: 0,
+  reasonPavementRank: 0,
+  reasonBridgeRank: 0,
+  reasonCongestionRank: 0,
+  reasonFatalityRank: 0,
   ...overrides,
 })
 

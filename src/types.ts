@@ -28,6 +28,12 @@ export type StateRecord = {
   educationPerPupil: number    // K-12 per-pupil expenditure in dollars (0 if not ingested)
   naepGrade4Reading: number    // NAEP 4th grade reading score, ~200–240 range (0 if no data for year)
   naepGrade8Math: number       // NAEP 8th grade math score, ~255–290 range (0 if no data for year)
+  // Transportation effectiveness (from Reason Foundation 29th Annual Highway Report)
+  reasonOverallRank: number      // 1 = best, 50 = worst; 0 if not ingested
+  reasonPavementRank: number     // avg of 4 pavement sub-rankings, rounded; 0 if not ingested
+  reasonBridgeRank: number       // Structurally Deficient Bridges ranking; 0 if not ingested
+  reasonCongestionRank: number   // Urbanized Area Congestion ranking; 0 if not ingested
+  reasonFatalityRank: number     // avg of 3 fatality rate sub-rankings, rounded; 0 if not ingested
 }
 
 export type YearRecord = {
