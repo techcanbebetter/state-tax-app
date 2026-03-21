@@ -29,6 +29,9 @@ const mockState: StateRecord = {
   grantsHealth: 0,
   grantsTransportation: 0,
   grantsOther: 0,
+  educationPerPupil: 0,
+  naepGrade4Reading: 0,
+  naepGrade8Math: 0,
 }
 
 describe('compactCurrency', () => {

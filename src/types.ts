@@ -24,6 +24,10 @@ export type StateRecord = {
   grantsHealth: number         // B42 + B43 — CHIP, hospital grants, public health
   grantsTransportation: number // B46 + B01 — highway formula funds, airports
   grantsOther: number          // B22+B30+B50+B54+B59+B80+B89 — housing, nat resources, etc.
+  // Education effectiveness (K-12 only; from Census F-33 and NAEP)
+  educationPerPupil: number    // K-12 per-pupil expenditure in dollars (0 if not ingested)
+  naepGrade4Reading: number    // NAEP 4th grade reading score, ~200–240 range (0 if no data for year)
+  naepGrade8Math: number       // NAEP 8th grade math score, ~255–290 range (0 if no data for year)
 }
 
 export type YearRecord = {
