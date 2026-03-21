@@ -12,9 +12,17 @@
       "Nominal dollars.",
       "Top states selected by population for the latest year."
     ],
-    "generatedAt": "2026-03-20T04:18:58.588Z"
+    "generatedAt": "2026-03-21T04:50:00.697Z"
   },
   "taxTypes": [
+    {
+      "key": "sales_selective",
+      "label": "Selective sales"
+    },
+    {
+      "key": "licenses",
+      "label": "Licenses"
+    },
     {
       "key": "property",
       "label": "Property"
@@ -24,20 +32,12 @@
       "label": "General sales"
     },
     {
-      "key": "sales_selective",
-      "label": "Selective sales"
-    },
-    {
       "key": "income_individual",
       "label": "Individual income"
     },
     {
       "key": "income_corporate",
       "label": "Corporate income"
-    },
-    {
-      "key": "licenses",
-      "label": "Licenses"
     },
     {
       "key": "other",
@@ -111,7 +111,10 @@
           "grantsEducation": 15052072000,
           "grantsHealth": 1634047000,
           "grantsTransportation": 5189599000,
-          "grantsOther": 5752933000
+          "grantsOther": 5752933000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New York",
@@ -146,7 +149,10 @@
           "grantsEducation": 3607824000,
           "grantsHealth": 6078501000,
           "grantsTransportation": 1897050000,
-          "grantsOther": 6279348000
+          "grantsOther": 6279348000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Texas",
@@ -179,7 +185,10 @@
           "grantsEducation": 7723226000,
           "grantsHealth": 33322127000,
           "grantsTransportation": 5643909000,
-          "grantsOther": 3394428000
+          "grantsOther": 3394428000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Illinois",
@@ -214,7 +223,10 @@
           "grantsEducation": 4223747000,
           "grantsHealth": 1228283000,
           "grantsTransportation": 2329516000,
-          "grantsOther": 2768185000
+          "grantsOther": 2768185000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Florida",
@@ -248,7 +260,10 @@
           "grantsEducation": 6638492000,
           "grantsHealth": 9763246000,
           "grantsTransportation": 2035668000,
-          "grantsOther": 4109262000
+          "grantsOther": 4109262000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Pennsylvania",
@@ -283,7 +298,10 @@
           "grantsEducation": 3887360000,
           "grantsHealth": 12657122000,
           "grantsTransportation": 2056294000,
-          "grantsOther": 1301749000
+          "grantsOther": 1301749000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Jersey",
@@ -318,7 +336,10 @@
           "grantsEducation": 2170516000,
           "grantsHealth": 3730228000,
           "grantsTransportation": 994754000,
-          "grantsOther": 3586464000
+          "grantsOther": 3586464000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Ohio",
@@ -353,7 +374,10 @@
           "grantsEducation": 3192722000,
           "grantsHealth": 7104942000,
           "grantsTransportation": 1433541000,
-          "grantsOther": 1119960000
+          "grantsOther": 1119960000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Massachusetts",
@@ -388,7 +412,10 @@
           "grantsEducation": 1766569000,
           "grantsHealth": 7195954000,
           "grantsTransportation": 707918000,
-          "grantsOther": 2086934000
+          "grantsOther": 2086934000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Virginia",
@@ -423,7 +450,10 @@
           "grantsEducation": 2396677000,
           "grantsHealth": 7159568000,
           "grantsTransportation": 988782000,
-          "grantsOther": 560258000
+          "grantsOther": 560258000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "North Carolina",
@@ -458,7 +488,10 @@
           "grantsEducation": 3144784000,
           "grantsHealth": 4117886000,
           "grantsTransportation": 1530370000,
-          "grantsOther": 3809265000
+          "grantsOther": 3809265000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Michigan",
@@ -493,7 +526,10 @@
           "grantsEducation": 4145589000,
           "grantsHealth": 4462253000,
           "grantsTransportation": 1029068000,
-          "grantsOther": 2731247000
+          "grantsOther": 2731247000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Georgia",
@@ -528,7 +564,10 @@
           "grantsEducation": 3621855000,
           "grantsHealth": 10265068000,
           "grantsTransportation": 1734578000,
-          "grantsOther": 1305683000
+          "grantsOther": 1305683000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Washington",
@@ -561,7 +600,10 @@
           "grantsEducation": 3015031000,
           "grantsHealth": 3138501000,
           "grantsTransportation": 913204000,
-          "grantsOther": 2307879000
+          "grantsOther": 2307879000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Maryland",
@@ -596,7 +638,10 @@
           "grantsEducation": 1892872000,
           "grantsHealth": 3210189000,
           "grantsTransportation": 777497000,
-          "grantsOther": 2384727000
+          "grantsOther": 2384727000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Minnesota",
@@ -631,7 +676,10 @@
           "grantsEducation": 2035914000,
           "grantsHealth": 2610454000,
           "grantsTransportation": 963458000,
-          "grantsOther": 673117000
+          "grantsOther": 673117000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Colorado",
@@ -666,7 +714,10 @@
           "grantsEducation": 1901399000,
           "grantsHealth": 3542681000,
           "grantsTransportation": 620455000,
-          "grantsOther": 1030265000
+          "grantsOther": 1030265000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Indiana",
@@ -701,7 +752,10 @@
           "grantsEducation": 1951880000,
           "grantsHealth": 3024920000,
           "grantsTransportation": 1256551000,
-          "grantsOther": 1017339000
+          "grantsOther": 1017339000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Connecticut",
@@ -709,11 +763,11 @@
           "totalRevenue": 33109765000,
           "breakdown": {
             "property": 11871993000,
-            "sales_general": 5252683000,
             "sales_selective": 2895587000,
             "income_individual": 10259183000,
             "income_corporate": 2607064000,
-            "licenses": 223255000
+            "licenses": 223255000,
+            "sales_general": 5252683000
           },
           "perCapitaTotal": 9187.74,
           "perCapitaIncome": 48146,
@@ -736,7 +790,10 @@
           "grantsEducation": 745618000,
           "grantsHealth": 4013331000,
           "grantsTransportation": 591249000,
-          "grantsOther": 653119000
+          "grantsOther": 653119000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Arizona",
@@ -771,7 +828,10 @@
           "grantsEducation": 2341262000,
           "grantsHealth": 3518053000,
           "grantsTransportation": 771732000,
-          "grantsOther": 706694000
+          "grantsOther": 706694000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Wisconsin",
@@ -806,7 +866,10 @@
           "grantsEducation": 1718027000,
           "grantsHealth": 469077000,
           "grantsTransportation": 946248000,
-          "grantsOther": 2682668000
+          "grantsOther": 2682668000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Missouri",
@@ -841,7 +904,10 @@
           "grantsEducation": 1646274000,
           "grantsHealth": 2694305000,
           "grantsTransportation": 1319054000,
-          "grantsOther": 825026000
+          "grantsOther": 825026000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Tennessee",
@@ -876,7 +942,10 @@
           "grantsEducation": 2165456000,
           "grantsHealth": 1777666000,
           "grantsTransportation": 1069161000,
-          "grantsOther": 2741060000
+          "grantsOther": 2741060000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Oregon",
@@ -910,7 +979,10 @@
           "grantsEducation": 1711299000,
           "grantsHealth": 312893000,
           "grantsTransportation": 474283000,
-          "grantsOther": 1147803000
+          "grantsOther": 1147803000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "South Carolina",
@@ -945,7 +1017,10 @@
           "grantsEducation": 1592504000,
           "grantsHealth": 1489834000,
           "grantsTransportation": 710595000,
-          "grantsOther": 1458956000
+          "grantsOther": 1458956000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Louisiana",
@@ -980,7 +1055,10 @@
           "grantsEducation": 1981001000,
           "grantsHealth": 499347000,
           "grantsTransportation": 833529000,
-          "grantsOther": 5307359000
+          "grantsOther": 5307359000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Kentucky",
@@ -1015,7 +1093,10 @@
           "grantsEducation": 1851261000,
           "grantsHealth": 1660865000,
           "grantsTransportation": 894038000,
-          "grantsOther": 903846000
+          "grantsOther": 903846000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Alabama",
@@ -1050,7 +1131,10 @@
           "grantsEducation": 2786910000,
           "grantsHealth": 1660034000,
           "grantsTransportation": 1006907000,
-          "grantsOther": 953622000
+          "grantsOther": 953622000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Utah",
@@ -1085,7 +1169,10 @@
           "grantsEducation": 1386208000,
           "grantsHealth": 1039559000,
           "grantsTransportation": 467394000,
-          "grantsOther": 456523000
+          "grantsOther": 456523000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Iowa",
@@ -1120,7 +1207,10 @@
           "grantsEducation": 1221318000,
           "grantsHealth": 547619000,
           "grantsTransportation": 587050000,
-          "grantsOther": 893354000
+          "grantsOther": 893354000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Kansas",
@@ -1155,7 +1245,10 @@
           "grantsEducation": 920118000,
           "grantsHealth": 1640698000,
           "grantsTransportation": 443598000,
-          "grantsOther": 439909000
+          "grantsOther": 439909000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Oklahoma",
@@ -1190,7 +1283,10 @@
           "grantsEducation": 1747721000,
           "grantsHealth": 571631000,
           "grantsTransportation": 712897000,
-          "grantsOther": 721972000
+          "grantsOther": 721972000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Arkansas",
@@ -1225,7 +1321,10 @@
           "grantsEducation": 1037029000,
           "grantsHealth": 1679861000,
           "grantsTransportation": 790844000,
-          "grantsOther": 530282000
+          "grantsOther": 530282000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Nevada",
@@ -1258,7 +1357,10 @@
           "grantsEducation": 710388000,
           "grantsHealth": 998067000,
           "grantsTransportation": 344668000,
-          "grantsOther": 749504000
+          "grantsOther": 749504000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Mississippi",
@@ -1293,7 +1395,10 @@
           "grantsEducation": 1155415000,
           "grantsHealth": 1691309000,
           "grantsTransportation": 683742000,
-          "grantsOther": 643019000
+          "grantsOther": 643019000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Nebraska",
@@ -1328,7 +1433,10 @@
           "grantsEducation": 301333000,
           "grantsHealth": 744788000,
           "grantsTransportation": 514059000,
-          "grantsOther": 394131000
+          "grantsOther": 394131000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Hawaii",
@@ -1363,7 +1471,10 @@
           "grantsEducation": 681340000,
           "grantsHealth": 2081280000,
           "grantsTransportation": 395446000,
-          "grantsOther": 290572000
+          "grantsOther": 290572000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Maine",
@@ -1398,7 +1509,10 @@
           "grantsEducation": 361575000,
           "grantsHealth": 703320000,
           "grantsTransportation": 282147000,
-          "grantsOther": 598668000
+          "grantsOther": 598668000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Mexico",
@@ -1433,7 +1547,10 @@
           "grantsEducation": 987319000,
           "grantsHealth": 1461601000,
           "grantsTransportation": 419390000,
-          "grantsOther": 818005000
+          "grantsOther": 818005000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Idaho",
@@ -1468,7 +1585,10 @@
           "grantsEducation": 432321000,
           "grantsHealth": 1268095000,
           "grantsTransportation": 398768000,
-          "grantsOther": 366720000
+          "grantsOther": 366720000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "West Virginia",
@@ -1503,7 +1623,10 @@
           "grantsEducation": 601094000,
           "grantsHealth": 1317147000,
           "grantsTransportation": 374678000,
-          "grantsOther": 439104000
+          "grantsOther": 439104000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Rhode Island",
@@ -1538,7 +1661,10 @@
           "grantsEducation": 199840000,
           "grantsHealth": 3295613000,
           "grantsTransportation": 297501000,
-          "grantsOther": 466470000
+          "grantsOther": 466470000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Hampshire",
@@ -1572,7 +1698,10 @@
           "grantsEducation": 249961000,
           "grantsHealth": 28397000,
           "grantsTransportation": 190350000,
-          "grantsOther": 1449276000
+          "grantsOther": 1449276000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Montana",
@@ -1606,7 +1735,10 @@
           "grantsEducation": 440099000,
           "grantsHealth": 1733265000,
           "grantsTransportation": 557191000,
-          "grantsOther": 362078000
+          "grantsOther": 362078000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Vermont",
@@ -1641,7 +1773,10 @@
           "grantsEducation": 336645000,
           "grantsHealth": 379000000,
           "grantsTransportation": 276557000,
-          "grantsOther": 261210000
+          "grantsOther": 261210000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Delaware",
@@ -1675,7 +1810,10 @@
           "grantsEducation": 390465000,
           "grantsHealth": 1358249000,
           "grantsTransportation": 1103290000,
-          "grantsOther": 244443000
+          "grantsOther": 244443000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "South Dakota",
@@ -1709,7 +1847,10 @@
           "grantsEducation": 311317000,
           "grantsHealth": 248722000,
           "grantsTransportation": 430246000,
-          "grantsOther": 218875000
+          "grantsOther": 218875000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "North Dakota",
@@ -1744,7 +1885,10 @@
           "grantsEducation": 410418000,
           "grantsHealth": 1230742000,
           "grantsTransportation": 338928000,
-          "grantsOther": 337592000
+          "grantsOther": 337592000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Alaska",
@@ -1778,7 +1922,10 @@
           "grantsEducation": 480024000,
           "grantsHealth": 1462257000,
           "grantsTransportation": 833384000,
-          "grantsOther": 580064000
+          "grantsOther": 580064000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Wyoming",
@@ -1811,7 +1958,10 @@
           "grantsEducation": 216005000,
           "grantsHealth": 1006086000,
           "grantsTransportation": 403873000,
-          "grantsOther": 980137000
+          "grantsOther": 980137000,
+          "educationPerPupil": 0,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         }
       ]
     },
@@ -1852,7 +2002,10 @@
           "grantsEducation": 23239585000,
           "grantsHealth": 2025226000,
           "grantsTransportation": 0,
-          "grantsOther": 11485382000
+          "grantsOther": 11485382000,
+          "educationPerPupil": 20737,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New York",
@@ -1888,7 +2041,10 @@
           "grantsEducation": 6123624000,
           "grantsHealth": 17952501000,
           "grantsTransportation": 1728963000,
-          "grantsOther": 6720703000
+          "grantsOther": 6720703000,
+          "educationPerPupil": 35677,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Texas",
@@ -1922,7 +2078,10 @@
           "grantsEducation": 9830961000,
           "grantsHealth": 18131396000,
           "grantsTransportation": 4530989000,
-          "grantsOther": 3540456000
+          "grantsOther": 3540456000,
+          "educationPerPupil": 15611,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Florida",
@@ -1957,7 +2116,10 @@
           "grantsEducation": 10241352000,
           "grantsHealth": 9684996000,
           "grantsTransportation": 2059880000,
-          "grantsOther": 4367145000
+          "grantsOther": 4367145000,
+          "educationPerPupil": 12703,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Illinois",
@@ -1993,7 +2155,10 @@
           "grantsEducation": 5732125000,
           "grantsHealth": 9729855000,
           "grantsTransportation": 1799664000,
-          "grantsOther": 3046809000
+          "grantsOther": 3046809000,
+          "educationPerPupil": 22239,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Jersey",
@@ -2029,16 +2194,19 @@
           "grantsEducation": 2693073000,
           "grantsHealth": 5209824000,
           "grantsTransportation": 1034903000,
-          "grantsOther": 4974793000
+          "grantsOther": 4974793000,
+          "educationPerPupil": 29173,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Pennsylvania",
           "population": 12972091,
           "totalRevenue": 86370205000,
           "breakdown": {
-            "property": 22298083000,
             "sales_general": 15771499000,
             "sales_selective": 11483045000,
+            "property": 22298083000,
             "income_individual": 23277637000,
             "income_corporate": 5753298000,
             "licenses": 3756454000,
@@ -2065,7 +2233,10 @@
           "grantsEducation": 4632907000,
           "grantsHealth": 8074546000,
           "grantsTransportation": 1890104000,
-          "grantsOther": 1419669000
+          "grantsOther": 1419669000,
+          "educationPerPupil": 25500,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Ohio",
@@ -2101,16 +2272,19 @@
           "grantsEducation": 3970745000,
           "grantsHealth": 9137319000,
           "grantsTransportation": 1347990000,
-          "grantsOther": 1265797000
+          "grantsOther": 1265797000,
+          "educationPerPupil": 18144,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Massachusetts",
           "population": 6982740,
           "totalRevenue": 65503491000,
           "breakdown": {
-            "property": 20932897000,
             "sales_general": 8716276000,
             "sales_selective": 3554427000,
+            "property": 20932897000,
             "income_individual": 24399902000,
             "income_corporate": 4601008000,
             "licenses": 1828943000,
@@ -2137,7 +2311,10 @@
           "grantsEducation": 2766042000,
           "grantsHealth": 2797011000,
           "grantsTransportation": 619630000,
-          "grantsOther": 3869527000
+          "grantsOther": 3869527000,
+          "educationPerPupil": 26732,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Virginia",
@@ -2173,7 +2350,10 @@
           "grantsEducation": 2970399000,
           "grantsHealth": 3056863000,
           "grantsTransportation": 1287119000,
-          "grantsOther": 571521000
+          "grantsOther": 571521000,
+          "educationPerPupil": 16766,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Washington",
@@ -2181,10 +2361,10 @@
           "totalRevenue": 57765102000,
           "breakdown": {
             "property": 15534189000,
-            "sales_general": 27899131000,
             "sales_selective": 7308299000,
             "licenses": 2992450000,
-            "other": 4031033000
+            "other": 4031033000,
+            "sales_general": 27899131000
           },
           "perCapitaTotal": 7420.55,
           "perCapitaIncome": 50764,
@@ -2207,7 +2387,10 @@
           "grantsEducation": 4468812000,
           "grantsHealth": 4467500000,
           "grantsTransportation": 893937000,
-          "grantsOther": 1868458000
+          "grantsOther": 1868458000,
+          "educationPerPupil": 20500,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Georgia",
@@ -2243,7 +2426,10 @@
           "grantsEducation": 5222904000,
           "grantsHealth": 4062419000,
           "grantsTransportation": 1455801000,
-          "grantsOther": 1402521000
+          "grantsOther": 1402521000,
+          "educationPerPupil": 15111,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "North Carolina",
@@ -2254,9 +2440,9 @@
             "sales_general": 15526697000,
             "sales_selective": 5895272000,
             "income_individual": 17672005000,
-            "income_corporate": 1631119000,
             "licenses": 3102435000,
-            "other": 501575000
+            "other": 501575000,
+            "income_corporate": 1631119000
           },
           "perCapitaTotal": 5314.29,
           "perCapitaIncome": 38701,
@@ -2279,20 +2465,23 @@
           "grantsEducation": 4391942000,
           "grantsHealth": 6146989000,
           "grantsTransportation": 1301616000,
-          "grantsOther": 2591679000
+          "grantsOther": 2591679000,
+          "educationPerPupil": 13782,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Michigan",
           "population": 10033281,
           "totalRevenue": 53053209000,
           "breakdown": {
+            "sales_selective": 5157873000,
             "property": 17097643000,
             "sales_general": 12204862000,
-            "sales_selective": 5157873000,
             "income_individual": 13574190000,
-            "income_corporate": 1794301000,
             "licenses": 2613387000,
-            "other": 610953000
+            "other": 610953000,
+            "income_corporate": 1794301000
           },
           "perCapitaTotal": 5287.72,
           "perCapitaIncome": 38151,
@@ -2315,7 +2504,10 @@
           "grantsEducation": 4241519000,
           "grantsHealth": 7243589000,
           "grantsTransportation": 1147930000,
-          "grantsOther": 3009667000
+          "grantsOther": 3009667000,
+          "educationPerPupil": 20201,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Maryland",
@@ -2351,7 +2543,10 @@
           "grantsEducation": 3357743000,
           "grantsHealth": 3901048000,
           "grantsTransportation": 792524000,
-          "grantsOther": 3148662000
+          "grantsOther": 3148662000,
+          "educationPerPupil": 20340,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Minnesota",
@@ -2362,8 +2557,8 @@
             "sales_general": 7689924000,
             "sales_selective": 5036077000,
             "income_individual": 15130683000,
-            "income_corporate": 4729850000,
             "licenses": 1778448000,
+            "income_corporate": 4729850000,
             "other": 735787000
           },
           "perCapitaTotal": 7900.66,
@@ -2387,7 +2582,10 @@
           "grantsEducation": 3127572000,
           "grantsHealth": 3830999000,
           "grantsTransportation": 924622000,
-          "grantsOther": 872124000
+          "grantsOther": 872124000,
+          "educationPerPupil": 19940,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Colorado",
@@ -2398,8 +2596,8 @@
             "sales_general": 10855720000,
             "sales_selective": 4159835000,
             "income_individual": 11685999000,
-            "income_corporate": 1508480000,
             "licenses": 1260652000,
+            "income_corporate": 1508480000,
             "other": 492797000
           },
           "perCapitaTotal": 7249.58,
@@ -2423,7 +2621,10 @@
           "grantsEducation": 2433236000,
           "grantsHealth": 2657273000,
           "grantsTransportation": 687829000,
-          "grantsOther": 1900192000
+          "grantsOther": 1900192000,
+          "educationPerPupil": 16755,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Indiana",
@@ -2433,10 +2634,10 @@
             "property": 8599672000,
             "sales_general": 10389202000,
             "sales_selective": 4720486000,
-            "income_individual": 12950694000,
             "income_corporate": 1539543000,
             "licenses": 1027448000,
-            "other": 166857000
+            "other": 166857000,
+            "income_individual": 12950694000
           },
           "perCapitaTotal": 5765.86,
           "perCapitaIncome": 35984,
@@ -2459,20 +2660,23 @@
           "grantsEducation": 2382948000,
           "grantsHealth": 4015632000,
           "grantsTransportation": 1182507000,
-          "grantsOther": 1120082000
+          "grantsOther": 1120082000,
+          "educationPerPupil": 15122,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Arizona",
           "population": 7365684,
           "totalRevenue": 38344758000,
           "breakdown": {
-            "property": 9201256000,
             "sales_general": 16366431000,
             "sales_selective": 2562217000,
             "income_individual": 7529879000,
             "income_corporate": 1176587000,
             "licenses": 1206904000,
-            "other": 301484000
+            "other": 301484000,
+            "property": 9201256000
           },
           "perCapitaTotal": 5205.87,
           "perCapitaIncome": 39819,
@@ -2495,7 +2699,10 @@
           "grantsEducation": 3462171000,
           "grantsHealth": 3566108000,
           "grantsTransportation": 873787000,
-          "grantsOther": 909388000
+          "grantsOther": 909388000,
+          "educationPerPupil": 12697,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Connecticut",
@@ -2503,11 +2710,11 @@
           "totalRevenue": 35113786000,
           "breakdown": {
             "property": 12140652000,
-            "sales_general": 5193413000,
             "sales_selective": 3134427000,
+            "sales_general": 5193413000,
             "income_individual": 9861264000,
-            "income_corporate": 3645975000,
             "licenses": 517322000,
+            "income_corporate": 3645975000,
             "other": 620733000
           },
           "perCapitaTotal": 9730.3,
@@ -2531,7 +2738,10 @@
           "grantsEducation": 1018466000,
           "grantsHealth": 1848617000,
           "grantsTransportation": 559589000,
-          "grantsOther": 1134455000
+          "grantsOther": 1134455000,
+          "educationPerPupil": 28172,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Wisconsin",
@@ -2542,9 +2752,9 @@
             "sales_general": 7545526000,
             "sales_selective": 3023836000,
             "income_individual": 8994997000,
-            "income_corporate": 2927101000,
             "licenses": 1610966000,
-            "other": 183583000
+            "other": 183583000,
+            "income_corporate": 2927101000
           },
           "perCapitaTotal": 5954.93,
           "perCapitaIncome": 40188,
@@ -2567,16 +2777,19 @@
           "grantsEducation": 2219468000,
           "grantsHealth": 859629000,
           "grantsTransportation": 980211000,
-          "grantsOther": 2536777000
+          "grantsOther": 2536777000,
+          "educationPerPupil": 17563,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Tennessee",
           "population": 7048976,
           "totalRevenue": 33165025000,
           "breakdown": {
-            "property": 6845814000,
             "sales_general": 15194334000,
             "sales_selective": 4567991000,
+            "property": 6845814000,
             "income_individual": 9480000,
             "income_corporate": 2999297000,
             "licenses": 2995495000,
@@ -2603,7 +2816,10 @@
           "grantsEducation": 2173678000,
           "grantsHealth": 2520852000,
           "grantsTransportation": 1194554000,
-          "grantsOther": 2040791000
+          "grantsOther": 2040791000,
+          "educationPerPupil": 12736,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Missouri",
@@ -2639,20 +2855,23 @@
           "grantsEducation": 2600524000,
           "grantsHealth": 5531915000,
           "grantsTransportation": 970641000,
-          "grantsOther": 1177362000
+          "grantsOther": 1177362000,
+          "educationPerPupil": 15322,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Oregon",
           "population": 4239379,
           "totalRevenue": 29700277000,
           "breakdown": {
-            "property": 8046812000,
             "sales_general": 1216538000,
             "sales_selective": 3501671000,
             "income_individual": 12107924000,
             "income_corporate": 1752999000,
             "licenses": 2119970000,
-            "other": 954363000
+            "other": 954363000,
+            "property": 8046812000
           },
           "perCapitaTotal": 7005.81,
           "perCapitaIncome": 42474,
@@ -2675,7 +2894,10 @@
           "grantsEducation": 1466094000,
           "grantsHealth": 3529625000,
           "grantsTransportation": 567164000,
-          "grantsOther": 915422000
+          "grantsOther": 915422000,
+          "educationPerPupil": 20327,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "South Carolina",
@@ -2711,7 +2933,10 @@
           "grantsEducation": 1893470000,
           "grantsHealth": 4721799000,
           "grantsTransportation": 840827000,
-          "grantsOther": 1127993000
+          "grantsOther": 1127993000,
+          "educationPerPupil": 16007,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Louisiana",
@@ -2747,7 +2972,10 @@
           "grantsEducation": 3250480000,
           "grantsHealth": 541079000,
           "grantsTransportation": 882577000,
-          "grantsOther": 2947125000
+          "grantsOther": 2947125000,
+          "educationPerPupil": 17278,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Alabama",
@@ -2755,8 +2983,8 @@
           "totalRevenue": 24100602000,
           "breakdown": {
             "property": 3535757000,
-            "sales_general": 7660470000,
             "sales_selective": 3741521000,
+            "sales_general": 7660470000,
             "income_individual": 6226144000,
             "income_corporate": 1463618000,
             "licenses": 1241138000,
@@ -2783,7 +3011,10 @@
           "grantsEducation": 3300637000,
           "grantsHealth": 2824249000,
           "grantsTransportation": 1016425000,
-          "grantsOther": 1143965000
+          "grantsOther": 1143965000,
+          "educationPerPupil": 13580,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Kentucky",
@@ -2819,15 +3050,18 @@
           "grantsEducation": 2952329000,
           "grantsHealth": 1815673000,
           "grantsTransportation": 1012556000,
-          "grantsOther": 1167876000
+          "grantsOther": 1167876000,
+          "educationPerPupil": 15481,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Utah",
           "population": 3381236,
           "totalRevenue": 21089315000,
           "breakdown": {
-            "property": 4547233000,
             "sales_general": 6216533000,
+            "property": 4547233000,
             "sales_selective": 1829731000,
             "income_individual": 6812367000,
             "income_corporate": 935481000,
@@ -2855,7 +3089,10 @@
           "grantsEducation": 1725436000,
           "grantsHealth": 928916000,
           "grantsTransportation": 419578000,
-          "grantsOther": 584505000
+          "grantsOther": 584505000,
+          "educationPerPupil": 11271,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Iowa",
@@ -2891,7 +3128,10 @@
           "grantsEducation": 1517589000,
           "grantsHealth": 1728219000,
           "grantsTransportation": 650817000,
-          "grantsOther": 831390000
+          "grantsOther": 831390000,
+          "educationPerPupil": 16726,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Oklahoma",
@@ -2901,10 +3141,10 @@
             "property": 3800588000,
             "sales_general": 6441418000,
             "sales_selective": 2031931000,
-            "income_individual": 4157808000,
             "income_corporate": 811693000,
             "licenses": 1256981000,
-            "other": 1729127000
+            "other": 1729127000,
+            "income_individual": 4157808000
           },
           "perCapitaTotal": 5033.14,
           "perCapitaIncome": 32930,
@@ -2927,7 +3167,10 @@
           "grantsEducation": 2470876000,
           "grantsHealth": 1511435000,
           "grantsTransportation": 746227000,
-          "grantsOther": 679500000
+          "grantsOther": 679500000,
+          "educationPerPupil": 12473,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Nevada",
@@ -2961,7 +3204,10 @@
           "grantsEducation": 745784000,
           "grantsHealth": 3292056000,
           "grantsTransportation": 286644000,
-          "grantsOther": 869406000
+          "grantsOther": 869406000,
+          "educationPerPupil": 13759,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Kansas",
@@ -2997,7 +3243,10 @@
           "grantsEducation": 1193293000,
           "grantsHealth": 2009679000,
           "grantsTransportation": 533216000,
-          "grantsOther": 653369000
+          "grantsOther": 653369000,
+          "educationPerPupil": 16747,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Mexico",
@@ -3008,9 +3257,9 @@
             "sales_general": 5252468000,
             "sales_selective": 992376000,
             "income_individual": 2172165000,
-            "income_corporate": 490786000,
             "licenses": 429623000,
-            "other": 4724812000
+            "other": 4724812000,
+            "income_corporate": 490786000
           },
           "perCapitaTotal": 7759.57,
           "perCapitaIncome": 33916,
@@ -3033,7 +3282,10 @@
           "grantsEducation": 1381385000,
           "grantsHealth": 338587000,
           "grantsTransportation": 531744000,
-          "grantsOther": 596520000
+          "grantsOther": 596520000,
+          "educationPerPupil": 15550,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Arkansas",
@@ -3069,7 +3321,10 @@
           "grantsEducation": 1242163000,
           "grantsHealth": 2008192000,
           "grantsTransportation": 754536000,
-          "grantsOther": 671967000
+          "grantsOther": 671967000,
+          "educationPerPupil": 14165,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Mississippi",
@@ -3077,8 +3332,8 @@
           "totalRevenue": 14044238000,
           "breakdown": {
             "property": 3613567000,
-            "sales_general": 4770468000,
             "sales_selective": 1642074000,
+            "sales_general": 4770468000,
             "income_individual": 2537787000,
             "income_corporate": 710719000,
             "licenses": 694163000,
@@ -3105,7 +3360,10 @@
           "grantsEducation": 1563046000,
           "grantsHealth": 1966911000,
           "grantsTransportation": 535770000,
-          "grantsOther": 934720000
+          "grantsOther": 934720000,
+          "educationPerPupil": 12442,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Hawaii",
@@ -3141,7 +3399,10 @@
           "grantsEducation": 1006143000,
           "grantsHealth": 1050777000,
           "grantsTransportation": 354252000,
-          "grantsOther": 352610000
+          "grantsOther": 352610000,
+          "educationPerPupil": 19381,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Nebraska",
@@ -3177,7 +3438,10 @@
           "grantsEducation": 322653000,
           "grantsHealth": 522504000,
           "grantsTransportation": 518385000,
-          "grantsOther": 363989000
+          "grantsOther": 363989000,
+          "educationPerPupil": 16931,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Idaho",
@@ -3213,7 +3477,10 @@
           "grantsEducation": 525759000,
           "grantsHealth": 787636000,
           "grantsTransportation": 370272000,
-          "grantsOther": 504578000
+          "grantsOther": 504578000,
+          "educationPerPupil": 10403,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Maine",
@@ -3249,7 +3516,10 @@
           "grantsEducation": 493124000,
           "grantsHealth": 802618000,
           "grantsTransportation": 295450000,
-          "grantsOther": 458275000
+          "grantsOther": 458275000,
+          "educationPerPupil": 20085,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "West Virginia",
@@ -3285,7 +3555,10 @@
           "grantsEducation": 927341000,
           "grantsHealth": 968271000,
           "grantsTransportation": 474477000,
-          "grantsOther": 518593000
+          "grantsOther": 518593000,
+          "educationPerPupil": 15344,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Hampshire",
@@ -3320,7 +3593,10 @@
           "grantsEducation": 321690000,
           "grantsHealth": 34389000,
           "grantsTransportation": 215428000,
-          "grantsOther": 1483464000
+          "grantsOther": 1483464000,
+          "educationPerPupil": 23064,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Delaware",
@@ -3355,7 +3631,10 @@
           "grantsEducation": 430954000,
           "grantsHealth": 534752000,
           "grantsTransportation": 473593000,
-          "grantsOther": 378134000
+          "grantsOther": 378134000,
+          "educationPerPupil": 21914,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Rhode Island",
@@ -3366,8 +3645,8 @@
             "sales_general": 1499910000,
             "sales_selective": 898132000,
             "income_individual": 1939003000,
-            "income_corporate": 288450000,
             "licenses": 226545000,
+            "income_corporate": 288450000,
             "other": 65039000
           },
           "perCapitaTotal": 7029.1,
@@ -3391,7 +3670,10 @@
           "grantsEducation": 258281000,
           "grantsHealth": 1806179000,
           "grantsTransportation": 343396000,
-          "grantsOther": 546478000
+          "grantsOther": 546478000,
+          "educationPerPupil": 23343,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "North Dakota",
@@ -3399,8 +3681,8 @@
           "totalRevenue": 6983413000,
           "breakdown": {
             "property": 1260801000,
-            "sales_general": 1378717000,
             "sales_selective": 550290000,
+            "sales_general": 1378717000,
             "income_individual": 472925000,
             "income_corporate": 229201000,
             "licenses": 229503000,
@@ -3427,15 +3709,18 @@
           "grantsEducation": 529558000,
           "grantsHealth": 222980000,
           "grantsTransportation": 311686000,
-          "grantsOther": 268208000
+          "grantsOther": 268208000,
+          "educationPerPupil": 19264,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Montana",
           "population": 1122878,
           "totalRevenue": 6512144000,
           "breakdown": {
-            "property": 2160312000,
             "sales_selective": 896236000,
+            "property": 2160312000,
             "income_individual": 2387008000,
             "income_corporate": 291198000,
             "licenses": 540773000,
@@ -3462,7 +3747,10 @@
           "grantsEducation": 469919000,
           "grantsHealth": 796342000,
           "grantsTransportation": 483953000,
-          "grantsOther": 347251000
+          "grantsOther": 347251000,
+          "educationPerPupil": 15876,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Vermont",
@@ -3472,9 +3760,9 @@
             "property": 2116254000,
             "sales_general": 564942000,
             "sales_selective": 856779000,
-            "income_individual": 1268299000,
             "income_corporate": 240402000,
             "licenses": 154454000,
+            "income_individual": 1268299000,
             "other": 138581000
           },
           "perCapitaTotal": 8251.63,
@@ -3498,7 +3786,10 @@
           "grantsEducation": 450962000,
           "grantsHealth": 1341106000,
           "grantsTransportation": 277275000,
-          "grantsOther": 415228000
+          "grantsOther": 415228000,
+          "educationPerPupil": 29754,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Alaska",
@@ -3506,10 +3797,10 @@
           "totalRevenue": 5079955000,
           "breakdown": {
             "property": 1752116000,
-            "sales_general": 287343000,
             "sales_selective": 455035000,
             "income_corporate": 413175000,
             "licenses": 138661000,
+            "sales_general": 287343000,
             "other": 2033625000
           },
           "perCapitaTotal": 6927.75,
@@ -3533,7 +3824,10 @@
           "grantsEducation": 704808000,
           "grantsHealth": 1039779000,
           "grantsTransportation": 934533000,
-          "grantsOther": 695575000
+          "grantsOther": 695575000,
+          "educationPerPupil": 22128,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "South Dakota",
@@ -3568,7 +3862,10 @@
           "grantsEducation": 373748000,
           "grantsHealth": 1505939000,
           "grantsTransportation": 406316000,
-          "grantsOther": 184285000
+          "grantsOther": 184285000,
+          "educationPerPupil": 13728,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Wyoming",
@@ -3602,7 +3899,10 @@
           "grantsEducation": 272121000,
           "grantsHealth": 742814000,
           "grantsTransportation": 412564000,
-          "grantsOther": 1537008000
+          "grantsOther": 1537008000,
+          "educationPerPupil": 20259,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         }
       ]
     },
@@ -3614,13 +3914,13 @@
           "population": 38965193,
           "totalRevenue": 350275780000,
           "breakdown": {
+            "sales_selective": 30339995000,
             "property": 92118854000,
             "sales_general": 75265199000,
-            "sales_selective": 30339995000,
-            "income_individual": 96379294000,
             "income_corporate": 29936654000,
             "licenses": 20180641000,
-            "other": 6055143000
+            "other": 6055143000,
+            "income_individual": 96379294000
           },
           "perCapitaTotal": 8989.45,
           "perCapitaIncome": 48013,
@@ -3643,16 +3943,19 @@
           "grantsEducation": 15394224000,
           "grantsHealth": 2110710000,
           "grantsTransportation": 0,
-          "grantsOther": 13263280000
+          "grantsOther": 13263280000,
+          "educationPerPupil": 22964,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New York",
           "population": 19571216,
           "totalRevenue": 246626736000,
           "breakdown": {
+            "sales_selective": 15862439000,
             "property": 68180767000,
             "sales_general": 41187322000,
-            "sales_selective": 15862439000,
             "income_individual": 75182838000,
             "income_corporate": 32871522000,
             "licenses": 3639049000,
@@ -3679,17 +3982,20 @@
           "grantsEducation": 6122766000,
           "grantsHealth": 5598209000,
           "grantsTransportation": 2143263000,
-          "grantsOther": 10580904000
+          "grantsOther": 10580904000,
+          "educationPerPupil": 36500,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Texas",
           "population": 30503301,
           "totalRevenue": 174514511000,
           "breakdown": {
+            "licenses": 5375628000,
             "property": 71083177000,
             "sales_general": 65791373000,
             "sales_selective": 22712234000,
-            "licenses": 5375628000,
             "other": 9552099000
           },
           "perCapitaTotal": 5721.17,
@@ -3713,18 +4019,21 @@
           "grantsEducation": 9649499000,
           "grantsHealth": 16176894000,
           "grantsTransportation": 4395494000,
-          "grantsOther": 3701459000
+          "grantsOther": 3701459000,
+          "educationPerPupil": 16986,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Florida",
           "population": 22610726,
           "totalRevenue": 116403601000,
           "breakdown": {
+            "sales_selective": 14659875000,
+            "licenses": 5564759000,
             "property": 40500343000,
             "sales_general": 45415760000,
-            "sales_selective": 14659875000,
             "income_corporate": 5522370000,
-            "licenses": 5564759000,
             "other": 4740494000
           },
           "perCapitaTotal": 5148.16,
@@ -3748,19 +4057,22 @@
           "grantsEducation": 12191674000,
           "grantsHealth": 2973847000,
           "grantsTransportation": 2476959000,
-          "grantsOther": 4576282000
+          "grantsOther": 4576282000,
+          "educationPerPupil": 13859,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Illinois",
           "population": 12549689,
           "totalRevenue": 105337892000,
           "breakdown": {
+            "sales_selective": 15527018000,
+            "licenses": 4533834000,
             "property": 33984591000,
             "sales_general": 18658032000,
-            "sales_selective": 15527018000,
             "income_individual": 21811151000,
             "income_corporate": 9862157000,
-            "licenses": 4533834000,
             "other": 961109000
           },
           "perCapitaTotal": 8393.67,
@@ -3784,19 +4096,22 @@
           "grantsEducation": 6025161000,
           "grantsHealth": 1157162000,
           "grantsTransportation": 2095143000,
-          "grantsOther": 2566225000
+          "grantsOther": 2566225000,
+          "educationPerPupil": 24128,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Pennsylvania",
           "population": 12961683,
           "totalRevenue": 89300670000,
           "breakdown": {
-            "property": 22918807000,
             "sales_general": 16467873000,
-            "sales_selective": 12176022000,
             "income_individual": 23515432000,
+            "property": 22918807000,
             "income_corporate": 6469304000,
             "licenses": 3788505000,
+            "sales_selective": 12176022000,
             "other": 3964727000
           },
           "perCapitaTotal": 6889.59,
@@ -3820,19 +4135,22 @@
           "grantsEducation": 4808548000,
           "grantsHealth": 7114401000,
           "grantsTransportation": 2239906000,
-          "grantsOther": 1463735000
+          "grantsOther": 1463735000,
+          "educationPerPupil": 26708,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Jersey",
           "population": 9290841,
           "totalRevenue": 85698594000,
           "breakdown": {
-            "property": 33525013000,
-            "sales_general": 14742322000,
             "sales_selective": 6042980000,
-            "income_individual": 18506010000,
             "income_corporate": 8696043000,
             "licenses": 2712134000,
+            "property": 33525013000,
+            "sales_general": 14742322000,
+            "income_individual": 18506010000,
             "other": 1474092000
           },
           "perCapitaTotal": 9223.99,
@@ -3856,20 +4174,23 @@
           "grantsEducation": 2434910000,
           "grantsHealth": 5222146000,
           "grantsTransportation": 1083369000,
-          "grantsOther": 5282317000
+          "grantsOther": 5282317000,
+          "educationPerPupil": 30701,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Ohio",
           "population": 11785935,
           "totalRevenue": 69196756000,
           "breakdown": {
-            "property": 19161545000,
-            "sales_general": 19224466000,
-            "sales_selective": 9105760000,
             "income_individual": 18553799000,
-            "income_corporate": 320633000,
             "licenses": 2553381000,
-            "other": 277172000
+            "other": 277172000,
+            "property": 19161545000,
+            "income_corporate": 320633000,
+            "sales_general": 19224466000,
+            "sales_selective": 9105760000
           },
           "perCapitaTotal": 5871.13,
           "perCapitaIncome": 39395,
@@ -3892,20 +4213,23 @@
           "grantsEducation": 3302629000,
           "grantsHealth": 5704572000,
           "grantsTransportation": 1570355000,
-          "grantsOther": 1305163000
+          "grantsOther": 1305163000,
+          "educationPerPupil": 19206,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Massachusetts",
           "population": 7001399,
           "totalRevenue": 63935631000,
           "breakdown": {
-            "property": 21170444000,
-            "sales_general": 9353642000,
             "sales_selective": 3631819000,
+            "licenses": 1901647000,
+            "other": 1398170000,
             "income_individual": 21908953000,
             "income_corporate": 4570956000,
-            "licenses": 1901647000,
-            "other": 1398170000
+            "property": 21170444000,
+            "sales_general": 9353642000
           },
           "perCapitaTotal": 9131.84,
           "perCapitaIncome": 55897,
@@ -3928,7 +4252,10 @@
           "grantsEducation": 2454000000,
           "grantsHealth": 1709266000,
           "grantsTransportation": 714247000,
-          "grantsOther": 3041333000
+          "grantsOther": 3041333000,
+          "educationPerPupil": 27527,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Virginia",
@@ -3939,8 +4266,8 @@
             "sales_general": 9288906000,
             "sales_selective": 8478773000,
             "income_individual": 16645280000,
-            "income_corporate": 4369396000,
             "licenses": 2843920000,
+            "income_corporate": 4369396000,
             "other": 834544000
           },
           "perCapitaTotal": 7037.37,
@@ -3964,19 +4291,22 @@
           "grantsEducation": 2828625000,
           "grantsHealth": 2569480000,
           "grantsTransportation": 1486733000,
-          "grantsOther": 586977000
+          "grantsOther": 586977000,
+          "educationPerPupil": 18121,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Washington",
           "population": 7812880,
           "totalRevenue": 60606625000,
           "breakdown": {
-            "property": 15753361000,
-            "sales_general": 29866568000,
             "sales_selective": 7515436000,
-            "income_individual": 846835000,
             "licenses": 3223583000,
-            "other": 3400842000
+            "other": 3400842000,
+            "income_individual": 846835000,
+            "property": 15753361000,
+            "sales_general": 29866568000
           },
           "perCapitaTotal": 7757.27,
           "perCapitaIncome": 52011,
@@ -3999,20 +4329,23 @@
           "grantsEducation": 4334075000,
           "grantsHealth": 4089942000,
           "grantsTransportation": 997327000,
-          "grantsOther": 1472187000
+          "grantsOther": 1472187000,
+          "educationPerPupil": 21275,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Georgia",
           "population": 11029227,
           "totalRevenue": 59454132000,
           "breakdown": {
-            "property": 17771363000,
-            "sales_general": 15133698000,
-            "sales_selective": 4569273000,
-            "income_individual": 16633022000,
             "income_corporate": 3623897000,
             "licenses": 1434051000,
-            "other": 288828000
+            "income_individual": 16633022000,
+            "property": 17771363000,
+            "other": 288828000,
+            "sales_general": 15133698000,
+            "sales_selective": 4569273000
           },
           "perCapitaTotal": 5390.6,
           "perCapitaIncome": 39685,
@@ -4035,19 +4368,22 @@
           "grantsEducation": 5216915000,
           "grantsHealth": 5320093000,
           "grantsTransportation": 2160538000,
-          "grantsOther": 1966668000
+          "grantsOther": 1966668000,
+          "educationPerPupil": 16169,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "North Carolina",
           "population": 10835491,
           "totalRevenue": 58061216000,
           "breakdown": {
+            "licenses": 3065208000,
+            "income_individual": 16855693000,
             "property": 12969672000,
             "sales_general": 16695872000,
             "sales_selective": 6391437000,
-            "income_individual": 16855693000,
             "income_corporate": 1640070000,
-            "licenses": 3065208000,
             "other": 443264000
           },
           "perCapitaTotal": 5358.43,
@@ -4071,19 +4407,22 @@
           "grantsEducation": 4156510000,
           "grantsHealth": 2317477000,
           "grantsTransportation": 1554212000,
-          "grantsOther": 2929945000
+          "grantsOther": 2929945000,
+          "educationPerPupil": 14238,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Michigan",
           "population": 10037261,
           "totalRevenue": 54497486000,
           "breakdown": {
+            "licenses": 2712210000,
             "property": 18433659000,
             "sales_general": 12897208000,
             "sales_selective": 5581288000,
             "income_individual": 12350610000,
             "income_corporate": 2056901000,
-            "licenses": 2712210000,
             "other": 465610000
           },
           "perCapitaTotal": 5429.52,
@@ -4107,19 +4446,22 @@
           "grantsEducation": 4126590000,
           "grantsHealth": 5809221000,
           "grantsTransportation": 1319652000,
-          "grantsOther": 2494075000
+          "grantsOther": 2494075000,
+          "educationPerPupil": 22596,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Maryland",
           "population": 6180253,
           "totalRevenue": 50500051000,
           "breakdown": {
+            "licenses": 1355702000,
+            "income_individual": 20071464000,
+            "income_corporate": 2043270000,
             "property": 11936446000,
             "sales_general": 6821665000,
             "sales_selective": 6674104000,
-            "income_individual": 20071464000,
-            "income_corporate": 2043270000,
-            "licenses": 1355702000,
             "other": 1597400000
           },
           "perCapitaTotal": 8171.19,
@@ -4143,19 +4485,22 @@
           "grantsEducation": 3110684000,
           "grantsHealth": 3554748000,
           "grantsTransportation": 759577000,
-          "grantsOther": 2268273000
+          "grantsOther": 2268273000,
+          "educationPerPupil": 21568,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Minnesota",
           "population": 5737915,
           "totalRevenue": 45095960000,
           "breakdown": {
-            "property": 10315813000,
             "sales_general": 8489268000,
+            "licenses": 1806164000,
+            "property": 10315813000,
             "sales_selective": 5197635000,
             "income_individual": 13978913000,
             "income_corporate": 4660098000,
-            "licenses": 1806164000,
             "other": 648069000
           },
           "perCapitaTotal": 7859.29,
@@ -4179,19 +4524,22 @@
           "grantsEducation": 2483490000,
           "grantsHealth": 1943902000,
           "grantsTransportation": 1053512000,
-          "grantsOther": 795512000
+          "grantsOther": 795512000,
+          "educationPerPupil": 20533,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Indiana",
           "population": 6862199,
           "totalRevenue": 40924028000,
           "breakdown": {
+            "sales_selective": 5517462000,
+            "licenses": 1023581000,
             "property": 9092987000,
             "sales_general": 11006097000,
-            "sales_selective": 5517462000,
             "income_individual": 12895502000,
             "income_corporate": 1230591000,
-            "licenses": 1023581000,
             "other": 157808000
           },
           "perCapitaTotal": 5963.69,
@@ -4215,19 +4563,22 @@
           "grantsEducation": 2543921000,
           "grantsHealth": 2283156000,
           "grantsTransportation": 1219291000,
-          "grantsOther": 1456002000
+          "grantsOther": 1456002000,
+          "educationPerPupil": 16492,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Colorado",
           "population": 5877610,
           "totalRevenue": 39838187000,
           "breakdown": {
+            "licenses": 1216425000,
+            "income_individual": 6780832000,
             "property": 13096698000,
             "sales_general": 11834133000,
             "sales_selective": 4055194000,
-            "income_individual": 6780832000,
             "income_corporate": 2342073000,
-            "licenses": 1216425000,
             "other": 512832000
           },
           "perCapitaTotal": 6777.96,
@@ -4251,20 +4602,23 @@
           "grantsEducation": 2733081000,
           "grantsHealth": 2434761000,
           "grantsTransportation": 702672000,
-          "grantsOther": 968784000
+          "grantsOther": 968784000,
+          "educationPerPupil": 18716,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Arizona",
           "population": 7431344,
           "totalRevenue": 37168173000,
           "breakdown": {
-            "property": 9162312000,
             "sales_general": 17513851000,
             "sales_selective": 2666472000,
             "income_individual": 4779485000,
             "income_corporate": 1553871000,
             "licenses": 1162630000,
-            "other": 329552000
+            "other": 329552000,
+            "property": 9162312000
           },
           "perCapitaTotal": 5001.54,
           "perCapitaIncome": 41290,
@@ -4287,19 +4641,22 @@
           "grantsEducation": 3350387000,
           "grantsHealth": 659735000,
           "grantsTransportation": 937184000,
-          "grantsOther": 846578000
+          "grantsOther": 846578000,
+          "educationPerPupil": 14000,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Wisconsin",
           "population": 5910955,
           "totalRevenue": 35681755000,
           "breakdown": {
+            "sales_selective": 3062912000,
+            "licenses": 1595034000,
+            "income_individual": 9191233000,
             "property": 10933523000,
             "sales_general": 8070317000,
-            "sales_selective": 3062912000,
-            "income_individual": 9191233000,
             "income_corporate": 2667937000,
-            "licenses": 1595034000,
             "other": 160799000
           },
           "perCapitaTotal": 6036.55,
@@ -4323,15 +4680,18 @@
           "grantsEducation": 2304500000,
           "grantsHealth": 636935000,
           "grantsTransportation": 1253659000,
-          "grantsOther": 1513871000
+          "grantsOther": 1513871000,
+          "educationPerPupil": 18720,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Tennessee",
           "population": 7126489,
           "totalRevenue": 34900255000,
           "breakdown": {
-            "property": 7271367000,
             "sales_general": 16281570000,
+            "property": 7271367000,
             "sales_selective": 4641885000,
             "income_individual": 2926000,
             "income_corporate": 3156401000,
@@ -4359,19 +4719,22 @@
           "grantsEducation": 1974846000,
           "grantsHealth": 2682590000,
           "grantsTransportation": 1190286000,
-          "grantsOther": 2191549000
+          "grantsOther": 2191549000,
+          "educationPerPupil": 14170,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Connecticut",
           "population": 3617176,
           "totalRevenue": 34081652000,
           "breakdown": {
+            "licenses": 487395000,
             "property": 12019495000,
             "sales_general": 5548269000,
             "sales_selective": 3158712000,
             "income_individual": 8845425000,
             "income_corporate": 3499272000,
-            "licenses": 487395000,
             "other": 523084000
           },
           "perCapitaTotal": 9422.17,
@@ -4395,7 +4758,10 @@
           "grantsEducation": 1113196000,
           "grantsHealth": 1578680000,
           "grantsTransportation": 712937000,
-          "grantsOther": 998642000
+          "grantsOther": 998642000,
+          "educationPerPupil": 28936,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Missouri",
@@ -4403,11 +4769,11 @@
           "totalRevenue": 32741391000,
           "breakdown": {
             "property": 9092504000,
-            "sales_general": 9271412000,
             "sales_selective": 2788990000,
             "income_individual": 9220245000,
-            "income_corporate": 959417000,
             "licenses": 1063502000,
+            "sales_general": 9271412000,
+            "income_corporate": 959417000,
             "other": 345321000
           },
           "perCapitaTotal": 5284.15,
@@ -4431,19 +4797,22 @@
           "grantsEducation": 2879829000,
           "grantsHealth": 2955435000,
           "grantsTransportation": 1205927000,
-          "grantsOther": 1085463000
+          "grantsOther": 1085463000,
+          "educationPerPupil": 16467,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Oregon",
           "population": 4233358,
           "totalRevenue": 32320499000,
           "breakdown": {
+            "income_corporate": 1936969000,
+            "licenses": 2305872000,
+            "income_individual": 13664325000,
             "property": 8500636000,
             "sales_general": 1338529000,
             "sales_selective": 3651642000,
-            "income_individual": 13664325000,
-            "income_corporate": 1936969000,
-            "licenses": 2305872000,
             "other": 922526000
           },
           "perCapitaTotal": 7634.72,
@@ -4467,7 +4836,10 @@
           "grantsEducation": 2290904000,
           "grantsHealth": 546607000,
           "grantsTransportation": 687817000,
-          "grantsOther": 1121319000
+          "grantsOther": 1121319000,
+          "educationPerPupil": 21827,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Louisiana",
@@ -4478,9 +4850,9 @@
             "sales_general": 10831225000,
             "sales_selective": 3376496000,
             "income_individual": 4678963000,
-            "income_corporate": 1223914000,
             "licenses": 942351000,
-            "other": 881195000
+            "other": 881195000,
+            "income_corporate": 1223914000
           },
           "perCapitaTotal": 5885.4,
           "perCapitaIncome": 34102,
@@ -4503,7 +4875,10 @@
           "grantsEducation": 3391823000,
           "grantsHealth": 434223000,
           "grantsTransportation": 919794000,
-          "grantsOther": 3183011000
+          "grantsOther": 3183011000,
+          "educationPerPupil": 17491,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "South Carolina",
@@ -4512,11 +4887,11 @@
           "breakdown": {
             "property": 7952229000,
             "sales_general": 6703837000,
-            "sales_selective": 2858112000,
-            "income_individual": 5782274000,
             "income_corporate": 1356927000,
             "licenses": 1669999000,
-            "other": 281632000
+            "other": 281632000,
+            "sales_selective": 2858112000,
+            "income_individual": 5782274000
           },
           "perCapitaTotal": 4951.1,
           "perCapitaIncome": 38097,
@@ -4539,19 +4914,22 @@
           "grantsEducation": 1817410000,
           "grantsHealth": 3933881000,
           "grantsTransportation": 832047000,
-          "grantsOther": 1157515000
+          "grantsOther": 1157515000,
+          "educationPerPupil": 16958,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Alabama",
           "population": 5108468,
           "totalRevenue": 25229762000,
           "breakdown": {
+            "sales_selective": 3963382000,
+            "licenses": 1303609000,
             "property": 3918533000,
             "sales_general": 8229342000,
-            "sales_selective": 3963382000,
             "income_individual": 6062202000,
             "income_corporate": 1559734000,
-            "licenses": 1303609000,
             "other": 192960000
           },
           "perCapitaTotal": 4938.81,
@@ -4575,20 +4953,23 @@
           "grantsEducation": 3635222000,
           "grantsHealth": 1016182000,
           "grantsTransportation": 982668000,
-          "grantsOther": 1047104000
+          "grantsOther": 1047104000,
+          "educationPerPupil": 14880,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Kentucky",
           "population": 4526154,
           "totalRevenue": 24688428000,
           "breakdown": {
-            "property": 4939587000,
-            "sales_general": 5707759000,
             "sales_selective": 3556034000,
-            "income_individual": 7979189000,
             "income_corporate": 1494837000,
             "licenses": 722344000,
-            "other": 288678000
+            "other": 288678000,
+            "property": 4939587000,
+            "sales_general": 5707759000,
+            "income_individual": 7979189000
           },
           "perCapitaTotal": 5454.62,
           "perCapitaIncome": 34676,
@@ -4611,19 +4992,22 @@
           "grantsEducation": 2527510000,
           "grantsHealth": 525347000,
           "grantsTransportation": 961141000,
-          "grantsOther": 1413124000
+          "grantsOther": 1413124000,
+          "educationPerPupil": 17141,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Oklahoma",
           "population": 4053824,
           "totalRevenue": 21487614000,
           "breakdown": {
+            "licenses": 1254631000,
+            "income_corporate": 774802000,
             "property": 4392661000,
             "sales_general": 6723624000,
             "sales_selective": 1922287000,
             "income_individual": 4393714000,
-            "income_corporate": 774802000,
-            "licenses": 1254631000,
             "other": 2025895000
           },
           "perCapitaTotal": 5300.58,
@@ -4647,19 +5031,22 @@
           "grantsEducation": 2072879000,
           "grantsHealth": 1512066000,
           "grantsTransportation": 892981000,
-          "grantsOther": 749213000
+          "grantsOther": 749213000,
+          "educationPerPupil": 12908,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Utah",
           "population": 3417734,
           "totalRevenue": 21319184000,
           "breakdown": {
+            "licenses": 580626000,
+            "income_corporate": 866752000,
             "property": 4913632000,
             "sales_general": 6372862000,
             "sales_selective": 1920193000,
             "income_individual": 6497347000,
-            "income_corporate": 866752000,
-            "licenses": 580626000,
             "other": 167772000
           },
           "perCapitaTotal": 6237.81,
@@ -4683,7 +5070,10 @@
           "grantsEducation": 1498966000,
           "grantsHealth": 714096000,
           "grantsTransportation": 529048000,
-          "grantsOther": 556405000
+          "grantsOther": 556405000,
+          "educationPerPupil": 12549,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Iowa",
@@ -4691,12 +5081,12 @@
           "totalRevenue": 20775471000,
           "breakdown": {
             "property": 6706886000,
+            "licenses": 1226655000,
+            "other": 120852000,
+            "income_individual": 4756448000,
             "sales_general": 5198053000,
             "sales_selective": 1928515000,
-            "income_individual": 4756448000,
-            "income_corporate": 838062000,
-            "licenses": 1226655000,
-            "other": 120852000
+            "income_corporate": 838062000
           },
           "perCapitaTotal": 6478.16,
           "perCapitaIncome": 39518,
@@ -4719,7 +5109,10 @@
           "grantsEducation": 1240533000,
           "grantsHealth": 1622076000,
           "grantsTransportation": 743488000,
-          "grantsOther": 844565000
+          "grantsOther": 844565000,
+          "educationPerPupil": 17646,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Nevada",
@@ -4753,19 +5146,22 @@
           "grantsEducation": 898307000,
           "grantsHealth": 1069607000,
           "grantsTransportation": 330286000,
-          "grantsOther": 1064552000
+          "grantsOther": 1064552000,
+          "educationPerPupil": 13750,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Kansas",
           "population": 2940546,
           "totalRevenue": 19458302000,
           "breakdown": {
-            "property": 5479103000,
             "sales_general": 5675659000,
+            "licenses": 567322000,
             "sales_selective": 1586247000,
+            "property": 5479103000,
             "income_individual": 4508019000,
             "income_corporate": 1561519000,
-            "licenses": 567322000,
             "other": 80433000
           },
           "perCapitaTotal": 6617.24,
@@ -4789,20 +5185,23 @@
           "grantsEducation": 1100949000,
           "grantsHealth": 1195103000,
           "grantsTransportation": 577031000,
-          "grantsOther": 565878000
+          "grantsOther": 565878000,
+          "educationPerPupil": 17316,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Mexico",
           "population": 2114371,
           "totalRevenue": 18958712000,
           "breakdown": {
-            "property": 2610574000,
             "sales_general": 6159251000,
             "sales_selective": 1225313000,
             "income_individual": 2646300000,
             "income_corporate": 444335000,
             "licenses": 446426000,
-            "other": 5426513000
+            "other": 5426513000,
+            "property": 2610574000
           },
           "perCapitaTotal": 8966.6,
           "perCapitaIncome": 35510,
@@ -4825,19 +5224,22 @@
           "grantsEducation": 1672962000,
           "grantsHealth": 277873000,
           "grantsTransportation": 461168000,
-          "grantsOther": 754462000
+          "grantsOther": 754462000,
+          "educationPerPupil": 18385,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Arkansas",
           "population": 3067732,
           "totalRevenue": 16218030000,
           "breakdown": {
+            "income_individual": 3147770000,
+            "licenses": 480493000,
             "property": 2756068000,
             "sales_general": 6762780000,
             "sales_selective": 1983354000,
-            "income_individual": 3147770000,
             "income_corporate": 838161000,
-            "licenses": 480493000,
             "other": 249404000
           },
           "perCapitaTotal": 5286.65,
@@ -4861,7 +5263,10 @@
           "grantsEducation": 1152919000,
           "grantsHealth": 1277716000,
           "grantsTransportation": 951138000,
-          "grantsOther": 617931000
+          "grantsOther": 617931000,
+          "educationPerPupil": 15041,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Mississippi",
@@ -4869,12 +5274,12 @@
           "totalRevenue": 14323425000,
           "breakdown": {
             "property": 3783788000,
-            "sales_general": 5022568000,
-            "sales_selective": 1696520000,
-            "income_individual": 2412412000,
             "income_corporate": 818357000,
             "licenses": 513749000,
-            "other": 76031000
+            "other": 76031000,
+            "income_individual": 2412412000,
+            "sales_general": 5022568000,
+            "sales_selective": 1696520000
           },
           "perCapitaTotal": 4872.43,
           "perCapitaIncome": 30807,
@@ -4897,19 +5302,22 @@
           "grantsEducation": 1463929000,
           "grantsHealth": 915234000,
           "grantsTransportation": 792863000,
-          "grantsOther": 838374000
+          "grantsOther": 838374000,
+          "educationPerPupil": 14157,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Hawaii",
           "population": 1435138,
           "totalRevenue": 14060111000,
           "breakdown": {
+            "licenses": 671049000,
             "property": 2538799000,
             "sales_general": 5266641000,
             "sales_selective": 1985629000,
             "income_individual": 3099978000,
             "income_corporate": 347800000,
-            "licenses": 671049000,
             "other": 150215000
           },
           "perCapitaTotal": 9797.04,
@@ -4933,19 +5341,22 @@
           "grantsEducation": 894844000,
           "grantsHealth": 420699000,
           "grantsTransportation": 351042000,
-          "grantsOther": 393394000
+          "grantsOther": 393394000,
+          "educationPerPupil": 21804,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Nebraska",
           "population": 1978379,
           "totalRevenue": 13120853000,
           "breakdown": {
+            "sales_selective": 744049000,
+            "licenses": 551028000,
             "property": 4581200000,
             "sales_general": 3264932000,
-            "sales_selective": 744049000,
             "income_individual": 3005952000,
             "income_corporate": 692965000,
-            "licenses": 551028000,
             "other": 280727000
           },
           "perCapitaTotal": 6632.12,
@@ -4969,19 +5380,22 @@
           "grantsEducation": 371936000,
           "grantsHealth": 80707000,
           "grantsTransportation": 515405000,
-          "grantsOther": 336819000
+          "grantsOther": 336819000,
+          "educationPerPupil": 17819,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "West Virginia",
           "population": 1770071,
           "totalRevenue": 10119910000,
           "breakdown": {
+            "sales_selective": 1748865000,
+            "licenses": 453106000,
             "property": 1965354000,
             "sales_general": 1929746000,
-            "sales_selective": 1748865000,
             "income_individual": 2693568000,
             "income_corporate": 419965000,
-            "licenses": 453106000,
             "other": 909306000
           },
           "perCapitaTotal": 5717.23,
@@ -5005,17 +5419,20 @@
           "grantsEducation": 980253000,
           "grantsHealth": 253645000,
           "grantsTransportation": 639231000,
-          "grantsOther": 630733000
+          "grantsOther": 630733000,
+          "educationPerPupil": 16497,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Maine",
           "population": 1395722,
           "totalRevenue": 10074010000,
           "breakdown": {
+            "income_individual": 2481964000,
             "property": 3615607000,
             "sales_general": 2263676000,
             "sales_selective": 806266000,
-            "income_individual": 2481964000,
             "income_corporate": 451211000,
             "licenses": 360378000,
             "other": 94908000
@@ -5041,19 +5458,22 @@
           "grantsEducation": 503433000,
           "grantsHealth": 229828000,
           "grantsTransportation": 331285000,
-          "grantsOther": 661693000
+          "grantsOther": 661693000,
+          "educationPerPupil": 21242,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Idaho",
           "population": 1964726,
           "totalRevenue": 9812252000,
           "breakdown": {
+            "licenses": 545383000,
             "property": 2236193000,
             "sales_general": 3090471000,
             "sales_selective": 751905000,
             "income_individual": 2141870000,
             "income_corporate": 1034310000,
-            "licenses": 545383000,
             "other": 12120000
           },
           "perCapitaTotal": 4994.21,
@@ -5077,18 +5497,21 @@
           "grantsEducation": 470893000,
           "grantsHealth": 498898000,
           "grantsTransportation": 508643000,
-          "grantsOther": 360729000
+          "grantsOther": 360729000,
+          "educationPerPupil": 11238,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "New Hampshire",
           "population": 1402054,
           "totalRevenue": 8094094000,
           "breakdown": {
+            "licenses": 639349000,
+            "income_corporate": 1271550000,
             "property": 4813242000,
             "sales_selective": 1011667000,
             "income_individual": 149485000,
-            "income_corporate": 1271550000,
-            "licenses": 639349000,
             "other": 208801000
           },
           "perCapitaTotal": 5773.03,
@@ -5112,7 +5535,10 @@
           "grantsEducation": 310287000,
           "grantsHealth": 39029000,
           "grantsTransportation": 235142000,
-          "grantsOther": 1037261000
+          "grantsOther": 1037261000,
+          "educationPerPupil": 24938,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Delaware",
@@ -5147,7 +5573,10 @@
           "grantsEducation": 371837000,
           "grantsHealth": 388447000,
           "grantsTransportation": 330690000,
-          "grantsOther": 391309000
+          "grantsOther": 391309000,
+          "educationPerPupil": 24176,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "North Dakota",
@@ -5155,12 +5584,12 @@
           "totalRevenue": 7720205000,
           "breakdown": {
             "property": 1261659000,
-            "sales_general": 1612875000,
             "sales_selective": 593739000,
             "income_individual": 495437000,
             "income_corporate": 324144000,
             "licenses": 262053000,
-            "other": 3170298000
+            "other": 3170298000,
+            "sales_general": 1612875000
           },
           "perCapitaTotal": 9848.13,
           "perCapitaIncome": 42814,
@@ -5183,7 +5612,10 @@
           "grantsEducation": 555990000,
           "grantsHealth": 247612000,
           "grantsTransportation": 382545000,
-          "grantsOther": 320794000
+          "grantsOther": 320794000,
+          "educationPerPupil": 20667,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Rhode Island",
@@ -5191,11 +5623,11 @@
           "totalRevenue": 7535052000,
           "breakdown": {
             "property": 2743766000,
+            "licenses": 227999000,
             "sales_general": 1560600000,
             "sales_selective": 1034229000,
             "income_individual": 1611789000,
             "income_corporate": 262600000,
-            "licenses": 227999000,
             "other": 94069000
           },
           "perCapitaTotal": 6875.29,
@@ -5219,18 +5651,21 @@
           "grantsEducation": 269133000,
           "grantsHealth": 1624634000,
           "grantsTransportation": 416101000,
-          "grantsOther": 447446000
+          "grantsOther": 447446000,
+          "educationPerPupil": 25329,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Montana",
           "population": 1132812,
           "totalRevenue": 6614026000,
           "breakdown": {
+            "licenses": 555975000,
             "property": 2275360000,
             "sales_selective": 896746000,
             "income_individual": 2286844000,
             "income_corporate": 307950000,
-            "licenses": 555975000,
             "other": 291151000
           },
           "perCapitaTotal": 5838.59,
@@ -5254,18 +5689,21 @@
           "grantsEducation": 467776000,
           "grantsHealth": 964475000,
           "grantsTransportation": 601113000,
-          "grantsOther": 446825000
+          "grantsOther": 446825000,
+          "educationPerPupil": 15925,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Alaska",
           "population": 733406,
           "totalRevenue": 5523043000,
           "breakdown": {
+            "licenses": 158106000,
             "property": 1770571000,
             "sales_general": 353696000,
             "sales_selective": 498297000,
             "income_corporate": 444240000,
-            "licenses": 158106000,
             "other": 2298133000
           },
           "perCapitaTotal": 7530.68,
@@ -5289,19 +5727,22 @@
           "grantsEducation": 594961000,
           "grantsHealth": 649938000,
           "grantsTransportation": 958159000,
-          "grantsOther": 744734000
+          "grantsOther": 744734000,
+          "educationPerPupil": 22331,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Vermont",
           "population": 647464,
           "totalRevenue": 5487007000,
           "breakdown": {
+            "licenses": 160941000,
             "property": 2152614000,
             "sales_general": 606716000,
             "sales_selective": 918608000,
             "income_individual": 1210585000,
             "income_corporate": 299607000,
-            "licenses": 160941000,
             "other": 137936000
           },
           "perCapitaTotal": 8474.61,
@@ -5325,18 +5766,21 @@
           "grantsEducation": 454361000,
           "grantsHealth": 268849000,
           "grantsTransportation": 370118000,
-          "grantsOther": 400430000
+          "grantsOther": 400430000,
+          "educationPerPupil": 32233,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "South Dakota",
           "population": 919318,
           "totalRevenue": 4842491000,
           "breakdown": {
-            "property": 1576730000,
-            "sales_general": 2169732000,
             "sales_selective": 596075000,
-            "income_corporate": 48070000,
+            "property": 1576730000,
             "licenses": 430746000,
+            "sales_general": 2169732000,
+            "income_corporate": 48070000,
             "other": 21138000
           },
           "perCapitaTotal": 5267.48,
@@ -5360,18 +5804,21 @@
           "grantsEducation": 334919000,
           "grantsHealth": 511585000,
           "grantsTransportation": 499039000,
-          "grantsOther": 215703000
+          "grantsOther": 215703000,
+          "educationPerPupil": 15755,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         },
         {
           "state": "Wyoming",
           "population": 584057,
           "totalRevenue": 4689639000,
           "breakdown": {
-            "property": 1663792000,
-            "sales_general": 1375693000,
             "sales_selective": 217838000,
             "licenses": 266016000,
-            "other": 1166300000
+            "other": 1166300000,
+            "property": 1663792000,
+            "sales_general": 1375693000
           },
           "perCapitaTotal": 8029.42,
           "perCapitaIncome": 39966,
@@ -5394,7 +5841,10 @@
           "grantsEducation": 254020000,
           "grantsHealth": 382896000,
           "grantsTransportation": 478194000,
-          "grantsOther": 2058556000
+          "grantsOther": 2058556000,
+          "educationPerPupil": 21462,
+          "naepGrade4Reading": 0,
+          "naepGrade8Math": 0
         }
       ]
     }
