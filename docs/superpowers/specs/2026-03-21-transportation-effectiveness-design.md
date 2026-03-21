@@ -60,7 +60,7 @@ Add to `normalizedOutputs`:
 "reasonHighway": "data/raw/reason-highway-report.csv"
 ```
 
-No new `downloads` entry — the file is already in `data/raw/downloads/` and will not be re-downloaded.
+No new `downloads` entry — the file is already in `data/raw/downloads/` and will not be re-downloaded. The `normalizedOutputs` entry is informational (documents where the normalize script writes its output) and does not drive runtime behavior — the output path is used directly in the normalize script.
 
 ### `scripts/normalize-census-sources.mjs`
 
@@ -125,7 +125,7 @@ const getSpendingPerCapita = (s: StateRecord): number =>
 
 1. **Scatter plot panel** — SVG-based using `d3-scale`, same dimensions as `EducationView` (`SVG_W=680`, `SVG_H=260`, same margins).
    - X axis: highway spending per capita (dollars)
-   - Y axis: selected rank, **inverted** — domain `[50, 0]` mapped to range `[PLOT_H, 0]` so rank 1 appears at the top and rank 50 at the bottom
+   - Y axis: selected rank, **inverted** — domain `[51, 1]` mapped to range `[PLOT_H, 0]` so rank 1 appears at the top and rank 50 at the bottom. Domain starts at 51 (not 50) and ends at 1 (not 0) to keep the sentinel value 0 ("no data") off the visible plot area and ensure tick labels only show valid ranks.
    - Y axis label changes with toggle: "Overall Rank" / "Pavement Rank" / "Bridge Rank" / "Congestion Rank" / "Fatality Rate Rank"
    - Toggle buttons: "Overall" | "Pavement" | "Bridges" | "Congestion" | "Fatality Rate"
    - Each state: `circle` (r=5, fill `#3b82f6`, opacity 0.75) + state abbreviation label (`#6b7280`, fontSize 9)
@@ -149,8 +149,8 @@ const getSpendingPerCapita = (s: StateRecord): number =>
 - Add `'transportation'` to the `View` type
 - Add Transportation as the **6th tab** (between Spending and Education)
 - Tab tooltip: `"State highway spending per capita vs. Reason Foundation highway performance rankings — shows which states get the most from their transportation dollars."`
-- Year lock: same pattern as Education — `useEffect` auto-selects 2023 when `view === 'transportation'`, year toggle hidden when `view === 'transportation'`
-- Top state card for Transportation view: state with the lowest (best) `reasonOverallRank` (filter to `> 0` first), label "Best overall rank"
+- Year lock: same pattern as Education — `useEffect` auto-selects 2023 when `view === 'transportation'`, year toggle hidden when `view === 'transportation'`. The existing year-toggle guard `view !== 'education'` must be updated to `view !== 'education' && view !== 'transportation'`.
+- Top state card for Transportation view: state with the lowest (best) `reasonOverallRank` among `activeStates` (filter to `> 0` first, then sort ascending), label "Best overall rank". Use `activeStates` (same as all other views), not `states2023`.
 
 ### `src/App.test.tsx`
 
