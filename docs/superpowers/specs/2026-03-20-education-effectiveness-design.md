@@ -8,7 +8,7 @@
 
 ### Census F-33 Survey (K-12 per-pupil spending)
 
-Annual Survey of Public Elementary-Secondary School System Finances. One fixed-width CSV file per year, ~14k rows of district-level data.
+Annual Survey of Public Elementary-Secondary School System Finances. One comma-delimited CSV file per year (~14k rows of district-level data). Despite the `.txt` extension, the file uses standard CSV formatting with quoted fields and a header row — parseable with Papa.parse using `header: true`.
 
 Download URLs (direct HTTP, no auth required):
 ```
@@ -87,13 +87,13 @@ Add to `normalizedOutputs`:
 
 ### `scripts/download-census-sources.mjs`
 
-Add F-33 download loop (one file per year, skip if already downloaded — same pattern as Individual Unit Files). The URL `{yy}` suffix is derived from the last 2 digits of the year (e.g. `2022` → `22`).
+Add F-33 download loop (one file per year, skip if already downloaded — same pattern as Individual Unit Files). The URL `{yy}` suffix is derived in the script loop logic (not the config): `const yy = String(year).slice(-2)`. No new config convention is needed for this derivation.
 
 ### `scripts/normalize-census-sources.mjs`
 
 **`normalizeF33(config)`** — reads each `census-f33-{year}.txt`, parses CSV, aggregates `ENROLL` and `TOTALEXP` by `FIPST` (filtering to valid state FIPS codes via a `FIPS_TO_STATE` map — same map already added for Individual Unit Files), computes `per_pupil = round((TOTALEXP * 1000) / ENROLL)`. Writes `data/raw/education-per-pupil.csv` with columns `state, year, per_pupil`.
 
-**`normalizeNaep(config)`** — fetches the 4 NAEP API endpoints (reading/math × 2019/2022), maps jurisdiction names to state names (trimming " Public" suffix that NAEP appends), writes `data/raw/naep-scores.csv` with columns `state, year, grade4_reading, grade8_math`.
+**`normalizeNaep(config)`** — fetches the 4 NAEP API endpoints (reading/math × 2019/2022). Each API response includes both state entries and non-state jurisdictions (national composites, large-city samples, DoD schools). Filter by membership in the existing `VALID_STATES` set after trimming the " Public" suffix that NAEP appends to all jurisdiction names (e.g. `"California Public"` → `"California"`). Collapses all 4 API calls into one row per state per year (`grade4_reading` and `grade8_math` on the same row), then writes `data/raw/naep-scores.csv` with columns `state, year, grade4_reading, grade8_math`.
 
 Both functions warn (non-fatal) and return empty arrays if files/API are unavailable.
 
@@ -143,6 +143,10 @@ Props: `activeStates: StateRecord[]`
 - Add "Education" as the 6th tab
 - Pass `activeStates` to `EducationView` (same as other views)
 - **Year selector behavior when Education tab is active:** Disable year buttons for 2020, 2021, 2023 (rendered with `opacity: 0.4`, `cursor: not-allowed`, `pointer-events: none`). Show note: "NAEP scores available for 2019 and 2022 only." If the currently selected year is 2020, 2021, or 2023 when the user switches to Education tab, auto-select 2022.
+
+### `src/App.test.tsx`
+
+In addition to adding the 3 zeroed fields to all mock `StateRecord` objects, add a test for the year auto-select behavior: when the Education tab is clicked while the active year is 2020, 2021, or 2023, the selected year must auto-advance to 2022.
 
 ### All test files with `StateRecord` mocks
 
