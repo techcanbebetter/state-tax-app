@@ -177,6 +177,32 @@ const run = async () => {
     }
   }
 
+  // Education per-pupil (F-33): read gracefully — missing file is non-fatal
+  const f33CsvPath = path.resolve(projectRoot, config.input.f33Csv)
+  let f33Rows = []
+  try {
+    f33Rows = await readCsv(f33CsvPath)
+  } catch (err) {
+    if (err.message?.includes('Missing required source file') || err.code === 'ENOENT') {
+      console.warn('F-33 CSV not found — educationPerPupil will be 0 for all states.')
+    } else {
+      throw err
+    }
+  }
+
+  // NAEP scores: read gracefully — missing file is non-fatal
+  const naepCsvPath = path.resolve(projectRoot, config.input.naepCsv)
+  let naepRows = []
+  try {
+    naepRows = await readCsv(naepCsvPath)
+  } catch (err) {
+    if (err.message?.includes('Missing required source file') || err.code === 'ENOENT') {
+      console.warn('NAEP CSV not found — naepGrade4Reading and naepGrade8Math will be 0 for all states.')
+    } else {
+      throw err
+    }
+  }
+
   // Build spending lookup: `${state}||${year}||${lf_code}` → amount in dollars
   const spendingByStateYearCode = new Map()
   for (const row of spendingRows) {
@@ -212,6 +238,28 @@ const run = async () => {
     // normalize script outputs Census thousands — convert to full dollars
     const amount = parseNumeric(row.amount_thousands) * 1000
     grantsByStateYearCode.set(`${state}||${year}||${bCode}`, amount)
+  }
+
+  // Build F-33 lookup: `${state}||${year}` → per_pupil (dollars)
+  const perPupilByStateYear = new Map()
+  for (const row of f33Rows) {
+    const state = normalizeState(row.state)
+    const year = Number(row.year)
+    if (!state || !VALID_STATES.has(state) || !Number.isFinite(year)) continue
+    const per_pupil = parseNumeric(row.per_pupil)
+    if (per_pupil > 0) perPupilByStateYear.set(`${state}||${year}`, per_pupil)
+  }
+
+  // Build NAEP lookup: `${state}||${year}` → { grade4_reading, grade8_math }
+  const naepByStateYear = new Map()
+  for (const row of naepRows) {
+    const state = normalizeState(row.state)
+    const year = Number(row.year)
+    if (!state || !VALID_STATES.has(state) || !Number.isFinite(year)) continue
+    naepByStateYear.set(`${state}||${year}`, {
+      grade4_reading: parseNumeric(row.grade4_reading),
+      grade8_math: parseNumeric(row.grade8_math),
+    })
   }
 
   const taxColumns = config.columns.tax
@@ -384,6 +432,11 @@ const run = async () => {
         const grantsTransportation = Math.round(grantsAccum['grantsTransportation'] ?? 0)
         const grantsOther = Math.round(grantsAccum['grantsOther'] ?? 0)
 
+        const educationPerPupil = Math.round(perPupilByStateYear.get(`${state.state}||${year}`) ?? 0)
+        const naepData = naepByStateYear.get(`${state.state}||${year}`)
+        const naepGrade4Reading = Math.round(naepData?.grade4_reading ?? 0)
+        const naepGrade8Math = Math.round(naepData?.grade8_math ?? 0)
+
         return {
           ...state,
           totalRevenue: Math.round(state.totalRevenue),
@@ -403,6 +456,9 @@ const run = async () => {
           grantsHealth,
           grantsTransportation,
           grantsOther,
+          educationPerPupil,
+          naepGrade4Reading,
+          naepGrade8Math,
         }
       })
       .sort((a, b) => b.totalRevenue - a.totalRevenue)

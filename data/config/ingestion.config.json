@@ -7,7 +7,9 @@
     "incomeCsv": "data/raw/state-per-capita-income.csv",
     "spendingByFunctionCsv": "data/raw/state-local-spending-by-function.csv",
     "revenueExtendedCsv": "data/raw/state-local-revenue-extended.csv",
-    "federalGrantsBreakdownCsv": "data/raw/federal-grants-breakdown.csv"
+    "federalGrantsBreakdownCsv": "data/raw/federal-grants-breakdown.csv",
+    "f33Csv": "data/raw/education-per-pupil.csv",
+    "naepCsv": "data/raw/naep-scores.csv"
   },
   "columns": {
     "tax": {
