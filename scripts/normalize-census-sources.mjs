@@ -374,6 +374,93 @@ const writeCsv = async (relativePath, rows, columns) => {
   return outputPath
 }
 
+const normalizeF33 = async (config) => {
+  const years = config.years ?? [config.year]
+  const outputTemplate = config.downloads?.f33ByYear ?? ''
+  const rows = []
+
+  for (const year of years) {
+    if (!outputTemplate) break
+    const filePath = outputTemplate.replace('{year}', year)
+    let rawRows
+    try {
+      rawRows = await parseCsv(filePath)
+    } catch {
+      console.warn(`Skipping F-33 for ${year}: file not found.`)
+      continue
+    }
+
+    // Aggregate ENROLL and TOTALEXP by FIPST across all district rows
+    const byState = new Map()
+    for (const row of rawRows) {
+      const fips = String(row.FIPST ?? '').trim().padStart(2, '0')
+      const state = FIPS_TO_STATE[fips]
+      if (!state) continue
+      const enroll = parseNumeric(row.ENROLL)
+      const totalexp = parseNumeric(row.TOTALEXP)
+      if (!byState.has(state)) byState.set(state, { enroll: 0, totalexp: 0 })
+      const acc = byState.get(state)
+      acc.enroll += enroll
+      acc.totalexp += totalexp
+    }
+
+    for (const [state, { enroll, totalexp }] of byState) {
+      if (enroll <= 0) continue
+      // TOTALEXP is in thousands; per_pupil = (thousands * 1000) / enrollment
+      const per_pupil = Math.round((totalexp * 1000) / enroll)
+      rows.push({ state, year, per_pupil })
+    }
+  }
+
+  return rows
+}
+
+const normalizeNaep = async () => {
+  const NAEP_YEARS = [2019, 2022]
+  const BASE = 'https://www.nationsreportcard.gov/NDEDataService/ChartHandler.aspx'
+  const rows = []
+
+  for (const year of NAEP_YEARS) {
+    const readingUrl = `${BASE}?type=sp_state_map_datatable&subject=RED&year=${year}R3&cohort=1`
+    const mathUrl = `${BASE}?type=sp_state_map_datatable&subject=MAT&year=${year}R3&cohort=2`
+
+    let readingJson, mathJson
+    try {
+      const [readingRes, mathRes] = await Promise.all([fetch(readingUrl), fetch(mathUrl)])
+      readingJson = await readingRes.json()
+      mathJson = await mathRes.json()
+    } catch (err) {
+      console.warn(`Skipping NAEP year ${year}: ${err.message}`)
+      continue
+    }
+
+    const extractScores = (json) => {
+      const map = new Map()
+      const entries = json?.result?.StateMap_DataTableData?.Statedata ?? []
+      for (const entry of entries) {
+        const rawName = String(entry.STATE ?? '').trim()
+        const stateName = rawName.endsWith(' Public') ? rawName.slice(0, -7) : rawName
+        if (!VALID_STATES.has(stateName)) continue
+        map.set(stateName, Math.round(parseNumeric(entry.MN)))
+      }
+      return map
+    }
+
+    const readingByState = extractScores(readingJson)
+    const mathByState = extractScores(mathJson)
+
+    for (const state of VALID_STATES) {
+      const grade4_reading = readingByState.get(state) ?? 0
+      const grade8_math = mathByState.get(state) ?? 0
+      if (grade4_reading > 0 || grade8_math > 0) {
+        rows.push({ state, year, grade4_reading, grade8_math })
+      }
+    }
+  }
+
+  return rows
+}
+
 const run = async () => {
   const config = await loadConfig()
   const years = config.years ?? [config.year]
@@ -533,6 +620,20 @@ const run = async () => {
   console.log(
     `Normalized federal grants breakdown rows: ${grantsBreakdownRows.length} -> ${path.relative(projectRoot, grantsBreakdownOutput)}`,
   )
+
+  const f33Rows = await normalizeF33(config)
+  if (f33Rows.length === 0) {
+    console.warn('F-33 normalization produced zero rows — F-33 files may not be downloaded yet.')
+  }
+  const f33Output = await writeCsv(config.normalizedOutputs.f33, f33Rows, ['state', 'year', 'per_pupil'])
+  console.log(`Normalized F-33 rows: ${f33Rows.length} -> ${path.relative(projectRoot, f33Output)}`)
+
+  const naepRows = await normalizeNaep()
+  if (naepRows.length === 0) {
+    console.warn('NAEP normalization produced zero rows — check network access to nationsreportcard.gov.')
+  }
+  const naepOutput = await writeCsv(config.normalizedOutputs.naep, naepRows, ['state', 'year', 'grade4_reading', 'grade8_math'])
+  console.log(`Normalized NAEP rows: ${naepRows.length} -> ${path.relative(projectRoot, naepOutput)}`)
 }
 
 run().catch((error) => {
