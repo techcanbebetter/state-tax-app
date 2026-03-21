@@ -370,7 +370,7 @@ describe('App year toggle', () => {
 })
 
 describe('App view tab bar', () => {
-  it('renders all 5 tabs in story order', async () => {
+  it('renders all 6 tabs in story order', async () => {
     render(<App />)
     const viewToggle = await screen.findByRole('group', { name: /view toggle/i })
     const buttons = viewToggle.querySelectorAll('button')
