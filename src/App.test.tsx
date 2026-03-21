@@ -374,12 +374,13 @@ describe('App view tab bar', () => {
     render(<App />)
     const viewToggle = await screen.findByRole('group', { name: /view toggle/i })
     const buttons = viewToggle.querySelectorAll('button')
-    expect(buttons).toHaveLength(5)
+    expect(buttons).toHaveLength(6)
     expect(buttons[0].textContent).toBe('Total Revenue')
     expect(buttons[1].textContent).toBe('Tax Revenue')
     expect(buttons[2].textContent).toBe('Other Revenue')
     expect(buttons[3].textContent).toBe('Federal Grants')
     expect(buttons[4].textContent).toBe('Spending')
+    expect(buttons[5].textContent).toBe('Education')
   })
 
   it('defaults to Total Revenue tab active', async () => {
@@ -394,5 +395,31 @@ describe('App view tab bar', () => {
     await userEvent.click(screen.getByRole('button', { name: /^spending$/i }))
     expect(screen.getByRole('button', { name: /^spending$/i }).className).toContain('active')
     expect(screen.getByRole('button', { name: /^total revenue$/i }).className).not.toContain('active')
+  })
+})
+
+describe('App Education tab', () => {
+  it('renders 6 tabs including Education as the last', async () => {
+    render(<App />)
+    const viewToggle = await screen.findByRole('group', { name: /view toggle/i })
+    const buttons = viewToggle.querySelectorAll('button')
+    expect(buttons).toHaveLength(6)
+    expect(buttons[5].textContent).toBe('Education')
+  })
+
+  it('auto-selects 2022 when switching to Education tab while year 2021 is active', async () => {
+    render(<App />)
+    // Wait for load, then select 2021
+    await screen.findByRole('button', { name: '2023' })
+    await userEvent.click(screen.getByRole('button', { name: '2021' }))
+    // Verify 2021 is active
+    expect(screen.getByRole('button', { name: '2021' }).className).toContain('active')
+    // Switch to Education tab
+    await userEvent.click(screen.getByRole('button', { name: 'Education' }))
+    // Should auto-advance to 2022
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: '2022' }).className).toContain('active')
+      expect(screen.getByRole('button', { name: '2021' }).className).not.toContain('active')
+    })
   })
 })

@@ -7,8 +7,11 @@ import SpendingView from './SpendingView'
 import TotalRevenueView from './TotalRevenueView'
 import FederalGrantsView from './FederalGrantsView'
 import OwnSourceView from './OwnSourceView'
+import EducationView from './EducationView'
 
-type View = 'totalRevenue' | 'federalGrants' | 'revenue' | 'ownSource' | 'spending'
+type View = 'totalRevenue' | 'federalGrants' | 'revenue' | 'ownSource' | 'spending' | 'education'
+
+const NAEP_YEARS = new Set([2019, 2022])
 
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -50,6 +53,12 @@ function App() {
 
     void loadData()
   }, [])
+
+  useEffect(() => {
+    if (view === 'education' && selectedYear != null && !NAEP_YEARS.has(selectedYear)) {
+      setSelectedYear(2022)
+    }
+  }, [view, selectedYear])
 
   const activeStates = useMemo(() => {
     if (!data || selectedYear == null) return []
@@ -109,6 +118,12 @@ function App() {
         const label = ownSourceMetric === 'total' ? 'Total other revenue' : 'Per capita other revenue'
         return { topStateName: sorted[0]?.state ?? '—', topStateLabel: label }
       }
+      case 'education': {
+        const sorted = [...activeStates]
+          .filter((s) => s.educationPerPupil > 0)
+          .sort((a, b) => b.educationPerPupil - a.educationPerPupil)
+        return { topStateName: sorted[0]?.state ?? '—', topStateLabel: 'Highest $/student' }
+      }
     }
   }, [activeStates, view, revenueMetric, spendingMetric, totalRevenueMetric, federalGrantsMetric, ownSourceMetric])
 
@@ -151,6 +166,14 @@ function App() {
               <button type="button" className={view === 'spending' ? 'active' : ''} onClick={() => setView('spending')} data-tooltip="State and local government expenditures broken down by category, such as education, public welfare, health, and highways.">
                 Spending
               </button>
+              <button
+                type="button"
+                className={view === 'education' ? 'active' : ''}
+                onClick={() => setView('education')}
+                data-tooltip="K-12 spending per student vs. NAEP reading and math achievement scores — reveals which states get the most from their education dollars."
+              >
+                Education
+              </button>
             </div>
 
             <section className="summary-grid">
@@ -173,16 +196,26 @@ function App() {
             </section>
 
             <div className="metric-toggle" role="group" aria-label="Year toggle">
-              {data.years.map((yr) => (
-                <button
-                  key={yr.year}
-                  className={selectedYear === yr.year ? 'active' : ''}
-                  onClick={() => setSelectedYear(yr.year)}
-                  type="button"
-                >
-                  {yr.year}
-                </button>
-              ))}
+              {data.years.map((yr) => {
+                const isDisabled = view === 'education' && !NAEP_YEARS.has(yr.year)
+                return (
+                  <button
+                    key={yr.year}
+                    className={selectedYear === yr.year ? 'active' : ''}
+                    onClick={() => { if (!isDisabled) setSelectedYear(yr.year) }}
+                    type="button"
+                    style={isDisabled ? { opacity: 0.4, cursor: 'not-allowed', pointerEvents: 'none' } : undefined}
+                    aria-disabled={isDisabled || undefined}
+                  >
+                    {yr.year}
+                  </button>
+                )
+              })}
+              {view === 'education' && (
+                <span style={{ fontSize: 11, color: '#6b7280', marginLeft: 8, alignSelf: 'center' }}>
+                  NAEP scores available for 2019 and 2022 only
+                </span>
+              )}
             </div>
 
             {view === 'totalRevenue' && (
@@ -222,6 +255,9 @@ function App() {
                 metric={spendingMetric}
                 setMetric={setSpendingMetric}
               />
+            )}
+            {view === 'education' && (
+              <EducationView activeStates={activeStates} />
             )}
 
             <section className="panel sources-panel">
