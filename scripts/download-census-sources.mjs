@@ -114,6 +114,30 @@ const run = async () => {
       console.log(`Downloaded Individual Unit File (${year}): ${path.relative(projectRoot, unitOutputPath)}`)
     }
   }
+
+  // F-33: one file per year, skip if already downloaded
+  const f33UrlTemplate = config.sources?.f33?.urlTemplate ?? ''
+  const f33OutputTemplate = config.downloads?.f33ByYear ?? ''
+
+  if (f33UrlTemplate && f33OutputTemplate) {
+    for (const year of years) {
+      const f33OutputPath = path.resolve(projectRoot, f33OutputTemplate.replace('{year}', year))
+
+      try {
+        await readFile(f33OutputPath)
+        console.log(`F-33 (${year}): already downloaded, skipping.`)
+        continue
+      } catch {
+        // File does not exist — proceed
+      }
+
+      const yy = String(year).slice(-2)
+      const f33Url = f33UrlTemplate.replace('{year}', year).replace('{yy}', yy)
+      console.log(`Downloading F-33 (${year})...`)
+      const f33Output = await downloadTo(f33Url, f33OutputTemplate.replace('{year}', year))
+      console.log(`Downloaded F-33 (${year}): ${path.relative(projectRoot, f33Output)}`)
+    }
+  }
 }
 
 run().catch((error) => {

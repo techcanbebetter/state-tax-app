@@ -23,13 +23,19 @@
         "2022": "https://www2.census.gov/programs-surveys/gov-finances/tables/2022/2022_Individual_Unit_File.zip",
         "2023": "https://www2.census.gov/programs-surveys/gov-finances/tables/2023/2023_Individual_Unit_Files.zip"
       }
+    },
+    "f33": {
+      "description": "Census F-33 K-12 finance data — district-level enrollment and expenditure by state",
+      "urlTemplate": "https://www2.census.gov/programs-surveys/school-finances/tables/{year}/secondary-education-finance/elsec{yy}t.txt",
+      "note": "yy is 2-digit year suffix: 2019→19, 2020→20, ..., 2023→23"
     }
   },
   "downloads": {
     "taxByYear": "data/raw/downloads/census-tax-source-{year}.json",
     "population": "data/raw/downloads/census-population-source.csv",
     "incomeByYear": "data/raw/downloads/census-acs-income-source-{year}.json",
-    "individualUnitFileByYear": "data/raw/downloads/census-individual-unit-{year}.txt"
+    "individualUnitFileByYear": "data/raw/downloads/census-individual-unit-{year}.txt",
+    "f33ByYear": "data/raw/downloads/census-f33-{year}.txt"
   },
   "normalization": {
     "tax": {
@@ -51,6 +57,8 @@
     "income": "data/raw/state-per-capita-income.csv",
     "spending": "data/raw/state-local-spending-by-function.csv",
     "revenueExtended": "data/raw/state-local-revenue-extended.csv",
-    "federalGrantsBreakdown": "data/raw/federal-grants-breakdown.csv"
+    "federalGrantsBreakdown": "data/raw/federal-grants-breakdown.csv",
+    "f33": "data/raw/education-per-pupil.csv",
+    "naep": "data/raw/naep-scores.csv"
   }
 }
