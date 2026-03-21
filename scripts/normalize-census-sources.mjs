@@ -427,10 +427,21 @@ const normalizeNaep = async () => {
     let readingJson, mathJson
     try {
       const [readingRes, mathRes] = await Promise.all([fetch(readingUrl), fetch(mathUrl)])
+      if (!readingRes.ok || !mathRes.ok) {
+        console.warn(`Skipping NAEP year ${year}: HTTP ${readingRes.status}/${mathRes.status}`)
+        continue
+      }
       readingJson = await readingRes.json()
       mathJson = await mathRes.json()
     } catch (err) {
       console.warn(`Skipping NAEP year ${year}: ${err.message}`)
+      continue
+    }
+
+    const hasValidShape = (json) =>
+      Array.isArray(json?.result?.StateMap_DataTableData?.Statedata)
+    if (!hasValidShape(readingJson) || !hasValidShape(mathJson)) {
+      console.warn(`Skipping NAEP year ${year}: unexpected API response structure`)
       continue
     }
 
