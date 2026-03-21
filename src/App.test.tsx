@@ -407,19 +407,17 @@ describe('App Education tab', () => {
     expect(buttons[5].textContent).toBe('Education')
   })
 
-  it('auto-selects 2022 when switching to Education tab while year 2021 is active', async () => {
+  it('hides year toggle and auto-selects 2022 when switching to Education tab', async () => {
     render(<App />)
-    // Wait for load, then select 2021
+    // Wait for data to load
     await screen.findByRole('button', { name: '2023' })
-    await userEvent.click(screen.getByRole('button', { name: '2021' }))
-    // Verify 2021 is active
-    expect(screen.getByRole('button', { name: '2021' }).className).toContain('active')
+    // Year toggle should be visible on other tabs
+    expect(screen.getByRole('group', { name: /year toggle/i })).toBeInTheDocument()
     // Switch to Education tab
     await userEvent.click(screen.getByRole('button', { name: 'Education' }))
-    // Should auto-advance to 2022
+    // Year toggle should be hidden
     await waitFor(() => {
-      expect(screen.getByRole('button', { name: '2022' }).className).toContain('active')
-      expect(screen.getByRole('button', { name: '2021' }).className).not.toContain('active')
+      expect(screen.queryByRole('group', { name: /year toggle/i })).not.toBeInTheDocument()
     })
   })
 })

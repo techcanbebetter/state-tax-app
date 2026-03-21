@@ -449,7 +449,7 @@ const normalizeNaep = async () => {
       const map = new Map()
       const entries = json?.result?.StateMap_DataTableData?.Statedata ?? []
       for (const entry of entries) {
-        const rawName = String(entry.STATE ?? '').trim()
+        const rawName = String(entry.Jurisdiction ?? entry.STATE ?? '').trim()
         const stateName = rawName.endsWith(' Public') ? rawName.slice(0, -7) : rawName
         if (!VALID_STATES.has(stateName)) continue
         map.set(stateName, Math.round(parseNumeric(entry.MN)))

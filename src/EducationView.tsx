@@ -109,10 +109,10 @@ export default function EducationView({ activeStates }: Props) {
   const yLabel = naepMetric === 'grade4Reading' ? '4th Grade Reading Score' : '8th Grade Math Score'
 
   return (
-    <div className="education-view">
-      <div className="chart-panel">
+    <div>
+      <div className="panel">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-          <h3 style={{ margin: 0, fontSize: 14, color: '#e5e7eb' }}>K-12 Spending per Student vs. Achievement</h3>
+          <h3 style={{ margin: 0, fontSize: 14, color: '#1a2744' }}>K-12 Spending per Student vs. Achievement</h3>
           <div role="group" aria-label="NAEP metric toggle" style={{ display: 'flex', gap: 4 }}>
             <button
               type="button"
@@ -143,14 +143,14 @@ export default function EducationView({ activeStates }: Props) {
                   <line
                     key={tick}
                     x1={0} y1={yScale(tick)} x2={PLOT_W} y2={yScale(tick)}
-                    stroke="#1f2937" strokeWidth={0.5} strokeDasharray="4,4"
+                    stroke="#e5e7eb" strokeWidth={0.5} strokeDasharray="4,4"
                   />
                 ))}
                 {xTicks.map((tick) => (
                   <line
                     key={tick}
                     x1={xScale(tick)} y1={0} x2={xScale(tick)} y2={PLOT_H}
-                    stroke="#1f2937" strokeWidth={0.5} strokeDasharray="4,4"
+                    stroke="#e5e7eb" strokeWidth={0.5} strokeDasharray="4,4"
                   />
                 ))}
                 {yTicks.map((tick) => (
@@ -181,7 +181,7 @@ export default function EducationView({ activeStates }: Props) {
                       style={{ cursor: 'default' }}
                     >
                       <circle cx={cx} cy={cy} r={5} fill="#3b82f6" opacity={0.75} />
-                      <text x={cx + 7} y={cy + 4} fill="#9ca3af" fontSize={9}>{abbrev}</text>
+                      <text x={cx + 7} y={cy + 4} fill="#6b7280" fontSize={9}>{abbrev}</text>
                     </g>
                   )
                 })}
@@ -215,8 +215,8 @@ export default function EducationView({ activeStates }: Props) {
         )}
       </div>
 
-      <div className="chart-panel" style={{ marginTop: 16 }}>
-        <h3 style={{ margin: '0 0 12px', fontSize: 14, color: '#e5e7eb' }}>
+      <div className="panel" style={{ marginTop: 16 }}>
+        <h3 style={{ margin: '0 0 12px', fontSize: 14, color: '#1a2744' }}>
           State Breakdown — click column to sort
         </h3>
         <div style={{ overflowX: 'auto' }}>
@@ -224,25 +224,25 @@ export default function EducationView({ activeStates }: Props) {
             <thead>
               <tr>
                 <th
-                  style={{ padding: '8px 12px', textAlign: 'left', color: '#9ca3af', fontWeight: 600 }}
+                  style={{ padding: '8px 12px', textAlign: 'left', color: '#6b7280', fontWeight: 600 }}
                 >
                   State
                 </th>
                 <th
                   onClick={() => handleSort('perPupil')}
-                  style={{ padding: '8px 12px', textAlign: 'right', color: sortKey === 'perPupil' ? '#d97706' : '#9ca3af', cursor: 'pointer', fontWeight: 600 }}
+                  style={{ padding: '8px 12px', textAlign: 'right', color: sortKey === 'perPupil' ? '#d97706' : '#6b7280', cursor: 'pointer', fontWeight: 600 }}
                 >
                   $ / Student{sortIndicator('perPupil')}
                 </th>
                 <th
                   onClick={() => handleSort('grade4Reading')}
-                  style={{ padding: '8px 12px', textAlign: 'right', color: sortKey === 'grade4Reading' ? '#d97706' : '#9ca3af', cursor: 'pointer', fontWeight: 600 }}
+                  style={{ padding: '8px 12px', textAlign: 'right', color: sortKey === 'grade4Reading' ? '#d97706' : '#6b7280', cursor: 'pointer', fontWeight: 600 }}
                 >
                   4th Gr. Reading{sortIndicator('grade4Reading')}
                 </th>
                 <th
                   onClick={() => handleSort('grade8Math')}
-                  style={{ padding: '8px 12px', textAlign: 'right', color: sortKey === 'grade8Math' ? '#d97706' : '#9ca3af', cursor: 'pointer', fontWeight: 600 }}
+                  style={{ padding: '8px 12px', textAlign: 'right', color: sortKey === 'grade8Math' ? '#d97706' : '#6b7280', cursor: 'pointer', fontWeight: 600 }}
                 >
                   8th Gr. Math{sortIndicator('grade8Math')}
                 </th>
@@ -250,15 +250,15 @@ export default function EducationView({ activeStates }: Props) {
             </thead>
             <tbody>
               {sortedStates.map((s, i) => (
-                <tr key={s.state} style={{ borderTop: '1px solid #1f2937', background: i % 2 === 1 ? '#0d1623' : undefined }}>
-                  <td style={{ padding: '7px 12px', color: '#e5e7eb' }}>{s.state}</td>
+                <tr key={s.state} style={{ borderTop: '1px solid #e5e7eb', background: i % 2 === 1 ? '#f9fafb' : undefined }}>
+                  <td style={{ padding: '7px 12px', color: '#1a2744' }}>{s.state}</td>
                   <td style={{ padding: '7px 12px', textAlign: 'right', color: '#d97706', fontWeight: 600 }}>
                     {s.educationPerPupil > 0 ? formatCurrency(s.educationPerPupil) : '—'}
                   </td>
-                  <td style={{ padding: '7px 12px', textAlign: 'right', color: '#e5e7eb' }}>
+                  <td style={{ padding: '7px 12px', textAlign: 'right', color: '#374151' }}>
                     {s.naepGrade4Reading > 0 ? s.naepGrade4Reading : '—'}
                   </td>
-                  <td style={{ padding: '7px 12px', textAlign: 'right', color: '#e5e7eb' }}>
+                  <td style={{ padding: '7px 12px', textAlign: 'right', color: '#374151' }}>
                     {s.naepGrade8Math > 0 ? s.naepGrade8Math : '—'}
                   </td>
                 </tr>

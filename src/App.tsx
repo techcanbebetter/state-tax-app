@@ -11,8 +11,6 @@ import EducationView from './EducationView'
 
 type View = 'totalRevenue' | 'federalGrants' | 'revenue' | 'ownSource' | 'spending' | 'education'
 
-const NAEP_YEARS = new Set([2019, 2022])
-
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
   timeStyle: 'short',
@@ -54,11 +52,10 @@ function App() {
     void loadData()
   }, [])
 
+
   useEffect(() => {
-    if (view === 'education' && selectedYear != null && !NAEP_YEARS.has(selectedYear)) {
-      setSelectedYear(2022)
-    }
-  }, [view, selectedYear])
+    if (view === 'education') setSelectedYear(2022)
+  }, [view])
 
   const activeStates = useMemo(() => {
     if (!data || selectedYear == null) return []
@@ -195,28 +192,20 @@ function App() {
               </article>
             </section>
 
-            <div className="metric-toggle" role="group" aria-label="Year toggle">
-              {data.years.map((yr) => {
-                const isDisabled = view === 'education' && !NAEP_YEARS.has(yr.year)
-                return (
+            {view !== 'education' && (
+              <div className="metric-toggle" role="group" aria-label="Year toggle">
+                {data.years.map((yr) => (
                   <button
                     key={yr.year}
                     className={selectedYear === yr.year ? 'active' : ''}
-                    onClick={() => { if (!isDisabled) setSelectedYear(yr.year) }}
+                    onClick={() => setSelectedYear(yr.year)}
                     type="button"
-                    style={isDisabled ? { opacity: 0.4, cursor: 'not-allowed', pointerEvents: 'none' } : undefined}
-                    aria-disabled={isDisabled || undefined}
                   >
                     {yr.year}
                   </button>
-                )
-              })}
-              {view === 'education' && (
-                <span style={{ fontSize: 11, color: '#6b7280', marginLeft: 8, alignSelf: 'center' }}>
-                  NAEP scores available for 2019 and 2022 only
-                </span>
-              )}
-            </div>
+                ))}
+              </div>
+            )}
 
             {view === 'totalRevenue' && (
               <TotalRevenueView
