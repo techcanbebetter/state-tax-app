@@ -472,6 +472,50 @@ const normalizeNaep = async () => {
   return rows
 }
 
+const normalizeReasonHighway = async (config) => {
+  const csvPath = path.join(projectRoot, 'data/raw/downloads/29th Annual Highway Report - Reason Foundation.csv')
+  let rawText
+  try {
+    rawText = await readFile(csvPath, 'utf8')
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.warn('Reason Foundation Highway Report CSV not found — transportation rankings will be 0 for all states.')
+      return []
+    }
+    throw err
+  }
+
+  const parsed = Papa.parse(rawText, { header: true, skipEmptyLines: true })
+  const rows = []
+
+  for (const row of parsed.data) {
+    const state = String(row['State'] ?? '').trim()
+    if (!VALID_STATES.has(state)) continue
+
+    const overall_rank = parseInt(row['Overall'], 10)
+    const ruralInterstate = parseInt(row['Rural Interstate Pavement Condition'], 10)
+    const urbanInterstate = parseInt(row['Urban Interstate Pavement Condition'], 10)
+    const ruralArterial = parseInt(row['Rural Arterial Pavement Condition'], 10)
+    const urbanArterial = parseInt(row['Urban Arterial Pavement Condition'], 10)
+    const pavement_rank = Number.isFinite(ruralInterstate) && Number.isFinite(urbanInterstate) && Number.isFinite(ruralArterial) && Number.isFinite(urbanArterial)
+      ? Math.round((ruralInterstate + urbanInterstate + ruralArterial + urbanArterial) / 4)
+      : 0
+    const bridge_rank = parseInt(row['Structurally Deficient Bridges'], 10)
+    const congestion_rank = parseInt(row['Urbanized Area Congestion'], 10)
+    const ruralFatality = parseInt(row['Rural Fatality Rate'], 10)
+    const urbanFatality = parseInt(row['Urban Fatality Rate'], 10)
+    const otherFatality = parseInt(row['Other Fatality Rate'], 10)
+    const fatality_rank = Number.isFinite(ruralFatality) && Number.isFinite(urbanFatality) && Number.isFinite(otherFatality)
+      ? Math.round((ruralFatality + urbanFatality + otherFatality) / 3)
+      : 0
+
+    if (!Number.isFinite(overall_rank)) continue
+    rows.push({ state, overall_rank, pavement_rank, bridge_rank: Number.isFinite(bridge_rank) ? bridge_rank : 0, congestion_rank: Number.isFinite(congestion_rank) ? congestion_rank : 0, fatality_rank })
+  }
+
+  return rows
+}
+
 const run = async () => {
   const config = await loadConfig()
   const years = config.years ?? [config.year]
@@ -645,6 +689,18 @@ const run = async () => {
   }
   const naepOutput = await writeCsv(config.normalizedOutputs.naep, naepRows, ['state', 'year', 'grade4_reading', 'grade8_math'])
   console.log(`Normalized NAEP rows: ${naepRows.length} -> ${path.relative(projectRoot, naepOutput)}`)
+
+  const reasonHighwayRows = await normalizeReasonHighway(config)
+  if (reasonHighwayRows.length === 0) {
+    console.warn('Reason Highway normalization produced zero rows — check data/raw/downloads/ for the Reason Foundation CSV. Skipping CSV write.')
+  } else {
+    const reasonHighwayOutput = await writeCsv(
+      config.normalizedOutputs.reasonHighway,
+      reasonHighwayRows,
+      ['state', 'overall_rank', 'pavement_rank', 'bridge_rank', 'congestion_rank', 'fatality_rank'],
+    )
+    console.log(`Normalized Reason Highway rows: ${reasonHighwayRows.length} -> ${path.relative(projectRoot, reasonHighwayOutput)}`)
+  }
 }
 
 run().catch((error) => {

@@ -59,6 +59,7 @@
     "revenueExtended": "data/raw/state-local-revenue-extended.csv",
     "federalGrantsBreakdown": "data/raw/federal-grants-breakdown.csv",
     "f33": "data/raw/education-per-pupil.csv",
-    "naep": "data/raw/naep-scores.csv"
+    "naep": "data/raw/naep-scores.csv",
+    "reasonHighway": "data/raw/reason-highway-report.csv"
   }
 }
