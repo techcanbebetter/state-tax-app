@@ -25,6 +25,9 @@ const STATE_ABBREVS: Record<string, string> = {
 const formatCurrency = (n: number) =>
   n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
 
+const getScore = (s: StateRecord, metric: NAEPMetric) =>
+  metric === 'grade4Reading' ? s.naepGrade4Reading : s.naepGrade8Math
+
 type Props = { activeStates: StateRecord[] }
 
 const SVG_W = 680
@@ -41,12 +44,8 @@ export default function EducationView({ activeStates }: Props) {
 
   const hasData = activeStates.some((s) => s.educationPerPupil > 0)
 
-  const getScore = (s: StateRecord) =>
-    naepMetric === 'grade4Reading' ? s.naepGrade4Reading : s.naepGrade8Math
-
   const plotStates = useMemo(
-    () => activeStates.filter((s) => s.educationPerPupil > 0 && getScore(s) > 0),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    () => activeStates.filter((s) => s.educationPerPupil > 0 && getScore(s, naepMetric) > 0),
     [activeStates, naepMetric],
   )
 
@@ -61,12 +60,11 @@ export default function EducationView({ activeStates }: Props) {
 
   const yScale = useMemo(() => {
     if (!plotStates.length) return scaleLinear().domain([0, 1]).range([PLOT_H, 0])
-    const vals = plotStates.map((s) => getScore(s))
+    const vals = plotStates.map((s) => getScore(s, naepMetric))
     const min = Math.min(...vals)
     const max = Math.max(...vals)
     const pad = (max - min) * 0.1 || 3
     return scaleLinear().domain([min - pad, max + pad]).range([PLOT_H, 0])
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [plotStates, naepMetric])
 
   const yTicks = useMemo(() => {
@@ -173,7 +171,7 @@ export default function EducationView({ activeStates }: Props) {
                 </text>
                 {plotStates.map((s) => {
                   const cx = xScale(s.educationPerPupil)
-                  const cy = yScale(getScore(s))
+                  const cy = yScale(getScore(s, naepMetric))
                   const abbrev = STATE_ABBREVS[s.state] ?? s.state.slice(0, 2).toUpperCase()
                   return (
                     <g
