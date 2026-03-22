@@ -203,6 +203,19 @@ const run = async () => {
     }
   }
 
+  // Reason Foundation highway rankings: read gracefully — missing file is non-fatal
+  const reasonHighwayCsvPath = path.resolve(projectRoot, config.input.reasonHighwayCsv)
+  let reasonHighwayRows = []
+  try {
+    reasonHighwayRows = await readCsv(reasonHighwayCsvPath)
+  } catch (err) {
+    if (err.message?.includes('Missing required source file') || err.code === 'ENOENT') {
+      console.warn('Reason Highway CSV not found — reason*Rank fields will be 0 for all states.')
+    } else {
+      throw err
+    }
+  }
+
   // Build spending lookup: `${state}||${year}||${lf_code}` → amount in dollars
   const spendingByStateYearCode = new Map()
   for (const row of spendingRows) {
@@ -259,6 +272,21 @@ const run = async () => {
     naepByStateYear.set(`${state}||${year}`, {
       grade4_reading: parseNumeric(row.grade4_reading),
       grade8_math: parseNumeric(row.grade8_math),
+    })
+  }
+
+  // Build Reason Highway lookup: state name → { overall_rank, pavement_rank, bridge_rank, congestion_rank, fatality_rank }
+  // No year key — single snapshot applied to all years
+  const reasonHighwayByState = new Map()
+  for (const row of reasonHighwayRows) {
+    const state = normalizeState(row.state)
+    if (!state || !VALID_STATES.has(state)) continue
+    reasonHighwayByState.set(state, {
+      overall_rank: Math.round(parseNumeric(row.overall_rank)),
+      pavement_rank: Math.round(parseNumeric(row.pavement_rank)),
+      bridge_rank: Math.round(parseNumeric(row.bridge_rank)),
+      congestion_rank: Math.round(parseNumeric(row.congestion_rank)),
+      fatality_rank: Math.round(parseNumeric(row.fatality_rank)),
     })
   }
 
@@ -437,6 +465,13 @@ const run = async () => {
         const naepGrade4Reading = Math.round(naepData?.grade4_reading ?? 0)
         const naepGrade8Math = Math.round(naepData?.grade8_math ?? 0)
 
+        const reasonHighway = reasonHighwayByState.get(state.state)
+        const reasonOverallRank = reasonHighway?.overall_rank ?? 0
+        const reasonPavementRank = reasonHighway?.pavement_rank ?? 0
+        const reasonBridgeRank = reasonHighway?.bridge_rank ?? 0
+        const reasonCongestionRank = reasonHighway?.congestion_rank ?? 0
+        const reasonFatalityRank = reasonHighway?.fatality_rank ?? 0
+
         return {
           ...state,
           totalRevenue: Math.round(state.totalRevenue),
@@ -459,6 +494,11 @@ const run = async () => {
           educationPerPupil,
           naepGrade4Reading,
           naepGrade8Math,
+          reasonOverallRank,
+          reasonPavementRank,
+          reasonBridgeRank,
+          reasonCongestionRank,
+          reasonFatalityRank,
         }
       })
       .sort((a, b) => b.totalRevenue - a.totalRevenue)

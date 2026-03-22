@@ -9,7 +9,8 @@
     "revenueExtendedCsv": "data/raw/state-local-revenue-extended.csv",
     "federalGrantsBreakdownCsv": "data/raw/federal-grants-breakdown.csv",
     "f33Csv": "data/raw/education-per-pupil.csv",
-    "naepCsv": "data/raw/naep-scores.csv"
+    "naepCsv": "data/raw/naep-scores.csv",
+    "reasonHighwayCsv": "data/raw/reason-highway-report.csv"
   },
   "columns": {
     "tax": {

@@ -12,7 +12,7 @@
       "Nominal dollars.",
       "Top states selected by population for the latest year."
     ],
-    "generatedAt": "2026-03-21T16:37:26.140Z"
+    "generatedAt": "2026-03-22T04:16:23.876Z"
   },
   "taxTypes": [
     {
@@ -114,7 +114,12 @@
           "grantsOther": 5752933000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 49,
+          "reasonPavementRank": 46,
+          "reasonBridgeRank": 25,
+          "reasonCongestionRank": 46,
+          "reasonFatalityRank": 34
         },
         {
           "state": "New York",
@@ -152,7 +157,12 @@
           "grantsOther": 6279348000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 47,
+          "reasonPavementRank": 40,
+          "reasonBridgeRank": 39,
+          "reasonCongestionRank": 48,
+          "reasonFatalityRank": 13
         },
         {
           "state": "Texas",
@@ -188,7 +198,12 @@
           "grantsOther": 3394428000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 27,
+          "reasonPavementRank": 26,
+          "reasonBridgeRank": 3,
+          "reasonCongestionRank": 41,
+          "reasonFatalityRank": 37
         },
         {
           "state": "Illinois",
@@ -226,7 +241,12 @@
           "grantsOther": 2768185000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 37,
+          "reasonPavementRank": 35,
+          "reasonBridgeRank": 41,
+          "reasonCongestionRank": 44,
+          "reasonFatalityRank": 26
         },
         {
           "state": "Florida",
@@ -263,7 +283,12 @@
           "grantsOther": 4109262000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 14,
+          "reasonPavementRank": 5,
+          "reasonBridgeRank": 9,
+          "reasonCongestionRank": 40,
+          "reasonFatalityRank": 33
         },
         {
           "state": "Pennsylvania",
@@ -301,7 +326,12 @@
           "grantsOther": 1301749000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 36,
+          "reasonPavementRank": 39,
+          "reasonBridgeRank": 45,
+          "reasonCongestionRank": 42,
+          "reasonFatalityRank": 22
         },
         {
           "state": "New Jersey",
@@ -339,7 +369,12 @@
           "grantsOther": 3586464000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 40,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 27,
+          "reasonCongestionRank": 50,
+          "reasonFatalityRank": 11
         },
         {
           "state": "Ohio",
@@ -377,7 +412,12 @@
           "grantsOther": 1119960000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 5,
+          "reasonPavementRank": 22,
+          "reasonBridgeRank": 14,
+          "reasonCongestionRank": 18,
+          "reasonFatalityRank": 17
         },
         {
           "state": "Massachusetts",
@@ -415,7 +455,12 @@
           "grantsOther": 2086934000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 17,
+          "reasonPavementRank": 30,
+          "reasonBridgeRank": 38,
+          "reasonCongestionRank": 49,
+          "reasonFatalityRank": 2
         },
         {
           "state": "Virginia",
@@ -453,7 +498,12 @@
           "grantsOther": 560258000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 1,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 10,
+          "reasonCongestionRank": 38,
+          "reasonFatalityRank": 20
         },
         {
           "state": "North Carolina",
@@ -491,7 +541,12 @@
           "grantsOther": 3809265000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 4,
+          "reasonPavementRank": 19,
+          "reasonBridgeRank": 33,
+          "reasonCongestionRank": 30,
+          "reasonFatalityRank": 27
         },
         {
           "state": "Michigan",
@@ -529,7 +584,12 @@
           "grantsOther": 2731247000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 23,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 43,
+          "reasonCongestionRank": 15,
+          "reasonFatalityRank": 17
         },
         {
           "state": "Georgia",
@@ -567,7 +627,12 @@
           "grantsOther": 1305683000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 2,
+          "reasonPavementRank": 9,
+          "reasonBridgeRank": 5,
+          "reasonCongestionRank": 45,
+          "reasonFatalityRank": 28
         },
         {
           "state": "Washington",
@@ -603,7 +668,12 @@
           "grantsOther": 2307879000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 48,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 23,
+          "reasonCongestionRank": 39,
+          "reasonFatalityRank": 34
         },
         {
           "state": "Maryland",
@@ -641,7 +711,12 @@
           "grantsOther": 2384727000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 34,
+          "reasonPavementRank": 37,
+          "reasonBridgeRank": 13,
+          "reasonCongestionRank": 43,
+          "reasonFatalityRank": 16
         },
         {
           "state": "Minnesota",
@@ -679,7 +754,12 @@
           "grantsOther": 673117000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 11,
+          "reasonPavementRank": 13,
+          "reasonBridgeRank": 11,
+          "reasonCongestionRank": 24,
+          "reasonFatalityRank": 4
         },
         {
           "state": "Colorado",
@@ -717,7 +797,12 @@
           "grantsOther": 1030265000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 42,
+          "reasonPavementRank": 40,
+          "reasonBridgeRank": 16,
+          "reasonCongestionRank": 35,
+          "reasonFatalityRank": 33
         },
         {
           "state": "Indiana",
@@ -755,7 +840,12 @@
           "grantsOther": 1017339000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 18,
+          "reasonPavementRank": 18,
+          "reasonBridgeRank": 21,
+          "reasonCongestionRank": 31,
+          "reasonFatalityRank": 19
         },
         {
           "state": "Connecticut",
@@ -793,7 +883,12 @@
           "grantsOther": 653119000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 7,
+          "reasonPavementRank": 16,
+          "reasonBridgeRank": 18,
+          "reasonCongestionRank": 28,
+          "reasonFatalityRank": 19
         },
         {
           "state": "Arizona",
@@ -831,7 +926,12 @@
           "grantsOther": 706694000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 41,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 1,
+          "reasonCongestionRank": 11,
+          "reasonFatalityRank": 43
         },
         {
           "state": "Wisconsin",
@@ -869,7 +969,12 @@
           "grantsOther": 2682668000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 31,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 27,
+          "reasonCongestionRank": 24,
+          "reasonFatalityRank": 9
         },
         {
           "state": "Missouri",
@@ -907,7 +1012,12 @@
           "grantsOther": 825026000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 9,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 40,
+          "reasonCongestionRank": 26,
+          "reasonFatalityRank": 20
         },
         {
           "state": "Tennessee",
@@ -945,7 +1055,12 @@
           "grantsOther": 2741060000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 12,
+          "reasonPavementRank": 17,
+          "reasonBridgeRank": 12,
+          "reasonCongestionRank": 36,
+          "reasonFatalityRank": 36
         },
         {
           "state": "Oregon",
@@ -982,7 +1097,12 @@
           "grantsOther": 1147803000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 33,
+          "reasonPavementRank": 20,
+          "reasonBridgeRank": 15,
+          "reasonCongestionRank": 34,
+          "reasonFatalityRank": 41
         },
         {
           "state": "South Carolina",
@@ -1020,7 +1140,12 @@
           "grantsOther": 1458956000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 3,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 24,
+          "reasonCongestionRank": 25,
+          "reasonFatalityRank": 45
         },
         {
           "state": "Louisiana",
@@ -1058,7 +1183,12 @@
           "grantsOther": 5307359000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 46,
+          "reasonPavementRank": 46,
+          "reasonBridgeRank": 44,
+          "reasonCongestionRank": 29,
+          "reasonFatalityRank": 31
         },
         {
           "state": "Kentucky",
@@ -1096,7 +1226,12 @@
           "grantsOther": 903846000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 15,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 32,
+          "reasonCongestionRank": 27,
+          "reasonFatalityRank": 34
         },
         {
           "state": "Alabama",
@@ -1134,7 +1269,12 @@
           "grantsOther": 953622000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 8,
+          "reasonPavementRank": 17,
+          "reasonBridgeRank": 8,
+          "reasonCongestionRank": 14,
+          "reasonFatalityRank": 32
         },
         {
           "state": "Utah",
@@ -1172,7 +1312,12 @@
           "grantsOther": 456523000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 10,
+          "reasonPavementRank": 11,
+          "reasonBridgeRank": 6,
+          "reasonCongestionRank": 19,
+          "reasonFatalityRank": 12
         },
         {
           "state": "Iowa",
@@ -1210,7 +1355,12 @@
           "grantsOther": 893354000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 35,
+          "reasonPavementRank": 32,
+          "reasonBridgeRank": 49,
+          "reasonCongestionRank": 1,
+          "reasonFatalityRank": 20
         },
         {
           "state": "Kansas",
@@ -1248,7 +1398,12 @@
           "grantsOther": 439909000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 19,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 20,
+          "reasonCongestionRank": 3,
+          "reasonFatalityRank": 22
         },
         {
           "state": "Oklahoma",
@@ -1286,7 +1441,12 @@
           "grantsOther": 721972000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 45,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 36,
+          "reasonCongestionRank": 16,
+          "reasonFatalityRank": 38
         },
         {
           "state": "Arkansas",
@@ -1324,7 +1484,12 @@
           "grantsOther": 530282000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 21,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 22,
+          "reasonCongestionRank": 17,
+          "reasonFatalityRank": 39
         },
         {
           "state": "Nevada",
@@ -1360,7 +1525,12 @@
           "grantsOther": 749504000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 25,
+          "reasonPavementRank": 11,
+          "reasonBridgeRank": 2,
+          "reasonCongestionRank": 33,
+          "reasonFatalityRank": 36
         },
         {
           "state": "Mississippi",
@@ -1398,7 +1568,12 @@
           "grantsOther": 643019000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 24,
+          "reasonPavementRank": 34,
+          "reasonBridgeRank": 26,
+          "reasonCongestionRank": 12,
+          "reasonFatalityRank": 44
         },
         {
           "state": "Nebraska",
@@ -1436,7 +1611,12 @@
           "grantsOther": 394131000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 29,
+          "reasonPavementRank": 28,
+          "reasonBridgeRank": 35,
+          "reasonCongestionRank": 23,
+          "reasonFatalityRank": 15
         },
         {
           "state": "Hawaii",
@@ -1474,7 +1654,12 @@
           "grantsOther": 290572000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 44,
+          "reasonPavementRank": 0,
+          "reasonBridgeRank": 30,
+          "reasonCongestionRank": 20,
+          "reasonFatalityRank": 30
         },
         {
           "state": "Maine",
@@ -1512,7 +1697,12 @@
           "grantsOther": 598668000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 16,
+          "reasonPavementRank": 19,
+          "reasonBridgeRank": 46,
+          "reasonCongestionRank": 8,
+          "reasonFatalityRank": 8
         },
         {
           "state": "New Mexico",
@@ -1550,7 +1740,12 @@
           "grantsOther": 818005000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 39,
+          "reasonPavementRank": 37,
+          "reasonBridgeRank": 17,
+          "reasonCongestionRank": 13,
+          "reasonFatalityRank": 37
         },
         {
           "state": "Idaho",
@@ -1588,7 +1783,12 @@
           "grantsOther": 366720000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 26,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 19,
+          "reasonCongestionRank": 22,
+          "reasonFatalityRank": 31
         },
         {
           "state": "West Virginia",
@@ -1626,7 +1826,12 @@
           "grantsOther": 439104000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 30,
+          "reasonPavementRank": 27,
+          "reasonBridgeRank": 50,
+          "reasonCongestionRank": 5,
+          "reasonFatalityRank": 38
         },
         {
           "state": "Rhode Island",
@@ -1664,7 +1869,12 @@
           "grantsOther": 466470000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 43,
+          "reasonPavementRank": 28,
+          "reasonBridgeRank": 47,
+          "reasonCongestionRank": 37,
+          "reasonFatalityRank": 13
         },
         {
           "state": "New Hampshire",
@@ -1701,7 +1911,12 @@
           "grantsOther": 1449276000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 13,
+          "reasonPavementRank": 7,
+          "reasonBridgeRank": 34,
+          "reasonCongestionRank": 32,
+          "reasonFatalityRank": 10
         },
         {
           "state": "Montana",
@@ -1738,7 +1953,12 @@
           "grantsOther": 362078000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 22,
+          "reasonPavementRank": 24,
+          "reasonBridgeRank": 31,
+          "reasonCongestionRank": 7,
+          "reasonFatalityRank": 40
         },
         {
           "state": "Vermont",
@@ -1776,7 +1996,12 @@
           "grantsOther": 261210000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 38,
+          "reasonPavementRank": 23,
+          "reasonBridgeRank": 7,
+          "reasonCongestionRank": 6,
+          "reasonFatalityRank": 9
         },
         {
           "state": "Delaware",
@@ -1813,7 +2038,12 @@
           "grantsOther": 244443000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 32,
+          "reasonPavementRank": 0,
+          "reasonBridgeRank": 4,
+          "reasonCongestionRank": 47,
+          "reasonFatalityRank": 35
         },
         {
           "state": "South Dakota",
@@ -1850,7 +2080,12 @@
           "grantsOther": 218875000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 28,
+          "reasonPavementRank": 13,
+          "reasonBridgeRank": 48,
+          "reasonCongestionRank": 9,
+          "reasonFatalityRank": 24
         },
         {
           "state": "North Dakota",
@@ -1888,7 +2123,12 @@
           "grantsOther": 337592000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 6,
+          "reasonPavementRank": 14,
+          "reasonBridgeRank": 42,
+          "reasonCongestionRank": 2,
+          "reasonFatalityRank": 13
         },
         {
           "state": "Alaska",
@@ -1925,7 +2165,12 @@
           "grantsOther": 580064000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 50,
+          "reasonPavementRank": 31,
+          "reasonBridgeRank": 37,
+          "reasonCongestionRank": 10,
+          "reasonFatalityRank": 22
         },
         {
           "state": "Wyoming",
@@ -1961,7 +2206,12 @@
           "grantsOther": 980137000,
           "educationPerPupil": 0,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 20,
+          "reasonPavementRank": 22,
+          "reasonBridgeRank": 28,
+          "reasonCongestionRank": 4,
+          "reasonFatalityRank": 34
         }
       ]
     },
@@ -2005,7 +2255,12 @@
           "grantsOther": 11485382000,
           "educationPerPupil": 20737,
           "naepGrade4Reading": 214,
-          "naepGrade8Math": 270
+          "naepGrade8Math": 270,
+          "reasonOverallRank": 49,
+          "reasonPavementRank": 46,
+          "reasonBridgeRank": 25,
+          "reasonCongestionRank": 46,
+          "reasonFatalityRank": 34
         },
         {
           "state": "New York",
@@ -2044,7 +2299,12 @@
           "grantsOther": 6720703000,
           "educationPerPupil": 35677,
           "naepGrade4Reading": 214,
-          "naepGrade8Math": 274
+          "naepGrade8Math": 274,
+          "reasonOverallRank": 47,
+          "reasonPavementRank": 40,
+          "reasonBridgeRank": 39,
+          "reasonCongestionRank": 48,
+          "reasonFatalityRank": 13
         },
         {
           "state": "Texas",
@@ -2081,7 +2341,12 @@
           "grantsOther": 3540456000,
           "educationPerPupil": 15611,
           "naepGrade4Reading": 214,
-          "naepGrade8Math": 273
+          "naepGrade8Math": 273,
+          "reasonOverallRank": 27,
+          "reasonPavementRank": 26,
+          "reasonBridgeRank": 3,
+          "reasonCongestionRank": 41,
+          "reasonFatalityRank": 37
         },
         {
           "state": "Florida",
@@ -2119,7 +2384,12 @@
           "grantsOther": 4367145000,
           "educationPerPupil": 12703,
           "naepGrade4Reading": 225,
-          "naepGrade8Math": 271
+          "naepGrade8Math": 271,
+          "reasonOverallRank": 14,
+          "reasonPavementRank": 5,
+          "reasonBridgeRank": 9,
+          "reasonCongestionRank": 40,
+          "reasonFatalityRank": 33
         },
         {
           "state": "Illinois",
@@ -2158,7 +2428,12 @@
           "grantsOther": 3046809000,
           "educationPerPupil": 22239,
           "naepGrade4Reading": 218,
-          "naepGrade8Math": 275
+          "naepGrade8Math": 275,
+          "reasonOverallRank": 37,
+          "reasonPavementRank": 35,
+          "reasonBridgeRank": 41,
+          "reasonCongestionRank": 44,
+          "reasonFatalityRank": 26
         },
         {
           "state": "New Jersey",
@@ -2197,7 +2472,12 @@
           "grantsOther": 4974793000,
           "educationPerPupil": 29173,
           "naepGrade4Reading": 223,
-          "naepGrade8Math": 281
+          "naepGrade8Math": 281,
+          "reasonOverallRank": 40,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 27,
+          "reasonCongestionRank": 50,
+          "reasonFatalityRank": 11
         },
         {
           "state": "Pennsylvania",
@@ -2236,7 +2516,12 @@
           "grantsOther": 1419669000,
           "educationPerPupil": 25500,
           "naepGrade4Reading": 219,
-          "naepGrade8Math": 274
+          "naepGrade8Math": 274,
+          "reasonOverallRank": 36,
+          "reasonPavementRank": 39,
+          "reasonBridgeRank": 45,
+          "reasonCongestionRank": 42,
+          "reasonFatalityRank": 22
         },
         {
           "state": "Ohio",
@@ -2275,7 +2560,12 @@
           "grantsOther": 1265797000,
           "educationPerPupil": 18144,
           "naepGrade4Reading": 219,
-          "naepGrade8Math": 276
+          "naepGrade8Math": 276,
+          "reasonOverallRank": 5,
+          "reasonPavementRank": 22,
+          "reasonBridgeRank": 14,
+          "reasonCongestionRank": 18,
+          "reasonFatalityRank": 17
         },
         {
           "state": "Massachusetts",
@@ -2314,7 +2604,12 @@
           "grantsOther": 3869527000,
           "educationPerPupil": 26732,
           "naepGrade4Reading": 227,
-          "naepGrade8Math": 284
+          "naepGrade8Math": 284,
+          "reasonOverallRank": 17,
+          "reasonPavementRank": 30,
+          "reasonBridgeRank": 38,
+          "reasonCongestionRank": 49,
+          "reasonFatalityRank": 2
         },
         {
           "state": "Virginia",
@@ -2353,7 +2648,12 @@
           "grantsOther": 571521000,
           "educationPerPupil": 16766,
           "naepGrade4Reading": 214,
-          "naepGrade8Math": 279
+          "naepGrade8Math": 279,
+          "reasonOverallRank": 1,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 10,
+          "reasonCongestionRank": 38,
+          "reasonFatalityRank": 20
         },
         {
           "state": "Washington",
@@ -2390,7 +2690,12 @@
           "grantsOther": 1868458000,
           "educationPerPupil": 20500,
           "naepGrade4Reading": 217,
-          "naepGrade8Math": 276
+          "naepGrade8Math": 276,
+          "reasonOverallRank": 48,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 23,
+          "reasonCongestionRank": 39,
+          "reasonFatalityRank": 34
         },
         {
           "state": "Georgia",
@@ -2429,7 +2734,12 @@
           "grantsOther": 1402521000,
           "educationPerPupil": 15111,
           "naepGrade4Reading": 216,
-          "naepGrade8Math": 271
+          "naepGrade8Math": 271,
+          "reasonOverallRank": 2,
+          "reasonPavementRank": 9,
+          "reasonBridgeRank": 5,
+          "reasonCongestionRank": 45,
+          "reasonFatalityRank": 28
         },
         {
           "state": "North Carolina",
@@ -2468,7 +2778,12 @@
           "grantsOther": 2591679000,
           "educationPerPupil": 13782,
           "naepGrade4Reading": 216,
-          "naepGrade8Math": 274
+          "naepGrade8Math": 274,
+          "reasonOverallRank": 4,
+          "reasonPavementRank": 19,
+          "reasonBridgeRank": 33,
+          "reasonCongestionRank": 30,
+          "reasonFatalityRank": 27
         },
         {
           "state": "Michigan",
@@ -2507,7 +2822,12 @@
           "grantsOther": 3009667000,
           "educationPerPupil": 20201,
           "naepGrade4Reading": 212,
-          "naepGrade8Math": 273
+          "naepGrade8Math": 273,
+          "reasonOverallRank": 23,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 43,
+          "reasonCongestionRank": 15,
+          "reasonFatalityRank": 17
         },
         {
           "state": "Maryland",
@@ -2546,7 +2866,12 @@
           "grantsOther": 3148662000,
           "educationPerPupil": 20340,
           "naepGrade4Reading": 212,
-          "naepGrade8Math": 269
+          "naepGrade8Math": 269,
+          "reasonOverallRank": 34,
+          "reasonPavementRank": 37,
+          "reasonBridgeRank": 13,
+          "reasonCongestionRank": 43,
+          "reasonFatalityRank": 16
         },
         {
           "state": "Minnesota",
@@ -2585,7 +2910,12 @@
           "grantsOther": 872124000,
           "educationPerPupil": 19940,
           "naepGrade4Reading": 215,
-          "naepGrade8Math": 280
+          "naepGrade8Math": 280,
+          "reasonOverallRank": 11,
+          "reasonPavementRank": 13,
+          "reasonBridgeRank": 11,
+          "reasonCongestionRank": 24,
+          "reasonFatalityRank": 4
         },
         {
           "state": "Colorado",
@@ -2624,7 +2954,12 @@
           "grantsOther": 1900192000,
           "educationPerPupil": 16755,
           "naepGrade4Reading": 223,
-          "naepGrade8Math": 275
+          "naepGrade8Math": 275,
+          "reasonOverallRank": 42,
+          "reasonPavementRank": 40,
+          "reasonBridgeRank": 16,
+          "reasonCongestionRank": 35,
+          "reasonFatalityRank": 33
         },
         {
           "state": "Indiana",
@@ -2663,7 +2998,12 @@
           "grantsOther": 1120082000,
           "educationPerPupil": 15122,
           "naepGrade4Reading": 217,
-          "naepGrade8Math": 279
+          "naepGrade8Math": 279,
+          "reasonOverallRank": 18,
+          "reasonPavementRank": 18,
+          "reasonBridgeRank": 21,
+          "reasonCongestionRank": 31,
+          "reasonFatalityRank": 19
         },
         {
           "state": "Arizona",
@@ -2702,7 +3042,12 @@
           "grantsOther": 909388000,
           "educationPerPupil": 12697,
           "naepGrade4Reading": 215,
-          "naepGrade8Math": 271
+          "naepGrade8Math": 271,
+          "reasonOverallRank": 41,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 1,
+          "reasonCongestionRank": 11,
+          "reasonFatalityRank": 43
         },
         {
           "state": "Connecticut",
@@ -2741,7 +3086,12 @@
           "grantsOther": 1134455000,
           "educationPerPupil": 28172,
           "naepGrade4Reading": 219,
-          "naepGrade8Math": 276
+          "naepGrade8Math": 276,
+          "reasonOverallRank": 7,
+          "reasonPavementRank": 16,
+          "reasonBridgeRank": 18,
+          "reasonCongestionRank": 28,
+          "reasonFatalityRank": 19
         },
         {
           "state": "Wisconsin",
@@ -2780,7 +3130,12 @@
           "grantsOther": 2536777000,
           "educationPerPupil": 17563,
           "naepGrade4Reading": 217,
-          "naepGrade8Math": 281
+          "naepGrade8Math": 281,
+          "reasonOverallRank": 31,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 27,
+          "reasonCongestionRank": 24,
+          "reasonFatalityRank": 9
         },
         {
           "state": "Tennessee",
@@ -2819,7 +3174,12 @@
           "grantsOther": 2040791000,
           "educationPerPupil": 12736,
           "naepGrade4Reading": 214,
-          "naepGrade8Math": 272
+          "naepGrade8Math": 272,
+          "reasonOverallRank": 12,
+          "reasonPavementRank": 17,
+          "reasonBridgeRank": 12,
+          "reasonCongestionRank": 36,
+          "reasonFatalityRank": 36
         },
         {
           "state": "Missouri",
@@ -2858,7 +3218,12 @@
           "grantsOther": 1177362000,
           "educationPerPupil": 15322,
           "naepGrade4Reading": 213,
-          "naepGrade8Math": 272
+          "naepGrade8Math": 272,
+          "reasonOverallRank": 9,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 40,
+          "reasonCongestionRank": 26,
+          "reasonFatalityRank": 20
         },
         {
           "state": "Oregon",
@@ -2897,7 +3262,12 @@
           "grantsOther": 915422000,
           "educationPerPupil": 20327,
           "naepGrade4Reading": 210,
-          "naepGrade8Math": 270
+          "naepGrade8Math": 270,
+          "reasonOverallRank": 33,
+          "reasonPavementRank": 20,
+          "reasonBridgeRank": 15,
+          "reasonCongestionRank": 34,
+          "reasonFatalityRank": 41
         },
         {
           "state": "South Carolina",
@@ -2936,7 +3306,12 @@
           "grantsOther": 1127993000,
           "educationPerPupil": 16007,
           "naepGrade4Reading": 216,
-          "naepGrade8Math": 269
+          "naepGrade8Math": 269,
+          "reasonOverallRank": 3,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 24,
+          "reasonCongestionRank": 25,
+          "reasonFatalityRank": 45
         },
         {
           "state": "Louisiana",
@@ -2975,7 +3350,12 @@
           "grantsOther": 2947125000,
           "educationPerPupil": 17278,
           "naepGrade4Reading": 212,
-          "naepGrade8Math": 266
+          "naepGrade8Math": 266,
+          "reasonOverallRank": 46,
+          "reasonPavementRank": 46,
+          "reasonBridgeRank": 44,
+          "reasonCongestionRank": 29,
+          "reasonFatalityRank": 31
         },
         {
           "state": "Alabama",
@@ -3014,7 +3394,12 @@
           "grantsOther": 1143965000,
           "educationPerPupil": 13580,
           "naepGrade4Reading": 213,
-          "naepGrade8Math": 264
+          "naepGrade8Math": 264,
+          "reasonOverallRank": 8,
+          "reasonPavementRank": 17,
+          "reasonBridgeRank": 8,
+          "reasonCongestionRank": 14,
+          "reasonFatalityRank": 32
         },
         {
           "state": "Kentucky",
@@ -3053,7 +3438,12 @@
           "grantsOther": 1167876000,
           "educationPerPupil": 15481,
           "naepGrade4Reading": 217,
-          "naepGrade8Math": 269
+          "naepGrade8Math": 269,
+          "reasonOverallRank": 15,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 32,
+          "reasonCongestionRank": 27,
+          "reasonFatalityRank": 34
         },
         {
           "state": "Utah",
@@ -3092,7 +3482,12 @@
           "grantsOther": 584505000,
           "educationPerPupil": 11271,
           "naepGrade4Reading": 221,
-          "naepGrade8Math": 282
+          "naepGrade8Math": 282,
+          "reasonOverallRank": 10,
+          "reasonPavementRank": 11,
+          "reasonBridgeRank": 6,
+          "reasonCongestionRank": 19,
+          "reasonFatalityRank": 12
         },
         {
           "state": "Iowa",
@@ -3131,7 +3526,12 @@
           "grantsOther": 831390000,
           "educationPerPupil": 16726,
           "naepGrade4Reading": 218,
-          "naepGrade8Math": 277
+          "naepGrade8Math": 277,
+          "reasonOverallRank": 35,
+          "reasonPavementRank": 32,
+          "reasonBridgeRank": 49,
+          "reasonCongestionRank": 1,
+          "reasonFatalityRank": 20
         },
         {
           "state": "Oklahoma",
@@ -3170,7 +3570,12 @@
           "grantsOther": 679500000,
           "educationPerPupil": 12473,
           "naepGrade4Reading": 208,
-          "naepGrade8Math": 264
+          "naepGrade8Math": 264,
+          "reasonOverallRank": 45,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 36,
+          "reasonCongestionRank": 16,
+          "reasonFatalityRank": 38
         },
         {
           "state": "Nevada",
@@ -3207,7 +3612,12 @@
           "grantsOther": 869406000,
           "educationPerPupil": 13759,
           "naepGrade4Reading": 212,
-          "naepGrade8Math": 269
+          "naepGrade8Math": 269,
+          "reasonOverallRank": 25,
+          "reasonPavementRank": 11,
+          "reasonBridgeRank": 2,
+          "reasonCongestionRank": 33,
+          "reasonFatalityRank": 36
         },
         {
           "state": "Kansas",
@@ -3246,7 +3656,12 @@
           "grantsOther": 653369000,
           "educationPerPupil": 16747,
           "naepGrade4Reading": 215,
-          "naepGrade8Math": 272
+          "naepGrade8Math": 272,
+          "reasonOverallRank": 19,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 20,
+          "reasonCongestionRank": 3,
+          "reasonFatalityRank": 22
         },
         {
           "state": "New Mexico",
@@ -3285,7 +3700,12 @@
           "grantsOther": 596520000,
           "educationPerPupil": 15550,
           "naepGrade4Reading": 202,
-          "naepGrade8Math": 259
+          "naepGrade8Math": 259,
+          "reasonOverallRank": 39,
+          "reasonPavementRank": 37,
+          "reasonBridgeRank": 17,
+          "reasonCongestionRank": 13,
+          "reasonFatalityRank": 37
         },
         {
           "state": "Arkansas",
@@ -3324,7 +3744,12 @@
           "grantsOther": 671967000,
           "educationPerPupil": 14165,
           "naepGrade4Reading": 212,
-          "naepGrade8Math": 267
+          "naepGrade8Math": 267,
+          "reasonOverallRank": 21,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 22,
+          "reasonCongestionRank": 17,
+          "reasonFatalityRank": 39
         },
         {
           "state": "Mississippi",
@@ -3363,7 +3788,12 @@
           "grantsOther": 934720000,
           "educationPerPupil": 12442,
           "naepGrade4Reading": 217,
-          "naepGrade8Math": 266
+          "naepGrade8Math": 266,
+          "reasonOverallRank": 24,
+          "reasonPavementRank": 34,
+          "reasonBridgeRank": 26,
+          "reasonCongestionRank": 12,
+          "reasonFatalityRank": 44
         },
         {
           "state": "Hawaii",
@@ -3402,7 +3832,12 @@
           "grantsOther": 352610000,
           "educationPerPupil": 19381,
           "naepGrade4Reading": 219,
-          "naepGrade8Math": 270
+          "naepGrade8Math": 270,
+          "reasonOverallRank": 44,
+          "reasonPavementRank": 0,
+          "reasonBridgeRank": 30,
+          "reasonCongestionRank": 20,
+          "reasonFatalityRank": 30
         },
         {
           "state": "Nebraska",
@@ -3441,7 +3876,12 @@
           "grantsOther": 363989000,
           "educationPerPupil": 16931,
           "naepGrade4Reading": 219,
-          "naepGrade8Math": 279
+          "naepGrade8Math": 279,
+          "reasonOverallRank": 29,
+          "reasonPavementRank": 28,
+          "reasonBridgeRank": 35,
+          "reasonCongestionRank": 23,
+          "reasonFatalityRank": 15
         },
         {
           "state": "Idaho",
@@ -3480,7 +3920,12 @@
           "grantsOther": 504578000,
           "educationPerPupil": 10403,
           "naepGrade4Reading": 215,
-          "naepGrade8Math": 282
+          "naepGrade8Math": 282,
+          "reasonOverallRank": 26,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 19,
+          "reasonCongestionRank": 22,
+          "reasonFatalityRank": 31
         },
         {
           "state": "Maine",
@@ -3519,7 +3964,12 @@
           "grantsOther": 458275000,
           "educationPerPupil": 20085,
           "naepGrade4Reading": 213,
-          "naepGrade8Math": 273
+          "naepGrade8Math": 273,
+          "reasonOverallRank": 16,
+          "reasonPavementRank": 19,
+          "reasonBridgeRank": 46,
+          "reasonCongestionRank": 8,
+          "reasonFatalityRank": 8
         },
         {
           "state": "West Virginia",
@@ -3558,7 +4008,12 @@
           "grantsOther": 518593000,
           "educationPerPupil": 15344,
           "naepGrade4Reading": 205,
-          "naepGrade8Math": 260
+          "naepGrade8Math": 260,
+          "reasonOverallRank": 30,
+          "reasonPavementRank": 27,
+          "reasonBridgeRank": 50,
+          "reasonCongestionRank": 5,
+          "reasonFatalityRank": 38
         },
         {
           "state": "New Hampshire",
@@ -3596,7 +4051,12 @@
           "grantsOther": 1483464000,
           "educationPerPupil": 23064,
           "naepGrade4Reading": 223,
-          "naepGrade8Math": 279
+          "naepGrade8Math": 279,
+          "reasonOverallRank": 13,
+          "reasonPavementRank": 7,
+          "reasonBridgeRank": 34,
+          "reasonCongestionRank": 32,
+          "reasonFatalityRank": 10
         },
         {
           "state": "Delaware",
@@ -3634,7 +4094,12 @@
           "grantsOther": 378134000,
           "educationPerPupil": 21914,
           "naepGrade4Reading": 208,
-          "naepGrade8Math": 264
+          "naepGrade8Math": 264,
+          "reasonOverallRank": 32,
+          "reasonPavementRank": 0,
+          "reasonBridgeRank": 4,
+          "reasonCongestionRank": 47,
+          "reasonFatalityRank": 35
         },
         {
           "state": "Rhode Island",
@@ -3673,7 +4138,12 @@
           "grantsOther": 546478000,
           "educationPerPupil": 23343,
           "naepGrade4Reading": 217,
-          "naepGrade8Math": 270
+          "naepGrade8Math": 270,
+          "reasonOverallRank": 43,
+          "reasonPavementRank": 28,
+          "reasonBridgeRank": 47,
+          "reasonCongestionRank": 37,
+          "reasonFatalityRank": 13
         },
         {
           "state": "North Dakota",
@@ -3712,7 +4182,12 @@
           "grantsOther": 268208000,
           "educationPerPupil": 19264,
           "naepGrade4Reading": 218,
-          "naepGrade8Math": 278
+          "naepGrade8Math": 278,
+          "reasonOverallRank": 6,
+          "reasonPavementRank": 14,
+          "reasonBridgeRank": 42,
+          "reasonCongestionRank": 2,
+          "reasonFatalityRank": 13
         },
         {
           "state": "Montana",
@@ -3750,7 +4225,12 @@
           "grantsOther": 347251000,
           "educationPerPupil": 15876,
           "naepGrade4Reading": 219,
-          "naepGrade8Math": 277
+          "naepGrade8Math": 277,
+          "reasonOverallRank": 22,
+          "reasonPavementRank": 24,
+          "reasonBridgeRank": 31,
+          "reasonCongestionRank": 7,
+          "reasonFatalityRank": 40
         },
         {
           "state": "Vermont",
@@ -3789,7 +4269,12 @@
           "grantsOther": 415228000,
           "educationPerPupil": 29754,
           "naepGrade4Reading": 217,
-          "naepGrade8Math": 276
+          "naepGrade8Math": 276,
+          "reasonOverallRank": 38,
+          "reasonPavementRank": 23,
+          "reasonBridgeRank": 7,
+          "reasonCongestionRank": 6,
+          "reasonFatalityRank": 9
         },
         {
           "state": "Alaska",
@@ -3827,7 +4312,12 @@
           "grantsOther": 695575000,
           "educationPerPupil": 22128,
           "naepGrade4Reading": 204,
-          "naepGrade8Math": 270
+          "naepGrade8Math": 270,
+          "reasonOverallRank": 50,
+          "reasonPavementRank": 31,
+          "reasonBridgeRank": 37,
+          "reasonCongestionRank": 10,
+          "reasonFatalityRank": 22
         },
         {
           "state": "South Dakota",
@@ -3865,7 +4355,12 @@
           "grantsOther": 184285000,
           "educationPerPupil": 13728,
           "naepGrade4Reading": 218,
-          "naepGrade8Math": 281
+          "naepGrade8Math": 281,
+          "reasonOverallRank": 28,
+          "reasonPavementRank": 13,
+          "reasonBridgeRank": 48,
+          "reasonCongestionRank": 9,
+          "reasonFatalityRank": 24
         },
         {
           "state": "Wyoming",
@@ -3902,7 +4397,12 @@
           "grantsOther": 1537008000,
           "educationPerPupil": 20259,
           "naepGrade4Reading": 225,
-          "naepGrade8Math": 281
+          "naepGrade8Math": 281,
+          "reasonOverallRank": 20,
+          "reasonPavementRank": 22,
+          "reasonBridgeRank": 28,
+          "reasonCongestionRank": 4,
+          "reasonFatalityRank": 34
         }
       ]
     },
@@ -3946,7 +4446,12 @@
           "grantsOther": 13263280000,
           "educationPerPupil": 22964,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 49,
+          "reasonPavementRank": 46,
+          "reasonBridgeRank": 25,
+          "reasonCongestionRank": 46,
+          "reasonFatalityRank": 34
         },
         {
           "state": "New York",
@@ -3985,7 +4490,12 @@
           "grantsOther": 10580904000,
           "educationPerPupil": 36500,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 47,
+          "reasonPavementRank": 40,
+          "reasonBridgeRank": 39,
+          "reasonCongestionRank": 48,
+          "reasonFatalityRank": 13
         },
         {
           "state": "Texas",
@@ -4022,7 +4532,12 @@
           "grantsOther": 3701459000,
           "educationPerPupil": 16986,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 27,
+          "reasonPavementRank": 26,
+          "reasonBridgeRank": 3,
+          "reasonCongestionRank": 41,
+          "reasonFatalityRank": 37
         },
         {
           "state": "Florida",
@@ -4060,7 +4575,12 @@
           "grantsOther": 4576282000,
           "educationPerPupil": 13859,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 14,
+          "reasonPavementRank": 5,
+          "reasonBridgeRank": 9,
+          "reasonCongestionRank": 40,
+          "reasonFatalityRank": 33
         },
         {
           "state": "Illinois",
@@ -4099,7 +4619,12 @@
           "grantsOther": 2566225000,
           "educationPerPupil": 24128,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 37,
+          "reasonPavementRank": 35,
+          "reasonBridgeRank": 41,
+          "reasonCongestionRank": 44,
+          "reasonFatalityRank": 26
         },
         {
           "state": "Pennsylvania",
@@ -4138,7 +4663,12 @@
           "grantsOther": 1463735000,
           "educationPerPupil": 26708,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 36,
+          "reasonPavementRank": 39,
+          "reasonBridgeRank": 45,
+          "reasonCongestionRank": 42,
+          "reasonFatalityRank": 22
         },
         {
           "state": "New Jersey",
@@ -4177,7 +4707,12 @@
           "grantsOther": 5282317000,
           "educationPerPupil": 30701,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 40,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 27,
+          "reasonCongestionRank": 50,
+          "reasonFatalityRank": 11
         },
         {
           "state": "Ohio",
@@ -4216,7 +4751,12 @@
           "grantsOther": 1305163000,
           "educationPerPupil": 19206,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 5,
+          "reasonPavementRank": 22,
+          "reasonBridgeRank": 14,
+          "reasonCongestionRank": 18,
+          "reasonFatalityRank": 17
         },
         {
           "state": "Massachusetts",
@@ -4255,7 +4795,12 @@
           "grantsOther": 3041333000,
           "educationPerPupil": 27527,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 17,
+          "reasonPavementRank": 30,
+          "reasonBridgeRank": 38,
+          "reasonCongestionRank": 49,
+          "reasonFatalityRank": 2
         },
         {
           "state": "Virginia",
@@ -4294,7 +4839,12 @@
           "grantsOther": 586977000,
           "educationPerPupil": 18121,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 1,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 10,
+          "reasonCongestionRank": 38,
+          "reasonFatalityRank": 20
         },
         {
           "state": "Washington",
@@ -4332,7 +4882,12 @@
           "grantsOther": 1472187000,
           "educationPerPupil": 21275,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 48,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 23,
+          "reasonCongestionRank": 39,
+          "reasonFatalityRank": 34
         },
         {
           "state": "Georgia",
@@ -4371,7 +4926,12 @@
           "grantsOther": 1966668000,
           "educationPerPupil": 16169,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 2,
+          "reasonPavementRank": 9,
+          "reasonBridgeRank": 5,
+          "reasonCongestionRank": 45,
+          "reasonFatalityRank": 28
         },
         {
           "state": "North Carolina",
@@ -4410,7 +4970,12 @@
           "grantsOther": 2929945000,
           "educationPerPupil": 14238,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 4,
+          "reasonPavementRank": 19,
+          "reasonBridgeRank": 33,
+          "reasonCongestionRank": 30,
+          "reasonFatalityRank": 27
         },
         {
           "state": "Michigan",
@@ -4449,7 +5014,12 @@
           "grantsOther": 2494075000,
           "educationPerPupil": 22596,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 23,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 43,
+          "reasonCongestionRank": 15,
+          "reasonFatalityRank": 17
         },
         {
           "state": "Maryland",
@@ -4488,7 +5058,12 @@
           "grantsOther": 2268273000,
           "educationPerPupil": 21568,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 34,
+          "reasonPavementRank": 37,
+          "reasonBridgeRank": 13,
+          "reasonCongestionRank": 43,
+          "reasonFatalityRank": 16
         },
         {
           "state": "Minnesota",
@@ -4527,7 +5102,12 @@
           "grantsOther": 795512000,
           "educationPerPupil": 20533,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 11,
+          "reasonPavementRank": 13,
+          "reasonBridgeRank": 11,
+          "reasonCongestionRank": 24,
+          "reasonFatalityRank": 4
         },
         {
           "state": "Indiana",
@@ -4566,7 +5146,12 @@
           "grantsOther": 1456002000,
           "educationPerPupil": 16492,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 18,
+          "reasonPavementRank": 18,
+          "reasonBridgeRank": 21,
+          "reasonCongestionRank": 31,
+          "reasonFatalityRank": 19
         },
         {
           "state": "Colorado",
@@ -4605,7 +5190,12 @@
           "grantsOther": 968784000,
           "educationPerPupil": 18716,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 42,
+          "reasonPavementRank": 40,
+          "reasonBridgeRank": 16,
+          "reasonCongestionRank": 35,
+          "reasonFatalityRank": 33
         },
         {
           "state": "Arizona",
@@ -4644,7 +5234,12 @@
           "grantsOther": 846578000,
           "educationPerPupil": 14000,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 41,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 1,
+          "reasonCongestionRank": 11,
+          "reasonFatalityRank": 43
         },
         {
           "state": "Wisconsin",
@@ -4683,7 +5278,12 @@
           "grantsOther": 1513871000,
           "educationPerPupil": 18720,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 31,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 27,
+          "reasonCongestionRank": 24,
+          "reasonFatalityRank": 9
         },
         {
           "state": "Tennessee",
@@ -4722,7 +5322,12 @@
           "grantsOther": 2191549000,
           "educationPerPupil": 14170,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 12,
+          "reasonPavementRank": 17,
+          "reasonBridgeRank": 12,
+          "reasonCongestionRank": 36,
+          "reasonFatalityRank": 36
         },
         {
           "state": "Connecticut",
@@ -4761,7 +5366,12 @@
           "grantsOther": 998642000,
           "educationPerPupil": 28936,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 7,
+          "reasonPavementRank": 16,
+          "reasonBridgeRank": 18,
+          "reasonCongestionRank": 28,
+          "reasonFatalityRank": 19
         },
         {
           "state": "Missouri",
@@ -4800,7 +5410,12 @@
           "grantsOther": 1085463000,
           "educationPerPupil": 16467,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 9,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 40,
+          "reasonCongestionRank": 26,
+          "reasonFatalityRank": 20
         },
         {
           "state": "Oregon",
@@ -4839,7 +5454,12 @@
           "grantsOther": 1121319000,
           "educationPerPupil": 21827,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 33,
+          "reasonPavementRank": 20,
+          "reasonBridgeRank": 15,
+          "reasonCongestionRank": 34,
+          "reasonFatalityRank": 41
         },
         {
           "state": "Louisiana",
@@ -4878,7 +5498,12 @@
           "grantsOther": 3183011000,
           "educationPerPupil": 17491,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 46,
+          "reasonPavementRank": 46,
+          "reasonBridgeRank": 44,
+          "reasonCongestionRank": 29,
+          "reasonFatalityRank": 31
         },
         {
           "state": "South Carolina",
@@ -4917,7 +5542,12 @@
           "grantsOther": 1157515000,
           "educationPerPupil": 16958,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 3,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 24,
+          "reasonCongestionRank": 25,
+          "reasonFatalityRank": 45
         },
         {
           "state": "Alabama",
@@ -4956,7 +5586,12 @@
           "grantsOther": 1047104000,
           "educationPerPupil": 14880,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 8,
+          "reasonPavementRank": 17,
+          "reasonBridgeRank": 8,
+          "reasonCongestionRank": 14,
+          "reasonFatalityRank": 32
         },
         {
           "state": "Kentucky",
@@ -4995,7 +5630,12 @@
           "grantsOther": 1413124000,
           "educationPerPupil": 17141,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 15,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 32,
+          "reasonCongestionRank": 27,
+          "reasonFatalityRank": 34
         },
         {
           "state": "Oklahoma",
@@ -5034,7 +5674,12 @@
           "grantsOther": 749213000,
           "educationPerPupil": 12908,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 45,
+          "reasonPavementRank": 36,
+          "reasonBridgeRank": 36,
+          "reasonCongestionRank": 16,
+          "reasonFatalityRank": 38
         },
         {
           "state": "Utah",
@@ -5073,7 +5718,12 @@
           "grantsOther": 556405000,
           "educationPerPupil": 12549,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 10,
+          "reasonPavementRank": 11,
+          "reasonBridgeRank": 6,
+          "reasonCongestionRank": 19,
+          "reasonFatalityRank": 12
         },
         {
           "state": "Iowa",
@@ -5112,7 +5762,12 @@
           "grantsOther": 844565000,
           "educationPerPupil": 17646,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 35,
+          "reasonPavementRank": 32,
+          "reasonBridgeRank": 49,
+          "reasonCongestionRank": 1,
+          "reasonFatalityRank": 20
         },
         {
           "state": "Nevada",
@@ -5149,7 +5804,12 @@
           "grantsOther": 1064552000,
           "educationPerPupil": 13750,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 25,
+          "reasonPavementRank": 11,
+          "reasonBridgeRank": 2,
+          "reasonCongestionRank": 33,
+          "reasonFatalityRank": 36
         },
         {
           "state": "Kansas",
@@ -5188,7 +5848,12 @@
           "grantsOther": 565878000,
           "educationPerPupil": 17316,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 19,
+          "reasonPavementRank": 15,
+          "reasonBridgeRank": 20,
+          "reasonCongestionRank": 3,
+          "reasonFatalityRank": 22
         },
         {
           "state": "New Mexico",
@@ -5227,7 +5892,12 @@
           "grantsOther": 754462000,
           "educationPerPupil": 18385,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 39,
+          "reasonPavementRank": 37,
+          "reasonBridgeRank": 17,
+          "reasonCongestionRank": 13,
+          "reasonFatalityRank": 37
         },
         {
           "state": "Arkansas",
@@ -5266,7 +5936,12 @@
           "grantsOther": 617931000,
           "educationPerPupil": 15041,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 21,
+          "reasonPavementRank": 33,
+          "reasonBridgeRank": 22,
+          "reasonCongestionRank": 17,
+          "reasonFatalityRank": 39
         },
         {
           "state": "Mississippi",
@@ -5305,7 +5980,12 @@
           "grantsOther": 838374000,
           "educationPerPupil": 14157,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 24,
+          "reasonPavementRank": 34,
+          "reasonBridgeRank": 26,
+          "reasonCongestionRank": 12,
+          "reasonFatalityRank": 44
         },
         {
           "state": "Hawaii",
@@ -5344,7 +6024,12 @@
           "grantsOther": 393394000,
           "educationPerPupil": 21804,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 44,
+          "reasonPavementRank": 0,
+          "reasonBridgeRank": 30,
+          "reasonCongestionRank": 20,
+          "reasonFatalityRank": 30
         },
         {
           "state": "Nebraska",
@@ -5383,7 +6068,12 @@
           "grantsOther": 336819000,
           "educationPerPupil": 17819,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 29,
+          "reasonPavementRank": 28,
+          "reasonBridgeRank": 35,
+          "reasonCongestionRank": 23,
+          "reasonFatalityRank": 15
         },
         {
           "state": "West Virginia",
@@ -5422,7 +6112,12 @@
           "grantsOther": 630733000,
           "educationPerPupil": 16497,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 30,
+          "reasonPavementRank": 27,
+          "reasonBridgeRank": 50,
+          "reasonCongestionRank": 5,
+          "reasonFatalityRank": 38
         },
         {
           "state": "Maine",
@@ -5461,7 +6156,12 @@
           "grantsOther": 661693000,
           "educationPerPupil": 21242,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 16,
+          "reasonPavementRank": 19,
+          "reasonBridgeRank": 46,
+          "reasonCongestionRank": 8,
+          "reasonFatalityRank": 8
         },
         {
           "state": "Idaho",
@@ -5500,7 +6200,12 @@
           "grantsOther": 360729000,
           "educationPerPupil": 11238,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 26,
+          "reasonPavementRank": 21,
+          "reasonBridgeRank": 19,
+          "reasonCongestionRank": 22,
+          "reasonFatalityRank": 31
         },
         {
           "state": "New Hampshire",
@@ -5538,7 +6243,12 @@
           "grantsOther": 1037261000,
           "educationPerPupil": 24938,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 13,
+          "reasonPavementRank": 7,
+          "reasonBridgeRank": 34,
+          "reasonCongestionRank": 32,
+          "reasonFatalityRank": 10
         },
         {
           "state": "Delaware",
@@ -5576,7 +6286,12 @@
           "grantsOther": 391309000,
           "educationPerPupil": 24176,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 32,
+          "reasonPavementRank": 0,
+          "reasonBridgeRank": 4,
+          "reasonCongestionRank": 47,
+          "reasonFatalityRank": 35
         },
         {
           "state": "North Dakota",
@@ -5615,7 +6330,12 @@
           "grantsOther": 320794000,
           "educationPerPupil": 20667,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 6,
+          "reasonPavementRank": 14,
+          "reasonBridgeRank": 42,
+          "reasonCongestionRank": 2,
+          "reasonFatalityRank": 13
         },
         {
           "state": "Rhode Island",
@@ -5654,7 +6374,12 @@
           "grantsOther": 447446000,
           "educationPerPupil": 25329,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 43,
+          "reasonPavementRank": 28,
+          "reasonBridgeRank": 47,
+          "reasonCongestionRank": 37,
+          "reasonFatalityRank": 13
         },
         {
           "state": "Montana",
@@ -5692,7 +6417,12 @@
           "grantsOther": 446825000,
           "educationPerPupil": 15925,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 22,
+          "reasonPavementRank": 24,
+          "reasonBridgeRank": 31,
+          "reasonCongestionRank": 7,
+          "reasonFatalityRank": 40
         },
         {
           "state": "Alaska",
@@ -5730,7 +6460,12 @@
           "grantsOther": 744734000,
           "educationPerPupil": 22331,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 50,
+          "reasonPavementRank": 31,
+          "reasonBridgeRank": 37,
+          "reasonCongestionRank": 10,
+          "reasonFatalityRank": 22
         },
         {
           "state": "Vermont",
@@ -5769,7 +6504,12 @@
           "grantsOther": 400430000,
           "educationPerPupil": 32233,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 38,
+          "reasonPavementRank": 23,
+          "reasonBridgeRank": 7,
+          "reasonCongestionRank": 6,
+          "reasonFatalityRank": 9
         },
         {
           "state": "South Dakota",
@@ -5807,7 +6547,12 @@
           "grantsOther": 215703000,
           "educationPerPupil": 15755,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 28,
+          "reasonPavementRank": 13,
+          "reasonBridgeRank": 48,
+          "reasonCongestionRank": 9,
+          "reasonFatalityRank": 24
         },
         {
           "state": "Wyoming",
@@ -5844,7 +6589,12 @@
           "grantsOther": 2058556000,
           "educationPerPupil": 21462,
           "naepGrade4Reading": 0,
-          "naepGrade8Math": 0
+          "naepGrade8Math": 0,
+          "reasonOverallRank": 20,
+          "reasonPavementRank": 22,
+          "reasonBridgeRank": 28,
+          "reasonCongestionRank": 4,
+          "reasonFatalityRank": 34
         }
       ]
     }
