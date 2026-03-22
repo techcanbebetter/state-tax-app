@@ -473,6 +473,8 @@ const normalizeNaep = async () => {
 }
 
 const normalizeReasonHighway = async (config) => {
+  // Reason Foundation Highway Report is pre-downloaded (not fetched via config.downloads).
+  // Path is hardcoded because the file is manually maintained and not part of the automated pipeline.
   const csvPath = path.join(projectRoot, 'data/raw/downloads/29th Annual Highway Report - Reason Foundation.csv')
   let rawText
   try {
@@ -489,8 +491,8 @@ const normalizeReasonHighway = async (config) => {
   const rows = []
 
   for (const row of parsed.data) {
-    const state = String(row['State'] ?? '').trim()
-    if (!VALID_STATES.has(state)) continue
+    const state = normalizeState(row['State'])
+    if (!state || !VALID_STATES.has(state)) continue
 
     const overall_rank = parseInt(row['Overall'], 10)
     const ruralInterstate = parseInt(row['Rural Interstate Pavement Condition'], 10)
