@@ -8,8 +8,9 @@ import TotalRevenueView from './TotalRevenueView'
 import FederalGrantsView from './FederalGrantsView'
 import OwnSourceView from './OwnSourceView'
 import EducationView from './EducationView'
+import TransportationView from './TransportationView'
 
-type View = 'totalRevenue' | 'federalGrants' | 'revenue' | 'ownSource' | 'spending' | 'education'
+type View = 'totalRevenue' | 'federalGrants' | 'revenue' | 'ownSource' | 'spending' | 'transportation' | 'education'
 
 const dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -55,6 +56,7 @@ function App() {
 
   useEffect(() => {
     if (view === 'education') setSelectedYear(2022)
+    if (view === 'transportation') setSelectedYear(2023)
   }, [view])
 
   const activeStates = useMemo(() => {
@@ -121,6 +123,12 @@ function App() {
           .sort((a, b) => b.educationPerPupil - a.educationPerPupil)
         return { topStateName: sorted[0]?.state ?? '—', topStateLabel: 'Highest $/student' }
       }
+      case 'transportation': {
+        const sorted = [...activeStates]
+          .filter((s) => s.reasonOverallRank > 0)
+          .sort((a, b) => a.reasonOverallRank - b.reasonOverallRank)
+        return { topStateName: sorted[0]?.state ?? '—', topStateLabel: 'Best overall rank' }
+      }
     }
   }, [activeStates, view, revenueMetric, spendingMetric, totalRevenueMetric, federalGrantsMetric, ownSourceMetric])
 
@@ -165,6 +173,14 @@ function App() {
               </button>
               <button
                 type="button"
+                className={view === 'transportation' ? 'active' : ''}
+                onClick={() => setView('transportation')}
+                data-tooltip="State highway spending per capita vs. Reason Foundation highway performance rankings — shows which states get the most from their transportation dollars."
+              >
+                Transportation
+              </button>
+              <button
+                type="button"
                 className={view === 'education' ? 'active' : ''}
                 onClick={() => setView('education')}
                 data-tooltip="K-12 spending per student vs. NAEP reading and math achievement scores — reveals which states get the most from their education dollars."
@@ -192,7 +208,7 @@ function App() {
               </article>
             </section>
 
-            {view !== 'education' && (
+            {view !== 'education' && view !== 'transportation' && (
               <div className="metric-toggle" role="group" aria-label="Year toggle">
                 {data.years.map((yr) => (
                   <button
@@ -244,6 +260,9 @@ function App() {
                 metric={spendingMetric}
                 setMetric={setSpendingMetric}
               />
+            )}
+            {view === 'transportation' && (
+              <TransportationView activeStates={activeStates} />
             )}
             {view === 'education' && (
               <EducationView activeStates={activeStates} />

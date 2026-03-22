@@ -424,13 +424,14 @@ describe('App view tab bar', () => {
     render(<App />)
     const viewToggle = await screen.findByRole('group', { name: /view toggle/i })
     const buttons = viewToggle.querySelectorAll('button')
-    expect(buttons).toHaveLength(6)
+    expect(buttons).toHaveLength(7)
     expect(buttons[0].textContent).toBe('Total Revenue')
     expect(buttons[1].textContent).toBe('Tax Revenue')
     expect(buttons[2].textContent).toBe('Other Revenue')
     expect(buttons[3].textContent).toBe('Federal Grants')
     expect(buttons[4].textContent).toBe('Spending')
-    expect(buttons[5].textContent).toBe('Education')
+    expect(buttons[5].textContent).toBe('Transportation')
+    expect(buttons[6].textContent).toBe('Education')
   })
 
   it('defaults to Total Revenue tab active', async () => {
@@ -449,12 +450,12 @@ describe('App view tab bar', () => {
 })
 
 describe('App Education tab', () => {
-  it('renders 6 tabs including Education as the last', async () => {
+  it('renders Education as the 7th tab', async () => {
     render(<App />)
     const viewToggle = await screen.findByRole('group', { name: /view toggle/i })
     const buttons = viewToggle.querySelectorAll('button')
-    expect(buttons).toHaveLength(6)
-    expect(buttons[5].textContent).toBe('Education')
+    expect(buttons).toHaveLength(7)
+    expect(buttons[6].textContent).toBe('Education')
   })
 
   it('hides year toggle and auto-selects 2022 when switching to Education tab', async () => {
@@ -468,6 +469,50 @@ describe('App Education tab', () => {
     // Year toggle should be hidden
     await waitFor(() => {
       expect(screen.queryByRole('group', { name: /year toggle/i })).not.toBeInTheDocument()
+    })
+  })
+})
+
+describe('App Transportation tab', () => {
+  it('renders 7 tabs including Transportation as the 6th', async () => {
+    render(<App />)
+    const viewToggle = await screen.findByRole('group', { name: /view toggle/i })
+    const buttons = viewToggle.querySelectorAll('button')
+    expect(buttons).toHaveLength(7)
+    expect(buttons[5].textContent).toBe('Transportation')
+    expect(buttons[6].textContent).toBe('Education')
+  })
+
+  it('hides year toggle and auto-selects 2023 when switching to Transportation tab', async () => {
+    render(<App />)
+    await screen.findByRole('button', { name: '2023' })
+    expect(screen.getByRole('group', { name: /year toggle/i })).toBeInTheDocument()
+    await userEvent.click(screen.getByRole('button', { name: 'Transportation' }))
+    await waitFor(() => {
+      expect(screen.queryByRole('group', { name: /year toggle/i })).not.toBeInTheDocument()
+    })
+  })
+
+  it('shows "Best overall rank" label in top state card when Transportation tab is active', async () => {
+    render(<App />)
+    await screen.findByRole('button', { name: '2023' })
+    await userEvent.click(screen.getByRole('button', { name: 'Transportation' }))
+    await waitFor(() => {
+      const headings = screen.getAllByRole('heading', { level: 2 })
+      const topCard = headings.find((h) => h.textContent?.includes('Best overall rank'))
+      expect(topCard).toBeTruthy()
+    })
+  })
+
+  it('auto-selects 2023 when switching to Transportation tab (overriding a different selected year)', async () => {
+    render(<App />)
+    await screen.findByRole('button', { name: '2023' })
+    await userEvent.click(screen.getByRole('button', { name: '2022' }))
+    expect(screen.getByRole('button', { name: '2022' }).className).toContain('active')
+    await userEvent.click(screen.getByRole('button', { name: 'Transportation' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Spending' }))
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: '2023' }).className).toContain('active')
     })
   })
 })
